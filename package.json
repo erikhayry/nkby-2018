@@ -1,0 +1,29 @@
+{
+  "name": "nkby-2018",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/babel index.js --out-dir lib --presets=@babel/env && node lib/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erikportin/nkby-2018.git"
+  },
+  "author": "Erik Portin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erikportin/nkby-2018/issues"
+  },
+  "homepage": "https://github.com/erikportin/nkby-2018#readme",
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0",
+    "crawler": "^1.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+  }
+}
