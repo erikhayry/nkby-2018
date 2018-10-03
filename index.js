@@ -34,15 +34,25 @@ function searchUrls(searchTerms, urls) {
                 const $ = res.$;
 
 
-                searchTerms.forEach(({address}) => {
+                searchTerms.forEach(({address, location}) => {
                     const bodyText = $("body").text() || '';
+                    const title = $("title").text() || '';
 
                     if(bodyText.toLowerCase().indexOf(address.toLowerCase()) > 0){
                         if(result[address]){
-                            result[address].push(res.options.uri)
+                            result[address].uris.push({
+                                uri: res.options.uri,
+                                title
+                            })
                         }
                         else {
-                            result[address] = [res.options.uri]
+                            result[address] = {
+                                location,
+                                uris: [{
+                                    uri: res.options.uri,
+                                    title
+                                }]
+                            }
                         }
                     }
                 })
@@ -56,7 +66,7 @@ function searchUrls(searchTerms, urls) {
     c.on('drain', function() {
         console.log('done!');
 
-        fs.writeFile("data/result.json",  JSON.stringify(result), function (err) {
+        fs.writeFile("admin/static/result.json",  JSON.stringify(result), function (err) {
             if (err) {
                 return console.log(err);
             }
@@ -74,7 +84,7 @@ let convertedAddresses = addresses
             address: address.address,
             location: geoCodeData.geometry && geoCodeData.geometry.location
         }
-    });
+    }).slice(20);
 
 //console.log(convertedAddresses);
 //console.log(filtersUrls);

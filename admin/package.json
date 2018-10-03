@@ -13,6 +13,7 @@
   "dependencies": {
     "next": "^7.0.1",
     "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "react-dom": "^16.5.2",
+    "react-google-maps": "^9.4.5"
   }
 }
