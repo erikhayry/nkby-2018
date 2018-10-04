@@ -170,9 +170,6 @@ function geoCode(address, postcode = '66900', country = 'FI'){
                     })
             })
     })
-
-
-
 }
 
 function toFile(data) {

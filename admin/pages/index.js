@@ -32,7 +32,6 @@ const GooglMapWrapper = compose(
 
 class Map extends React.PureComponent {
     state = {
-        isMarkerShown: false,
         addresses: undefined,
         currentAddress: undefined
     };
@@ -44,15 +43,12 @@ class Map extends React.PureComponent {
             .then(function(response) {
                 return response.json()
             })
-            .then(function(myJson) {
-                that.setState({ addresses: myJson })
-
-                //console.log(JSON.stringify(myJson));
+            .then(function(responseAsJson) {
+                that.setState({ addresses: responseAsJson })
             });
     }
 
     handleMarkerClick = (key, address) => {
-        console.log(key, address)
         this.setState({ currentAddress: {key, address}})
     };
 
@@ -60,7 +56,6 @@ class Map extends React.PureComponent {
         return (
             <div>
                 <GooglMapWrapper
-                    isMarkerShown={this.state.isMarkerShown}
                     onMarkerClick={this.handleMarkerClick}
                     addresses={this.state.addresses}
                 />
@@ -68,8 +63,14 @@ class Map extends React.PureComponent {
                     <h1>{this.state.currentAddress.key}</h1>
                     <ul>
                         {this.state.currentAddress.address.uris.map((uri, i) => {
-                            console.log(uri)
-                            return <li key={i}><a href={uri.uri}>{uri.title || uri.uri}</a></li>
+                            return (
+                                <li key={i}>
+                                    {uri.images.length > 0 && <img src={`http://www.nykarlebyvyer.nu/${uri.images[0].replace('../../../', '')}`} alt="" width="100px"/>}
+                                    <br/>
+                                    <a href={uri.uri}>{uri.title || uri.uri}</a>
+                                    {uri.addressWithStreetNumber && <p>({uri.addressWithStreetNumber})</p>}
+                                </li>
+                            )
                         })}
                     </ul>
                 </div>}
