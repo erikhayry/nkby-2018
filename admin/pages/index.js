@@ -2,6 +2,28 @@ import React from "react"
 import { compose, withProps } from "recompose"
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
 
+const locale = {
+    location: {
+        street:  {
+            lang: '',
+            lat: ''
+        },
+        streetNumber: {
+            lang: '',
+            lat: ''
+        },
+        manuallyAdded: {
+            lang: '',
+            lat: ''
+        }
+    },
+    pages: {
+        url: '',
+        title: ''
+    }
+};
+
+
 const GooglMapWrapper = compose(
     withProps({
         googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyBoFBVnwa-VAWKXuZ5m32Jh6fL4lvPYVxQ&v=3.exp&libraries=geometry,drawing,places",
@@ -13,7 +35,7 @@ const GooglMapWrapper = compose(
     withGoogleMap
 )((props) =>
     <GoogleMap
-        defaultZoom={8}
+        defaultZoom={16}
         defaultCenter={{ lat: 63.5217687, lng: 22.5216011 }}
     >
         {props.addresses && Object.keys(props.addresses).map((key) => {

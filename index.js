@@ -1,6 +1,7 @@
 import Crawler from "crawler";
 import fs from 'fs';
-import addresses from '../data/geocoded-addresses.json';
+import geocodedLocales from '../data/geocoded-locale.json';
+import locales from '../data/locale.json';
 import urls from '../data/urls.json';
 import result from '../admin/static/result.json';
 import areas from '../data/areas.json';
@@ -16,9 +17,6 @@ const postalAreas = [
     'hirvlax',
     'monå',
 ];
-
-const searchTerms = [];
-//const searchTerms = ['forsby', 'Grev Tott gatan'];
 
 function toLargeResult(){
     let largeResult = {};
@@ -60,10 +58,11 @@ function toLargeResult(){
         console.log("The file was saved!");
     });}
 
-function searchUrls(searchTerms, urls) {
+function searchUrls(locales, urls) {
     let count = 0;
     const total = urls.length;
     const result = {};
+
     const c = new Crawler({
         maxConnections : 10,
         // This will be called for each crawled page
@@ -74,8 +73,7 @@ function searchUrls(searchTerms, urls) {
                 console.log(`${count++} / ${total}`);
                 const $ = res.$;
 
-
-                searchTerms.forEach(({address, location}) => {
+                locales.forEach(name => {
                     const body = $("body");
                     const bodyText = (body.text() || '').toLowerCase();
                     const title = $("title").text() || '';
@@ -84,26 +82,24 @@ function searchUrls(searchTerms, urls) {
                     });
 
 
-                    if(bodyText.indexOf(address.toLowerCase()) > 0){
-                        const re = new RegExp(`\\b${address.toLowerCase()}\\s[0-9]{2,}`);
+                    if(bodyText.indexOf(name.toLowerCase()) > 0){
+                        const re = new RegExp(`\\b${name.toLowerCase()}\\s[0-9]{1,3}`);
                         const addressWithStreetNumber = bodyText.match(re);
+                        const key = addressWithStreetNumber || name;
 
-                        if(result[address]){
-                            result[address].uris.push({
-                                uri: res.options.uri,
+                        if(result[key]){
+                            result[key].pages.push({
+                                url: res.options.uri,
                                 title,
-                                images,
-                                addressWithStreetNumber
+                                images
                             })
                         }
                         else {
-                            result[address] = {
-                                location,
-                                uris: [{
-                                    uri: res.options.uri,
+                            result[key] = {
+                                pages: [{
+                                    url: res.options.uri,
                                     title,
                                     images,
-                                    addressWithStreetNumber
                                 }]
                             }
                         }
@@ -119,7 +115,7 @@ function searchUrls(searchTerms, urls) {
     c.on('drain', function() {
         console.log('done!');
 
-        fs.writeFile("admin/static/result.json",  JSON.stringify(result), function (err) {
+        fs.writeFile("data/crawler-result.json",  JSON.stringify(result), function (err) {
             if (err) {
                 return console.log(err);
             }
@@ -128,20 +124,7 @@ function searchUrls(searchTerms, urls) {
     });
 }
 
-let filtersUrls = urls.filter(url => url.indexOf('sidor/texter/hus/') === 0);
-let convertedAddresses = addresses
-    .filter(address => address.geoCodeData)
-    .map(address => {
-        const geoCodeData = address.geoCodeData;
-        return {
-            address: address.address,
-            location: geoCodeData.geometry && geoCodeData.geometry.location
-        }
-    }).splice(20);
-
-//console.log(convertedAddresses);
-//console.log(filtersUrls);
-
-//searchUrls(convertedAddresses, filtersUrls);
-toLargeResult()
+let filteredUrls = urls.filter(url => url.indexOf('sidor/texter/hus/') === 0);
+searchUrls(locales, filteredUrls);
+//toLargeResult()
 
