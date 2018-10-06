@@ -64,14 +64,24 @@ function geoCodeLocale(){
         });
 }
 
+function addLocaleToCrawlerResult(geoCodedLocales, crawlerResult){
+    geoCodedLocales.forEach(locale => {
+        if(crawlerResult[locale.name]){
+            crawlerResult[locale.name].locale = locale.location;
+        }
+    });
+
+    toFile(crawlerResult, "admin/static/crawler-result-with-locale.json")
+}
+
 function geoCodeCrawlerResult() {
     const locales = Object.keys(crawlerResult);
 
     const reqs = locales.map(locale => geoCode(locale));
     Promise.all(reqs)
-        .then((responses) => {
-            console.log(JSON.stringify(responses))
-            //toFile(responses, "data/geocoded-crawler-result.json")
+        .then((newGeoCodedLocales) => {
+            toFile(newGeoCodedLocales, "data/geocoded-locale.json")
+            addLocaleToCrawlerResult(newGeoCodedLocales, crawlerResult);
         })
         .catch((err) => {
             console.log(err);

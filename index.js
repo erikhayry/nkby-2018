@@ -58,6 +58,20 @@ function toLargeResult(){
         console.log("The file was saved!");
     });}
 
+function getKey(addressWithStreetNumber, name){
+    const address = addressWithStreetNumber && addressWithStreetNumber[0];
+    if(!address){
+        return name;
+    }
+    const postcode = address.substring(address.lastIndexOf(' ') + 1);
+
+    if(!Number.isInteger(Number(postcode)) || postcode > 2 || postcode === 0){
+        return name;
+    }
+
+    return address;
+}
+
 function searchUrls(locales, urls) {
     let count = 0;
     const total = urls.length;
@@ -85,7 +99,7 @@ function searchUrls(locales, urls) {
                     if(bodyText.indexOf(name.toLowerCase()) > 0){
                         const re = new RegExp(`\\b${name.toLowerCase()}\\s[0-9]{1,3}`);
                         const addressWithStreetNumber = bodyText.match(re);
-                        const key = addressWithStreetNumber || name;
+                        const key = getKey(addressWithStreetNumber, name);
 
                         if(result[key]){
                             result[key].pages.push({
