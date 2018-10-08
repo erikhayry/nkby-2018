@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "./node_modules/.bin/babel index.js --out-dir lib --presets=@babel/env && node lib/index.js",
-    "geocoder": "./node_modules/.bin/babel geocoder.js --out-dir lib --presets=@babel/env && node lib/geocoder.js"
+    "search": "./node_modules/.bin/babel index.js --out-dir lib --presets=@babel/env && node lib/index.js",
+    "geocoder": "./node_modules/.bin/babel geocoder.js --out-dir lib --presets=@babel/env && node lib/geocoder.js",
+    "start": "npm run search && npm run geocoder"
   },
   "repository": {
     "type": "git",
