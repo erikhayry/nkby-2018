@@ -12,7 +12,7 @@ const googleMapsClient = require('@google/maps').createClient({
     Promise: Promise
 });
 
-function geoCode(name, postcode = '66900', country = 'FI'){
+function geoCode(name, postcode = '66900', city = 'Nykarleby', country = 'Finland'){
     bar.tick();
     return new Promise((resolve, reject) => {
         const geoCodeData = geoCodedLocale.find(function (locale) {
@@ -24,7 +24,7 @@ function geoCode(name, postcode = '66900', country = 'FI'){
             resolve(geoCodeData)
         }
         else {
-            googleMapsClient.geocode({address: `${name}, ${postcode}, ${country}`})
+            googleMapsClient.geocode({address: `${name}, ${postcode}, ${city} ${country}`})
                 .asPromise()
                 .then(responses => {
                     const geoCodedData = responses.json.results[0];
@@ -57,18 +57,6 @@ function toFile(data, path) {
     });
 }
 
-function geoCodeLocale(){
-    const reqs = locales.map(locale => geoCode(locale));
-
-    Promise.all(reqs)
-        .then((responses) => {
-            toFile(responses, "data/geocoded-locale.json")
-        })
-        .catch((err) => {
-            console.log(err);
-        });
-}
-
 function addLocaleToCrawlerResult(geoCodedLocales, crawlerResult){
     geoCodedLocales.forEach(locale => {
         if(crawlerResult[locale.name]){
@@ -86,7 +74,7 @@ function merge(a, b, prop){
 
 function geoCodeCrawlerResult() {
     const locales = Object.keys(crawlerResult);
-    console.log(`GeoCode ${locales.length} locales from search result`)
+    console.log(`GeoCode ${locales.length} locales from search result`);
     bar = new ProgressBar(':bar', { total: locales.length });
 
     const reqs = locales.map(locale => geoCode(locale));
