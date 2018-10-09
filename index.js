@@ -49,36 +49,39 @@ function searchUrls(locales, urls) {
                 bar.tick();
 
                 locales.forEach(name => {
-                    const body = $("body");
-                    const bodyText = (body.text() || '').toLowerCase();
-                    const title = $("title").text() || '';
-                    const images = Array.from($('body img')).map((el) => {
-                        return el.attribs.src.replace('../../../', '')
-                    });
+                    if($){
+                        const body = $("body");
+                        const bodyText = (body.text() || '').toLowerCase();
+                        const title = $("title").text() || '';
+                        const images = Array.from($('body img')).map((el) => {
+                            return el.attribs.src.replace('../../../', '')
+                        });
 
-                    if(bodyText.indexOf(name.toLowerCase()) > 0){
-                        const re = new RegExp(`\\b${name.toLowerCase()}\\s[0-9]{1,3}`);
-                        const addressWithStreetNumber = bodyText.match(re);
-                        const key = getKey(addressWithStreetNumber, name);
-                        pagesCount++;
+                        if(bodyText.indexOf(name.toLowerCase()) > 0){
+                            const re = new RegExp(`\\b${name.toLowerCase()}\\s[0-9]{1,3}`);
+                            const addressWithStreetNumber = bodyText.match(re);
+                            const key = getKey(addressWithStreetNumber, name);
+                            pagesCount++;
 
-                        if(result[key]){
-                            result[key].pages.push({
-                                url: res.options.uri,
-                                title,
-                                images
-                            })
-                        }
-                        else {
-                            result[key] = {
-                                pages: [{
+                            if(result[key]){
+                                result[key].pages.push({
                                     url: res.options.uri,
                                     title,
-                                    images,
-                                }]
+                                    images
+                                })
+                            }
+                            else {
+                                result[key] = {
+                                    pages: [{
+                                        url: res.options.uri,
+                                        title,
+                                        images,
+                                    }]
+                                }
                             }
                         }
                     }
+
                 })
 
             }
@@ -91,7 +94,7 @@ function searchUrls(locales, urls) {
         console.log('Searching done');
         console.log(`Matched ${pagesCount} urls to ${Object.keys(result).length} locales`);
 
-        fs.writeFile("data/crawler-result.json",  JSON.stringify(result), function (err) {
+        fs.writeFile("data/crawler-result-lg.json",  JSON.stringify(result), function (err) {
             if (err) {
                 return console.log(err);
             }
@@ -100,5 +103,5 @@ function searchUrls(locales, urls) {
     });
 }
 
-let filteredUrls = urls.filter(url => url.indexOf('sidor/texter/hus/') === 0);
+let filteredUrls = urls.filter(url => url.indexOf('sidor/texter/') === 0);
 searchUrls(locales, filteredUrls);

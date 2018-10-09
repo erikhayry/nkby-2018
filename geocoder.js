@@ -2,7 +2,7 @@ import fs from 'fs';
 import ProgressBar from 'progress';
 import locales from '../data/locale.json';
 import geoCodedLocale from '../data/geocoded-locale.json';
-import crawlerResult from '../data/crawler-result.json';
+import crawlerResult from '../data/crawler-result-lg.json';
 
 let bar, ignored = [], geoCodeSuccess = [], geoCodeErrors = [];
 
@@ -18,6 +18,7 @@ function geoCode(name, postcode = '66900', country = 'FI'){
         const geoCodeData = geoCodedLocale.find(function (locale) {
             return locale.name === name;
         });
+
         if(geoCodeData){
             ignored.push(geoCodeData.name);
             resolve(geoCodeData)
@@ -28,14 +29,14 @@ function geoCode(name, postcode = '66900', country = 'FI'){
                 .then(responses => {
                     const geoCodedData = responses.json.results[0];
                     if(geoCodedData && geoCodedData.geometry){
-                        geoCodeSuccess.push(geoCodeData.name);
+                        geoCodeSuccess.push(name);
                         resolve({
                             location: geoCodedData.geometry.location,
                             name
                         })
                     }
                     else {
-                        geoCodeErrors.push(geoCodeData.name);
+                        geoCodeErrors.push(name);
                         resolve({
                             name
                         })
@@ -78,6 +79,11 @@ function addLocaleToCrawlerResult(geoCodedLocales, crawlerResult){
     toFile(crawlerResult, "admin/static/crawler-result-with-locale.json")
 }
 
+function merge(a, b, prop){
+    let reduced =  a.filter( aitem => ! b.find ( bitem => aitem[prop] === bitem[prop]) )
+    return reduced.concat(b);
+}
+
 function geoCodeCrawlerResult() {
     const locales = Object.keys(crawlerResult);
     console.log(`GeoCode ${locales.length} locales from search result`)
@@ -87,7 +93,7 @@ function geoCodeCrawlerResult() {
     Promise.all(reqs)
         .then((newGeoCodedLocales) => {
             console.log(`Geocoding done, ignored: ${ignored.length}, success: ${geoCodeSuccess.length}, failed: ${geoCodeErrors.length}`);
-            toFile(newGeoCodedLocales, "data/geocoded-locale.json")
+            toFile(merge(geoCodedLocale, newGeoCodedLocales, name), "data/geocoded-locale.json");
             addLocaleToCrawlerResult(newGeoCodedLocales, crawlerResult);
         })
         .catch((err) => {

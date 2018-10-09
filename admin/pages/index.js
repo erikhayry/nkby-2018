@@ -3,6 +3,48 @@ import { compose, withProps } from "recompose"
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
 import Head from 'next/head'
 
+
+function addMarkers({addresses, onMarkerClick}){
+    //63.522610, 22.531123
+    //63.522572, 22.531295
+    let addedPositions = [];
+
+
+    if(addresses){
+        return Object.keys(addresses).map((key) => {
+            const address = addresses[key];
+            if(address.locale){
+                const position = address.locale;
+                const positionAsString = JSON.stringify(position);
+                const positionAdded = addedPositions.find((position) => {
+                    return position === positionAsString;
+                });
+
+                if(positionAdded){
+                    position.lat = position.lat - 0.0001;
+                    position.lng = position.lng + 0.0001;
+                    addedPositions.push(JSON.stringify(position));
+                }
+                else{
+                    addedPositions.push(positionAsString);
+                }
+
+                return <Marker
+                    key={key} position={position}
+                    onClick={() => {
+                        onMarkerClick(key, address)
+                    }}
+                    label={address.pages.length.toString()}
+                />
+            }
+
+            return null;
+        })
+    }
+
+    return null;
+}
+
 const GooglMapWrapper = compose(
     withProps({
         googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyBoFBVnwa-VAWKXuZ5m32Jh6fL4lvPYVxQ&v=3.exp&libraries=geometry,drawing,places",
@@ -16,21 +58,196 @@ const GooglMapWrapper = compose(
     <GoogleMap
         defaultZoom={12}
         defaultCenter={{ lat: 63.5217687, lng: 22.5216011 }}
+        options={{
+            styles: [
+                {
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#212121"
+                        }
+                    ]
+                },
+                {
+                    "elementType": "labels.icon",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#757575"
+                        }
+                    ]
+                },
+                {
+                    "elementType": "labels.text.stroke",
+                    "stylers": [
+                        {
+                            "color": "#212121"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "administrative",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#757575"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "administrative.country",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#9e9e9e"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "administrative.land_parcel",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "administrative.locality",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#bdbdbd"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#757575"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi.park",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#181818"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi.park",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#616161"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi.park",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [
+                        {
+                            "color": "#1b1b1b"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "color": "#2c2c2c"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#8a8a8a"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.arterial",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#373737"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.highway",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#3c3c3c"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.highway.controlled_access",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#4e4e4e"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.local",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#616161"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "transit",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#757575"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "water",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#000000"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "water",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#3d3d3d"
+                        }
+                    ]
+                }
+            ]
+        }}
     >
-        {props.addresses && Object.keys(props.addresses).map((key) => {
-            const address = props.addresses[key];
-
-            if(address.locale){
-                return <Marker
-                    key={key} position={address.locale} onClick={() => {
-                        props.onMarkerClick(key, address)
-                    }}
-                    label={address.pages.length.toString()}
-                />
-            }
-
-            return null;
-        })}
+        {addMarkers((props))}
     </GoogleMap>
 );
 
