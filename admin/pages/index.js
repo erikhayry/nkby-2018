@@ -3,6 +3,7 @@ import { compose, withProps } from "recompose"
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
 import Head from 'next/head'
 import theme from '../static/theme.json';
+import axios from 'axios';
 
 function addMarkers({addresses, onMarkerClick}){
     let addedPositions = [];
@@ -71,12 +72,20 @@ const GooglMapWrapper = compose(
 class Map extends React.PureComponent {
     state = {
         addresses: undefined,
-        currentAddress: undefined
+        currentAddress: undefined,
+        count: null
     };
 
     componentDidMount() {
         let that = this;
-
+        fetch('http://localhost:3001/get')
+            .then(function(response) {
+                return response.json()
+            })
+            .then(function(responseAsJson) {
+                console.log(responseAsJson)
+                that.setState(responseAsJson)
+            });
         fetch('/static/crawler-result-with-locale.json')
             .then(function(response) {
                 return response.json()
@@ -88,6 +97,25 @@ class Map extends React.PureComponent {
 
     handleMarkerClick = (key, address) => {
         this.setState({ currentAddress: {key, address}})
+    };
+
+    handleClick = () => {
+        let that = this;
+        let count = this.state.count + 1;
+        fetch('http://localhost:3001/add', {
+            method: 'post',
+            body: JSON.stringify({
+                count: count
+            })
+        })
+        .then(function(response) {
+            console.log(response)
+            return response.json()
+        })
+        .then(function(responseAsJson) {
+            console.log(responseAsJson)
+            that.setState(responseAsJson)
+        });
     };
 
     render() {
@@ -104,6 +132,7 @@ class Map extends React.PureComponent {
                     margin: 0;
                   }
                 `}</style>
+                <button onClick={this.handleClick}>add  | {this.state.count}</button>
                 <GooglMapWrapper
                     onMarkerClick={this.handleMarkerClick}
                     addresses={this.state.addresses}
