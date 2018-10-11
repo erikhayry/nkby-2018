@@ -3,12 +3,16 @@ import { compose, withProps } from "recompose"
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
 import Head from 'next/head'
 import theme from '../static/theme.json';
-import axios from 'axios';
 
-function addMarkers({addresses, onMarkerClick}){
+function addMarkers({addresses, onMarkerClick, showApproved, approvedLocations}){
+    console.log(showApproved, approvedLocations)
     let addedPositions = [];
     if(addresses){
         return Object.keys(addresses).map((key) => {
+            if(showApproved && (!approvedLocations[key] || approvedLocations[key].approved.length === 0)){
+                return null;
+            }
+
             const address = addresses[key];
             if(address.locale){
                 const position = address.locale;
@@ -21,9 +25,19 @@ function addMarkers({addresses, onMarkerClick}){
                     position.lat = position.lat - 0.0001;
                     position.lng = position.lng + 0.0001;
                     addedPositions.push(JSON.stringify(position));
-                }
-                else{
+                } else{
                     addedPositions.push(positionAsString);
+                }
+
+                let label = 0;
+                if(showApproved){
+                    address.pages.forEach((page) => {
+                        if(approvedLocations[key].approved.includes(page.url)){
+                            label++
+                        }
+                    })
+                } else {
+                    label = address.pages.length;
                 }
 
                 return <Marker
@@ -31,7 +45,7 @@ function addMarkers({addresses, onMarkerClick}){
                     onClick={() => {
                         onMarkerClick(key, address)
                     }}
-                    label={address.pages.length.toString()}
+                    label={label.toString()}
                 />
             }
 
@@ -65,7 +79,7 @@ const GooglMapWrapper = compose(
             styles: theme
         }}
     >
-        {addMarkers((props))}
+        {addMarkers(props)}
     </GoogleMap>
 );
 
@@ -73,7 +87,8 @@ class Map extends React.PureComponent {
     state = {
         addresses: undefined,
         currentAddress: undefined,
-        count: null
+        editedLocations: {},
+        showApproved: false,
     };
 
     componentDidMount() {
@@ -83,8 +98,7 @@ class Map extends React.PureComponent {
                 return response.json()
             })
             .then(function(responseAsJson) {
-                console.log(responseAsJson)
-                that.setState(responseAsJson)
+                that.setState({editedLocations: responseAsJson})
             });
         fetch('/static/crawler-result-with-locale.json')
             .then(function(response) {
@@ -99,13 +113,19 @@ class Map extends React.PureComponent {
         this.setState({ currentAddress: {key, address}})
     };
 
-    handleClick = () => {
+    toggleView = () => {
+        this.setState({
+            showApproved: !this.state.showApproved
+        })
+    }
+
+    approve = ({id, url}) => {
+        console.log(id, url)
         let that = this;
-        let count = this.state.count + 1;
-        fetch('http://localhost:3001/add', {
+        fetch('http://localhost:3001/approve', {
             method: 'post',
             body: JSON.stringify({
-                count: count
+                id, url
             })
         })
         .then(function(response) {
@@ -114,7 +134,7 @@ class Map extends React.PureComponent {
         })
         .then(function(responseAsJson) {
             console.log(responseAsJson)
-            that.setState(responseAsJson)
+            that.setState({editedLocations: responseAsJson})
         });
     };
 
@@ -132,10 +152,14 @@ class Map extends React.PureComponent {
                     margin: 0;
                   }
                 `}</style>
-                <button onClick={this.handleClick}>add  | {this.state.count}</button>
+                <div>
+                    <button onClick={this.toggleView}>{this.state.showApproved ? 'Visa alla' : 'Visa godkända'}</button>
+                </div>
                 <GooglMapWrapper
                     onMarkerClick={this.handleMarkerClick}
                     addresses={this.state.addresses}
+                    showApproved={this.state.showApproved}
+                    approvedLocations={this.state.editedLocations}
                 />
                 {this.state.currentAddress && <div style={{
                     position: 'absolute',
@@ -167,6 +191,10 @@ class Map extends React.PureComponent {
                                     {page.images.length > 0 && <img src={`http://www.nykarlebyvyer.nu/${page.images[0].replace('../../../', '')}`} alt="" width="100px"/>}
                                     <br/>
                                     <a href={page.url} target="_blank">{page.title || page.url}</a>
+                                    <button onClick={()=> {this.approve({
+                                        id: this.state.currentAddress.key,
+                                        url: page.url
+                                    })}}>Godkänn</button>
                                 </li>
                             )
                         })}
