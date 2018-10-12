@@ -21,6 +21,7 @@ class App extends React.PureComponent {
                 return response.json()
             })
             .then(function(responseAsJson) {
+                console.log(responseAsJson)
                 that.setState({editedLocations: responseAsJson})
             });
         fetch('/static/crawler-result-with-locale.json')
@@ -43,22 +44,69 @@ class App extends React.PureComponent {
     }
 
     approve = ({id, url}) => {
-        console.log(id, url)
         let that = this;
-        fetch('http://localhost:3001/approve', {
+        fetch('http://localhost:3001/add/approved-page', {
             method: 'post',
             body: JSON.stringify({
                 id, url
             })
         })
         .then(function(response) {
-            console.log(response)
             return response.json()
         })
         .then(function(responseAsJson) {
             console.log(responseAsJson)
             that.setState({editedLocations: responseAsJson})
         });
+    };
+
+    undoApprove = ({id, url}) => {
+        let that = this;
+        fetch('http://localhost:3001/remove/approved-page', {
+            method: 'post',
+            body: JSON.stringify({
+                id, url
+            })
+        })
+        .then(function(response) {
+            return response.json()
+        })
+        .then(function(responseAsJson) {
+            console.log(responseAsJson)
+            that.setState({editedLocations: responseAsJson})
+        });
+    };
+
+    disapprove = ({id, url}) => {
+        let that = this;
+        fetch('http://localhost:3001/add/disapproved-page', {
+            method: 'post',
+            body: JSON.stringify({
+                id, url
+            })
+        })
+            .then(function(response) {
+                return response.json()
+            })
+            .then(function(responseAsJson) {
+                that.setState({editedLocations: responseAsJson})
+            });
+    };
+
+    undoDisapprove = ({id, url}) => {
+        let that = this;
+        fetch('http://localhost:3001/remove/disapproved-page', {
+            method: 'post',
+            body: JSON.stringify({
+                id, url
+            })
+        })
+            .then(function(response) {
+                return response.json()
+            })
+            .then(function(responseAsJson) {
+                that.setState({editedLocations: responseAsJson})
+            });
     };
 
     render() {
@@ -82,10 +130,15 @@ class App extends React.PureComponent {
                     onMarkerClick={this.handleMarkerClick}
                     addresses={this.state.addresses}
                     showApproved={this.state.showApproved}
-                    approvedLocations={this.state.editedLocations}
+                    editedLocations={this.state.editedLocations}
                 />
                 <Overlay
+                    approve={this.approve}
+                    undoApprove={this.undoApprove}
+                    disapprove={this.disapprove}
+                    undoDisapprove={this.undoDisapprove}
                     currentAddress={this.state.currentAddress}
+                    editedLocations={this.state.editedLocations}
                     closeOverlay={() => {
                         this.setState({
                             currentAddress: undefined

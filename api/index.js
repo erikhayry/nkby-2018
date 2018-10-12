@@ -25,7 +25,6 @@ function write(path, data) {
     });
 }
 
-
 const getData = async (req, res) => {
     let data = await read('data/edited-locations.json');
     send(res, 200, data)
@@ -66,7 +65,7 @@ const addToList = async (req, res, list) => {
     await write('data/edited-locations.json', editedLocations);
     editedLocations = await read('data/edited-locations.json');
     send(res, 200, editedLocations)
-}
+};
 
 module.exports = router(
     cors(post('/add/disapproved-page', (req, res) => {

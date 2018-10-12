@@ -1,5 +1,5 @@
 class Overlay extends React.PureComponent {
-    renderPage = (page, i) => {
+    renderPage = (page, i, key, type) => {
         return (
             <li key={i} style={{
                 listStyle: 'none',
@@ -10,10 +10,34 @@ class Overlay extends React.PureComponent {
                 {page.images.length > 0 && <img src={`http://www.nykarlebyvyer.nu/${page.images[0].replace('../../../', '')}`} alt="" width="100px"/>}
                 <br/>
                 <a href={page.url} target="_blank">{page.title || page.url}</a>
-                <button onClick={()=> {this.approve({
-                    id: this.state.currentAddress.key,
-                    url: page.url
-                })}}>Godkänn</button>
+
+
+                {type === 'unedited' && <div>
+                    <button onClick={()=> {this.props.approve({
+                        id: key,
+                        url: page.url
+                    })}}>Godkänn</button>
+                    <button onClick={()=> {this.props.disapprove({
+                        id: key,
+                        url: page.url
+                    })}}>Släng</button>
+                </div>}
+
+                {type === 'approved' && <div>
+                    <button onClick={()=> {this.props.undoApprove({
+                        id: key,
+                        url: page.url
+                    })}}>Ångra</button>
+                </div>}
+
+                {type === 'disapproved' && <div>
+                    <button onClick={()=> {this.props.undoDisapprove({
+                        id: key,
+                        url: page.url
+                    })}}>Ångra</button>
+                </div>}
+
+
             </li>
         )
     }
@@ -21,6 +45,13 @@ class Overlay extends React.PureComponent {
     render() {
         if(this.props.currentAddress){
             const {key, address} = this.props.currentAddress;
+            const approved = this.props.editedLocations[key] ?  this.props.editedLocations[key].approved : [];
+            const disapproved = this.props.editedLocations[key] ?  this.props.editedLocations[key].disapproved : [];
+
+            const approvedAddresses = address.pages.filter(page => approved.includes(page.url)) || [];
+            const disapprovedAddresses = address.pages.filter(page => disapproved.includes(page.url)) || [];
+            const uneditedAddresses = address.pages.filter(page => !disapproved.includes(page.url) && !approved.includes(page.url)) || [];
+
             return (
                 <div style={{
                     position: 'absolute',
@@ -42,24 +73,24 @@ class Overlay extends React.PureComponent {
                         padding: 0,
                         margin: 0
                     }}>
-                        {address.pages.map(this.renderPage)}
+                        {approvedAddresses.map((page, index) => this.renderPage(page, index, key, 'approved'))}
                     </ul>
                     <h2>Obehandlade</h2>
                     <ul style={{
                         padding: 0,
                         margin: 0
                     }}>
-                        {address.pages.map(this.renderPage)}
+                        {uneditedAddresses.map((page, index) => this.renderPage(page, index, key, 'unedited'))}
                     </ul>
                     <h2>Slängda</h2>
                     <ul style={{
                         padding: 0,
                         margin: 0
                     }}>
-                        {address.pages.map(this.renderPage)}
+                        {disapprovedAddresses.map((page, index) => this.renderPage(page, index, key, 'disapproved'))}
                     </ul>
 
-                    <button onClick={this.props.closeOverlay} style={{
+                    <button onClick={this.props.w} style={{
                         position: 'absolute',
                         right: '10px',
                         top: '10px'
