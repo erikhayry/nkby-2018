@@ -31,49 +31,41 @@ const getData = async (req, res) => {
     send(res, 200, data)
 };
 
-const approve = async (req, res) => {
+const removeFromList = async () => {
+
+}
+
+const addToList = async (req, res, list) => {
     const newEditedLocation = await json(req);
     let editedLocations = JSON.parse(await read('data/edited-locations.json'));
 
     if(editedLocations[newEditedLocation.id]){
-        if(!editedLocations[newEditedLocation.id].approved.includes(newEditedLocation.url)){
-            editedLocations[newEditedLocation.id].approved.push(newEditedLocation.url)
+        if(!editedLocations[newEditedLocation.id][list].includes(newEditedLocation.url)){
+            editedLocations[newEditedLocation.id][list].push(newEditedLocation.url)
         }
     } else {
         editedLocations[newEditedLocation.id] = {
-            approved: [
-                newEditedLocation.url
-            ]
-        }
+            approved: [],
+            disapproved: []
+        };
+        editedLocations[newEditedLocation.id][list].push(newEditedLocation.url);
     }
 
     await write('data/edited-locations.json', editedLocations);
     editedLocations = await read('data/edited-locations.json');
     send(res, 200, editedLocations)
-};
-
-const disapprove = async (req, res) => {
-    const newEditedLocation = await json(req);
-    let editedLocations = JSON.parse(await read('data/edited-locations.json'));
-
-    if(editedLocations[newEditedLocation.id]){
-        let index = editedLocations[newEditedLocation.id].disapproved.findIndexOf((url) => {
-            return url === newEditedLocation.url        
-        })
-
-        if(index){
-            editedLocations[newEditedLocation.id].disapproved.splice(index, 0);
-        }
-    
-    }
-
-    await write('data/edited-locations.json', editedLocations);
-    editedLocations = await read('data/edited-locations.json');
-    send(res, 200, editedLocations)
-};
+}
 
 module.exports = router(
-    cors(post('/approve', approve)),
-    cors(post('/disapprove', disapprove)),
+    cors(post('/add/disapproved-page', (req, res) => {
+        return addToList(req, res, 'disapproved');
+    })),
+    cors(post('/add/approved-page', (req, res) => {
+        return addToList(req, res, 'approved');
+    })),
+
+    //cors(post('/remove/approved-page', approve)),
+    //cors(post('/add/disapprove-page', approve)),
+    //cors(post('/remove/disapprove-page', approve)),
     cors(get('/get', getData))
 );
