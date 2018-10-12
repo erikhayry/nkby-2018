@@ -31,9 +31,21 @@ const getData = async (req, res) => {
     send(res, 200, data)
 };
 
-const removeFromList = async () => {
+const removeFromList = async (req, res, list) => {
+    const newEditedLocation = await json(req);
+    let editedLocations = JSON.parse(await read('data/edited-locations.json'));
 
-}
+    if(editedLocations[newEditedLocation.id]){
+        const locationIndex = editedLocations[newEditedLocation.id][list].indexOf(newEditedLocation.url)
+        if(locationIndex > -1){
+            editedLocations[newEditedLocation.id][list].splice(locationIndex, 1);
+        }
+    }
+
+    await write('data/edited-locations.json', editedLocations);
+    editedLocations = await read('data/edited-locations.json');
+    send(res, 200, editedLocations)
+};
 
 const addToList = async (req, res, list) => {
     const newEditedLocation = await json(req);
@@ -63,9 +75,11 @@ module.exports = router(
     cors(post('/add/approved-page', (req, res) => {
         return addToList(req, res, 'approved');
     })),
-
-    //cors(post('/remove/approved-page', approve)),
-    //cors(post('/add/disapprove-page', approve)),
-    //cors(post('/remove/disapprove-page', approve)),
+    cors(post('/remove/approved-page', (req, res) => {
+        return removeFromList(req, res, 'approved');
+    })),
+    cors(post('/remove/disapproved-page', (req, res) => {
+        return removeFromList(req, res, 'disapproved');
+    })),
     cors(get('/get', getData))
 );
