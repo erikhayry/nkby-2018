@@ -3,14 +3,11 @@ import { compose, withProps } from "recompose"
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
 import theme from '../static/theme.json';
 
-function addMarkers({addresses, onMarkerClick, showApproved, approvedLocations}){
+function addMarkers({addresses, onMarkerClick, locationFilter, editedLocations}){
     let addedPositions = [];
+
     if(addresses){
         return Object.keys(addresses).map((key) => {
-            if(showApproved && (!approvedLocations[key] || approvedLocations[key].approved.length === 0)){
-                return null;
-            }
-
             const address = addresses[key];
             if(address.locale){
                 const position = address.locale;
@@ -18,6 +15,31 @@ function addMarkers({addresses, onMarkerClick, showApproved, approvedLocations})
                 const positionAdded = addedPositions.find((position) => {
                     return position === positionAsString;
                 });
+                const hasApproved = editedLocations[key] ? address.pages.find(page => editedLocations[key].approved.includes(page.url)) : false;
+                const hasUnedited = editedLocations[key] ? address.pages.find(page => !editedLocations[key].approved.includes(page.url) && !editedLocations[key].disapproved.includes(page.url)) : true;
+                let label = 0;
+
+                if(locationFilter === 'approved'){
+                    if(!hasApproved ){
+                        return null;
+                    }
+                    address.pages.forEach((page) => {
+                        if(editedLocations[key] && editedLocations[key].approved.includes(page.url)){
+                            label++
+                        }
+                    })
+                } else if(locationFilter === 'unedited'){
+                    if(!hasUnedited ){
+                        return null;
+                    }
+                    address.pages.forEach((page) => {
+                        if(!editedLocations[key] || (!editedLocations[key].approved.includes(page.url) && !editedLocations[key].disapproved.includes(page.url))){
+                            label++
+                        }
+                    })
+                } else {
+                    label = address.pages.length;
+                }
 
                 if(positionAdded){
                     position.lat = position.lat - 0.0001;
@@ -25,17 +47,6 @@ function addMarkers({addresses, onMarkerClick, showApproved, approvedLocations})
                     addedPositions.push(JSON.stringify(position));
                 } else{
                     addedPositions.push(positionAsString);
-                }
-
-                let label = 0;
-                if(showApproved){
-                    address.pages.forEach((page) => {
-                        if(approvedLocations[key].approved.includes(page.url)){
-                            label++
-                        }
-                    })
-                } else {
-                    label = address.pages.length;
                 }
 
                 return <Marker

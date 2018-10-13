@@ -90,7 +90,7 @@ class Overlay extends React.PureComponent {
                         {disapprovedAddresses.map((page, index) => this.renderPage(page, index, key, 'disapproved'))}
                     </ul>
 
-                    <button onClick={this.props.w} style={{
+                    <button onClick={this.props.setCurrentAddress} style={{
                         position: 'absolute',
                         right: '10px',
                         top: '10px'

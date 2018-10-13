@@ -11,7 +11,7 @@ class App extends React.PureComponent {
         addresses: undefined,
         currentAddress: undefined,
         editedLocations: {},
-        showApproved: false,
+        locationFilter: 'all',
     };
 
     componentDidMount() {
@@ -33,13 +33,13 @@ class App extends React.PureComponent {
             });
     }
 
-    handleMarkerClick = (key, address) => {
-        this.setState({ currentAddress: {key, address}})
+    setCurrentAddress = (key, address) => {
+        this.setState({ currentAddress: key && address ? {key, address} : undefined})
     };
 
-    toggleView = () => {
+    setFilter = (type) => {
         this.setState({
-            showApproved: !this.state.showApproved
+            locationFilter: type
         })
     }
 
@@ -124,12 +124,20 @@ class App extends React.PureComponent {
                   }
                 `}</style>
                 <div>
-                    <button onClick={this.toggleView}>{this.state.showApproved ? 'Visa alla' : 'Visa godkända'}</button>
+                    <button onClick={() => {
+                        this.setFilter('approved')
+                    }}>{'Visa godkända'}</button>
+                    <button onClick={() => {
+                        this.setFilter('unedited')
+                    }}>{'Visa oediterade'}</button>
+                    <button onClick={() => {
+                        this.setFilter('all')
+                    }}>{'Visa alla'}</button>
                 </div>
                 <Map
-                    onMarkerClick={this.handleMarkerClick}
+                    onMarkerClick={this.setCurrentAddress}
                     addresses={this.state.addresses}
-                    showApproved={this.state.showApproved}
+                    locationFilter={this.state.locationFilter}
                     editedLocations={this.state.editedLocations}
                 />
                 <Overlay
@@ -139,11 +147,7 @@ class App extends React.PureComponent {
                     undoDisapprove={this.undoDisapprove}
                     currentAddress={this.state.currentAddress}
                     editedLocations={this.state.editedLocations}
-                    closeOverlay={() => {
-                        this.setState({
-                            currentAddress: undefined
-                        })
-                    }}
+                    setCurrentAddress={this.setCurrentAddress}
                 />
             </div>
         )
