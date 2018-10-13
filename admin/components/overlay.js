@@ -21,6 +21,7 @@ class Overlay extends React.PureComponent {
                         name: localeName,
                         pageUrl: page.url
                     })}}>Släng</button>
+                    <button onClick={()=> {this.props.disapproveGlobally(page.url)}}>Släng globalt</button>
                 </div>}
 
                 {type === 'approved' && <div>
@@ -44,13 +45,14 @@ class Overlay extends React.PureComponent {
 
     render() {
         if(this.props.currentLocale){
-            const {editedLocales = {}, currentLocale: {name, locale}} = this.props;
+            const {editedLocales = {}, currentLocale: {name, locale}, globallyDisapprovedPageUrls} = this.props;
             const approvedPageUrls = editedLocales[name] ?  editedLocales[name].approvedPageUrls : [];
             const disapprovedPageUrls = editedLocales[name] ?  editedLocales[name].disapprovedPageUrls : [];
+            const pages = locale.pages.filter(page => !globallyDisapprovedPageUrls.includes(page.url));
 
-            const approvedPageUrlsForLocale = locale.pages.filter(page => approvedPageUrls.includes(page.url)) || [];
-            const disapprovedPageUrlsForLocale = locale.pages.filter(page => disapprovedPageUrls.includes(page.url)) || [];
-            const uneditedPageUrlsForLocale = locale.pages.filter(page => !disapprovedPageUrls.includes(page.url) && !approvedPageUrls.includes(page.url)) || [];
+            const approvedPageUrlsForLocale = pages.filter(page => approvedPageUrls.includes(page.url)) || [];
+            const disapprovedPageUrlsForLocale = pages.filter(page => disapprovedPageUrls.includes(page.url)) || [];
+            const uneditedPageUrlsForLocale = pages.filter(page => !disapprovedPageUrls.includes(page.url) && !approvedPageUrls.includes(page.url)) || [];
 
             return (
                 <div style={{

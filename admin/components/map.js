@@ -3,13 +3,13 @@ import { compose, withProps } from "recompose"
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
 import theme from '../static/theme.json';
 
-function addMarkers({onMarkerClick, locales, localeFilter, editedLocales}){
+function addMarkers({onMarkerClick, locales, localeFilter, editedLocales, globallyDisapprovedPageUrls}){
     let addedPositions = [];
 
     if(locales){
         return Object.keys(locales).map((name) => {
             const locale = locales[name];
-            if(locale.position){
+            if(locale.position && locale.pages.some(page => !globallyDisapprovedPageUrls.includes(page.url))){
                 const position = locale.position;
                 const positionAsString = JSON.stringify(position);
                 const positionAdded = addedPositions.find((position) => {
@@ -17,13 +17,14 @@ function addMarkers({onMarkerClick, locales, localeFilter, editedLocales}){
                 });
                 const hasApprovedPageUrl = editedLocales[name] ? locale.pages.find(page => editedLocales[name].approvedPageUrls.includes(page.url)) : false;
                 const hasUneditedPageUrl = editedLocales[name] ? locale.pages.find(page => !editedLocales[name].approvedPageUrls.includes(page.url) && !editedLocales[name].disapprovedPageUrls.includes(page.url)) : true;
+                const pages = locale.pages.filter(page => !globallyDisapprovedPageUrls.includes(page.url));
                 let label = 0;
 
                 if(localeFilter === 'approved'){
                     if(!hasApprovedPageUrl ){
                         return null;
                     }
-                    locale.pages.forEach((page) => {
+                    pages.forEach((page) => {
                         if(editedLocales[name] && editedLocales[name].approvedPageUrls.includes(page.url)){
                             label++
                         }
@@ -32,13 +33,13 @@ function addMarkers({onMarkerClick, locales, localeFilter, editedLocales}){
                     if(!hasUneditedPageUrl ){
                         return null;
                     }
-                    locale.pages.forEach((page) => {
+                    pages.forEach((page) => {
                         if(!editedLocales[name] || (!editedLocales[name].approvedPageUrls.includes(page.url) && !editedLocales[name].disapprovedPageUrls.includes(page.url))){
                             label++
                         }
                     })
                 } else {
-                    label = locale.pages.length;
+                    label = pages.length;
                 }
 
                 if(positionAdded){
@@ -55,14 +56,14 @@ function addMarkers({onMarkerClick, locales, localeFilter, editedLocales}){
                     labelOrigin: new google.maps.Point(11, 12)
                 };
 
-                return <Marker
+                return label > 0 ? <Marker
                     key={name} position={position}
                     onClick={() => {
                         onMarkerClick(name, locale)
                     }}
                     icon={image}
                     label={label.toString()}
-                />
+                /> : null
             }
 
             return null;

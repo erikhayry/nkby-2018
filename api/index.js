@@ -30,6 +30,11 @@ const getEditedLocales = async (req, res) => {
     send(res, 200, data)
 };
 
+const getGlobalDisapproved= async (req, res) => {
+    let data = await read('data/disapproved.json');
+    send(res, 200, data)
+};
+
 const removeFromList = async (req, res, list) => {
     const editedLocale = await json(req);
     let editedLocales = JSON.parse(await read('data/edited-locales.json'));
@@ -67,6 +72,18 @@ const addToList = async (req, res, list) => {
     send(res, 200, editedLocales)
 };
 
+const addToGlobalDisapproveList = async (req, res) => {
+    const disapprovedUrl = await json(req);
+    let disapprovedUrls = JSON.parse(await read('data/disapproved.json'));
+
+    disapprovedUrls.push(disapprovedUrl);
+
+    await write('data/disapproved.json', disapprovedUrls);
+    disapprovedUrls = await read('data/disapproved.json');
+    send(res, 200, disapprovedUrls)
+};
+
+
 module.exports = router(
 
     cors(post('/add/approved-page-url', (req, res) => {
@@ -81,5 +98,9 @@ module.exports = router(
     cors(post('/remove/disapproved-page-url', (req, res) => {
         return removeFromList(req, res, 'disapprovedPageUrls');
     })),
-    cors(get('/get-edited-locales', getEditedLocales))
+    cors(post('/remove/disapproved-page-url-globally', (req, res) => {
+        return addToGlobalDisapproveList(req, res);
+    })),
+    cors(get('/get/disapproved-page-url-globally', getGlobalDisapproved)),
+    cors(get('/get/edited-locales', getEditedLocales))
 );

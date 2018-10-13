@@ -11,12 +11,13 @@ class App extends React.PureComponent {
         locales: [],
         currentLocale: undefined,
         editedLocales: {},
+        globallyDisapprovedPageUrls: [],
         localeFilter: 'all',
     };
 
     componentDidMount() {
         let that = this;
-        fetch('http://localhost:3001/get-edited-locales')
+        fetch('http://localhost:3001/get/edited-locales')
             .then(function(response) {
                 return response.json()
             })
@@ -31,6 +32,13 @@ class App extends React.PureComponent {
             .then(function(responseAsJson) {
                 that.setState({ locales: responseAsJson })
             });
+        fetch('http://localhost:3001/get/disapproved-page-url-globally')
+            .then(function(response) {
+                return response.json()
+            })
+            .then(function(responseAsJson) {
+                that.setState({ globallyDisapprovedPageUrls: responseAsJson })
+            });
     }
 
     setCurrentLocale = (name, locale) => {
@@ -43,70 +51,57 @@ class App extends React.PureComponent {
         })
     }
 
-    approve = ({name, pageUrl}) => {
+    api = (url, method, body = {}) => {
+        console.log(url, method, body)
         let that = this;
-        fetch('http://localhost:3001/add/approved-page-url', {
-            method: 'post',
-            body: JSON.stringify({
-                name, pageUrl
+        return fetch('http://localhost:3001' + url, {
+                method,
+                body: JSON.stringify(body)
             })
-        })
-        .then(function(response) {
-            return response.json()
-        })
+            .then(function(response) {
+                return response.json()
+            })
+    }
+
+    disapproveGlobally = (disapprovedUrl) => {
+        let that = this;
+        this.api('/remove/disapproved-page-url-globally', 'post', disapprovedUrl)
+            .then(function(responseAsJson) {
+                that.setState({globallyDisapprovedPageUrls: responseAsJson})
+            });
+    };
+
+    approve = (approvedUrlData) => {
+        let that = this;
+        this.api('/add/approved-page-url', 'post', approvedUrlData)
         .then(function(responseAsJson) {
             console.log(responseAsJson)
             that.setState({editedLocales: responseAsJson})
         });
     };
 
-    undoApprove = ({name, pageUrl}) => {
+    undoApprove = (approvedUrlData) => {
         let that = this;
-        fetch('http://localhost:3001/remove/approved-page-url', {
-            method: 'post',
-            body: JSON.stringify({
-                name, pageUrl
-            })
-        })
-        .then(function(response) {
-            return response.json()
-        })
+        this.api('/remove/approved-page-url', 'post', approvedUrlData)
         .then(function(responseAsJson) {
-            console.log(responseAsJson)
             that.setState({editedLocales: responseAsJson})
         });
     };
 
-    disapprove = ({name, pageUrl}) => {
+    disapprove = (approvedUrlData) => {
         let that = this;
-        fetch('http://localhost:3001/add/disapproved-page-url', {
-            method: 'post',
-            body: JSON.stringify({
-                name, pageUrl
-            })
-        })
-            .then(function(response) {
-                return response.json()
-            })
-            .then(function(responseAsJson) {
-                that.setState({editedLocales: responseAsJson})
-            });
+        this.api('/add/disapproved-page-url', 'post', approvedUrlData)
+        .then(function(responseAsJson) {
+            that.setState({editedLocales: responseAsJson})
+        });
     };
 
-    undoDisapprove = ({name, pageUrl}) => {
+    undoDisapprove = (approvedUrlData) => {
         let that = this;
-        fetch('http://localhost:3001/remove/disapproved-page-url', {
-            method: 'post',
-            body: JSON.stringify({
-                name, pageUrl
-            })
-        })
-            .then(function(response) {
-                return response.json()
-            })
-            .then(function(responseAsJson) {
-                that.setState({editedLocales: responseAsJson})
-            });
+        this.api('/remove/disapproved-page-url', 'post', approvedUrlData)
+        .then(function(responseAsJson) {
+            that.setState({editedLocales: responseAsJson})
+        });
     };
 
     render() {
@@ -142,13 +137,16 @@ class App extends React.PureComponent {
                     locales={this.state.locales}
                     localeFilter={this.state.localeFilter}
                     editedLocales={this.state.editedLocales}
+                    globallyDisapprovedPageUrls={this.state.globallyDisapprovedPageUrls}
                 />
                 <Overlay
                     approve={this.approve}
                     undoApprove={this.undoApprove}
                     disapprove={this.disapprove}
                     undoDisapprove={this.undoDisapprove}
+                    disapproveGlobally={this.disapproveGlobally}
 
+                    globallyDisapprovedPageUrls={this.state.globallyDisapprovedPageUrls}
                     currentLocale={this.state.currentLocale}
                     editedLocales={this.state.editedLocales}
                     setCurrentLocale={this.setCurrentLocale}
