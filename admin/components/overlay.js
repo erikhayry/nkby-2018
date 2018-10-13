@@ -72,21 +72,27 @@ class Overlay extends React.PureComponent {
                     <h2>Godkända</h2>
                     <ul style={{
                         padding: 0,
-                        margin: 0
+                        margin: 0,
+                        overflow: 'hidden',
+                        borderBottom: '1px solid #000'
                     }}>
                         {approvedPageUrlsForLocale.map((page, index) => this.renderPage(page, index, name, 'approved'))}
                     </ul>
                     <h2>Obehandlade</h2>
                     <ul style={{
                         padding: 0,
-                        margin: 0
+                        margin: 0,
+                        overflow: 'hidden',
+                        borderBottom: '1px solid #000'
                     }}>
                         {uneditedPageUrlsForLocale.map((page, index) => this.renderPage(page, index, name, 'unedited'))}
                     </ul>
                     <h2>Slängda</h2>
                     <ul style={{
                         padding: 0,
-                        margin: 0
+                        margin: 0,
+                        overflow: 'hidden',
+                        borderBottom: '1px solid #000'
                     }}>
                         {disapprovedPageUrlsForLocale.map((page, index) => this.renderPage(page, index, name, 'disapproved'))}
                     </ul>

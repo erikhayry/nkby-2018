@@ -49,11 +49,18 @@ function addMarkers({onMarkerClick, locales, localeFilter, editedLocales}){
                     addedPositions.push(positionAsString);
                 }
 
+                const image = {
+                    url: hasApprovedPageUrl ? 'http://localhost:3000/static/images/markers/_green.png' : 'http://localhost:3000/static/images/markers/_red.png',
+                    size: new google.maps.Size(22, 40),
+                    labelOrigin: new google.maps.Point(11, 12)
+                };
+
                 return <Marker
                     key={name} position={position}
                     onClick={() => {
                         onMarkerClick(name, locale)
                     }}
+                    icon={image}
                     label={label.toString()}
                 />
             }
