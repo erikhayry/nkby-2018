@@ -1,23 +1,8 @@
 import Crawler from "crawler";
 import fs from 'fs';
 import ProgressBar from 'progress';
-
-import geocodedLocales from '../data/geocoded-locale.json';
-import locales from '../data/locale.json';
+import locales from '../data/locales.json';
 import urls from '../data/urls.json';
-import areas from '../data/areas.json';
-
-const postalAreas = [
-    'ekola',
-    'pensala',
-    'jeppo',
-    'nykarleby',
-    'socklot',
-    'kovjoki',
-    'munsala',
-    'hirvlax',
-    'monå',
-];
 
 function getKey(addressWithStreetNumber, name){
     const address = addressWithStreetNumber && addressWithStreetNumber[0];

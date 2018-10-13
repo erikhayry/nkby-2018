@@ -8,47 +8,47 @@ import Map from '../components/map';
 
 class App extends React.PureComponent {
     state = {
-        addresses: undefined,
-        currentAddress: undefined,
-        editedLocations: {},
-        locationFilter: 'all',
+        locales: [],
+        currentLocale: undefined,
+        editedLocales: {},
+        localeFilter: 'all',
     };
 
     componentDidMount() {
         let that = this;
-        fetch('http://localhost:3001/get')
+        fetch('http://localhost:3001/get-edited-locales')
             .then(function(response) {
                 return response.json()
             })
             .then(function(responseAsJson) {
                 console.log(responseAsJson)
-                that.setState({editedLocations: responseAsJson})
+                that.setState({editedLocales: responseAsJson})
             });
-        fetch('/static/crawler-result-with-locale.json')
+        fetch('/static/crawler-result-with-locales.json')
             .then(function(response) {
                 return response.json()
             })
             .then(function(responseAsJson) {
-                that.setState({ addresses: responseAsJson })
+                that.setState({ locales: responseAsJson })
             });
     }
 
-    setCurrentAddress = (key, address) => {
-        this.setState({ currentAddress: key && address ? {key, address} : undefined})
+    setCurrentLocale = (name, locale) => {
+        this.setState({ currentLocale: name && locale ? {name, locale} : undefined})
     };
 
-    setFilter = (type) => {
+    setLocaleFilter = (type) => {
         this.setState({
-            locationFilter: type
+            localeFilter: type
         })
     }
 
-    approve = ({id, url}) => {
+    approve = ({name, pageUrl}) => {
         let that = this;
-        fetch('http://localhost:3001/add/approved-page', {
+        fetch('http://localhost:3001/add/approved-page-url', {
             method: 'post',
             body: JSON.stringify({
-                id, url
+                name, pageUrl
             })
         })
         .then(function(response) {
@@ -56,16 +56,16 @@ class App extends React.PureComponent {
         })
         .then(function(responseAsJson) {
             console.log(responseAsJson)
-            that.setState({editedLocations: responseAsJson})
+            that.setState({editedLocales: responseAsJson})
         });
     };
 
-    undoApprove = ({id, url}) => {
+    undoApprove = ({name, pageUrl}) => {
         let that = this;
-        fetch('http://localhost:3001/remove/approved-page', {
+        fetch('http://localhost:3001/remove/approved-page-url', {
             method: 'post',
             body: JSON.stringify({
-                id, url
+                name, pageUrl
             })
         })
         .then(function(response) {
@@ -73,39 +73,39 @@ class App extends React.PureComponent {
         })
         .then(function(responseAsJson) {
             console.log(responseAsJson)
-            that.setState({editedLocations: responseAsJson})
+            that.setState({editedLocales: responseAsJson})
         });
     };
 
-    disapprove = ({id, url}) => {
+    disapprove = ({name, pageUrl}) => {
         let that = this;
-        fetch('http://localhost:3001/add/disapproved-page', {
+        fetch('http://localhost:3001/add/disapproved-page-url', {
             method: 'post',
             body: JSON.stringify({
-                id, url
+                name, pageUrl
             })
         })
             .then(function(response) {
                 return response.json()
             })
             .then(function(responseAsJson) {
-                that.setState({editedLocations: responseAsJson})
+                that.setState({editedLocales: responseAsJson})
             });
     };
 
-    undoDisapprove = ({id, url}) => {
+    undoDisapprove = ({name, pageUrl}) => {
         let that = this;
-        fetch('http://localhost:3001/remove/disapproved-page', {
+        fetch('http://localhost:3001/remove/disapproved-page-url', {
             method: 'post',
             body: JSON.stringify({
-                id, url
+                name, pageUrl
             })
         })
             .then(function(response) {
                 return response.json()
             })
             .then(function(responseAsJson) {
-                that.setState({editedLocations: responseAsJson})
+                that.setState({editedLocales: responseAsJson})
             });
     };
 
@@ -123,31 +123,35 @@ class App extends React.PureComponent {
                     margin: 0;
                   }
                 `}</style>
-                <div>
-                    <button onClick={() => {
-                        this.setFilter('approved')
+                {!this.state.currentLocale && <div style={{
+                    position: 'fixed',
+                    zIndex: 1
+                }}>
+                    <button disabled={this.state.localeFilter === 'approved'} onClick={() => {
+                        this.setLocaleFilter('approved')
                     }}>{'Visa godkända'}</button>
-                    <button onClick={() => {
-                        this.setFilter('unedited')
+                    <button disabled={this.state.localeFilter === 'unedited'} onClick={() => {
+                        this.setLocaleFilter('unedited')
                     }}>{'Visa oediterade'}</button>
-                    <button onClick={() => {
-                        this.setFilter('all')
+                    <button disabled={this.state.localeFilter === 'all'} onClick={() => {
+                        this.setLocaleFilter('all')
                     }}>{'Visa alla'}</button>
-                </div>
+                </div>}
                 <Map
-                    onMarkerClick={this.setCurrentAddress}
-                    addresses={this.state.addresses}
-                    locationFilter={this.state.locationFilter}
-                    editedLocations={this.state.editedLocations}
+                    onMarkerClick={this.setCurrentLocale}
+                    locales={this.state.locales}
+                    localeFilter={this.state.localeFilter}
+                    editedLocales={this.state.editedLocales}
                 />
                 <Overlay
                     approve={this.approve}
                     undoApprove={this.undoApprove}
                     disapprove={this.disapprove}
                     undoDisapprove={this.undoDisapprove}
-                    currentAddress={this.state.currentAddress}
-                    editedLocations={this.state.editedLocations}
-                    setCurrentAddress={this.setCurrentAddress}
+
+                    currentLocale={this.state.currentLocale}
+                    editedLocales={this.state.editedLocales}
+                    setCurrentLocale={this.setCurrentLocale}
                 />
             </div>
         )

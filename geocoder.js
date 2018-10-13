@@ -1,12 +1,9 @@
 import fs from 'fs';
 import ProgressBar from 'progress';
-import locales from '../data/locale.json';
-import geoCodedLocale from '../data/geocoded-locale.json';
+import geoCodedLocale from '../data/geocoded-locales.json';
 import crawlerResult from '../data/crawler-result-lg.json';
 
 let bar, ignored = [], geoCodeSuccess = [], geoCodeErrors = [];
-
-
 const googleMapsClient = require('@google/maps').createClient({
     key: 'AIzaSyBoFBVnwa-VAWKXuZ5m32Jh6fL4lvPYVxQ',
     Promise: Promise
@@ -60,11 +57,11 @@ function toFile(data, path) {
 function addLocaleToCrawlerResult(geoCodedLocales, crawlerResult){
     geoCodedLocales.forEach(locale => {
         if(crawlerResult[locale.name]){
-            crawlerResult[locale.name].locale = locale.location;
+            crawlerResult[locale.name].location = locale.location;
         }
     });
 
-    toFile(crawlerResult, "admin/static/crawler-result-with-locale.json")
+    toFile(crawlerResult, "admin/static/crawler-result-with-locales.json")
 }
 
 function merge(a, b, prop){
@@ -81,7 +78,7 @@ function geoCodeCrawlerResult() {
     Promise.all(reqs)
         .then((newGeoCodedLocales) => {
             console.log(`Geocoding done, ignored: ${ignored.length}, success: ${geoCodeSuccess.length}, failed: ${geoCodeErrors.length}`);
-            toFile(merge(geoCodedLocale, newGeoCodedLocales, name), "data/geocoded-locale.json");
+            toFile(merge(geoCodedLocale, newGeoCodedLocales, name), "data/geocoded-locales.json");
             addLocaleToCrawlerResult(newGeoCodedLocales, crawlerResult);
         })
         .catch((err) => {
@@ -89,4 +86,4 @@ function geoCodeCrawlerResult() {
         });
 }
 
-geoCodeCrawlerResult()
+geoCodeCrawlerResult();

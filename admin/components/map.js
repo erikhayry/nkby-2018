@@ -3,42 +3,42 @@ import { compose, withProps } from "recompose"
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
 import theme from '../static/theme.json';
 
-function addMarkers({addresses, onMarkerClick, locationFilter, editedLocations}){
+function addMarkers({onMarkerClick, locales, localeFilter, editedLocales}){
     let addedPositions = [];
 
-    if(addresses){
-        return Object.keys(addresses).map((key) => {
-            const address = addresses[key];
-            if(address.locale){
-                const position = address.locale;
+    if(locales){
+        return Object.keys(locales).map((name) => {
+            const locale = locales[name];
+            if(locale.position){
+                const position = locale.position;
                 const positionAsString = JSON.stringify(position);
                 const positionAdded = addedPositions.find((position) => {
                     return position === positionAsString;
                 });
-                const hasApproved = editedLocations[key] ? address.pages.find(page => editedLocations[key].approved.includes(page.url)) : false;
-                const hasUnedited = editedLocations[key] ? address.pages.find(page => !editedLocations[key].approved.includes(page.url) && !editedLocations[key].disapproved.includes(page.url)) : true;
+                const hasApprovedPageUrl = editedLocales[name] ? locale.pages.find(page => editedLocales[name].approvedPageUrls.includes(page.url)) : false;
+                const hasUneditedPageUrl = editedLocales[name] ? locale.pages.find(page => !editedLocales[name].approvedPageUrls.includes(page.url) && !editedLocales[name].disapprovedPageUrls.includes(page.url)) : true;
                 let label = 0;
 
-                if(locationFilter === 'approved'){
-                    if(!hasApproved ){
+                if(localeFilter === 'approved'){
+                    if(!hasApprovedPageUrl ){
                         return null;
                     }
-                    address.pages.forEach((page) => {
-                        if(editedLocations[key] && editedLocations[key].approved.includes(page.url)){
+                    locale.pages.forEach((page) => {
+                        if(editedLocales[name] && editedLocales[name].approvedPageUrls.includes(page.url)){
                             label++
                         }
                     })
-                } else if(locationFilter === 'unedited'){
-                    if(!hasUnedited ){
+                } else if(localeFilter === 'unedited'){
+                    if(!hasUneditedPageUrl ){
                         return null;
                     }
-                    address.pages.forEach((page) => {
-                        if(!editedLocations[key] || (!editedLocations[key].approved.includes(page.url) && !editedLocations[key].disapproved.includes(page.url))){
+                    locale.pages.forEach((page) => {
+                        if(!editedLocales[name] || (!editedLocales[name].approvedPageUrls.includes(page.url) && !editedLocales[name].disapprovedPageUrls.includes(page.url))){
                             label++
                         }
                     })
                 } else {
-                    label = address.pages.length;
+                    label = locale.pages.length;
                 }
 
                 if(positionAdded){
@@ -50,9 +50,9 @@ function addMarkers({addresses, onMarkerClick, locationFilter, editedLocations})
                 }
 
                 return <Marker
-                    key={key} position={position}
+                    key={name} position={position}
                     onClick={() => {
-                        onMarkerClick(key, address)
+                        onMarkerClick(name, locale)
                     }}
                     label={label.toString()}
                 />

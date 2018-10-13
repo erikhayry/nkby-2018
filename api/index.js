@@ -25,60 +25,61 @@ function write(path, data) {
     });
 }
 
-const getData = async (req, res) => {
-    let data = await read('data/edited-locations.json');
+const getEditedLocales = async (req, res) => {
+    let data = await read('data/edited-locales.json');
     send(res, 200, data)
 };
 
 const removeFromList = async (req, res, list) => {
-    const newEditedLocation = await json(req);
-    let editedLocations = JSON.parse(await read('data/edited-locations.json'));
+    const editedLocale = await json(req);
+    let editedLocales = JSON.parse(await read('data/edited-locales.json'));
 
-    if(editedLocations[newEditedLocation.id]){
-        const locationIndex = editedLocations[newEditedLocation.id][list].indexOf(newEditedLocation.url)
+    if(editedLocales[editedLocale.name]){
+        const locationIndex = editedLocales[editedLocale.name][list].indexOf(editedLocale.pageUrl)
         if(locationIndex > -1){
-            editedLocations[newEditedLocation.id][list].splice(locationIndex, 1);
+            editedLocales[editedLocale.name][list].splice(locationIndex, 1);
         }
     }
 
-    await write('data/edited-locations.json', editedLocations);
-    editedLocations = await read('data/edited-locations.json');
-    send(res, 200, editedLocations)
+    await write('data/edited-locales.json', editedLocales);
+    editedLocales = await read('data/edited-locales.json');
+    send(res, 200, editedLocales)
 };
 
 const addToList = async (req, res, list) => {
-    const newEditedLocation = await json(req);
-    let editedLocations = JSON.parse(await read('data/edited-locations.json'));
+    const editedLocale = await json(req);
+    let editedLocales = JSON.parse(await read('data/edited-locales.json'));
 
-    if(editedLocations[newEditedLocation.id]){
-        if(!editedLocations[newEditedLocation.id][list].includes(newEditedLocation.url)){
-            editedLocations[newEditedLocation.id][list].push(newEditedLocation.url)
+    if(editedLocales[editedLocale.name]){
+        if(!editedLocales[editedLocale.name][list].includes(editedLocale.pageUrl)){
+            editedLocales[editedLocale.name][list].push(editedLocale.pageUrl)
         }
     } else {
-        editedLocations[newEditedLocation.id] = {
-            approved: [],
-            disapproved: []
+        editedLocales[editedLocale.name] = {
+            approvedPageUrls: [],
+            disapprovedPageUrls: []
         };
-        editedLocations[newEditedLocation.id][list].push(newEditedLocation.url);
+        editedLocales[editedLocale.name][list].push(editedLocale.pageUrl);
     }
 
-    await write('data/edited-locations.json', editedLocations);
-    editedLocations = await read('data/edited-locations.json');
-    send(res, 200, editedLocations)
+    await write('data/edited-locales.json', editedLocales);
+    editedLocales = await read('data/edited-locales.json');
+    send(res, 200, editedLocales)
 };
 
 module.exports = router(
-    cors(post('/add/disapproved-page', (req, res) => {
-        return addToList(req, res, 'disapproved');
+
+    cors(post('/add/approved-page-url', (req, res) => {
+        return addToList(req, res, 'approvedPageUrls');
     })),
-    cors(post('/add/approved-page', (req, res) => {
-        return addToList(req, res, 'approved');
+    cors(post('/remove/approved-page-url', (req, res) => {
+        return removeFromList(req, res, 'approvedPageUrls');
     })),
-    cors(post('/remove/approved-page', (req, res) => {
-        return removeFromList(req, res, 'approved');
+    cors(post('/add/disapproved-page-url', (req, res) => {
+        return addToList(req, res, 'disapprovedPageUrls');
     })),
-    cors(post('/remove/disapproved-page', (req, res) => {
-        return removeFromList(req, res, 'disapproved');
+    cors(post('/remove/disapproved-page-url', (req, res) => {
+        return removeFromList(req, res, 'disapprovedPageUrls');
     })),
-    cors(get('/get', getData))
+    cors(get('/get-edited-locales', getEditedLocales))
 );

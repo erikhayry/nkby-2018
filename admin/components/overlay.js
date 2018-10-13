@@ -1,5 +1,5 @@
 class Overlay extends React.PureComponent {
-    renderPage = (page, i, key, type) => {
+    renderPage = (page, i, localeName, type) => {
         return (
             <li key={i} style={{
                 listStyle: 'none',
@@ -14,43 +14,43 @@ class Overlay extends React.PureComponent {
 
                 {type === 'unedited' && <div>
                     <button onClick={()=> {this.props.approve({
-                        id: key,
-                        url: page.url
+                        name: localeName,
+                        pageUrl: page.url
                     })}}>Godkänn</button>
                     <button onClick={()=> {this.props.disapprove({
-                        id: key,
-                        url: page.url
+                        name: localeName,
+                        pageUrl: page.url
                     })}}>Släng</button>
                 </div>}
 
                 {type === 'approved' && <div>
                     <button onClick={()=> {this.props.undoApprove({
-                        id: key,
-                        url: page.url
+                        name: localeName,
+                        pageUrl: page.url
                     })}}>Ångra</button>
                 </div>}
 
                 {type === 'disapproved' && <div>
                     <button onClick={()=> {this.props.undoDisapprove({
-                        id: key,
-                        url: page.url
+                        name: localeName,
+                        pageUrl: page.url
                     })}}>Ångra</button>
                 </div>}
 
 
             </li>
         )
-    }
+    };
 
     render() {
-        if(this.props.currentAddress){
-            const {key, address} = this.props.currentAddress;
-            const approved = this.props.editedLocations[key] ?  this.props.editedLocations[key].approved : [];
-            const disapproved = this.props.editedLocations[key] ?  this.props.editedLocations[key].disapproved : [];
+        if(this.props.currentLocale){
+            const {editedLocales = {}, currentLocale: {name, locale}} = this.props;
+            const approvedPageUrls = editedLocales[name] ?  editedLocales[name].approvedPageUrls : [];
+            const disapprovedPageUrls = editedLocales[name] ?  editedLocales[name].disapprovedPageUrls : [];
 
-            const approvedAddresses = address.pages.filter(page => approved.includes(page.url)) || [];
-            const disapprovedAddresses = address.pages.filter(page => disapproved.includes(page.url)) || [];
-            const uneditedAddresses = address.pages.filter(page => !disapproved.includes(page.url) && !approved.includes(page.url)) || [];
+            const approvedPageUrlsForLocale = locale.pages.filter(page => approvedPageUrls.includes(page.url)) || [];
+            const disapprovedPageUrlsForLocale = locale.pages.filter(page => disapprovedPageUrls.includes(page.url)) || [];
+            const uneditedPageUrlsForLocale = locale.pages.filter(page => !disapprovedPageUrls.includes(page.url) && !approvedPageUrls.includes(page.url)) || [];
 
             return (
                 <div style={{
@@ -67,30 +67,31 @@ class Overlay extends React.PureComponent {
                     <h1 style={{
                         textAlign: 'center',
                         textTransform: 'capitalize'
-                    }}>{key}</h1>
+                    }}>{name}</h1>
+
                     <h2>Godkända</h2>
                     <ul style={{
                         padding: 0,
                         margin: 0
                     }}>
-                        {approvedAddresses.map((page, index) => this.renderPage(page, index, key, 'approved'))}
+                        {approvedPageUrlsForLocale.map((page, index) => this.renderPage(page, index, name, 'approved'))}
                     </ul>
                     <h2>Obehandlade</h2>
                     <ul style={{
                         padding: 0,
                         margin: 0
                     }}>
-                        {uneditedAddresses.map((page, index) => this.renderPage(page, index, key, 'unedited'))}
+                        {uneditedPageUrlsForLocale.map((page, index) => this.renderPage(page, index, name, 'unedited'))}
                     </ul>
                     <h2>Slängda</h2>
                     <ul style={{
                         padding: 0,
                         margin: 0
                     }}>
-                        {disapprovedAddresses.map((page, index) => this.renderPage(page, index, key, 'disapproved'))}
+                        {disapprovedPageUrlsForLocale.map((page, index) => this.renderPage(page, index, name, 'disapproved'))}
                     </ul>
 
-                    <button onClick={this.props.setCurrentAddress} style={{
+                    <button onClick={this.props.setCurrentLocale} style={{
                         position: 'absolute',
                         right: '10px',
                         top: '10px'
