@@ -1,4 +1,34 @@
 class Overlay extends React.PureComponent {
+    state = {
+        showAllImages: false
+    };
+
+    showAllImages = (url) => {
+        this.setState({
+            showAllImages: url
+        })
+    };
+
+    setAsPreferredImages = (pageUrl, url) => {
+        console.log('setAsPreferredImages', pageUrl, url)
+    };
+
+    renderImages = (pageUrl, images = []) => {
+        if(this.state.showAllImages === pageUrl){
+            return images.map(url => {
+                return <img key={url} onClick={() => {
+                    this.setAsPreferredImages(pageUrl, url);
+                }} src={`http://www.nykarlebyvyer.nu/${url.replace('../../../', '')}`} alt="" width="100px"/>
+            })
+        } else if(images.length > 0){
+            return <img onClick={() => {
+                this.showAllImages(pageUrl)
+            }} src={`http://www.nykarlebyvyer.nu/${images[0].replace('../../../', '')}`} alt="" width="100px"/>
+        }
+
+        return null;
+    };
+
     renderPage = (page, i, localeName, type) => {
         return (
             <li key={i} style={{
@@ -7,7 +37,7 @@ class Overlay extends React.PureComponent {
                 float: 'left',
                 marginBottom: '10px'
             }}>
-                {page.images.length > 0 && <img src={`http://www.nykarlebyvyer.nu/${page.images[0].replace('../../../', '')}`} alt="" width="100px"/>}
+                {this.renderImages(page.url, page.images)}
                 <br/>
                 <a href={page.url} target="_blank">{page.title || page.url}</a>
 
