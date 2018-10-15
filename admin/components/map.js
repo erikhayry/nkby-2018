@@ -56,7 +56,7 @@ function addMarkers({onMarkerClick, locales, localeFilter, editedLocales, global
                 }
 
                 const image = {
-                    url: hasApprovedPageUrl ? 'http://localhost:3000/static/images/markers/_green.png' : 'http://localhost:3000/static/images/markers/_red.png',
+                    url: hasApprovedPageUrl ? '/static/images/markers/_green.png' : '/static/images/markers/_red.png',
                     size: new google.maps.Size(22, 40),
                     labelOrigin: new google.maps.Point(11, 12)
                 };
