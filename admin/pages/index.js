@@ -71,6 +71,15 @@ class App extends React.PureComponent {
             });
     };
 
+    addPreferredPageImage = (preferredImageData) => {
+        let that = this;
+        this.api('/add/preferred-page-image', 'post', preferredImageData)
+            .then(function(responseAsJson) {
+                console.log(responseAsJson)
+                that.setState({editedLocales: responseAsJson})
+            });
+    }
+
     approve = (approvedUrlData) => {
         let that = this;
         this.api('/add/approved-page-url', 'post', approvedUrlData)
@@ -140,6 +149,7 @@ class App extends React.PureComponent {
                     globallyDisapprovedPageUrls={this.state.globallyDisapprovedPageUrls}
                 />
                 <Overlay
+                    addPreferredPageImage={this.addPreferredPageImage}
                     approve={this.approve}
                     undoApprove={this.undoApprove}
                     disapprove={this.disapprove}

@@ -15,8 +15,8 @@ function addMarkers({onMarkerClick, locales, localeFilter, editedLocales, global
                 const positionAdded = addedPositions.find((position) => {
                     return position === positionAsString;
                 });
-                const hasApprovedPageUrl = editedLocales[name] ? locale.pages.find(page => editedLocales[name].approvedPageUrls.includes(page.url)) : false;
-                const hasUneditedPageUrl = editedLocales[name] ? locale.pages.find(page => !editedLocales[name].approvedPageUrls.includes(page.url) && !editedLocales[name].disapprovedPageUrls.includes(page.url)) : true;
+                const hasApprovedPageUrl = editedLocales[name] ? locale.pages.find(page => editedLocales[name].approvedPages.find(approvedPage => approvedPage.url === page.url)) : false;
+                const hasUneditedPageUrl = editedLocales[name] ? locale.pages.find(page => !editedLocales[name].approvedPages.includes(page.url) && !editedLocales[name].disapprovedPages.includes(page.url)) : true;
                 const pages = locale.pages.filter(page => !globallyDisapprovedPageUrls.includes(page.url));
                 let label = 0;
 
@@ -25,7 +25,7 @@ function addMarkers({onMarkerClick, locales, localeFilter, editedLocales, global
                         return null;
                     }
                     pages.forEach((page) => {
-                        if(editedLocales[name] && editedLocales[name].approvedPageUrls.includes(page.url)){
+                        if(editedLocales[name] && editedLocales[name].approvedPages.find(approvedPage => approvedPage.url === page.url)){
                             label++
                         }
                     })
@@ -34,7 +34,12 @@ function addMarkers({onMarkerClick, locales, localeFilter, editedLocales, global
                         return null;
                     }
                     pages.forEach((page) => {
-                        if(!editedLocales[name] || (!editedLocales[name].approvedPageUrls.includes(page.url) && !editedLocales[name].disapprovedPageUrls.includes(page.url))){
+                        if(!editedLocales[name] ||
+                            (
+                                !editedLocales[name].approvedPages.find(approvedPage => approvedPage.url === page.url) &&
+                                !editedLocales[name].disapprovedPages.find(disapprovedPage => disapprovedPage.url === page.url)
+                            )
+                        ){
                             label++
                         }
                     })

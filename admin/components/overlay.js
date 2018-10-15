@@ -1,6 +1,6 @@
 class Overlay extends React.PureComponent {
     state = {
-        showAllImages: false
+        showAllImages: undefined
     };
 
     showAllImages = (url) => {
@@ -9,38 +9,99 @@ class Overlay extends React.PureComponent {
         })
     };
 
-    setAsPreferredImages = (pageUrl, url) => {
-        console.log('setAsPreferredImages', pageUrl, url)
+    setAsPreferredImages = (localeName, pageUrl, preferredImage) => {
+        console.log('setAsPreferredImages', localeName, pageUrl, preferredImage);
+        this.props.addPreferredPageImage({
+            name: localeName,
+            pageUrl,
+            preferredImage
+        })
     };
 
-    renderImages = (pageUrl, images = []) => {
+    renderImages = (localeName, pageUrl, images = [], type, preferredImage) => {
         if(this.state.showAllImages === pageUrl){
-            return images.map(url => {
-                return <img key={url} onClick={() => {
-                    this.setAsPreferredImages(pageUrl, url);
-                }} src={`http://www.nykarlebyvyer.nu/${url.replace('../../../', '')}`} alt="" width="100px"/>
-            })
+            return (
+                <div style={{
+                    textAlign: 'center'
+                }}>
+                    {images.map(url => {
+                        return <img
+                            key={url}
+                            onClick={() => {
+                                this.setState({
+                                    showAllImages: undefined
+                                }, () => {
+                                    this.setAsPreferredImages(localeName, pageUrl, url);
+                                });
+                            }}
+                            src={`http://www.nykarlebyvyer.nu/${url.replace('../../../', '')}`}
+                            alt=""
+                            width="300px"
+                            style={{
+                                margin: 10,
+                                border: preferredImage === url ? '5px solid #ff5858' : 'none'
+                            }}
+                        />
+                    })}
+                    <br/>
+                    <button onClick={() => {
+                        this.showAllImages();
+                    }}>Stäng</button>
+                </div>
+
+            )
+
         } else if(images.length > 0){
-            return <img onClick={() => {
-                this.showAllImages(pageUrl)
-            }} src={`http://www.nykarlebyvyer.nu/${images[0].replace('../../../', '')}`} alt="" width="100px"/>
+            let src = preferredImage || images[0];
+            return (
+                <div style={{
+                    position: 'relative',
+                    display: 'inline-block'
+                }}>
+                    <img
+                        onClick={() => {
+                            if(type === 'approved'){
+                                this.showAllImages(pageUrl)
+                            }
+                        }}
+                        src={`http://www.nykarlebyvyer.nu/${src.replace('../../../', '')}`}
+                        alt=""
+                        width="200px"
+                        style={{
+                            opacity: preferredImage ? 1 : 0.5
+                        }}
+                    />
+                    <div style={{
+                        position: 'absolute',
+                        top: 5,
+                        right: 5,
+                        color: '#fff',
+                        backgroundColor: '#ff5858',
+                        padding: 2
+                    }}>{images.length}</div>
+                </div>
+            )
         }
 
         return null;
     };
 
-    renderPage = (page, i, localeName, type) => {
+    renderPage = (page, i, localeName, type, approvedPage = {}) => {
         return (
             <li key={i} style={{
                 listStyle: 'none',
-                width: '50%',
+                width: this.state.showAllImages && this.state.showAllImages === page.url ? '100%' : '50%',
                 float: 'left',
-                marginBottom: '10px'
+                marginBottom: '10px',
+                display: this.state.showAllImages && this.state.showAllImages !== page.url ? 'none' : 'block',
+                textAlign: 'center'
             }}>
-                {this.renderImages(page.url, page.images)}
+                {this.renderImages(localeName, page.url, page.images, type, approvedPage.preferredImage)}
                 <br/>
-                <a href={page.url} target="_blank">{page.title || page.url}</a>
-
+                <a href={page.url} target="_blank" style={{
+                    display: 'block',
+                    marginBottom: 10
+                }}>{page.title || page.url}</a>
 
                 {type === 'unedited' && <div>
                     <button onClick={()=> {this.props.approve({
@@ -76,13 +137,13 @@ class Overlay extends React.PureComponent {
     render() {
         if(this.props.currentLocale){
             const {editedLocales = {}, currentLocale: {name, locale}, globallyDisapprovedPageUrls} = this.props;
-            const approvedPageUrls = editedLocales[name] ?  editedLocales[name].approvedPageUrls : [];
-            const disapprovedPageUrls = editedLocales[name] ?  editedLocales[name].disapprovedPageUrls : [];
+            const approvedPages = editedLocales[name] ?  editedLocales[name].approvedPages : [];
+            const disapprovedPages = editedLocales[name] ?  editedLocales[name].disapprovedPages : [];
             const pages = locale.pages.filter(page => !globallyDisapprovedPageUrls.includes(page.url));
 
-            const approvedPageUrlsForLocale = pages.filter(page => approvedPageUrls.includes(page.url)) || [];
-            const disapprovedPageUrlsForLocale = pages.filter(page => disapprovedPageUrls.includes(page.url)) || [];
-            const uneditedPageUrlsForLocale = pages.filter(page => !disapprovedPageUrls.includes(page.url) && !approvedPageUrls.includes(page.url)) || [];
+            const approvedPagesForLocale = pages.filter(page => approvedPages.find((approvedPage) => approvedPage.url === page.url)) || [];
+            const disapprovedPagesForLocale = pages.filter(page => disapprovedPages.find((disapprovedPage) => disapprovedPage.url === page.url)) || [];
+            const uneditedPageUrlsForLocale = pages.filter(page => !disapprovedPages.find((disapprovedPage) => disapprovedPage.url === page.url) && !approvedPages.find((approvedPage) => approvedPage.url === page.url)) || [];
 
             return (
                 <div style={{
@@ -108,7 +169,7 @@ class Overlay extends React.PureComponent {
                         overflow: 'hidden',
                         borderBottom: '1px solid #000'
                     }}>
-                        {approvedPageUrlsForLocale.map((page, index) => this.renderPage(page, index, name, 'approved'))}
+                        {approvedPagesForLocale.map((page, index) => this.renderPage(page, index, name, 'approved', approvedPages.find((approvedPage) => approvedPage.url === page.url)))}
                     </ul>
                     <h2>Obehandlade</h2>
                     <ul style={{
@@ -126,14 +187,20 @@ class Overlay extends React.PureComponent {
                         overflow: 'hidden',
                         borderBottom: '1px solid #000'
                     }}>
-                        {disapprovedPageUrlsForLocale.map((page, index) => this.renderPage(page, index, name, 'disapproved'))}
+                        {disapprovedPagesForLocale.map((page, index) => this.renderPage(page, index, name, 'disapproved'))}
                     </ul>
 
-                    <button onClick={this.props.setCurrentLocale} style={{
+                    <button onClick={() => {
+                        this.setState({
+                            showAllImages: undefined
+                        }, () => {
+                            this.props.setCurrentLocale()
+                        });
+                    }} style={{
                         position: 'absolute',
                         right: '10px',
                         top: '10px'
-                    }}>Stäng</button>
+                    }}>Tillbaka till kartan</button>
                 </div>
             )
         }
