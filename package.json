@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "search": "./node_modules/.bin/babel index.js --out-dir lib --presets=@babel/env && node lib/index.js",
     "geocoder": "./node_modules/.bin/babel geocoder.js --out-dir lib --presets=@babel/env && node lib/geocoder.js",
+    "build": "./node_modules/.bin/babel build-web-data.js --out-dir lib --presets=@babel/env && node lib/build-web-data.js",
     "start": "npm run search && npm run geocoder"
   },
   "repository": {
