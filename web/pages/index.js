@@ -1,13 +1,11 @@
 import React from "react"
 import { compose, withProps } from "recompose"
 import Head from 'next/head'
-import Overlay from '../components/overlay';
 import Map from '../components/map';
 
 class App extends React.PureComponent {
     state = {
         locales: [],
-        currentLocale: undefined
     };
 
     componentDidMount() {
@@ -21,10 +19,6 @@ class App extends React.PureComponent {
             });
     }
 
-    setCurrentLocale = (name, locale) => {
-        this.setState({ currentLocale: name && locale ? {name, locale} : undefined})
-    };
-
     render() {
         return (
             <div>
@@ -34,18 +28,12 @@ class App extends React.PureComponent {
                 </Head>
                 <style jsx global>{`
                   body {
-                    font: 11px menlo;
                     color: #222;
                     margin: 0;
                   }
                 `}</style>
                 <Map
-                    onMarkerClick={this.setCurrentLocale}
                     locales={this.state.locales}
-                />
-                <Overlay
-                    currentLocale={this.state.currentLocale}
-                    setCurrentLocale={this.setCurrentLocale}
                 />
             </div>
         )

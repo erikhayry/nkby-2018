@@ -13,6 +13,7 @@ class App extends React.PureComponent {
         editedLocales: {},
         globallyDisapprovedPageUrls: [],
         localeFilter: 'all',
+        starredPages: []
     };
 
     componentDidMount() {
@@ -38,6 +39,13 @@ class App extends React.PureComponent {
             })
             .then(function(responseAsJson) {
                 that.setState({ globallyDisapprovedPageUrls: responseAsJson })
+            });
+        fetch('http://localhost:3001/get/starred-pages')
+            .then(function(response) {
+                return response.json()
+            })
+            .then(function(responseAsJson) {
+                that.setState({ starredPages: responseAsJson })
             });
     }
 
@@ -71,11 +79,18 @@ class App extends React.PureComponent {
             });
     };
 
+    addStarForPage = (pageUrl) => {
+        let that = this;
+        this.api('/add/starred-page', 'post', pageUrl)
+            .then(function(responseAsJson) {
+                that.setState({starredPages: responseAsJson})
+            });
+    };
+
     addPreferredPageImage = (preferredImageData) => {
         let that = this;
         this.api('/add/preferred-page-image', 'post', preferredImageData)
             .then(function(responseAsJson) {
-                console.log(responseAsJson)
                 that.setState({editedLocales: responseAsJson})
             });
     }
@@ -84,7 +99,6 @@ class App extends React.PureComponent {
         let that = this;
         this.api('/add/approved-page-url', 'post', approvedUrlData)
         .then(function(responseAsJson) {
-            console.log(responseAsJson)
             that.setState({editedLocales: responseAsJson})
         });
     };
@@ -155,8 +169,10 @@ class App extends React.PureComponent {
                     disapprove={this.disapprove}
                     undoDisapprove={this.undoDisapprove}
                     disapproveGlobally={this.disapproveGlobally}
+                    addStarForPage={this.addStarForPage}
 
                     globallyDisapprovedPageUrls={this.state.globallyDisapprovedPageUrls}
+                    starredPages={this.state.starredPages}
                     currentLocale={this.state.currentLocale}
                     editedLocales={this.state.editedLocales}
                     setCurrentLocale={this.setCurrentLocale}

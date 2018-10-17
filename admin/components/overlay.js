@@ -86,7 +86,7 @@ class Overlay extends React.PureComponent {
         return null;
     };
 
-    renderPage = (page, i, localeName, type, approvedPage = {}) => {
+    renderPage = (page, i, localeName, type, approvedPage = {}, isStarred) => {
         return (
             <li key={i} style={{
                 listStyle: 'none',
@@ -101,7 +101,7 @@ class Overlay extends React.PureComponent {
                 <a href={page.url} target="_blank" style={{
                     display: 'block',
                     marginBottom: 10
-                }}>{page.title || page.url}</a>
+                }}>{page.title || page.url}{isStarred && '★'}</a>
 
                 {type === 'unedited' && <div>
                     <button onClick={()=> {this.props.approve({
@@ -129,6 +129,7 @@ class Overlay extends React.PureComponent {
                     })}}>Ångra</button>
                 </div>}
 
+                <button onClick={()=> {this.props.addStarForPage(page.url)}} disabled={isStarred}>Stjärnmärk</button>
 
             </li>
         )
@@ -136,7 +137,7 @@ class Overlay extends React.PureComponent {
 
     render() {
         if(this.props.currentLocale){
-            const {editedLocales = {}, currentLocale: {name, locale}, globallyDisapprovedPageUrls} = this.props;
+            const {editedLocales = {}, currentLocale: {name, locale}, globallyDisapprovedPageUrls, starredPages} = this.props;
             const approvedPages = editedLocales[name] ?  editedLocales[name].approvedPages : [];
             const disapprovedPages = editedLocales[name] ?  editedLocales[name].disapprovedPages : [];
             const pages = locale.pages.filter(page => !globallyDisapprovedPageUrls.includes(page.url));
@@ -169,7 +170,7 @@ class Overlay extends React.PureComponent {
                         overflow: 'hidden',
                         borderBottom: '1px solid #000'
                     }}>
-                        {approvedPagesForLocale.map((page, index) => this.renderPage(page, index, name, 'approved', approvedPages.find((approvedPage) => approvedPage.url === page.url)))}
+                        {approvedPagesForLocale.map((page, index) => this.renderPage(page, index, name, 'approved', approvedPages.find((approvedPage) => approvedPage.url === page.url), starredPages.includes(page.url)))}
                     </ul>
                     <h2>Obehandlade</h2>
                     <ul style={{
@@ -178,7 +179,7 @@ class Overlay extends React.PureComponent {
                         overflow: 'hidden',
                         borderBottom: '1px solid #000'
                     }}>
-                        {uneditedPageUrlsForLocale.map((page, index) => this.renderPage(page, index, name, 'unedited'))}
+                        {uneditedPageUrlsForLocale.map((page, index) => this.renderPage(page, index, name, 'unedited', undefined, starredPages.includes(page.url)))}
                     </ul>
                     <h2>Slängda</h2>
                     <ul style={{
@@ -187,7 +188,7 @@ class Overlay extends React.PureComponent {
                         overflow: 'hidden',
                         borderBottom: '1px solid #000'
                     }}>
-                        {disapprovedPagesForLocale.map((page, index) => this.renderPage(page, index, name, 'disapproved'))}
+                        {disapprovedPagesForLocale.map((page, index) => this.renderPage(page, index, name, 'disapproved', undefined, starredPages.includes(page.url)))}
                     </ul>
 
                     <button onClick={() => {

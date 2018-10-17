@@ -20,6 +20,15 @@ function addMarkers({onMarkerClick, locales, localeFilter, editedLocales, global
                 const pages = locale.pages.filter(page => !globallyDisapprovedPageUrls.includes(page.url));
                 let label = 0;
 
+
+
+                let marker = '/static/images/markers/_red.png';
+                if(editedLocales[name] && editedLocales[name].approvedPages.every(page => page.preferredImage) && hasUneditedPageUrl){
+                    marker = '/static/images/markers/_purple.png';
+                } else if(hasApprovedPageUrl){
+                    marker = '/static/images/markers/_green.png';
+                }
+
                 if(localeFilter === 'approved'){
                     if(!hasApprovedPageUrl ){
                         return null;
@@ -56,7 +65,7 @@ function addMarkers({onMarkerClick, locales, localeFilter, editedLocales, global
                 }
 
                 const image = {
-                    url: hasApprovedPageUrl ? '/static/images/markers/_green.png' : '/static/images/markers/_red.png',
+                    url: marker,
                     size: new google.maps.Size(22, 40),
                     labelOrigin: new google.maps.Point(11, 12)
                 };

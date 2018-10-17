@@ -30,8 +30,13 @@ const getEditedLocales = async (req, res) => {
     send(res, 200, data)
 };
 
-const getGlobalDisapproved= async (req, res) => {
+const getGlobalDisapproved = async (req, res) => {
     let data = await read('data/disapproved.json');
+    send(res, 200, data)
+};
+
+const getStarredPages = async (req, res) => {
+    let data = await read('data/starred-pages.json');
     send(res, 200, data)
 };
 
@@ -83,6 +88,17 @@ const addToGlobalDisapproveList = async (req, res) => {
     send(res, 200, disapprovedUrls)
 };
 
+const addToStarredPages = async (req, res) => {
+    const starredLocale = await json(req);
+    let starredPages = JSON.parse(await read('data/starred-pages.json'));
+
+    starredPages.push(starredLocale);
+
+    await write('data/starred-pages.json', starredPages);
+    starredPages = await read('data/starred-pages.json');
+    send(res, 200, starredPages)
+};
+
 const addImageToPage = async (req, res) => {
     const editedLocale = await json(req);
     let editedLocales = JSON.parse(await read('data/edited-locales.json'));
@@ -119,6 +135,10 @@ module.exports = router(
     cors(post('/remove/disapproved-page-url-globally', (req, res) => {
         return addToGlobalDisapproveList(req, res);
     })),
+    cors(post('/add/starred-page', (req, res) => {
+        return addToStarredPages(req, res);
+    })),
     cors(get('/get/disapproved-page-url-globally', getGlobalDisapproved)),
-    cors(get('/get/edited-locales', getEditedLocales))
+    cors(get('/get/edited-locales', getEditedLocales)),
+    cors(get('/get/starred-pages', getStarredPages))
 );
