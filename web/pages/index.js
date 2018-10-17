@@ -5,8 +5,12 @@ import Map from '../components/map';
 
 class App extends React.PureComponent {
     state = {
-        locales: [],
+        locales: []
     };
+
+    updateDimensions() {
+        this.setState({isSmallDevice: window.innerWidth < 800});
+    }
 
     componentDidMount() {
         let that = this;
@@ -17,7 +21,16 @@ class App extends React.PureComponent {
             .then(function(responseAsJson) {
                 that.setState({ locales: responseAsJson })
             });
+
+        this.updateDimensions()       
+        window.addEventListener("resize", this.updateDimensions.bind(this));
+        navigator.geolocation.getCurrentPosition((position) => {
+          console.log(position)
+        });
     }
+    componentWillUnmount() {
+        window.removeEventListener("resize", this.updateDimensions);
+    }  
 
     render() {
         return (
@@ -34,6 +47,7 @@ class App extends React.PureComponent {
                 `}</style>
                 <Map
                     locales={this.state.locales}
+                    isSmallDevice={this.state.isSmallDevice}
                 />
             </div>
         )

@@ -93,30 +93,46 @@ class Overlay extends React.PureComponent {
                 width: '100%',
                 float: 'left',
                 marginBottom: '10px',
-                textAlign: 'center'
+                textAlign: 'left'
             }}>
-                <img
-                    src={`http://www.nykarlebyvyer.nu/${page.image.replace('../../../', '')}`}
-                    alt=""
-                    width="200px"
-                />
-                <br/>
+
                 <a href={page.url} target="_blank" style={{
                     display: 'block',
-                    marginBottom: 10
-                }}>{page.title || page.url}</a>
+                    textDecoration: 'none',
+                }}>
+                    <img
+                        src={`http://www.nykarlebyvyer.nu/${page.image.replace('../../../', '')}`}
+                        alt=""
+                        width="400px"
+                        style={{
+                            maxWidth: '100%'
+                        }}
+                    />
+                    <br />
+                    <div style={{
+                        display: 'inline-block',
+                        marginBottom: 20,
+                        color: '#fff',
+                        backgroundColor: '#222',
+                        padding: 5,
+                        textDecoration: 'none',
+                        maxWidth: '75%',
+                        fontSize: 16
+                    }}>{page.title || page.url}</div>
+                </a>
             </li>
         )
     };
 
     render() {
         if(this.props.currentLocale){
-            let {name, locale} = this.props.currentLocale;
+            console.log(this.props.currentLocale)
+            let {currentLocale} = this.props;
             return (
                 <div style={{
                     position: 'absolute',
                     top: '0',
-                    backgroundColor: '#ffffffbd',
+                    backgroundColor: 'rgba(256, 256, 256, 0.8)',
                     width: '100%',
                     height: '100%',
                     overflow: 'auto',
@@ -127,15 +143,14 @@ class Overlay extends React.PureComponent {
                     <h1 style={{
                         textAlign: 'center',
                         textTransform: 'capitalize'
-                    }}>{name}</h1>
+                    }}>{currentLocale.name}</h1>
 
                     <ul style={{
                         padding: 0,
                         margin: 0,
                         overflow: 'hidden',
-                        borderBottom: '1px solid #000'
                     }}>
-                        {locale.pages.map((page, index) => this.renderPage(page, index, name))}
+                        {currentLocale.pages.map((page, index) => this.renderPage(page, index, name))}
                     </ul>
 
 

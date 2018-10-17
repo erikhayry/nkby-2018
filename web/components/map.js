@@ -2,6 +2,7 @@ import React from "react"
 import { compose, withProps, withStateHandlers } from "recompose"
 import { withScriptjs, withGoogleMap, GoogleMap, Marker, InfoWindow } from "react-google-maps"
 import theme from '../static/theme.json';
+import Overlay from './overlay.js';
 
 
 function renderPage(page, i){
@@ -55,7 +56,7 @@ function addMarkers(props){
                     onToggleOpen({name, ...locale})
                 }}
             >
-                {currentLocale.name === name && <InfoWindow onCloseClick={onToggleOpen}>
+                {!props.isSmallDevice && currentLocale.name === name && <InfoWindow onCloseClick={onToggleOpen}>
                     <div style={{
                         width: 300,
                         height: 400,
@@ -75,6 +76,10 @@ function addMarkers(props){
                         </ul>
                     </div>
                 </InfoWindow>}
+                {props.isSmallDevice && currentLocale.name === name && <Overlay 
+                    currentLocale={currentLocale}
+                    setCurrentLocale={onToggleOpen}
+                />}
             </Marker>
         })
     }
