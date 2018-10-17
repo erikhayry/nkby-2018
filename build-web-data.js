@@ -21,6 +21,4 @@ Object.keys(editedLocales).forEach(key => {
     }
 });
 
-console.log(JSON.stringify(res))
-
 fs.writeFile('web/static/locales.json', JSON.stringify(res))
