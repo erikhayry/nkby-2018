@@ -88,5 +88,5 @@ function searchUrls(locales, urls) {
     });
 }
 
-let filteredUrls = urls.filter(url => url.indexOf('sidor/texter/') === 0);
+let filteredUrls = urls.filter(url => url.indexOf('sidor/texter/') === 0 || url.indexOf('/sidor/kortindi/') === 0);
 searchUrls(locales, filteredUrls);
