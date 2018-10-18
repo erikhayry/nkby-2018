@@ -2,7 +2,7 @@ import React from "react"
 import { compose, withProps } from "recompose"
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
 import Head from 'next/head'
-import theme from '../static/theme.json';
+import theme from '../static/themes/dark.json';
 import Overlay from '../components/overlay';
 import Map from '../components/map';
 
@@ -13,7 +13,8 @@ class App extends React.PureComponent {
         editedLocales: {},
         globallyDisapprovedPageUrls: [],
         localeFilter: 'all',
-        starredPages: []
+        starredPages: [],
+        reportedLocales: []
     };
 
     componentDidMount() {
@@ -46,6 +47,13 @@ class App extends React.PureComponent {
             })
             .then(function(responseAsJson) {
                 that.setState({ starredPages: responseAsJson })
+            });
+        fetch('http://localhost:3001/get/reported-locales')
+            .then(function(response) {
+                return response.json()
+            })
+            .then(function(responseAsJson) {
+                that.setState({ reportedLocales: responseAsJson })
             });
     }
 
@@ -84,6 +92,14 @@ class App extends React.PureComponent {
         this.api('/add/starred-page', 'post', pageUrl)
             .then(function(responseAsJson) {
                 that.setState({starredPages: responseAsJson})
+            });
+    };
+
+    addReportedLocale = (name) => {
+        let that = this;
+        this.api('/add/reported-locale', 'post', name)
+            .then(function(responseAsJson) {
+                that.setState({reportedLocales: responseAsJson})
             });
     };
 
@@ -170,9 +186,11 @@ class App extends React.PureComponent {
                     undoDisapprove={this.undoDisapprove}
                     disapproveGlobally={this.disapproveGlobally}
                     addStarForPage={this.addStarForPage}
+                    addReportedLocale={this.addReportedLocale}
 
                     globallyDisapprovedPageUrls={this.state.globallyDisapprovedPageUrls}
                     starredPages={this.state.starredPages}
+                    reportedLocales={this.state.reportedLocales}
                     currentLocale={this.state.currentLocale}
                     editedLocales={this.state.editedLocales}
                     setCurrentLocale={this.setCurrentLocale}

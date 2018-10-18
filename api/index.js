@@ -40,6 +40,11 @@ const getStarredPages = async (req, res) => {
     send(res, 200, data)
 };
 
+const getReportedLocales = async (req, res) => {
+    let data = await read('data/reported-locales.json');
+    send(res, 200, data)
+};
+
 const removeFromList = async (req, res, list) => {
     const editedLocale = await json(req);
     let editedLocales = JSON.parse(await read('data/edited-locales.json'));
@@ -89,14 +94,25 @@ const addToGlobalDisapproveList = async (req, res) => {
 };
 
 const addToStarredPages = async (req, res) => {
-    const starredLocale = await json(req);
+    const starredPage = await json(req);
     let starredPages = JSON.parse(await read('data/starred-pages.json'));
 
-    starredPages.push(starredLocale);
+    starredPages.push(starredPage);
 
     await write('data/starred-pages.json', starredPages);
     starredPages = await read('data/starred-pages.json');
     send(res, 200, starredPages)
+};
+
+const addToReportedLocale = async (req, res) => {
+    const reportedLocale = await json(req);
+    let reportedLocales = JSON.parse(await read('data/reported-locales.json'));
+
+    reportedLocales.push(reportedLocale);
+
+    await write('data/reported-locales.json', reportedLocales);
+    reportedLocales = await read('data/reported-locales.json');
+    send(res, 200, reportedLocales)
 };
 
 const addImageToPage = async (req, res) => {
@@ -117,9 +133,7 @@ const addImageToPage = async (req, res) => {
 
 
 module.exports = router(
-    cors(post('/add/preferred-page-image', (req, res) => {
-        return addImageToPage(req, res);
-    })),
+    cors(post('/add/preferred-page-image', addImageToPage)),
     cors(post('/add/approved-page-url', (req, res) => {
         return addToList(req, res, 'approvedPages');
     })),
@@ -132,13 +146,11 @@ module.exports = router(
     cors(post('/remove/disapproved-page-url', (req, res) => {
         return removeFromList(req, res, 'disapprovedPages');
     })),
-    cors(post('/remove/disapproved-page-url-globally', (req, res) => {
-        return addToGlobalDisapproveList(req, res);
-    })),
-    cors(post('/add/starred-page', (req, res) => {
-        return addToStarredPages(req, res);
-    })),
+    cors(post('/remove/disapproved-page-url-globally', addToGlobalDisapproveList)),
+    cors(post('/add/starred-page', addToStarredPages)),
+    cors(post('/add/reported-locale', addToReportedLocale)),
     cors(get('/get/disapproved-page-url-globally', getGlobalDisapproved)),
     cors(get('/get/edited-locales', getEditedLocales)),
-    cors(get('/get/starred-pages', getStarredPages))
+    cors(get('/get/starred-pages', getStarredPages)),
+    cors(get('/get/reported-locales', getReportedLocales))
 );

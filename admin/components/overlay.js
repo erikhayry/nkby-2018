@@ -137,7 +137,7 @@ class Overlay extends React.PureComponent {
 
     render() {
         if(this.props.currentLocale){
-            const {editedLocales = {}, currentLocale: {name, locale}, globallyDisapprovedPageUrls, starredPages} = this.props;
+            const {editedLocales = {}, currentLocale: {name, locale}, globallyDisapprovedPageUrls, starredPages, reportedLocales} = this.props;
             const approvedPages = editedLocales[name] ?  editedLocales[name].approvedPages : [];
             const disapprovedPages = editedLocales[name] ?  editedLocales[name].disapprovedPages : [];
             const pages = locale.pages.filter(page => !globallyDisapprovedPageUrls.includes(page.url));
@@ -145,6 +145,8 @@ class Overlay extends React.PureComponent {
             const approvedPagesForLocale = pages.filter(page => approvedPages.find((approvedPage) => approvedPage.url === page.url)) || [];
             const disapprovedPagesForLocale = pages.filter(page => disapprovedPages.find((disapprovedPage) => disapprovedPage.url === page.url)) || [];
             const uneditedPageUrlsForLocale = pages.filter(page => !disapprovedPages.find((disapprovedPage) => disapprovedPage.url === page.url) && !approvedPages.find((approvedPage) => approvedPage.url === page.url)) || [];
+
+            const localeIsReported = reportedLocales.includes(name);
 
             return (
                 <div style={{
@@ -160,8 +162,10 @@ class Overlay extends React.PureComponent {
                 }}>
                     <h1 style={{
                         textAlign: 'center',
-                        textTransform: 'capitalize'
-                    }}>{name}</h1>
+                        textTransform: 'capitalize',
+                        color: localeIsReported ? 'red' : '#000'
+                    }}>{name} <button onClick={()=> {this.props.addReportedLocale(name)}} disabled={localeIsReported}>Rapportera</button>
+                    </h1>
 
                     <h2>Godkända</h2>
                     <ul style={{

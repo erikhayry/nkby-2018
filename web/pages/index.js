@@ -22,11 +22,8 @@ class App extends React.PureComponent {
                 that.setState({ locales: responseAsJson })
             });
 
-        this.updateDimensions()       
+        this.updateDimensions();
         window.addEventListener("resize", this.updateDimensions.bind(this));
-        navigator.geolocation.getCurrentPosition((position) => {
-          console.log(position)
-        });
     }
     componentWillUnmount() {
         window.removeEventListener("resize", this.updateDimensions);
@@ -43,6 +40,8 @@ class App extends React.PureComponent {
                   body {
                     color: #222;
                     margin: 0;
+                    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                    font-weight: 300;
                   }
                 `}</style>
                 <Map

@@ -1,8 +1,9 @@
 import React from "react"
-import { compose, withProps, withStateHandlers } from "recompose"
+import { compose, withProps, withStateHandlers, withHandlers } from "recompose"
 import { withScriptjs, withGoogleMap, GoogleMap, Marker, InfoWindow } from "react-google-maps"
-import theme from '../static/theme.json';
+import theme from '../static/themes/dark.json';
 import Overlay from './overlay.js';
+
 
 
 function renderPage(page, i){
@@ -36,7 +37,11 @@ function renderPage(page, i){
                     bottom: 10,
                     right: 5,
                     maxWidth: '50%',
-                    fontSize: 16
+                    fontSize: 16,
+                    maxHeight: 'calc(100% - 30px)',
+                    overflow: 'hidden',
+                    boxSizing: 'border-box',
+                    border: '5px solid #222'
                 }}>{page.title || page.url}</div>
             </a>
 
@@ -45,7 +50,6 @@ function renderPage(page, i){
 }
 
 function addMarkers(props){
-    console.log(props);
     const {onToggleOpen, locales, currentLocale = {}} = props;
     if(locales) {
         return Object.keys(locales).map((name) => {
@@ -64,8 +68,11 @@ function addMarkers(props){
                         padding: 5
                     }}>
                         <h1 style={{
-                            textAlign: 'center',
-                            textTransform: 'capitalize'
+                            textTransform: 'capitalize',
+                            margin: '5px 0 20px',
+                            letterSpacing: 2,
+                            color: '#ceb216',
+                            textAlign: 'left'
                         }}>{currentLocale.name}</h1>
                         <ul style={{
                             padding: 0,
@@ -88,6 +95,24 @@ function addMarkers(props){
 }
 
 const Map = compose(
+    withHandlers(() => {
+        const refs = {
+            map: undefined
+        };
+
+        return {
+            onMapMounted: () => ref => {
+                refs.map = ref
+            },
+            setLocation: () => () => {
+                console.log('setLocation')
+                navigator.geolocation.getCurrentPosition((position) => {
+                    refs.map.panTo({lat: position.coords.latitude, lng: position.coords.longitude})
+                });
+            }
+        }
+    }),
+
     withStateHandlers(() => ({
         currentLocale: undefined,
     }), {
@@ -106,21 +131,39 @@ const Map = compose(
     withScriptjs,
     withGoogleMap
 )((props) =>
-    <GoogleMap
-        defaultZoom={12}
-        defaultCenter={{ lat: 63.5217687, lng: 22.5216011 }}
-
-        options={{
-            fullscreenControl: false,
-            mapTypeControl: false,
-            streetViewControl: false,
-            zoomControl: true,
-            scaleControl: false,
-            styles: theme
-        }}
-    >
-        {addMarkers(props)}
-    </GoogleMap>
+    <div>
+        <GoogleMap
+            defaultZoom={12}
+            defaultCenter={{ lat: 63.5217687, lng: 22.5216011 }}
+            ref={props.onMapMounted}
+            options={{
+                fullscreenControl: !props.isSmallDevice,
+                mapTypeControl: false,
+                streetViewControl: false,
+                zoomControl: true,
+                scaleControl: false,
+                scrollwheel: false,
+                locationControl: true,
+                styles: theme,
+            }}
+        >
+            {addMarkers(props)}
+        </GoogleMap>
+        <button onClick={() => {
+            props.setLocation()
+        }} style={{
+            backgroundColor: 'transparent',
+            position: 'absolute',
+            top: 5,
+            left: 5,
+            padding: 4,
+            color: '#fff',
+            border: '2px solid #fff',
+            textTransform: 'uppercase',
+            fontSize: '14',
+            zIndex: 1
+        }}>Hitta mig</button>
+    </div>
 );
 
 export default Map;

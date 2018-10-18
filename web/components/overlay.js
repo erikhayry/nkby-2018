@@ -1,99 +1,12 @@
 class Overlay extends React.PureComponent {
-    state = {
-        showAllImages: undefined
-    };
-
-    showAllImages = (url) => {
-        this.setState({
-            showAllImages: url
-        })
-    };
-
-    setAsPreferredImages = (localeName, pageUrl, preferredImage) => {
-        console.log('setAsPreferredImages', localeName, pageUrl, preferredImage);
-        this.props.addPreferredPageImage({
-            name: localeName,
-            pageUrl,
-            preferredImage
-        })
-    };
-
-    renderImages = (localeName, pageUrl, images = [], type, preferredImage) => {
-        if(this.state.showAllImages === pageUrl){
-            return (
-                <div style={{
-                    textAlign: 'center'
-                }}>
-                    {images.map(url => {
-                        return <img
-                            key={url}
-                            onClick={() => {
-                                this.setState({
-                                    showAllImages: undefined
-                                }, () => {
-                                    this.setAsPreferredImages(localeName, pageUrl, url);
-                                });
-                            }}
-                            src={`http://www.nykarlebyvyer.nu/${url.replace('../../../', '')}`}
-                            alt=""
-                            width="300px"
-                            style={{
-                                margin: 10,
-                                border: preferredImage === url ? '5px solid #ff5858' : 'none'
-                            }}
-                        />
-                    })}
-                    <br/>
-                    <button onClick={() => {
-                        this.showAllImages();
-                    }}>Stäng</button>
-                </div>
-
-            )
-
-        } else if(images.length > 0){
-            let src = preferredImage || images[0];
-            return (
-                <div style={{
-                    position: 'relative',
-                    display: 'inline-block'
-                }}>
-                    <img
-                        onClick={() => {
-                            if(type === 'approved'){
-                                this.showAllImages(pageUrl)
-                            }
-                        }}
-                        src={`http://www.nykarlebyvyer.nu/${src.replace('../../../', '')}`}
-                        alt=""
-                        width="200px"
-                        style={{
-                            opacity: preferredImage ? 1 : 0.5
-                        }}
-                    />
-                    <div style={{
-                        position: 'absolute',
-                        top: 5,
-                        right: 5,
-                        color: '#fff',
-                        backgroundColor: '#ff5858',
-                        padding: 2
-                    }}>{images.length}</div>
-                </div>
-            )
-        }
-
-        return null;
-    };
-
-    renderPage = (page, i, localeName) => {
+    renderPage = (page, i) => {
         return (
             <li key={i} style={{
                 listStyle: 'none',
                 width: '100%',
                 float: 'left',
                 marginBottom: '10px',
-                textAlign: 'left'
+                textAlign: 'center'
             }}>
 
                 <a href={page.url} target="_blank" style={{
@@ -126,13 +39,12 @@ class Overlay extends React.PureComponent {
 
     render() {
         if(this.props.currentLocale){
-            console.log(this.props.currentLocale)
             let {currentLocale} = this.props;
             return (
                 <div style={{
                     position: 'absolute',
                     top: '0',
-                    backgroundColor: 'rgba(256, 256, 256, 0.8)',
+                    backgroundColor: 'rgba(256, 256, 256, 0.9)',
                     width: '100%',
                     height: '100%',
                     overflow: 'auto',
@@ -142,13 +54,17 @@ class Overlay extends React.PureComponent {
                 }}>
                     <h1 style={{
                         textAlign: 'center',
-                        textTransform: 'capitalize'
+                        textTransform: 'capitalize',
+                        margin: '5px 0 20px',
+                        letterSpacing: 2,
+                        color: '#ceb216',
                     }}>{currentLocale.name}</h1>
 
                     <ul style={{
                         padding: 0,
-                        margin: 0,
+                        margin: '0 auto',
                         overflow: 'hidden',
+                        maxWidth: 600
                     }}>
                         {currentLocale.pages.map((page, index) => this.renderPage(page, index, name))}
                     </ul>
@@ -159,8 +75,11 @@ class Overlay extends React.PureComponent {
                     }} style={{
                         position: 'absolute',
                         right: '10px',
-                        top: '10px'
-                    }}>Tillbaka till kartan</button>
+                        top: '10px',
+                        border: 'none',
+                        backgroundColor: '#222',
+                        color: '#fff'
+                    }}>Stäng</button>
                 </div>
             )
         }
