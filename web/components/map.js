@@ -16,15 +16,18 @@ function renderPage(page, i){
         }}>
             <a href={page.url} target="_blank" style={{
                 textDecoration: 'none',
+                display: 'block',
+                minHeight: 100,
+                width: '100%'
             }}>
-                <img
+                {page.image && <img
                     src={`http://www.nykarlebyvyer.nu/${page.image.replace('../../../', '')}`}
                     alt=""
                     width="100%"
                     style={{
                         maxWidth: '100%'
                     }}
-                />
+                />}
                 <br/>
                 <div style={{
                     display: 'inline-block',

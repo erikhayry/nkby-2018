@@ -12,15 +12,17 @@ class Overlay extends React.PureComponent {
                 <a href={page.url} target="_blank" style={{
                     display: 'block',
                     textDecoration: 'none',
+                    minHeight: 300,
+                    width: '100%'
                 }}>
-                    <img
+                    {page.image && <img
                         src={`http://www.nykarlebyvyer.nu/${page.image.replace('../../../', '')}`}
                         alt=""
                         width="400px"
                         style={{
                             maxWidth: '100%'
                         }}
-                    />
+                    />}
                     <br />
                     <div style={{
                         display: 'inline-block',
@@ -49,7 +51,8 @@ class Overlay extends React.PureComponent {
                     height: '100%',
                     overflow: 'auto',
                     padding: '10px',
-                    boxSizing: 'border-box'
+                    boxSizing: 'border-box',
+                    zIndex: 2
 
                 }}>
                     <h1 style={{
@@ -74,11 +77,12 @@ class Overlay extends React.PureComponent {
                         this.props.setCurrentLocale()
                     }} style={{
                         position: 'absolute',
-                        right: '10px',
-                        top: '10px',
-                        border: 'none',
-                        backgroundColor: '#222',
-                        color: '#fff'
+                        right: 5,
+                        top: 5,
+                        padding: 4,
+                        border: '2px solid #222',
+                        backgroundColor: 'transparent',
+                        color: '#222'
                     }}>Stäng</button>
                 </div>
             )
