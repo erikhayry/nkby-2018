@@ -103,6 +103,24 @@ class App extends React.PureComponent {
             });
     };
 
+    updateLocale = (data) => {
+        console.log(data)
+        let that = this;
+        this.api('/add/locale-data', 'post', data)
+            .then(function(responseAsJson) {
+                that.setState({editedLocales: responseAsJson})
+            });
+    };
+
+    addName = (data) => {
+        console.log(data)
+        let that = this;
+        this.api('/add/locale-data', 'post', data)
+            .then(function(responseAsJson) {
+                that.setState({editedLocales: responseAsJson})
+            });
+    };
+
     addPreferredPageImage = (preferredImageData) => {
         let that = this;
         this.api('/add/preferred-page-image', 'post', preferredImageData)
@@ -178,7 +196,7 @@ class App extends React.PureComponent {
                     editedLocales={this.state.editedLocales}
                     globallyDisapprovedPageUrls={this.state.globallyDisapprovedPageUrls}
                 />
-                <Overlay
+                {this.state.currentLocale && <Overlay
                     addPreferredPageImage={this.addPreferredPageImage}
                     approve={this.approve}
                     undoApprove={this.undoApprove}
@@ -187,14 +205,16 @@ class App extends React.PureComponent {
                     disapproveGlobally={this.disapproveGlobally}
                     addStarForPage={this.addStarForPage}
                     addReportedLocale={this.addReportedLocale}
+                    addName={this.addName}
+                    updateLocale={this.updateLocale}
+                    setCurrentLocale={this.setCurrentLocale}
 
                     globallyDisapprovedPageUrls={this.state.globallyDisapprovedPageUrls}
                     starredPages={this.state.starredPages}
                     reportedLocales={this.state.reportedLocales}
                     currentLocale={this.state.currentLocale}
                     editedLocales={this.state.editedLocales}
-                    setCurrentLocale={this.setCurrentLocale}
-                />
+                />}
             </div>
         )
     }

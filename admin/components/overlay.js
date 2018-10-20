@@ -1,7 +1,29 @@
 class Overlay extends React.PureComponent {
     state = {
-        showAllImages: undefined
+        showAllImages: undefined,
+        inputValueLng: 0,
+        inputValueLat: 0,
+        inputValueName: ''
     };
+
+    updateInputValueLng(evt) {
+        this.setState({
+            inputValueLng: evt.target.value
+        });
+    }
+
+    updateInputValueLat(evt) {
+        this.setState({
+            inputValueLat: evt.target.value
+        });
+    }
+
+    updateInputValueName(evt) {
+        this.setState({
+            inputValueName: evt.target.value
+        });
+    }
+
 
     showAllImages = (url) => {
         this.setState({
@@ -138,8 +160,9 @@ class Overlay extends React.PureComponent {
     render() {
         if(this.props.currentLocale){
             const {editedLocales = {}, currentLocale: {name, locale}, globallyDisapprovedPageUrls, starredPages, reportedLocales} = this.props;
-            const approvedPages = editedLocales[name] ?  editedLocales[name].approvedPages : [];
-            const disapprovedPages = editedLocales[name] ?  editedLocales[name].disapprovedPages : [];
+            const editedLocale = editedLocales[name] || {};
+            console.log(editedLocale)
+            const { approvedPages = [], disapprovedPages = [], alternativeNames = [], position: editedPosition = {}} = editedLocale;
             const pages = locale.pages.filter(page => !globallyDisapprovedPageUrls.includes(page.url));
 
             const approvedPagesForLocale = pages.filter(page => approvedPages.find((approvedPage) => approvedPage.url === page.url)) || [];
@@ -164,8 +187,39 @@ class Overlay extends React.PureComponent {
                         textAlign: 'center',
                         textTransform: 'capitalize',
                         color: localeIsReported ? 'red' : '#000'
-                    }}>{name} <button onClick={()=> {this.props.addReportedLocale(name)}} disabled={localeIsReported}>Rapportera</button>
+                    }}>
+                        {name}
                     </h1>
+
+                    <div>
+                        <button onClick={()=> {this.props.addReportedLocale(name)}} disabled={localeIsReported}>Rapportera</button>
+                        <hr/>
+                        <input type="number" placeholder={'lng'} defaultValue={editedPosition ? editedPosition.lng: locale.position.lng} onChange={evt => this.updateInputValueLng(evt)}/>
+                        <input type="number" placeholder={'lat'} defaultValue={editedPosition ? editedPosition.lat: locale.position.lat} onChange={evt => this.updateInputValueLat(evt)}/>
+
+                        <button onClick={() => {
+                            this.props.updateLocale({
+                                name,
+                                position: {
+                                    lng: Number(this.state.inputValueLng),
+                                    lat: Number(this.state.inputValueLat)
+                                }
+                            });
+
+                        }}>Ändra kordinater</button>
+
+                        <hr/>
+                        {alternativeNames.map(name => (<span key={name}>{name} </span>))} :
+                        <input type="text" placeholder={'namn'} value={this.state.inputValueName} onChange={evt => this.updateInputValueName(evt)}/>
+
+                        <button onClick={() => {
+                            this.props.addName({
+                                name,
+                                alternativeNames: [...alternativeNames, this.state.inputValueName]
+                            });
+
+                        }}>Lägg till namn</button>
+                    </div>
 
                     <h2>Godkända</h2>
                     <ul style={{
@@ -176,7 +230,7 @@ class Overlay extends React.PureComponent {
                     }}>
                         {approvedPagesForLocale.map((page, index) => this.renderPage(page, index, name, 'approved', approvedPages.find((approvedPage) => approvedPage.url === page.url), starredPages.includes(page.url)))}
                     </ul>
-                    <h2>Obehandlade</h2>
+                    <h2>Obehandlade ({uneditedPageUrlsForLocale.length})</h2>
                     <ul style={{
                         padding: 0,
                         margin: 0,

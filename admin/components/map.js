@@ -10,20 +10,20 @@ function addMarkers({onMarkerClick, locales, localeFilter, editedLocales, global
         return Object.keys(locales).map((name) => {
             const locale = locales[name];
             if(locale.position && locale.pages.some(page => !globallyDisapprovedPageUrls.includes(page.url))){
-                const position = locale.position;
+                const editedLocale = editedLocales[name] || {};
+                const {approvedPages = [], disapprovedPages = []} = editedLocale;
+                const position = editedLocale && editedLocale.position ? editedLocale.position : locale.position;
                 const positionAsString = JSON.stringify(position);
                 const positionAdded = addedPositions.find((position) => {
                     return position === positionAsString;
                 });
-                const hasApprovedPageUrl = editedLocales[name] ? locale.pages.find(page => editedLocales[name].approvedPages.find(approvedPage => approvedPage.url === page.url)) : false;
-                const hasUneditedPageUrl = editedLocales[name] ? locale.pages.find(page => !editedLocales[name].approvedPages.includes(page.url) && !editedLocales[name].disapprovedPages.includes(page.url)) : true;
+                const hasApprovedPageUrl = editedLocale ? locale.pages.find(page => approvedPages.find(approvedPage => approvedPage.url === page.url)) : false;
+                const hasUneditedPageUrl = editedLocale ? locale.pages.find(page => !approvedPages.includes(page.url) && !disapprovedPages.includes(page.url)) : true;
                 const pages = locale.pages.filter(page => !globallyDisapprovedPageUrls.includes(page.url));
                 let label = 0;
 
-
-
                 let marker = '/static/images/markers/_red.png';
-                if(editedLocales[name] && editedLocales[name].approvedPages.every(page => page.preferredImage) && hasUneditedPageUrl){
+                if(editedLocale && approvedPages.every(page => page.preferredImage) && hasUneditedPageUrl){
                     marker = '/static/images/markers/_purple.png';
                 } else if(hasApprovedPageUrl){
                     marker = '/static/images/markers/_green.png';
@@ -34,7 +34,7 @@ function addMarkers({onMarkerClick, locales, localeFilter, editedLocales, global
                         return null;
                     }
                     pages.forEach((page) => {
-                        if(editedLocales[name] && editedLocales[name].approvedPages.find(approvedPage => approvedPage.url === page.url)){
+                        if(editedLocale && approvedPages.find(approvedPage => approvedPage.url === page.url)){
                             label++
                         }
                     })
@@ -43,10 +43,10 @@ function addMarkers({onMarkerClick, locales, localeFilter, editedLocales, global
                         return null;
                     }
                     pages.forEach((page) => {
-                        if(!editedLocales[name] ||
+                        if(!editedLocale ||
                             (
-                                !editedLocales[name].approvedPages.find(approvedPage => approvedPage.url === page.url) &&
-                                !editedLocales[name].disapprovedPages.find(disapprovedPage => disapprovedPage.url === page.url)
+                                !approvedPages.find(approvedPage => approvedPage.url === page.url) &&
+                                !disapprovedPages.find(disapprovedPage => disapprovedPage.url === page.url)
                             )
                         ){
                             label++

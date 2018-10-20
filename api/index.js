@@ -16,7 +16,7 @@ function read(path) {
 
 function write(path, data) {
     return new Promise((resolve, reject) => {
-        fs.writeFile(path, JSON.stringify(data), function(err, data) {
+        fs.writeFile(path, JSON.stringify(data, null,'\t'), function(err, data) {
             if(err){
                 reject(err)
             }
@@ -66,15 +66,15 @@ const addToList = async (req, res, list) => {
     let editedLocales = JSON.parse(await read('data/edited-locales.json'));
 
     if(editedLocales[editedLocale.name]){
-        if(!editedLocales[editedLocale.name][list].find(page => page.url === editedLocale.pageUrl)){
+        if(!editedLocales[editedLocale.name][list]){
+            editedLocales[editedLocale.name][list] = [{url: editedLocale.pageUrl}];
+        }
+        else if(!editedLocales[editedLocale.name][list].find(page => page.url === editedLocale.pageUrl)){
             editedLocales[editedLocale.name][list].push({url: editedLocale.pageUrl})
         }
     } else {
-        editedLocales[editedLocale.name] = {
-            approvedPages: [],
-            disapprovedPages: []
-        };
-        editedLocales[editedLocale.name][list].push({url: editedLocale.pageUrl});
+        editedLocales[editedLocale.name] = {};
+        editedLocales[editedLocale.name][list] = [{url: editedLocale.pageUrl}];
     }
 
     await write('data/edited-locales.json', editedLocales);
@@ -131,6 +131,28 @@ const addImageToPage = async (req, res) => {
     send(res, 200, editedLocales)
 };
 
+const addLocationData = async (req, res) => {
+    const editedLocale = await json(req);
+    let editedLocales = JSON.parse(await read('data/edited-locales.json'));
+    let name = editedLocale.name;
+    delete editedLocale["name"];
+
+    if(editedLocales[name]){
+        editedLocales[name] = {
+            ...editedLocales[name],
+            ...editedLocale
+        }
+    } else {
+        editedLocales[name] = {
+            ...editedLocale.position
+        };
+    }
+
+    await write('data/edited-locales.json', editedLocales);
+    editedLocales = await read('data/edited-locales.json');
+    send(res, 200, editedLocales)
+};
+
 
 module.exports = router(
     cors(post('/add/preferred-page-image', addImageToPage)),
@@ -149,6 +171,7 @@ module.exports = router(
     cors(post('/remove/disapproved-page-url-globally', addToGlobalDisapproveList)),
     cors(post('/add/starred-page', addToStarredPages)),
     cors(post('/add/reported-locale', addToReportedLocale)),
+    cors(post('/add/locale-data', addLocationData)),
     cors(get('/get/disapproved-page-url-globally', getGlobalDisapproved)),
     cors(get('/get/edited-locales', getEditedLocales)),
     cors(get('/get/starred-pages', getStarredPages)),
