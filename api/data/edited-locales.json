@@ -377,6 +377,105 @@
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/backmanw/div/hogbacka.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/ryskmili.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/brunnalp.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/nkbystlp.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/grasvaxt.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/brostulp.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/cafeer.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/blommor6.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/holmstrf/bonhuset.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/johanssonb/10intern.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/ii/stadjord.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/handelsm.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birckjl/op/stfojajb.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birckjl/op/kuddhojb.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/birckjl.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/levtidbi.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/pask35.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/notiser30.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/casen.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/gardar66.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/jrnvokud.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/tvattinr.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/telefon54.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/byggande66.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/hedstrom/aterblic.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/hedstrom/gator.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/bruhn949.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/tonbergp/divpt/strakork.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/fakta/smoromsl.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/gusta-ban.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/korsholm.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/pers/sjoblomr_lp.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/pers/nessler_cw.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/pers/fougstee.htm"
 			}
 		],
 		"approvedPages": [
@@ -391,7 +490,90 @@
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/stations.htm",
 				"preferredImage": "bilder/hus/STATIONS.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/fanglagr.html",
+				"preferredImage": "../bilder/1918/modelld.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/opeb.htm",
+				"preferredImage": "../../bilder/hus/NESSLEEB.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/sbil1946.htm",
+				"preferredImage": "../../bilder/vyer/sodraesplanad.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/nkbyjrnv.htm",
+				"preferredImage": "../../bilder/hus/gastrin.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/hantverk.htm",
+				"preferredImage": "../../bilder/birck3/276MARKE.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/barnhemm.htm",
+				"preferredImage": "../../bilder/personer/barn1956.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birckjl/op/lokeldjb.htm",
+				"preferredImage": "../../bilder/diverse/lokethh.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/borgarhu.htm",
+				"preferredImage": "../bilder/hus/casenls.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/rikets_sal74.html",
+				"preferredImage": "../bilder/jt/rikets_sal74.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/brands59.htm",
+				"preferredImage": "../bilder/hus/brandsta.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/opingluo.htm",
+				"preferredImage": "../bilder/diverse/opildorr.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/fakta/fordf700.htm",
+				"preferredImage": "bilder/fakta/Fordf700.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/nessler.htm",
+				"preferredImage": "bilder/hus/NESSLELP.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/marken.htm",
+				"preferredImage": "bilder/hus/MARKEN2.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/kallstrom.html",
+				"preferredImage": "bilder/hus/stranden.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/barnhemm.htm",
+				"preferredImage": "bilder/hus/barnhem2.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/bonehus.htm",
+				"preferredImage": "bilder/hus/BONHUSH.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/sladpart.htm",
+				"preferredImage": "bilder/diverse/DAGISLAD.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/willmans.html",
+				"preferredImage": "bilder/sjoblom/willman51.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/konsten/anakron.html",
+				"preferredImage": "bilder/pensarj/bangatan.jpg"
 			}
+		],
+		"alternativeNames": [
+			"Södra Staketgatan"
 		]
 	},
 	"rajåkersgränden": {
@@ -819,9 +1001,179 @@
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/vbl/brostube.htm",
 				"preferredImage": "../bilder/vbl/brostube.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/div/willmansper.html",
+				"preferredImage": "../bilder/fordon/bssemig78.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/lowing.html",
+				"preferredImage": "../bilder/hus/blackhornet04_1.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/ii/nystaden.htm",
+				"preferredImage": "../../bilder/hh/semigatv.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/byggandr.htm",
+				"preferredImage": "../../bilder/birck3/573LINDB.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birckjl/minbarnd.htm",
+				"preferredImage": "../bilder/diverse/SEMIJLB.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/byggande75.html",
+				"preferredImage": "../bilder/vyer/brostukorsningen1964.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/brostugan_debatt76.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/tomtfo46.htm",
+				"preferredImage": "../bilder/vyer/semigatan1hh.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/folkismatsal46.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/hedstrom/nystaden.htm",
+				"preferredImage": "../bilder/vyer/semigasb.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/hbl/nyttvaxt.htm",
+				"preferredImage": "../bilder/hus/vaxthus8x.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/hbl/bildfrny.htm",
+				"preferredImage": "../bilder/vyer/semigata.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/smastadsb.htm",
+				"preferredImage": "../bilder/diverse/sbpolism.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/wichmanv/tottresi.htm",
+				"preferredImage": "../bilder/hus/residensk2.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/bergsti2.htm",
+				"preferredImage": "bilder/hus/BERGSTI2.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/semig3hu.htm",
+				"preferredImage": "bilder/hus/semigata.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/troskjfr.htm",
+				"preferredImage": "bilder/pensarl/semiga05.jpg"
 			}
 		],
-		"disapprovedPages": []
+		"disapprovedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/div/minnen_sk.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/brostulp.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/johanssonb/affarer.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/ii/spobebyg.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/arkekomm.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/nydirekt.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birckjl/op/statkajb.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/brostugan_55.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/kraftverk03_17.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/nystpoesi.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/gardar18.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/1940joel.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/hedstrom/op/gammalt.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/hedstrom/gator.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/hedstrom/innehavh.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/hbl/grundrepbrostugan_82.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/huldenjj/osterblu/topestad.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/backmanw/div/hogbacka.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/backmanw/lassi/a005-.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/sjostrandk/01handelser.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/martha76.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/meriksso.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/lararutbildgn.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/vbl/pumpen.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/fakta/karlsbad.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/kraftv14.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/seriebes/1960finne.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/siegfrids.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/kulhisvm.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/stopbrost2011.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/tomteork.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/vandring120528.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/1maj2012.html"
+			}
+		],
+		"alternativeNames": [
+			"Västra Långgatan",
+			"Westra Långgatan"
+		]
 	},
 	"seminariegatan 15": {
 		"approvedPages": [
@@ -4437,6 +4789,1838 @@
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/pers/sjoblomr.htm"
 			}
+		]
+	},
+	"andrasjövägen": {
+		"disapprovedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/div/mjolken.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/brostulp.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/andrasjon4krig.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/nik70/014frank.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/arkekomm.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birckjl/op/nygardb3.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/byggande75.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/div_sep17.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/sportetc.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/julhal51.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/hedstrom/stadsboh.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/uppslfinl/vagvasen.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/stenar.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/vonessen.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/groda22.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/wilkman.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/nybroboul.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/fzakrar.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/protokoll/fullm4912_lubeck.html"
+			}
+		],
+		"approvedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/div/andrasjon_kw.html",
+				"preferredImage": "../bilder/wenelius/wenelius.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/fanglagr.html",
+				"preferredImage": "../bilder/1918/andrasjovag.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/tandsteb.htm",
+				"preferredImage": "../../bilder/hus/tandstf1.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/grindsla.htm",
+				"preferredImage": "../bilder/jt/hanna.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/1966idrg.htm",
+				"preferredImage": "../bilder/sjoblom/IDRGFRNO.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/lindfors.htm",
+				"preferredImage": "bilder/hus/lindfor1.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/hamnvakt.htm",
+				"preferredImage": "bilder/hus/hamnvakt.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/andrkisf.htm",
+				"preferredImage": "bilder/hus/sjokiosk.jpg"
+			}
+		]
+	},
+	"munsalavägen": {
+		"disapprovedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/div/kuusinens_minnen.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/karleblp.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/brandlarm.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/holmstrf/vinter.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/holmstrf/fotbolf.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/nik70/014frank.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/vagar_65.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/guldpennan17.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/wikstesp.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/skridsko58.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/vattenve.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/nkbytl52.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/stenar.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/fartyg/oma.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/semigran.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/korsholm.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/wilkman.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/pers/semifilm1.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/protokoll/fullm4912_lubeck.html"
+			}
+		],
+		"approvedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/sockmave.htm",
+				"preferredImage": "bilder/upp/hhfrsvsm.jpg"
+			}
+		]
+	},
+	"jakobstadsvägen": {
+		"disapprovedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/div/forsverk.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/ii/spobebyg.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/karlon.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/palsdju2.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/ebsp1965.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/plastind.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/nyajarnv.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/tonbergp/divpt/strakork.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/sundkvistn/socklot/01forord.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/fakta/fredri67.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/gangstig_18.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/nylundh.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/julgra53.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/julhal58.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/nykaslag.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/superkamp.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/alefsskr.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/loppisrace2012.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/wilkman.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/pers/vaxeltan.htm"
+			}
+		],
+		"approvedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/Kottkont.htm",
+				"preferredImage": "bilder/gm/011sundsd.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/nykofrys64.html",
+				"preferredImage": "../bilder/hus/nykofrys.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/postensocklot.html",
+				"preferredImage": "bilder/filateli/poststuga_socklot.jpg"
+			}
+		]
+	},
+	"kovjokivägen": {
+		"disapprovedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/ii/spobebyg.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/ii/graderin.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/innehiii.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/palsdju2.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/bastur.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/ebsp1965.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/indufors.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/marklundalg.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/knivhu45.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/julhal46.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/minnesga.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/anno5534.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/hbl/nykarleby_chi47.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/uppslfinl/vagvasen.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/handind71.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/nykarlwh.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/stenar.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/lions/0440ar.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/poesi/lindholm/kyrktupp/mickelsm.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/brander.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/stroms_gjuteri.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/omfartsvag12_j_k.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/wilkman.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/djupst06.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/troskning2001.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/protokoll/fullm4912_lubeck.html"
+			}
+		],
+		"approvedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/batbygge.htm",
+				"preferredImage": "../../bilder/sjoblom/NYKRSNFR.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/nkbyjrnv.htm",
+				"preferredImage": "../../bilder/diverse/NJNKBWI.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/nyajarnv.htm",
+				"preferredImage": "../../bilder/birck3/overgang.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/ramsagen.htm",
+				"preferredImage": "bilder/hus/ramsagen.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/fzakrar.htm",
+				"preferredImage": "bilder/diverse/KACKURDU.JPG"
+			}
+		]
+	},
+	"seminariegatan 16": {
+		"lng": 22.523644,
+		"lat": 63.524282,
+		"position": {
+			"lng": 22.523644,
+			"lat": 63.524282
+		},
+		"approvedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/flinta.html",
+				"preferredImage": "bilder/hus/semigat16_06.jpg"
+			}
+		],
+		"disapprovedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/tulluppb.htm"
+			}
+		]
+	},
+	"kyrkogatan 44": {
+		"lng": 22.527806,
+		"lat": 63.523994,
+		"position": {
+			"lng": 22.527806,
+			"lat": 63.523994
+		},
+		"disapprovedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/backmanw/bjorkl/06jakob.htm"
+			}
+		]
+	},
+	"källbackgatan": {
+		"approvedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/div/hugolilj.htm",
+				"preferredImage": "../bilder/personer/hugoalet.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/brunnalp.htm",
+				"preferredImage": "../bilder/hus/gagkalgb.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/grasvaxt.html",
+				"preferredImage": "../bilder/vyer/kallbacksg16.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/stadiljus16.html",
+				"preferredImage": "../bilder/pensarl/vt16stj2.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/bygg1922.htm",
+				"preferredImage": "../../bilder/hus/91BROMAN.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/wikmana/div/appel_hugo.html",
+				"preferredImage": "../../bilder/personer/hugo81ror.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/willmaneb.htm",
+				"preferredImage": "bilder/hus/willmanst.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/lillesth.htm",
+				"preferredImage": "bilder/hus/gagkalgt.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/andells.html",
+				"preferredImage": "bilder/hus/andell_md.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/wedin.htm",
+				"preferredImage": "bilder/hus/wedinc.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/Wedin2.htm",
+				"preferredImage": "bilder/hus/WEDINS2.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/upp/kallba65.htm",
+				"preferredImage": "bilder/upp/vtnv65.jpg"
+			}
+		],
+		"disapprovedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/div/kallbackgr.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/ryskmili.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/ii/skastafl.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/ii/spobebyg.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/gyllenbe.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/julhal46.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/noti0816.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/hedstrom/aterblic.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/backmanw/div/bonas.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/backmanw/2s/fs01.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/marklune.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/hantrakn.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/facebook.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/loppisrace2012.html"
+			}
+		]
+	},
+	"mathesiusgatan": {
+		"alternativeNames": [
+			"Östra Staketgatan"
+		],
+		"disapprovedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/brunnalp.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/brostulp.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/leksaksf.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/ii/skastafl.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/semiosta.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/gyllenbe.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/nkbypost/ungidr17.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/nkbypost/minne900815.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/tel_kiosk_74.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/gardar18.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/40glasma.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/fagerhoj.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/hedstrom/gator.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/backmanw/nsp/07nsphb.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/bros1971.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/mathesius.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/tvagranns.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/brander.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/upp/lybe64.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/loppisrace2012.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/ladbil09.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/korsholm.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/pers/sjoblomr_lp.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/pers/sjoblomr.htm"
+			}
+		],
+		"approvedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/halsosju.htm",
+				"preferredImage": "../../bilder/hus/sjukhuset1924.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/hantverk.htm",
+				"preferredImage": "../../bilder/personer/pihlainen1.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/vattento.htm",
+				"preferredImage": "../bilder/jt/vattentorn1aug63.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/julhal59.html",
+				"preferredImage": "../bilder/hus/mathesius591.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/soderlun.htm",
+				"preferredImage": "bilder/hus/soderlun.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/stations.htm",
+				"preferredImage": "bilder/hus/STATIONS.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/esasliis.htm",
+				"preferredImage": "bilder/hus/fagerholmny.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/ahlstroms_bastu.html",
+				"preferredImage": "bilder/hus/ahlstrbastu1.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/barntrad.htm",
+				"preferredImage": "bilder/hus/BARNTRAD.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/ikaheimo.html",
+				"preferredImage": "bilder/hus/markkulabg.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/sladpart.htm",
+				"preferredImage": "bilder/diverse/DAGISLAD.JPG"
+			}
+		]
+	},
+	"karleborgsgatan": {
+		"approvedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/karleblp.htm",
+				"preferredImage": "../bilder/pensarl/KARLEBR.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/stadiljus16.html",
+				"preferredImage": "../bilder/pensarl/vt16stj2.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/bygg1922.htm",
+				"preferredImage": "../../bilder/hus/91BROMAN.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/fralsi70.htm",
+				"preferredImage": "../bilder/hus/bjorklun.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/backmanw/div/ahlstrom.htm",
+				"preferredImage": "../../bilder/hus/ahlstrom.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/rummelsp.htm",
+				"preferredImage": "../bilder/pensarl/rummelso.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/nkbyseur.htm",
+				"preferredImage": "../bilder/hus/topegata.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/vidman.htm",
+				"preferredImage": "bilder/hus/vidmans.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/sparasuthus.html",
+				"preferredImage": "bilder/hus/sparasuthus1957.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/mattssong.html",
+				"preferredImage": "bilder/hus/mattssong1.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/marklug.htm",
+				"preferredImage": "bilder/hus/MARKLUND.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/rummbrun.htm",
+				"preferredImage": "bilder/hus/RBBRUNN.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/andells.html",
+				"preferredImage": "bilder/hus/kallbackkarle.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/bjarfors.htm",
+				"preferredImage": "bilder/hus/andersso.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/melcher85.html",
+				"preferredImage": "bilder/hus/melcher85kbg.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/karlebga.htm",
+				"preferredImage": "bilder/diverse/KARLEBGA.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/sotorgga.htm",
+				"preferredImage": "bilder/hus/KOPMANSG.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/pers/mattsson_gerda.html",
+				"preferredImage": "bilder/hus/mattssong3.jpg"
+			}
+		],
+		"disapprovedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/brunnalp.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/fanglagr.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/holmstrf/bioscala.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/ii/spobebyg.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/ii/skastafl.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/ebsp1965.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/halsosju.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/fotograf.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/hallstrand_lp.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/gardar18.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/brunnshau.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/wikstesp.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/noti0816.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/gardsams.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/hedstrom/stenhust.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/hedstrom/gator.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/backmanw/rikssven/03forsbe.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/backmanw/div/bonas.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/backmanw/div/tornskar.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/backmanw/div/smeds.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/backmanw/nsp/07nsphb.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/tidningar1905.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/poesi/lindholm/kyrktupp/mickelsm.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/sjohaga.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/fjarrvar.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/astromki.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/barntrad.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/upp/lybe64.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/vandring/lratext.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/bantis.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/hantrakn.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/ssarsb35.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/loppisrace2012.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/korsholm.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/ladbil06.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/pers/schalitu.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/pers/hannamfl.htm"
+			}
+		]
+	},
+	"borgaregatan": {
+		"disapprovedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/div/kuusinens_minnen.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/div/minnen_sk.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/dobeln.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/cafeer.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/alko32_lp.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/traprofessorn.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/holmstrf/vinter.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/holmstrf/fhhgarde.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/holmstrf/samskofh.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/holmstrf/korvkop.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/nik70/041lucia.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/ii/radhuseb.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/sptillam.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/taxi.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/halsosju.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/westerst.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/busstaxi.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/langorn.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/julia.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/byggande71.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/tel_kiosk_74.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/hallstrand_lp.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/cafe19.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/julkomm1911.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/sfppad66.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/mopedoly.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/0artikla.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/byggve37.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/vadgomme.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/notiser25feb.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/hedstrom/stenhust.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/hedstrom/gator.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/hedstrom/idrottol.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/tuominen/div/tkommt.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/backmanw/div/smeds.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/backmanw/2s/fs01.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/samskola.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/bertlin_s.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/hab100ar.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/berg.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/hedstrog/gn7sjofa.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/vbl/sjukhuset68.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/poesi/div/samskolan50.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/fjarrvar.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/rkioske.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/lundqvistskiosk.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/kyrkog03.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/seriebes/1960finne.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/vandring/lratext.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/ladbil08.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/facebook.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/loppisrace2012.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/ladbil09.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/willmans.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/korsholm.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/wilkman.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/ladbil10.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/ladbil06.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/pers/tuominen.htm"
+			}
+		],
+		"approvedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/div/alkogard.htm",
+				"preferredImage": "../bilder/hus/alkobgex.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/holmstrf/fotbolf.htm",
+				"preferredImage": "../vykort/PK/PK_A/PKAV015Y.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/ebsp65tl.htm",
+				"preferredImage": "../../bilder/hus/fdalkof.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/nkbypost/81april.htm",
+				"preferredImage": "../bilder/nkbypost/8104roy.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/ostesp15_62.html",
+				"preferredImage": "../bilder/hus/alko.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/stadstr58.htm",
+				"preferredImage": "../bilder/vyer/espeborg.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/huldenjj/osterblu/topestad.htm",
+				"preferredImage": "../../bilder/lustresa/ESPEN.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/nkbysk53.htm",
+				"preferredImage": "../bilder/suomkuva/53borgar.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/fakta/apotfoto.htm",
+				"preferredImage": "bilder/fakta/APOTEKET.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/poesi/agrenl/stammor/stalasan.htm",
+				"preferredImage": "../../bilder/hus/SARLINGA.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/lundqvisteb.htm",
+				"preferredImage": "bilder/hus/back.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/lundqvistglass.html",
+				"preferredImage": "bilder/lundqvistg/haxa.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/samskola.htm",
+				"preferredImage": "bilder/hus/SAMSKOLP.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/hoglundv.htm",
+				"preferredImage": "bilder/hus/hoglundv.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/apotekka.htm",
+				"preferredImage": "bilder/hus/APOTKALL.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/bergfeld.htm",
+				"preferredImage": "bilder/hus/bergfefr.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/borgar03.htm",
+				"preferredImage": "bilder/hus/BORGAR03.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/gulf.htm",
+				"preferredImage": "bilder/hus/GLASSBA3.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/fougsted.htm",
+				"preferredImage": "bilder/hus/FOUGSTED.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/apotbh03.htm",
+				"preferredImage": "bilder/hus/APOTBH03.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/samskob2.htm",
+				"preferredImage": "bilder/hus/samskolshh.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/solvjeep.html",
+				"preferredImage": "bilder/diverse/solvjeep1.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/pers/barntr32.htm",
+				"preferredImage": "bilder/personer/barnt32.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/pers/ehrola.htm",
+				"preferredImage": "bilder/personer/ehrola.jpg"
+			}
+		]
+	},
+	"sollefteågatan": {
+		"disapprovedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/div/nybo.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/fataljeu.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/brunnalp.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/julen60.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/brostulp.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/cafeer.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/andrasjon1.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/holmstrf/besiktning.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/nik70/041lucia.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/nik70/082friid.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/cykobil.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/handelsm.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/fanglagr.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/nkbyjrnv.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/hantverk.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/brandkar.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/busstaxi.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birckjl/divlb/julkaser.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/levtidbi.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/sangfest1928.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/upproprre.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/gardar18.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/julkomm1911.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/knivhu45.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/19484849.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/lucia52.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/nyabutik58.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/joupebio.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/wikstesp.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/jrnvokud.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/cykel09.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/skridsko.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/kommentarer_lp_82.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/vattenve.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/huligand.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/hagenakk.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/kollision32.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/vanort.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/dyrtperm.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/skidta45.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/jrnvagsp.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/hedstrom/brunsh00.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/hedstrom/aterblic.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/hedstrom/gator.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/wikmana/vals/01vals.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/backmanw/div/hogbacka.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/nyholmr/forsfore/01forsfo.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/hab100ar.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/rummelsp.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/folkhals.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/vbl/gagata81.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/vbl/pumpen.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/vbl/eleniusj.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/barntrad.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/seriebes/1960finne.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/vandring/lratext.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/hantrakn.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/tjuven.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/juloppn14.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/korsholm.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/wilkman.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/nybroboul.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/vandring120528.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/normen100_sf.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/nordstroms_av.html"
+			}
+		],
+		"approvedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/holmtb.htm",
+				"preferredImage": "../bilder/diverse/HOLMTBKM.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/fanglagr.html",
+				"preferredImage": "../bilder/1918/modelld.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/johanssonb/affarer.html",
+				"preferredImage": "../bilder/hus/aaltokiosk.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/ovader57.htm",
+				"preferredImage": "../bilder/hh/ov57kg.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/julhal46.htm",
+				"preferredImage": "../bilder/upp/f1835-041d.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/tomtfo46.htm",
+				"preferredImage": "../bilder/vyer/sollgat15_1.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/hbl/blomstrom.htm",
+				"preferredImage": "../bilder/hbl/blomstrhu.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/handelsl.htm",
+				"preferredImage": "../bilder/hlg/nkbyahl.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/torget_lp.html",
+				"preferredImage": "../bilder/personer/torgfest.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/vbl/bilmonst.htm",
+				"preferredImage": "../bilder/vbl/bilmonst.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/fakta/asgard.htm",
+				"preferredImage": "bilder/fakta/EBASGARD.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/blomstro.htm",
+				"preferredImage": "bilder/hus/BLOMSTROM.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/normvedl.htm",
+				"preferredImage": "bilder/hus/NORMUTHU.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/tb-kioskhh.htm",
+				"preferredImage": "bilder/hh/tbkiosk.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/granberg.htm",
+				"preferredImage": "bilder/hus/K15431.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/apotskylt.html",
+				"preferredImage": "bilder/hus/apotskylt09.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/sotorggf.htm",
+				"preferredImage": "bilder/hus/sodtorgf.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/rummbrun.htm",
+				"preferredImage": "bilder/hus/RBBRUNN.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/hedstromeb.htm",
+				"preferredImage": "bilder/hus/EBHEDSTR.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/blomstrd.htm",
+				"preferredImage": "bilder/hus/BLOMSTRD.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/blomstr2.htm",
+				"preferredImage": "bilder/hus/BLOMSTRO.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/karlebga.htm",
+				"preferredImage": "bilder/diverse/KARLEBGA.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/willmans.html",
+				"preferredImage": "bilder/sjoblom/willman41.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/andelskassan.html",
+				"preferredImage": "bilder/akassan/nkby.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/sotorgga.htm",
+				"preferredImage": "bilder/hus/KOPMANSG.JPG"
+			}
+		],
+		"alternativeNames": [
+			"Köpmansgatan",
+			"Torggatan",
+			"Södra Torggatan"
+		]
+	},
+	"bankgatan": {
+		"disapprovedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/div/blodstortning_kw.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/brunnalp.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/svenklub.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/blevavlp.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/aktiastang17.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/gardar18.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/40glasma.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/wikstesp.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/doktstin.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/dyrtperm.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/hedstrom/gator.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/hbl/nykarleby_chi47.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/wikmana/vals/02vals.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/wikmana/ving/02ving.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/asbacka/ogats/00forord.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/asbacka/ogats/2forts.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/nkbystlp.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/brandlarm.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/julen60.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/espen10.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/holmstrf/bonhuset.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/holmstrf/normen.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/holmstrf/willmansper.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/johanssonb/10intern.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/ii/spobebyg.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/ii/stadjord.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/ryskaink.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/fanglagr.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/telefsta.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/taxi.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/arkekomm.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/nkbyjrnv.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/ebsp65tl.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/brandkar.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/nkbypost/ungidr17.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/stridtav.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/borgarhu.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/tel_kiosk_74.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/levtidbi.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/alvstrander84.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/trafikolyck65.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/pask35.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/tomtfo46.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/Krigsfan.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/spolander28.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/ullspinneri.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/sfproto1958_09.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/kyrkanif.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/juli59.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/hedstrom/stenhust.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/hedstrom/foreosam.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/hedstrom/brandkar.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/hbl/blomstrom.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/astromm/hagfors/103inyka.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/huldena/div/julhal57.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/wikmana/vals/01vals.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/asbacka/ogats/01inledning.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/backmanw/div/tornskar.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/backmanw/2s/fs01.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/missfors.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/bertlin_s.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/dobelnbb.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/tidningar1905.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/thurman.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/lions/0330ar.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/vbl/gagata81.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/vbl/pensars.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/vbl/sjukhuset68.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/hagfors/semi/09semiho.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/hagfors/kurre/kas28n28.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/poesi/lindholm/kyrktupp/mickelsm.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/gusta-ban.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/fjarrvar.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/kappas.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/lofholm.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/thulgarv.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/nkbybyni.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/hansensr.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/rummbrun.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/kyrkog03.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/seriebes/1960finne.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/upp/00menupp.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/vandring/lratext.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/siegfrids.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/rvd_files/valkommen.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/normenkavalkad.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/loppisrace2012.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/kulhisvm.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/juloppn14.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/korsholm.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/wilkman.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/nkbyv13.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/pers/wik_henrik.html"
+			}
+		],
+		"approvedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/forstmaj.htm",
+				"preferredImage": "../bilder/vyer/bankgatan_fm.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/holmstrf/vinter.htm",
+				"preferredImage": "../bilder/holmstrf/vintgard.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/holmstrf/jhbokhfh.htm",
+				"preferredImage": "../bilder/personer/JHIBUTIK.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/johanssonb/affarer.html",
+				"preferredImage": "../bilder/hus/holmstrom_fh.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/ebhabfinn.htm",
+				"preferredImage": "../../bilder/vyer/lybfinnst.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/sptillam.htm",
+				"preferredImage": "../../bilder/hus/NTORGGAT.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/cykobil.htm",
+				"preferredImage": "../../bilder/fordon/bussesp.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/ebsp1965.htm",
+				"preferredImage": "../../bilder/birck3/592wasa.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/indufors.htm",
+				"preferredImage": "../../bilder/hus/WESTLUND.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/mantere87.html",
+				"preferredImage": "../bilder/jt/mantere1.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/dobelnin.htm",
+				"preferredImage": "../vykort/ILL/liljedahl.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/post59.html",
+				"preferredImage": "../bilder/hus/liljedahl_rs.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/julhal46.htm",
+				"preferredImage": "../bilder/upp/f1835-041d.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/liljbyg58.htm",
+				"preferredImage": "../bilder/ritning/liljed.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/julhal41.htm",
+				"preferredImage": "../bilder/hh/front1941.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/tvragnar.html",
+				"preferredImage": "../bilder/personer/westerlunds.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/skridsko.htm",
+				"preferredImage": "../bilder/sjoblom/skridsko57.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/huldenjj/osterblu/topestad.htm",
+				"preferredImage": "../../bilder/lustresa/BANKGATA.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/heimlaga.htm",
+				"preferredImage": "../bilder/diverse/heimlaga.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/torget_lp.html",
+				"preferredImage": "../bilder/sjoblom/torggran.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/tvagranns.htm",
+				"preferredImage": "../bilder/tvagrann/anstadsh.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/thulineb.htm",
+				"preferredImage": "bilder/hus/manteg73.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/brunnstim.htm",
+				"preferredImage": "bilder/hus/BRUNNSTH.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/lundqvistglass.html",
+				"preferredImage": "bilder/lundqvistg/vagnl.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/juldeko.htm",
+				"preferredImage": "bilder/stjarn/godhelg_ls.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/bogdanoff.html",
+				"preferredImage": "bilder/hus/lundqvist.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/astromki.htm",
+				"preferredImage": "bilder/hus/aaltokio.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/sandqvis.htm",
+				"preferredImage": "bilder/hus/sandqhel.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/godhelgrs.htm",
+				"preferredImage": "bilder/hus/godhelg2.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/liljedsh.htm",
+				"preferredImage": "bilder/hus/LILJBYG1.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/wiksholp.htm",
+				"preferredImage": "bilder/hus/pihlainen1.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/wikshof.htm",
+				"preferredImage": "bilder/hus/viksks37f.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/liljbyg2.htm",
+				"preferredImage": "bilder/hus/LILJBYG2.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/gronhufh.htm",
+				"preferredImage": "bilder/hus/GRONHUFH.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/lybeckeb.htm",
+				"preferredImage": "bilder/hus/unionbank.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/rundkios.htm",
+				"preferredImage": "bilder/hus/RUNDKIOS.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/wikskios.htm",
+				"preferredImage": "bilder/hus/wiksscha.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/upp/v64p.htm",
+				"preferredImage": "bilder/upp/frvast64p.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/scoutmve.htm",
+				"preferredImage": "bilder/scout/bankgata.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/kattfight.htm",
+				"preferredImage": "bilder/diverse/kattfight.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/ahlstrom.htm",
+				"preferredImage": "bilder/agholm/taxi.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/vallu74.htm",
+				"preferredImage": "bilder/personer/vallu74.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/pers/vaxeltan.htm",
+				"preferredImage": "bilder/personer/vaxeltan.jpg"
+			}
+		],
+		"alternativeNames": [
+			"N. Torggatan",
+			"Norra torggatan"
 		]
 	}
 }

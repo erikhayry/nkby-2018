@@ -4,18 +4,20 @@ import fs from 'fs';
 
 let res = {};
 Object.keys(editedLocales).forEach(key => {
-    let pages = editedLocales[key].approvedPages.map(approvedPage => {
-        let pageData = locales[key].pages.find(page => page.url === approvedPage.url);
-
-        return {
-            title: pageData.title,
-            url: pageData.url,
-            image: approvedPage.preferredImage ? approvedPage.preferredImage : pageData.images[0]
-        }
-    });
+    let pages = [];
+    if (editedLocales[key].approvedPages){
+        pages = editedLocales[key].approvedPages.map(approvedPage => {
+            let pageData = locales[key].pages.find(page => page.url === approvedPage.url);
+            return {
+                title: pageData.title,
+                url: pageData.url,
+                image: approvedPage.preferredImage ? approvedPage.preferredImage : pageData.images[0]
+            }
+        });
+    }
     if(pages.length > 0){
         res[key] = {
-            position: locales[key].position,
+            position: editedLocales[key].position || locales[key].position,
             pages
         }
     }
