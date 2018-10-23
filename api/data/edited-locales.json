@@ -36,6 +36,9 @@
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/andrasjon2.html",
 				"preferredImage": "../bilder/villor/essen.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/NN/NN_B/Nnbvo34q.htm"
 			}
 		]
 	},
@@ -365,7 +368,11 @@
 		"approvedPages": []
 	},
 	"högbackavägen": {
-		"disapprovedPages": [],
+		"disapprovedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/NN/NN_B/Nnbvo34q.htm"
+			}
+		],
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/backmanw/div/hogbacka.htm",
@@ -1067,6 +1074,30 @@
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/troskjfr.htm",
 				"preferredImage": "bilder/pensarl/semiga05.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_14054.html",
+				"preferredImage": "../vykort/KM/KMA/14054.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/JS/JS_C/JSCV053S.HTM",
+				"preferredImage": "../vykort/JS/JS_B/Jsbv053f.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/JH/JH_F/JHFV016S.HTM",
+				"preferredImage": "../vykort/JH/JH_F/JHFV016F.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/JH/JH_M/JHMHO46S.HTM",
+				"preferredImage": "../vykort/JH/JH_M/JHMH046F.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/LR/LR_F/LRFV018S.HTM",
+				"preferredImage": "../vykort/LR/LR_F/LRFV018F.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/LR/LR_B/LRBR040S.HTM",
+				"preferredImage": "../vykort/LR/LR_B/LRBR040F.JPG"
 			}
 		],
 		"disapprovedPages": [
@@ -1168,6 +1199,9 @@
 			},
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/1maj2012.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/VB/VB_C/VBC.htm"
 			}
 		],
 		"alternativeNames": [
@@ -1267,7 +1301,11 @@
 				"preferredImage": "bilder/hus/SAMSKBAK2.jpg"
 			}
 		],
-		"disapprovedPages": []
+		"disapprovedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/RS/RS_A/rsah059f.htm"
+			}
+		]
 	},
 	"gustav adolfsgatan 27": {
 		"approvedPages": [
@@ -1471,6 +1509,9 @@
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/pers/castremp.htm",
 				"preferredImage": "vykort/KM/KMA/0-8-0-81.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/LR/LR_D/LRDR033S.HTM"
 			}
 		],
 		"disapprovedPages": [
@@ -1652,6 +1693,10 @@
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/gleisner.htm",
 				"preferredImage": "bilder/hus/GLEISNER.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/LR/LR_B/LRBE009X.HTM",
+				"preferredImage": "../vykort/LR/LR_B/LRBE009X.JPG"
 			}
 		],
 		"disapprovedPages": []
@@ -1793,6 +1838,9 @@
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/bros1971.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/RS/RS_A/rsah059f.htm"
 			}
 		]
 	},
@@ -2009,6 +2057,9 @@
 			},
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/vandring120528.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/JH/JH_F/JHF.HTM"
 			}
 		]
 	},
@@ -2036,6 +2087,10 @@
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/wiksholp.htm",
 				"preferredImage": "bilder/hus/viksks37.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/LR/LR_I/LRIV024D.HTM",
+				"preferredImage": "../vykort/LR/LR_I/LRIV024D.JPG"
 			}
 		],
 		"disapprovedPages": [
@@ -2430,7 +2485,11 @@
 				"preferredImage": "../bilder/personer/fagekopp.jpg"
 			}
 		],
-		"disapprovedPages": []
+		"disapprovedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/kmfortec.htm"
+			}
+		]
 	},
 	"källbackgatan 3": {
 		"approvedPages": [],
@@ -2895,7 +2954,12 @@
 		]
 	},
 	"sollefteågatan 3": {
-		"approvedPages": [],
+		"approvedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/RS/RS_A/rsah059f.htm",
+				"preferredImage": "../bilder/personer/lovhoddbygg.jpg"
+			}
+		],
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/ebrivgru.htm"
@@ -2914,6 +2978,9 @@
 			},
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/sparb100.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/kmfortec.htm"
 			}
 		]
 	},
@@ -2926,6 +2993,10 @@
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/upp/v64p.htm",
 				"preferredImage": "bilder/upp/frvast64p.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_13955.html",
+				"preferredImage": "../vykort/KM/KMA/13955.jpg"
 			}
 		],
 		"disapprovedPages": [
@@ -3146,6 +3217,9 @@
 			},
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/brander.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_13965.html"
 			}
 		]
 	},
@@ -3876,6 +3950,15 @@
 			},
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/pers/semifilm1.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/JH/JH_D/JHDR046S.HTM"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/JH/JH_K/JHKR016S.HTM"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/VB/VB_A/VBAR022D.HTM"
 			}
 		]
 	},
@@ -3908,6 +3991,10 @@
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/bergsti2.htm",
 				"preferredImage": "bilder/hus/BERGSTI2.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/LR/LR_F/LRFV018S.HTM",
+				"preferredImage": "../vykort/LR/LR_F/LRFV018F.JPG"
 			}
 		],
 		"disapprovedPages": [
@@ -4046,6 +4133,12 @@
 			},
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/fanglagr.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/LR/LR_F/LRFR015S.HTM"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/LR/LR_B/LRBE009S.HTM"
 			}
 		]
 	},
@@ -4849,6 +4942,9 @@
 			},
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/protokoll/fullm4912_lubeck.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/JH/JH_K/JHKH037S.HTM"
 			}
 		],
 		"approvedPages": [
@@ -5339,6 +5435,9 @@
 			},
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/pers/sjoblomr.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/JH/JH_G/JHGH0132.HTM"
 			}
 		],
 		"approvedPages": [
@@ -6621,6 +6720,21 @@
 		"alternativeNames": [
 			"N. Torggatan",
 			"Norra torggatan"
+		]
+	},
+	"seminariegatan 5": {
+		"approvedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/LR/LR_F/LRFV0181.HTML",
+				"preferredImage": "../bilder/jt/petterssons.jpg"
+			}
+		]
+	},
+	"borgaregatan 34": {
+		"disapprovedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/PK/PK_A/Pkav015x.htm"
+			}
 		]
 	}
 }

@@ -3,8 +3,15 @@ class Overlay extends React.PureComponent {
         showAllImages: undefined,
         inputValueLng: 0,
         inputValueLat: 0,
-        inputValueName: ''
+        inputValueName: '',
+        showUnedited: true,
+        showApproved: false,
+        showDisapproved: false,
     };
+
+    toggleView(val){
+        this.setState(val);
+    }
 
     updateInputValueLng(evt) {
         this.setState({
@@ -221,32 +228,44 @@ class Overlay extends React.PureComponent {
                         }}>Lägg till namn</button>
                     </div>
 
-                    <h2>Godkända</h2>
+                    <h2 onClick={() => {
+                        this.toggleView({
+                            showApproved: !this.state.showApproved
+                        })
+                    }}>Godkända</h2>
                     <ul style={{
                         padding: 0,
                         margin: 0,
                         overflow: 'hidden',
                         borderBottom: '1px solid #000'
                     }}>
-                        {approvedPagesForLocale.map((page, index) => this.renderPage(page, index, name, 'approved', approvedPages.find((approvedPage) => approvedPage.url === page.url), starredPages.includes(page.url)))}
+                        {(this.state.showApproved || uneditedPageUrlsForLocale.length === 0)  && approvedPagesForLocale.map((page, index) => this.renderPage(page, index, name, 'approved', approvedPages.find((approvedPage) => approvedPage.url === page.url), starredPages.includes(page.url)))}
                     </ul>
-                    <h2>Obehandlade ({uneditedPageUrlsForLocale.length})</h2>
+                    <h2 onClick={() => {
+                        this.toggleView({
+                            showUnedited: !this.state.showUnedited
+                        })
+                    }}>Obehandlade ({uneditedPageUrlsForLocale.length})</h2>
                     <ul style={{
                         padding: 0,
                         margin: 0,
                         overflow: 'hidden',
                         borderBottom: '1px solid #000'
                     }}>
-                        {uneditedPageUrlsForLocale.map((page, index) => this.renderPage(page, index, name, 'unedited', undefined, starredPages.includes(page.url)))}
+                        {this.state.showUnedited && uneditedPageUrlsForLocale.map((page, index) => this.renderPage(page, index, name, 'unedited', undefined, starredPages.includes(page.url)))}
                     </ul>
-                    <h2>Slängda</h2>
+                    <h2 onClick={() => {
+                        this.toggleView({
+                            showDisapproved: !this.state.showDisapproved
+                        })
+                    }}>Slängda</h2>
                     <ul style={{
                         padding: 0,
                         margin: 0,
                         overflow: 'hidden',
                         borderBottom: '1px solid #000'
                     }}>
-                        {disapprovedPagesForLocale.map((page, index) => this.renderPage(page, index, name, 'disapproved', undefined, starredPages.includes(page.url)))}
+                        {this.state.showDisapproved && disapprovedPagesForLocale.map((page, index) => this.renderPage(page, index, name, 'disapproved', undefined, starredPages.includes(page.url)))}
                     </ul>
 
                     <button onClick={() => {

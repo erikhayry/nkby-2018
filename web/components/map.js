@@ -11,8 +11,7 @@ function renderPage(page, i){
         <li key={i} style={{
             listStyle: 'none',
             width: '100%',
-            marginBottom: '10px',
-            position: 'relative'
+            marginBottom: '20px'
         }}>
             <a href={page.url} target="_blank" style={{
                 textDecoration: 'none',
@@ -25,10 +24,12 @@ function renderPage(page, i){
                     alt=""
                     width="100%"
                     style={{
-                        maxWidth: '100%'
+                        maxWidth: '100%',
+                        display: 'block',
+                        width: 'auto',
+                        margin: '0 auto'
                     }}
                 />}
-                <br/>
                 <div style={{
                     display: 'inline-block',
                     marginBottom: 10,
@@ -36,15 +37,12 @@ function renderPage(page, i){
                     backgroundColor: '#222',
                     padding: 5,
                     textDecoration: 'none',
-                    position: 'absolute',
-                    bottom: 10,
-                    right: 5,
-                    maxWidth: '50%',
                     fontSize: 16,
                     maxHeight: 'calc(100% - 30px)',
                     overflow: 'hidden',
                     boxSizing: 'border-box',
-                    border: '5px solid #222'
+                    border: '5px solid #222',
+                    width: '100%'
                 }}>{page.title || page.url}</div>
             </a>
 
@@ -65,8 +63,8 @@ function addMarkers(props){
             >
                 {!props.isSmallDevice && currentLocale.name === name && <InfoWindow onCloseClick={onToggleOpen}>
                     <div style={{
-                        width: 300,
-                        height: 400,
+                        width: 500,
+                        height: 500,
                         borderRadius: 0,
                         padding: 5
                     }}>

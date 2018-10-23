@@ -78,7 +78,7 @@ function geoCodeCrawlerResult() {
     Promise.all(reqs)
         .then((newGeoCodedLocales) => {
             console.log(`Geocoding done, ignored: ${ignored.length}, success: ${geoCodeSuccess.length}, failed: ${geoCodeErrors.length}`);
-            toFile(merge(geoCodedLocale, newGeoCodedLocales, name), "data/geocoded-locales.json");
+            toFile(merge(geoCodedLocale, newGeoCodedLocales, 'name'), "data/geocoded-locales.json");
             addLocaleToCrawlerResult(newGeoCodedLocales, crawlerResult);
         })
         .catch((err) => {
