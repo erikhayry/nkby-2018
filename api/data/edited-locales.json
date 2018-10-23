@@ -6736,5 +6736,77 @@
 				"url": "http://nykarlebyvyer.nu/sidor/kortindi/PK/PK_A/Pkav015x.htm"
 			}
 		]
+	},
+	"Aspnäsvägen": {
+		"disapprovedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/julhap59.html"
+			}
+		]
+	},
+	"Stationsvägen": {
+		"disapprovedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/lybeckm/margit/01margit.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/fartyg/ulrika.htm"
+			}
+		]
+	},
+	"Kyrkvägen": {
+		"disapprovedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/svedberh/op/socknen1.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/socklots.htm"
+			}
+		]
+	},
+	"Markbyvägen": {
+		"approvedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/boxal62.html",
+				"preferredImage": "../bilder/kartor/boxal.JPG"
+			}
+		]
+	},
+	"Haraldsrundan": {
+		"disapprovedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/djupst06.htm"
+			}
+		]
+	},
+	"Hirvlaxvägen": {
+		"disapprovedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/postensocklot.html"
+			}
+		]
+	},
+	"Rijfsväg": {
+		"approvedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/skospanne.html",
+				"preferredImage": "bilder/diverse/skospanne1.jpg"
+			}
+		]
+	},
+	"grisselören 1": {
+		"disapprovedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/pers/herlerjo.htm"
+			}
+		]
+	},
+	"Vedören": {
+		"approvedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/litenbro.html",
+				"preferredImage": "../bilder/jt/brosomm.jpg"
+			}
+		]
 	}
 }

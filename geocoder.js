@@ -11,6 +11,8 @@ const googleMapsClient = require('@google/maps').createClient({
 
 function geoCode(name, postcode = '66900', city = 'Nykarleby', country = 'Finland'){
     bar.tick();
+    console.log('Geocode', name, postcode, city, country);
+
     return new Promise((resolve, reject) => {
         const geoCodeData = geoCodedLocale.find(function (locale) {
             return locale.name === name;
@@ -29,7 +31,8 @@ function geoCode(name, postcode = '66900', city = 'Nykarleby', country = 'Finlan
                         geoCodeSuccess.push(name);
                         resolve({
                             location: geoCodedData.geometry.location,
-                            name
+                            name,
+                            postcode
                         })
                     }
                     else {
@@ -74,7 +77,7 @@ function geoCodeCrawlerResult() {
     console.log(`GeoCode ${locales.length} locales from search result`);
     bar = new ProgressBar(':bar', { total: locales.length });
 
-    const reqs = locales.map(locale => geoCode(locale));
+    const reqs = locales.map(key => geoCode(key, crawlerResult[key].zipCode));
     Promise.all(reqs)
         .then((newGeoCodedLocales) => {
             console.log(`Geocoding done, ignored: ${ignored.length}, success: ${geoCodeSuccess.length}, failed: ${geoCodeErrors.length}`);
