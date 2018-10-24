@@ -624,6 +624,10 @@
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/rianrian.htm",
 				"preferredImage": "bilder/hus/rianrian.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_11305.html",
+				"preferredImage": "../vykort/KM/KMA/km11305.jpg"
 			}
 		]
 	},
@@ -4247,6 +4251,41 @@
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/pers/vaxeltan.htm",
 				"preferredImage": "bilder/personer/vaxeltan.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/EG/EG_A/EGAE008S.HTM",
+				"preferredImage": "../vykort/EG/EG_A/EGAE008F.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/LR/LR_B/LRBE0092.HTM"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/LR/LR_D/Lrde003s.htm",
+				"preferredImage": "../vykort/LR/LR_D/LRDE003F.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/AA/AA_A/AAAB001S.HTM",
+				"preferredImage": "../vykort/AA/AA_A/AAAB001F.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/VB/VB_C/VBCE004S.HTM",
+				"preferredImage": "../vykort/VB/VB_C/VBCE004F.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/JH/JH_C/JHCE0072.HTM",
+				"preferredImage": "../vykort/JH/JH_C/JHCE0072.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/VB/VB_B/VBBV050S.htm",
+				"preferredImage": "../vykort/VB/VB_B/VBBV050F.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/JH/JH_C/JHCE002S.HTM",
+				"preferredImage": "../vykort/JH/JH_C/JHCE002F.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/JH/JH_C/JHCE007S.HTM",
+				"preferredImage": "../vykort/JH/JH_C/JHCE007F.JPG"
 			}
 		],
 		"disapprovedPages": [
@@ -5228,6 +5267,10 @@
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/fzakrar.htm",
 				"preferredImage": "bilder/diverse/KACKURDU.JPG"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/LR/LR_F/Lrfv054s.htm",
+				"preferredImage": "../vykort/LR/LR_F/LRFV054F.JPG"
 			}
 		]
 	},
@@ -6806,6 +6849,160 @@
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/litenbro.html",
 				"preferredImage": "../bilder/jt/brosomm.jpg"
+			}
+		]
+	},
+	"socklotvägen": {
+		"approvedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/galgback.htm",
+				"preferredImage": "../bilder/jt/galgback.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/sundkvistn/socklot/26fjarde.html",
+				"preferredImage": "../../bilder/socklotsk/08.jpg"
+			}
+		],
+		"disapprovedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/grisseps.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/jstadsva.htm"
+			}
+		]
+	},
+	"rijfsväg": {
+		"approvedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/skospanne.html",
+				"preferredImage": "bilder/diverse/skospanne1.jpg"
+			}
+		]
+	},
+	"nyvägen": {
+		"disapprovedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/riksmarsch.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/ii/spobebyg.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birckjl/op/bodfrok1.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/huldena/div/sjalvstyr.html"
+			}
+		],
+		"approvedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/nkbyjrnv.htm",
+				"preferredImage": "../../bilder/diverse/NJKOVSTA.jpg"
+			}
+		]
+	},
+	"hirvlaxvägen": {
+		"approvedPages": [],
+		"disapprovedPages": []
+	},
+	"kyrkvägen": {
+		"disapprovedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/socklots.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/svedberh/op/socknen1.htm"
+			}
+		]
+	},
+	"stationsvägen": {
+		"disapprovedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/fartyg/ulrika.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/lybeckm/margit/01margit.htm"
+			}
+		]
+	},
+	"jeppovägen": {
+		"disapprovedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/gpub/kuddnas/04smastad.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/vagar_65.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/dengamlabyn.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/0artikla.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/wikstesp.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/grahng/uppbrott/08tillnk.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/uppslfinl/vagvasen.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/folkwann/vandringlappo.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/lepu00.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/gensvefi.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/lions/0440ar.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/rundkios.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/asping.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/omfartsvag12_j_k.html"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/wilkman.html"
+			}
+		],
+		"approvedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/oljegrusjeppovag66.html",
+				"preferredImage": "../bilder/pensarl/midsommar09_005.jpg"
+			}
+		]
+	},
+	"aspnäsvägen": {
+		"disapprovedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/julhap59.html"
+			}
+		]
+	},
+	"viksgatan": {
+		"disapprovedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/heikel/barnd/04mfb.htm"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/holmstrf/olresanfh.htm"
+			}
+		]
+	},
+	"vedören": {
+		"approvedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/litenbro.html",
+				"preferredImage": "../bilder/jt/broung50.jpg"
 			}
 		]
 	}
