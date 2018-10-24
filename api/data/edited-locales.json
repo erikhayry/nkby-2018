@@ -1,5 +1,5 @@
 {
-	"andrasjö strandväg": {
+	"andrasjö strandväg-66900": {
 		"disapprovedPages": [],
 		"approvedPages": [
 			{
@@ -12,7 +12,7 @@
 			}
 		]
 	},
-	"bådasvängen": {
+	"bådasvängen-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/gatunamn/gmeny.htm"
@@ -42,7 +42,7 @@
 			}
 		]
 	},
-	"broasvägen": {
+	"broasvägen-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/jaktstugan60.html"
@@ -50,7 +50,7 @@
 		],
 		"approvedPages": []
 	},
-	"lybecksgatan 2": {
+	"lybecksgatan 2-66900": {
 		"disapprovedPages": [],
 		"approvedPages": [
 			{
@@ -59,7 +59,7 @@
 			}
 		]
 	},
-	"kyrkogatan 71": {
+	"kyrkogatan 71-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/pers/ahlskogk_mik.html"
@@ -67,7 +67,7 @@
 		],
 		"approvedPages": []
 	},
-	"lybecksgatan 1": {
+	"lybecksgatan 1-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/hedstrom/stadsboh.htm"
@@ -87,7 +87,7 @@
 			}
 		]
 	},
-	"gustav adolfsgatan 13": {
+	"gustav adolfsgatan 13-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/backmanw/div/hogbacka.htm"
@@ -95,7 +95,7 @@
 		],
 		"approvedPages": []
 	},
-	"topeliusesplanaden 20": {
+	"topeliusesplanaden 20-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/pers/hellstrt.htm"
@@ -103,7 +103,7 @@
 		],
 		"approvedPages": []
 	},
-	"gustav adolfsgatan 18": {
+	"gustav adolfsgatan 18-66900": {
 		"disapprovedPages": [],
 		"approvedPages": [
 			{
@@ -112,7 +112,7 @@
 			}
 		]
 	},
-	"sollefteågatan 10": {
+	"sollefteågatan 10-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/tele1958.htm"
@@ -120,7 +120,7 @@
 		],
 		"approvedPages": []
 	},
-	"sollefteågatan 17": {
+	"sollefteågatan 17-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/bidragar.htm"
@@ -128,7 +128,7 @@
 		],
 		"approvedPages": []
 	},
-	"bankgatan 5": {
+	"bankgatan 5-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/hedstrom/idrottol.htm"
@@ -136,7 +136,7 @@
 		],
 		"approvedPages": []
 	},
-	"borgaregatan 1": {
+	"borgaregatan 1-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/hedstrom/aterblic.htm"
@@ -144,7 +144,7 @@
 		],
 		"approvedPages": []
 	},
-	"lybecksgatan 3": {
+	"lybecksgatan 3-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/siegfrids.html"
@@ -158,7 +158,7 @@
 		],
 		"approvedPages": []
 	},
-	"topeliusesplanaden 21": {
+	"topeliusesplanaden 21-66900": {
 		"disapprovedPages": [],
 		"approvedPages": [
 			{
@@ -167,7 +167,7 @@
 			}
 		]
 	},
-	"topeliusesplanaden 24": {
+	"topeliusesplanaden 24-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/fakta/stadskva.htm"
@@ -175,7 +175,7 @@
 		],
 		"approvedPages": []
 	},
-	"topeliusesplanaden 16": {
+	"topeliusesplanaden 16-66900": {
 		"disapprovedPages": [],
 		"approvedPages": [
 			{
@@ -184,7 +184,7 @@
 			}
 		]
 	},
-	"kyrkogatan 11": {
+	"kyrkogatan 11-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/bruhn949.htm"
@@ -197,7 +197,7 @@
 			}
 		]
 	},
-	"kyrkogatan 9": {
+	"kyrkogatan 9-66900": {
 		"disapprovedPages": [],
 		"approvedPages": [
 			{
@@ -210,7 +210,7 @@
 			}
 		]
 	},
-	"lybecksgatan 5": {
+	"lybecksgatan 5-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/bidragar.htm"
@@ -236,7 +236,7 @@
 			}
 		]
 	},
-	"borgaregatan 2": {
+	"borgaregatan 2-66900": {
 		"disapprovedPages": [],
 		"approvedPages": [
 			{
@@ -249,7 +249,7 @@
 			}
 		]
 	},
-	"kyrkogatan 12": {
+	"kyrkogatan 12-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/bombminn.htm"
@@ -266,7 +266,7 @@
 			}
 		]
 	},
-	"borgaregatan 4": {
+	"borgaregatan 4-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/tonbergp/nykt/01nykt.htm"
@@ -307,7 +307,7 @@
 			}
 		]
 	},
-	"borgaregatan 3": {
+	"borgaregatan 3-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/aterenga.html"
@@ -333,7 +333,7 @@
 			}
 		]
 	},
-	"borgaregatan 6": {
+	"borgaregatan 6-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/arkekomm.htm"
@@ -350,7 +350,7 @@
 			}
 		]
 	},
-	"joupersgatan 2": {
+	"joupersgatan 2-66900": {
 		"disapprovedPages": [],
 		"approvedPages": [
 			{
@@ -359,7 +359,7 @@
 			}
 		]
 	},
-	"hjortrongränd": {
+	"hjortrongränd-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/rk50ar.htm"
@@ -367,7 +367,7 @@
 		],
 		"approvedPages": []
 	},
-	"högbackavägen": {
+	"högbackavägen-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/kortindi/NN/NN_B/Nnbvo34q.htm"
@@ -380,7 +380,7 @@
 			}
 		]
 	},
-	"bangatan": {
+	"bangatan-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/backmanw/div/hogbacka.htm"
@@ -583,7 +583,7 @@
 			"Södra Staketgatan"
 		]
 	},
-	"rajåkersgränden": {
+	"rajåkersgränden-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/omfartsvag10.html"
@@ -591,7 +591,7 @@
 		],
 		"approvedPages": []
 	},
-	"rajåkersstigen": {
+	"rajåkersstigen-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/omfartsvag10.html"
@@ -599,7 +599,7 @@
 		],
 		"approvedPages": []
 	},
-	"rajåkersvägen": {
+	"rajåkersvägen-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/omfartsvag12_j_k.html"
@@ -618,7 +618,7 @@
 			}
 		]
 	},
-	"jeansborgsvägen": {
+	"jeansborgsvägen-66900": {
 		"disapprovedPages": [],
 		"approvedPages": [
 			{
@@ -631,7 +631,7 @@
 			}
 		]
 	},
-	"joupersgatan": {
+	"joupersgatan-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/jouper.htm"
@@ -644,7 +644,7 @@
 			}
 		]
 	},
-	"stjärnfallet": {
+	"stjärnfallet-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/schalin/invignin.htm"
@@ -655,7 +655,7 @@
 		],
 		"approvedPages": []
 	},
-	"bonäsvägen": {
+	"bonäsvägen-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/div/kronika_mb.html"
@@ -714,7 +714,7 @@
 			}
 		]
 	},
-	"bonskogsvägen": {
+	"bonskogsvägen-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/poesi/div/advent_eh.html"
@@ -733,7 +733,7 @@
 			}
 		]
 	},
-	"conradigatan": {
+	"conradigatan-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/sjalvs59.htm"
@@ -741,7 +741,7 @@
 		],
 		"approvedPages": []
 	},
-	"haraldsrundan": {
+	"haraldsrundan-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/djupst06.htm"
@@ -749,7 +749,7 @@
 		],
 		"approvedPages": []
 	},
-	"åminnevägen": {
+	"åminnevägen-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/skospanne.html"
@@ -772,7 +772,7 @@
 			}
 		]
 	},
-	"topeliusesplanaden 25": {
+	"topeliusesplanaden 25-66900": {
 		"disapprovedPages": [],
 		"approvedPages": [
 			{
@@ -793,7 +793,7 @@
 			}
 		]
 	},
-	"topeliusesplanaden 23": {
+	"topeliusesplanaden 23-66900": {
 		"disapprovedPages": [],
 		"approvedPages": [
 			{
@@ -806,7 +806,7 @@
 			}
 		]
 	},
-	"jakobstadsvägen 7": {
+	"jakobstadsvägen 7-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/handind71.html"
@@ -814,7 +814,7 @@
 		],
 		"approvedPages": []
 	},
-	"jakobstadsvägen 6": {
+	"jakobstadsvägen 6-66900": {
 		"disapprovedPages": [],
 		"approvedPages": [
 			{
@@ -827,7 +827,7 @@
 			}
 		]
 	},
-	"jakobstadsvägen 3": {
+	"jakobstadsvägen 3-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/notise13.htm"
@@ -843,7 +843,7 @@
 			}
 		]
 	},
-	"topeliusesplanaden 31": {
+	"topeliusesplanaden 31-66900": {
 		"disapprovedPages": [],
 		"approvedPages": [
 			{
@@ -856,7 +856,7 @@
 			}
 		]
 	},
-	"topeliusesplanaden 29": {
+	"topeliusesplanaden 29-66900": {
 		"disapprovedPages": [],
 		"approvedPages": [
 			{
@@ -865,7 +865,7 @@
 			}
 		]
 	},
-	"gustav adolfsgatan 34": {
+	"gustav adolfsgatan 34-66900": {
 		"disapprovedPages": [],
 		"approvedPages": [
 			{
@@ -878,7 +878,7 @@
 			}
 		]
 	},
-	"gustav adolfsgatan 32": {
+	"gustav adolfsgatan 32-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/backmanw/div/bjorklun.htm"
@@ -886,7 +886,7 @@
 		],
 		"approvedPages": []
 	},
-	"gustav adolfsgatan 44": {
+	"gustav adolfsgatan 44-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -894,7 +894,7 @@
 			}
 		]
 	},
-	"gustav adolfsgatan 43": {
+	"gustav adolfsgatan 43-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/pers/granqvitsfv.htm",
@@ -903,7 +903,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"fiskaregränd": {
+	"fiskaregränd-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/ga411910.htm",
@@ -920,7 +920,7 @@
 			}
 		]
 	},
-	"gustav adolfsgatan 42": {
+	"gustav adolfsgatan 42-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/olsons.htm",
@@ -929,7 +929,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"gustav adolfsgatan 41": {
+	"gustav adolfsgatan 41-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/fakta/fredri67.htm",
@@ -961,7 +961,7 @@
 			}
 		]
 	},
-	"fabriksgatan 9": {
+	"fabriksgatan 9-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/norcar_bsb.html",
@@ -970,7 +970,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"fabriksgatan": {
+	"fabriksgatan-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/torafors15.html",
@@ -986,7 +986,7 @@
 			}
 		]
 	},
-	"frillmossavägen": {
+	"frillmossavägen-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/pers/kekkolav.htm",
@@ -1003,7 +1003,7 @@
 			}
 		]
 	},
-	"seminariegatan": {
+	"seminariegatan-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/semigat76.html",
@@ -1213,7 +1213,7 @@
 			"Westra Långgatan"
 		]
 	},
-	"seminariegatan 15": {
+	"seminariegatan 15-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/overgaardsuthus.html",
@@ -1226,7 +1226,7 @@
 			}
 		]
 	},
-	"seminariegatan 13": {
+	"seminariegatan 13-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -1234,7 +1234,7 @@
 			}
 		]
 	},
-	"seminariegatan 11": {
+	"seminariegatan 11-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -1245,7 +1245,7 @@
 			}
 		]
 	},
-	"mellangatan": {
+	"mellangatan-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -1268,7 +1268,7 @@
 			}
 		]
 	},
-	"smedsgränd": {
+	"smedsgränd-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/div/kuusinens_minnen.html",
@@ -1277,7 +1277,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"kyrkogatan 7": {
+	"kyrkogatan 7-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/fakta/apotfoto.htm",
@@ -1294,7 +1294,7 @@
 			}
 		]
 	},
-	"topeliusesplanaden 12": {
+	"topeliusesplanaden 12-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/samskola.htm",
@@ -1311,7 +1311,7 @@
 			}
 		]
 	},
-	"gustav adolfsgatan 27": {
+	"gustav adolfsgatan 27-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/heikgard.htm",
@@ -1324,7 +1324,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"gustav adolfsgatan 30": {
+	"gustav adolfsgatan 30-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/wenelius.htm",
@@ -1333,7 +1333,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"gustav adolfsgatan 24": {
+	"gustav adolfsgatan 24-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -1341,7 +1341,7 @@
 			}
 		]
 	},
-	"gustav adolfsgatan 28": {
+	"gustav adolfsgatan 28-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/knutsdim.htm",
@@ -1354,7 +1354,7 @@
 			}
 		]
 	},
-	"gustav adolfsgatan 33": {
+	"gustav adolfsgatan 33-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/lillesth.htm",
@@ -1367,7 +1367,7 @@
 			}
 		]
 	},
-	"gustav adolfsgatan 35": {
+	"gustav adolfsgatan 35-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/pers/olgabjbr.htm",
@@ -1376,7 +1376,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"grev tott gatan 7": {
+	"grev tott gatan 7-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/backlunl.htm",
@@ -1385,7 +1385,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"södra ringvägen": {
+	"södra ringvägen-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -1396,7 +1396,7 @@
 			}
 		]
 	},
-	"frihemsvägen": {
+	"frihemsvägen-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/byggande49.html",
@@ -1405,7 +1405,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"hantverkaregatan": {
+	"hantverkaregatan-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -1413,7 +1413,7 @@
 			}
 		]
 	},
-	"arbetaregatan 1": {
+	"arbetaregatan 1-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/ramsagen.htm",
@@ -1422,7 +1422,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"arbetaregatan": {
+	"arbetaregatan-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -1433,11 +1433,11 @@
 			}
 		]
 	},
-	"seminariegatan 4": {
+	"seminariegatan 4-66900": {
 		"approvedPages": [],
 		"disapprovedPages": []
 	},
-	"seminariegatan 1": {
+	"seminariegatan 1-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/knaperbo.html",
@@ -1446,7 +1446,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"seminariegatan 3": {
+	"seminariegatan 3-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/siegfrid.htm",
@@ -1459,7 +1459,7 @@
 			}
 		]
 	},
-	"mellangatan 1": {
+	"mellangatan 1-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/bergsti1.htm",
@@ -1468,7 +1468,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"berggränd 5": {
+	"berggränd 5-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -1476,7 +1476,7 @@
 			}
 		]
 	},
-	"staketgatan 6": {
+	"staketgatan 6-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -1484,7 +1484,7 @@
 			}
 		]
 	},
-	"berggränd": {
+	"berggränd-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -1492,7 +1492,7 @@
 			}
 		]
 	},
-	"badhusstigen": {
+	"badhusstigen-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/sirensbastu.html",
@@ -1542,7 +1542,7 @@
 			}
 		]
 	},
-	"remalskroken": {
+	"remalskroken-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/div/willmansper.html",
@@ -1555,7 +1555,7 @@
 			}
 		]
 	},
-	"kyrkogatan 10": {
+	"kyrkogatan 10-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/kyrkog80.htm",
@@ -1564,7 +1564,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"kyrkogatan 5": {
+	"kyrkogatan 5-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -1572,7 +1572,7 @@
 			}
 		]
 	},
-	"kyrkogatan 8": {
+	"kyrkogatan 8-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/dyhreb.htm",
@@ -1581,7 +1581,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"bankgatan 6": {
+	"bankgatan 6-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/berger.htm",
@@ -1609,7 +1609,7 @@
 			}
 		]
 	},
-	"borgaregatan 30": {
+	"borgaregatan 30-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -1617,7 +1617,7 @@
 			}
 		]
 	},
-	"gustav adolfsgatan 39": {
+	"gustav adolfsgatan 39-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/levhemsb.htm",
@@ -1638,7 +1638,7 @@
 			}
 		]
 	},
-	"karleborgsgatan 23": {
+	"karleborgsgatan 23-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/langrade.htm",
@@ -1647,7 +1647,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"gustav adolfsgatan 25": {
+	"gustav adolfsgatan 25-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/div/willmansper.html",
@@ -1656,7 +1656,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"karleborgsgatan 26": {
+	"karleborgsgatan 26-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/wikman.htm",
@@ -1665,7 +1665,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"karleborgsgatan 28": {
+	"karleborgsgatan 28-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/hagglunj.htm",
@@ -1674,7 +1674,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"karleborgsgatan 15": {
+	"karleborgsgatan 15-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/forsells.htm",
@@ -1683,7 +1683,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"gustav adolfsgatan 23": {
+	"gustav adolfsgatan 23-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/hoglundv.htm",
@@ -1692,7 +1692,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"borgaregatan 10": {
+	"borgaregatan 10-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/gleisner.htm",
@@ -1705,7 +1705,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"topeliusesplanaden 17": {
+	"topeliusesplanaden 17-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/gulf.htm",
@@ -1722,7 +1722,7 @@
 			}
 		]
 	},
-	"topeliusesplanaden 13": {
+	"topeliusesplanaden 13-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/rkioske.htm",
@@ -1758,7 +1758,7 @@
 			}
 		]
 	},
-	"topeliusesplanaden 10": {
+	"topeliusesplanaden 10-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/nkbybyni.htm",
@@ -1789,7 +1789,7 @@
 			}
 		]
 	},
-	"bankgatan 8": {
+	"bankgatan 8-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/nik70/154fotbo.htm",
@@ -1811,7 +1811,7 @@
 			}
 		]
 	},
-	"bankgatan 12": {
+	"bankgatan 12-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/mackarlp.htm",
@@ -1832,7 +1832,7 @@
 			}
 		]
 	},
-	"bankgatan 3": {
+	"bankgatan 3-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/nyholmr/forsfore/01forsfo.htm",
@@ -1848,7 +1848,7 @@
 			}
 		]
 	},
-	"topeliusesplanaden 15": {
+	"topeliusesplanaden 15-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/bergfeld.htm",
@@ -1861,7 +1861,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"markbyvägen": {
+	"markbyvägen-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/boxal62.html",
@@ -1870,7 +1870,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"östra åvägen": {
+	"östra åvägen-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/rianrian.htm",
@@ -1883,7 +1883,7 @@
 			}
 		]
 	},
-	"juthasvägen 3": {
+	"juthasvägen 3-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/brunnalp.htm",
@@ -1896,7 +1896,7 @@
 			}
 		]
 	},
-	"juthasvägen 5": {
+	"juthasvägen 5-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/julhal50.htm",
@@ -1905,7 +1905,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"juthasvägen 7": {
+	"juthasvägen 7-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/vonessen.htm",
@@ -1914,7 +1914,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"sollefteågatan 1": {
+	"sollefteågatan 1-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/dalton.htm",
@@ -1923,7 +1923,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"badhusstigen 1": {
+	"badhusstigen 1-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/mannfors.htm",
@@ -1940,7 +1940,7 @@
 			}
 		]
 	},
-	"seminariegatan 10": {
+	"seminariegatan 10-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -1948,7 +1948,7 @@
 			}
 		]
 	},
-	"bankgatan 2": {
+	"bankgatan 2-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/holmstrf/sommar.htm",
@@ -1987,7 +1987,7 @@
 			}
 		]
 	},
-	"kyrkogatan 45": {
+	"kyrkogatan 45-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -1995,7 +1995,7 @@
 			}
 		]
 	},
-	"bankgatan 4": {
+	"bankgatan 4-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/ryskgrepp.html",
@@ -2067,7 +2067,7 @@
 			}
 		]
 	},
-	"kyrkogatan 6": {
+	"kyrkogatan 6-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/fakta/kyrkogdr.htm",
@@ -2086,7 +2086,7 @@
 			}
 		]
 	},
-	"topeliusesplanaden 11": {
+	"topeliusesplanaden 11-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/wiksholp.htm",
@@ -2106,7 +2106,7 @@
 			}
 		]
 	},
-	"topeliusesplanaden 7": {
+	"topeliusesplanaden 7-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2117,7 +2117,7 @@
 			}
 		]
 	},
-	"topeliusesplanaden 9": {
+	"topeliusesplanaden 9-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/liljedsh.htm",
@@ -2130,7 +2130,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"bankgatan 10": {
+	"bankgatan 10-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/viksjr.htm",
@@ -2150,7 +2150,7 @@
 			}
 		]
 	},
-	"bankgatan 14": {
+	"bankgatan 14-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2161,7 +2161,7 @@
 			}
 		]
 	},
-	"bankgatan 7": {
+	"bankgatan 7-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/krokfovd.htm",
@@ -2186,7 +2186,7 @@
 			}
 		]
 	},
-	"gustav adolfsgatan 15": {
+	"gustav adolfsgatan 15-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2197,7 +2197,7 @@
 			}
 		]
 	},
-	"sollefteågatan 5": {
+	"sollefteågatan 5-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/solleft3.htm",
@@ -2213,7 +2213,7 @@
 			}
 		]
 	},
-	"sollefteågatan 7": {
+	"sollefteågatan 7-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/vikenstg.htm",
@@ -2222,7 +2222,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"bankgatan 9": {
+	"bankgatan 9-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2236,7 +2236,7 @@
 			}
 		]
 	},
-	"bankgatan 11": {
+	"bankgatan 11-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2244,7 +2244,7 @@
 			}
 		]
 	},
-	"bankgatan 13": {
+	"bankgatan 13-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2255,7 +2255,7 @@
 			}
 		]
 	},
-	"gustav adolfsgatan 19": {
+	"gustav adolfsgatan 19-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/salem.htm",
@@ -2264,7 +2264,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"bankgatan 16": {
+	"bankgatan 16-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2275,7 +2275,7 @@
 			}
 		]
 	},
-	"bankgatan 17": {
+	"bankgatan 17-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2298,7 +2298,7 @@
 			}
 		]
 	},
-	"gustav adolfsgatan 20": {
+	"gustav adolfsgatan 20-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/fougsted.htm",
@@ -2307,7 +2307,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"gustav adolfsgatan 21": {
+	"gustav adolfsgatan 21-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2315,7 +2315,7 @@
 			}
 		]
 	},
-	"gustav adolfsgatan 22": {
+	"gustav adolfsgatan 22-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2323,7 +2323,7 @@
 			}
 		]
 	},
-	"bankgatan 20": {
+	"bankgatan 20-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/lillolla.htm",
@@ -2340,7 +2340,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"sollefteågatan 18": {
+	"sollefteågatan 18-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/bjarfors.htm",
@@ -2349,7 +2349,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"mathesiusgatan 10": {
+	"mathesiusgatan 10-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/grusadef.htm",
@@ -2358,7 +2358,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"borgaregatan 12": {
+	"borgaregatan 12-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/gardar65.htm",
@@ -2371,7 +2371,7 @@
 			}
 		]
 	},
-	"gustav adolfsgatan 29": {
+	"gustav adolfsgatan 29-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2379,7 +2379,7 @@
 			}
 		]
 	},
-	"gustav adolfsgatan 12": {
+	"gustav adolfsgatan 12-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/granberg.htm",
@@ -2392,7 +2392,7 @@
 			}
 		]
 	},
-	"karlmansgatan": {
+	"karlmansgatan-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2400,7 +2400,7 @@
 			}
 		]
 	},
-	"mathesiusgatan 1": {
+	"mathesiusgatan 1-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2408,7 +2408,7 @@
 			}
 		]
 	},
-	"karleborgsgatan 6": {
+	"karleborgsgatan 6-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2416,7 +2416,7 @@
 			}
 		]
 	},
-	"borgaregatan 13": {
+	"borgaregatan 13-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2424,7 +2424,7 @@
 			}
 		]
 	},
-	"borgaregatan 22": {
+	"borgaregatan 22-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2432,7 +2432,7 @@
 			}
 		]
 	},
-	"borgaregatan 26": {
+	"borgaregatan 26-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/tomtfo46.htm",
@@ -2441,7 +2441,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"karleborgsgatan 30": {
+	"karleborgsgatan 30-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2449,7 +2449,7 @@
 			}
 		]
 	},
-	"bankgatan 33": {
+	"bankgatan 33-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/bankg33.htm",
@@ -2458,7 +2458,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"skeppsgatan": {
+	"skeppsgatan-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2466,7 +2466,7 @@
 			}
 		]
 	},
-	"borgaregatan 24": {
+	"borgaregatan 24-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/brunnalp.htm",
@@ -2482,7 +2482,7 @@
 			}
 		]
 	},
-	"bankgatan 32": {
+	"bankgatan 32-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/20groda.htm",
@@ -2495,7 +2495,7 @@
 			}
 		]
 	},
-	"källbackgatan 3": {
+	"källbackgatan 3-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2503,7 +2503,7 @@
 			}
 		]
 	},
-	"källbackgatan 6": {
+	"källbackgatan 6-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/melcher85.html",
@@ -2512,7 +2512,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"karleborgsgatan 34": {
+	"karleborgsgatan 34-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/blabaria.htm",
@@ -2521,7 +2521,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"källbackgatan 8": {
+	"källbackgatan 8-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/vidman.htm",
@@ -2530,7 +2530,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"källbackgatan 10": {
+	"källbackgatan 10-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/janssons.htm",
@@ -2539,7 +2539,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"källbackgatan 12": {
+	"källbackgatan 12-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/soderlun.htm",
@@ -2548,7 +2548,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"mathesiusgatan 22": {
+	"mathesiusgatan 22-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2556,7 +2556,7 @@
 			}
 		]
 	},
-	"källbackgatan 82": {
+	"källbackgatan 82-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2564,7 +2564,7 @@
 			}
 		]
 	},
-	"grev tott gatan": {
+	"grev tott gatan-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/brunnalp.htm",
@@ -2587,7 +2587,7 @@
 			}
 		]
 	},
-	"kvarnvägen 2": {
+	"kvarnvägen 2-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2595,7 +2595,7 @@
 			}
 		]
 	},
-	"sandvägen": {
+	"sandvägen-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2606,7 +2606,7 @@
 			}
 		]
 	},
-	"kovjokivägen 1": {
+	"kovjokivägen 1-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2614,7 +2614,7 @@
 			}
 		]
 	},
-	"bankgatan 34": {
+	"bankgatan 34-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2622,7 +2622,7 @@
 			}
 		]
 	},
-	"bankgatan 25": {
+	"bankgatan 25-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/ikaheimo.html",
@@ -2635,7 +2635,7 @@
 			}
 		]
 	},
-	"bankgatan 24": {
+	"bankgatan 24-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2643,7 +2643,7 @@
 			}
 		]
 	},
-	"granvägen": {
+	"granvägen-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2651,7 +2651,7 @@
 			}
 		]
 	},
-	"tallvägen": {
+	"tallvägen-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2659,7 +2659,7 @@
 			}
 		]
 	},
-	"gustav adolfsgränd": {
+	"gustav adolfsgränd-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/sandman/hand/266krigs.htm",
@@ -2668,7 +2668,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"prästgårdsgränd": {
+	"prästgårdsgränd-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2679,7 +2679,7 @@
 			}
 		]
 	},
-	"klockaregränd": {
+	"klockaregränd-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2693,7 +2693,7 @@
 			}
 		]
 	},
-	"karleborgsgatan 1": {
+	"karleborgsgatan 1-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/bjorklu2.htm",
@@ -2702,7 +2702,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"sollefteågatan 11": {
+	"sollefteågatan 11-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/hedstrom/stenhust.htm",
@@ -2711,7 +2711,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"topeliusesplanaden 5": {
+	"topeliusesplanaden 5-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/hedstromeb.htm",
@@ -2720,7 +2720,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"topeliusesplanaden 4": {
+	"topeliusesplanaden 4-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/nessler.htm",
@@ -2729,7 +2729,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"bangatan 5": {
+	"bangatan 5-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2737,7 +2737,7 @@
 			}
 		]
 	},
-	"kyrkogatan 4": {
+	"kyrkogatan 4-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2745,7 +2745,7 @@
 			}
 		]
 	},
-	"skogsgatan 4": {
+	"skogsgatan 4-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2753,7 +2753,7 @@
 			}
 		]
 	},
-	"skogsgatan": {
+	"skogsgatan-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/div/willmansper.html",
@@ -2762,7 +2762,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"seminariegatan 12": {
+	"seminariegatan 12-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2770,7 +2770,7 @@
 			}
 		]
 	},
-	"lundagatan": {
+	"lundagatan-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2778,7 +2778,7 @@
 			}
 		]
 	},
-	"tvärgatan 4": {
+	"tvärgatan 4-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2786,7 +2786,7 @@
 			}
 		]
 	},
-	"idrottsgatan 7": {
+	"idrottsgatan 7-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/asplunds.htm",
@@ -2795,7 +2795,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"juthasvägen 6": {
+	"juthasvägen 6-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2803,7 +2803,7 @@
 			}
 		]
 	},
-	"idrottsgränd": {
+	"idrottsgränd-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2811,7 +2811,7 @@
 			}
 		]
 	},
-	"gustav adolfsgatan 7": {
+	"gustav adolfsgatan 7-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/kappas.htm",
@@ -2820,7 +2820,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"bangatan 15": {
+	"bangatan 15-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/martha30.htm",
@@ -2829,7 +2829,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"bangatan 12": {
+	"bangatan 12-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2837,7 +2837,7 @@
 			}
 		]
 	},
-	"bangatan 13": {
+	"bangatan 13-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2845,7 +2845,7 @@
 			}
 		]
 	},
-	"gustav adolfsgatan 2": {
+	"gustav adolfsgatan 2-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/frilundv.html",
@@ -2854,7 +2854,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"gustav adolfsgatan 4": {
+	"gustav adolfsgatan 4-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/gusta-ban.htm",
@@ -2867,7 +2867,7 @@
 			}
 		]
 	},
-	"bangatan 9": {
+	"bangatan 9-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/kommunsa.htm",
@@ -2880,7 +2880,7 @@
 			}
 		]
 	},
-	"gustav adolfsgatan 5": {
+	"gustav adolfsgatan 5-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/bonhkont.htm",
@@ -2893,7 +2893,7 @@
 			}
 		]
 	},
-	"gustav adolfsgatan 8": {
+	"gustav adolfsgatan 8-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/hansensr.htm",
@@ -2906,7 +2906,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"gustav adolfsgatan 10": {
+	"gustav adolfsgatan 10-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/ohmanr.htm",
@@ -2919,7 +2919,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"topeliusesplanaden 6": {
+	"topeliusesplanaden 6-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/nordlin2.htm",
@@ -2932,7 +2932,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"jöns drakes väg 21": {
+	"jöns drakes väg 21-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/vahaluom.htm",
@@ -2941,7 +2941,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"fabriksgatan 27": {
+	"fabriksgatan 27-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2949,7 +2949,7 @@
 			}
 		]
 	},
-	"smedsbackavägen": {
+	"smedsbackavägen-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -2957,7 +2957,7 @@
 			}
 		]
 	},
-	"sollefteågatan 3": {
+	"sollefteågatan 3-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/kortindi/RS/RS_A/rsah059f.htm",
@@ -2988,7 +2988,7 @@
 			}
 		]
 	},
-	"bockmöllergatan": {
+	"bockmöllergatan-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/halsosju.htm",
@@ -3012,7 +3012,7 @@
 			}
 		]
 	},
-	"karl grönforsväg": {
+	"karl grönforsväg-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -3026,7 +3026,7 @@
 			}
 		]
 	},
-	"nygårdsgränd": {
+	"nygårdsgränd-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/huldenjj/osterblu/topestad.htm",
@@ -3046,7 +3046,7 @@
 			}
 		]
 	},
-	"pälsvägen": {
+	"pälsvägen-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/roosasla.htm",
@@ -3059,7 +3059,7 @@
 			}
 		]
 	},
-	"frillmossavägen 1": {
+	"frillmossavägen 1-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -3070,7 +3070,7 @@
 			}
 		]
 	},
-	"jöns drakes väg": {
+	"jöns drakes väg-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -3087,7 +3087,7 @@
 			}
 		]
 	},
-	"hagagatan": {
+	"hagagatan-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/gamlamej.htm",
@@ -3103,7 +3103,7 @@
 			}
 		]
 	},
-	"idrottsgatan": {
+	"idrottsgatan-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -3114,7 +3114,7 @@
 			}
 		]
 	},
-	"norrskenet": {
+	"norrskenet-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -3161,7 +3161,7 @@
 			}
 		]
 	},
-	"kyrkogatan 58": {
+	"kyrkogatan 58-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -3174,7 +3174,7 @@
 			"lat": 63.524056
 		}
 	},
-	"riksväg åtta": {
+	"riksväg åtta-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -3187,7 +3187,7 @@
 			"lat": 63.480316
 		}
 	},
-	"älvgränd": {
+	"älvgränd-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/nygardsv.htm",
@@ -3201,7 +3201,7 @@
 			"lat": 63.520552
 		}
 	},
-	"kolonivägen": {
+	"kolonivägen-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/byggande49.html",
@@ -3227,7 +3227,7 @@
 			}
 		]
 	},
-	"gustav adolfsgatan 9": {
+	"gustav adolfsgatan 9-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/blomstro.htm",
@@ -3244,7 +3244,7 @@
 		],
 		"disapprovedPages": []
 	},
-	"kyrkogatan 2": {
+	"kyrkogatan 2-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -3261,7 +3261,7 @@
 			}
 		]
 	},
-	"sollefteågatan 9": {
+	"sollefteågatan 9-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/bnordlin.htm",
@@ -3282,7 +3282,7 @@
 			}
 		]
 	},
-	"sollefteågatan 8": {
+	"sollefteågatan 8-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/poliskaeb.htm",
@@ -3303,7 +3303,7 @@
 			}
 		]
 	},
-	"bangatan 3": {
+	"bangatan 3-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/backmanr.htm",
@@ -3326,7 +3326,7 @@
 			}
 		]
 	},
-	"västanlid": {
+	"västanlid-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/div/bagarstug_sk.html",
@@ -3353,7 +3353,7 @@
 			}
 		]
 	},
-	"kvarnvägen": {
+	"kvarnvägen-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/upp/stad0992.htm",
@@ -3384,7 +3384,7 @@
 			}
 		]
 	},
-	"residensgatan": {
+	"residensgatan-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -3419,7 +3419,7 @@
 			}
 		]
 	},
-	"juthasvägen": {
+	"juthasvägen-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/castrenm.htm",
@@ -3511,7 +3511,7 @@
 			}
 		]
 	},
-	"kyrkogatan": {
+	"kyrkogatan-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/kyrkbrun.htm",
@@ -3870,7 +3870,7 @@
 			}
 		]
 	},
-	"nygårdsvägen": {
+	"nygårdsvägen-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birckjl/op/nygardb4.htm",
@@ -3910,7 +3910,7 @@
 			}
 		]
 	},
-	"spången": {
+	"spången-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -3966,7 +3966,7 @@
 			}
 		]
 	},
-	"bergstigen": {
+	"bergstigen-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/desmastu.htm",
@@ -4031,7 +4031,7 @@
 			}
 		]
 	},
-	"staketgatan": {
+	"staketgatan-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/byggande74.html",
@@ -4087,7 +4087,7 @@
 			}
 		]
 	},
-	"tvärgatan": {
+	"tvärgatan-66900": {
 		"approvedPages": [],
 		"disapprovedPages": [
 			{
@@ -4146,7 +4146,7 @@
 			}
 		]
 	},
-	"topeliusesplanaden": {
+	"topeliusesplanaden-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/fanglagr.html",
@@ -4390,7 +4390,7 @@
 			}
 		]
 	},
-	"gustav adolfsgatan": {
+	"gustav adolfsgatan-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/div/alkogard.htm",
@@ -4614,7 +4614,7 @@
 			}
 		]
 	},
-	"regnbågen": {
+	"regnbågen-66900": {
 		"name": "regnbågen",
 		"position": {
 			"lng": 22.505623,
@@ -4650,7 +4650,7 @@
 			}
 		]
 	},
-	"östanlid": {
+	"östanlid-66900": {
 		"name": "östanlid",
 		"position": {
 			"lng": 22.541151,
@@ -4683,7 +4683,7 @@
 			}
 		]
 	},
-	"lybecksgatan": {
+	"lybecksgatan-66900": {
 		"alternativeNames": [
 			"Nybro Boulevarden"
 		],
@@ -4923,7 +4923,7 @@
 			}
 		]
 	},
-	"andrasjövägen": {
+	"andrasjövägen-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/div/mjolken.htm"
@@ -5021,7 +5021,7 @@
 			}
 		]
 	},
-	"munsalavägen": {
+	"munsalavägen-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/div/kuusinens_minnen.html"
@@ -5088,7 +5088,7 @@
 			}
 		]
 	},
-	"jakobstadsvägen": {
+	"jakobstadsvägen-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/div/forsverk.html"
@@ -5166,7 +5166,7 @@
 			}
 		]
 	},
-	"kovjokivägen": {
+	"kovjokivägen-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/ii/spobebyg.htm"
@@ -5274,7 +5274,7 @@
 			}
 		]
 	},
-	"seminariegatan 16": {
+	"seminariegatan 16-66900": {
 		"lng": 22.523644,
 		"lat": 63.524282,
 		"position": {
@@ -5293,7 +5293,7 @@
 			}
 		]
 	},
-	"kyrkogatan 44": {
+	"kyrkogatan 44-66900": {
 		"lng": 22.527806,
 		"lat": 63.523994,
 		"position": {
@@ -5306,7 +5306,7 @@
 			}
 		]
 	},
-	"källbackgatan": {
+	"källbackgatan-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/div/hugolilj.htm",
@@ -5402,7 +5402,7 @@
 			}
 		]
 	},
-	"mathesiusgatan": {
+	"mathesiusgatan-66900": {
 		"alternativeNames": [
 			"Östra Staketgatan"
 		],
@@ -5530,7 +5530,7 @@
 			}
 		]
 	},
-	"karleborgsgatan": {
+	"karleborgsgatan-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/karleblp.htm",
@@ -5719,7 +5719,7 @@
 			}
 		]
 	},
-	"borgaregatan": {
+	"borgaregatan-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/div/kuusinens_minnen.html"
@@ -5998,7 +5998,7 @@
 			}
 		]
 	},
-	"sollefteågatan": {
+	"sollefteågatan-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/div/nybo.htm"
@@ -6304,7 +6304,7 @@
 			"Södra Torggatan"
 		]
 	},
-	"bankgatan": {
+	"bankgatan-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/div/blodstortning_kw.html"
@@ -6765,7 +6765,7 @@
 			"Norra torggatan"
 		]
 	},
-	"seminariegatan 5": {
+	"seminariegatan 5-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/kortindi/LR/LR_F/LRFV0181.HTML",
@@ -6773,21 +6773,21 @@
 			}
 		]
 	},
-	"borgaregatan 34": {
+	"borgaregatan 34-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/kortindi/PK/PK_A/Pkav015x.htm"
 			}
 		]
 	},
-	"Aspnäsvägen": {
+	"Aspnäsvägen-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/julhap59.html"
 			}
 		]
 	},
-	"Stationsvägen": {
+	"Stationsvägen-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/lybeckm/margit/01margit.htm"
@@ -6797,7 +6797,7 @@
 			}
 		]
 	},
-	"Kyrkvägen": {
+	"Kyrkvägen-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/svedberh/op/socknen1.htm"
@@ -6807,7 +6807,7 @@
 			}
 		]
 	},
-	"Markbyvägen": {
+	"Markbyvägen-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/boxal62.html",
@@ -6815,21 +6815,21 @@
 			}
 		]
 	},
-	"Haraldsrundan": {
+	"Haraldsrundan-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/djupst06.htm"
 			}
 		]
 	},
-	"Hirvlaxvägen": {
+	"Hirvlaxvägen-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/postensocklot.html"
 			}
 		]
 	},
-	"Rijfsväg": {
+	"Rijfsväg-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/skospanne.html",
@@ -6837,14 +6837,14 @@
 			}
 		]
 	},
-	"grisselören 1": {
+	"grisselören 1-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/pers/herlerjo.htm"
 			}
 		]
 	},
-	"Vedören": {
+	"Vedören-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/litenbro.html",
@@ -6852,7 +6852,7 @@
 			}
 		]
 	},
-	"socklotvägen": {
+	"socklotvägen-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/galgback.htm",
@@ -6872,7 +6872,7 @@
 			}
 		]
 	},
-	"rijfsväg": {
+	"rijfsväg-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/skospanne.html",
@@ -6880,7 +6880,7 @@
 			}
 		]
 	},
-	"nyvägen": {
+	"nyvägen-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/riksmarsch.html"
@@ -6902,11 +6902,11 @@
 			}
 		]
 	},
-	"hirvlaxvägen": {
+	"hirvlaxvägen-66900": {
 		"approvedPages": [],
 		"disapprovedPages": []
 	},
-	"kyrkvägen": {
+	"kyrkvägen-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/diverse/socklots.htm"
@@ -6916,7 +6916,7 @@
 			}
 		]
 	},
-	"stationsvägen": {
+	"stationsvägen-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/fartyg/ulrika.htm"
@@ -6926,7 +6926,7 @@
 			}
 		]
 	},
-	"jeppovägen": {
+	"jeppovägen-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/gpub/kuddnas/04smastad.html"
@@ -6981,14 +6981,14 @@
 			}
 		]
 	},
-	"aspnäsvägen": {
+	"aspnäsvägen-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/op/julhap59.html"
 			}
 		]
 	},
-	"viksgatan": {
+	"viksgatan-66900": {
 		"disapprovedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/heikel/barnd/04mfb.htm"
@@ -6998,7 +6998,7 @@
 			}
 		]
 	},
-	"vedören": {
+	"vedören-66900": {
 		"approvedPages": [
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/litenbro.html",

@@ -48,7 +48,7 @@ function geoCode(name, postcode = '66900', city = 'Nykarleby', country = 'Finlan
 }
 
 function toFile(data, path) {
-    fs.writeFile(path, JSON.stringify(data), function (err) {
+    fs.writeFile(path, JSON.stringify(data, null,'\t'), function (err) {
         if (err) {
             return console.log(err);
         }
@@ -77,7 +77,7 @@ function geoCodeCrawlerResult() {
     console.log(`GeoCode ${locales.length} locales from search result`);
     bar = new ProgressBar(':bar', { total: locales.length });
 
-    const reqs = locales.map(key => geoCode(key, crawlerResult[key].zipCode));
+    const reqs = locales.map(key => geoCode(crawlerResult[key].name, crawlerResult[key].zipCode));
     Promise.all(reqs)
         .then((newGeoCodedLocales) => {
             console.log(`Geocoding done, ignored: ${ignored.length}, success: ${geoCodeSuccess.length}, failed: ${geoCodeErrors.length}`);

@@ -8,6 +8,7 @@ Object.keys(editedLocales).forEach(key => {
     if (editedLocales[key].approvedPages){
         pages = editedLocales[key].approvedPages.map(approvedPage => {
             let pageData = locales[key].pages.find(page => page.url === approvedPage.url);
+
             return {
                 title: pageData.title,
                 url: pageData.url,

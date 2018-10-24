@@ -35,7 +35,7 @@ function searchUrls(zipCodeAndLocales, urls) {
 
                 Object.keys(zipCodeAndLocales).forEach(key => {
                     const {zipCode, streetNames} = zipCodeAndLocales[key];
-                    streetNames.forEach(name => {
+                    streetNames.forEach(streetName => {
                         if($){
                             const body = $("body");
                             const bodyText = (body.text() || '').toLowerCase();
@@ -44,13 +44,14 @@ function searchUrls(zipCodeAndLocales, urls) {
                                 return el.attribs.src.replace('../../../', '')
                             });
 
-                            if(bodyText.indexOf(name.toLowerCase()) > 0){
-                                const re = new RegExp(`\\b${name.toLowerCase()}\\s[0-9]{1,3}`);
+                            if(bodyText.indexOf(streetName.toLowerCase()) > 0){
+                                const re = new RegExp(`\\b${streetName.toLowerCase()}\\s[0-9]{1,3}`);
                                 const addressWithStreetNumber = bodyText.match(re);
-                                const key = getKey(addressWithStreetNumber, name);
+                                const name = getKey(addressWithStreetNumber, streetName);
                                 pagesCount++;
+                                const key = `${name}-${zipCode}`;
 
-                                if(result[key] && result[key].zipCode === zipCode){
+                                if(result[key]){
                                     result[key].pages.push({
                                         url: res.options.uri,
                                         title,
@@ -59,6 +60,7 @@ function searchUrls(zipCodeAndLocales, urls) {
                                 }
                                 else {
                                     result[key] = {
+                                        name,
                                         zipCode,
                                         isAddressWithStreetNumber: !!addressWithStreetNumber,
                                         pages: [{
@@ -86,7 +88,7 @@ function searchUrls(zipCodeAndLocales, urls) {
         console.log('Searching done');
         console.log(`Matched ${pagesCount} urls to ${Object.keys(result).length} locales`);
 
-        fs.writeFile("data/crawler-result-lg.json",  JSON.stringify(result), function (err) {
+        fs.writeFile("data/crawler-result-lg.json",  JSON.stringify(result, null,'\t'), function (err) {
             if (err) {
                 return console.log(err);
             }
@@ -125,7 +127,7 @@ function getStreetNames(zipCodeUrls){
                         const streetNameData = $('.data table table td div:not(.ipono_tooltip)')
                         result.push({zipCode, streetNames: Object.keys(streetNameData).filter(key => streetNameData[key]).map(key => {
                             if(streetNameData[key].children && streetNameData[key].children.length > 0 &&  streetNameData[key].children[0]){
-                                return streetNameData[key].children[0].data.replace(/(\r\n|\n|\r|\t|\s)/gm,"").toLowerCase()
+                                return streetNameData[key].children[0].data.replace(/(\r\n|\n|\r|\t)/gm,'').replace('  ', '').toLowerCase()
                             }
                         }).filter(streetName => streetName)});
                     }
@@ -174,7 +176,7 @@ function getLocales(commune){
         c.on('drain', function() {
             console.log('Searching done');
             getStreetNames(zipeCodeUrls).then((streetNames) => {
-                fs.writeFile("data/locales.json",  JSON.stringify(streetNames), function (err) {
+                fs.writeFile("data/locales.json",  JSON.stringify(streetNames, null,'\t'), function (err) {
                     if (err) {
                         return console.log(err);
                     }
@@ -190,7 +192,7 @@ function getLocales(commune){
 }
 
 getLocales('Nykarleby').then((streetNames) => {
-    searchUrls(streetNames, filteredUrls);
+    searchUrls(streetNames, filteredUrls.slice(0, 20));
 });
 
 
