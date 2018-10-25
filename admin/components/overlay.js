@@ -168,10 +168,8 @@ class Overlay extends React.PureComponent {
         if(this.props.currentLocale){
             const {editedLocales = {}, currentLocale: {name, locale}, globallyDisapprovedPageUrls, starredPages, reportedLocales} = this.props;
             const editedLocale = editedLocales[name] || {};
-            console.log(editedLocale)
             const { approvedPages = [], disapprovedPages = [], alternativeNames = [], position: editedPosition = {}} = editedLocale;
             const pages = locale.pages.filter(page => !globallyDisapprovedPageUrls.includes(page.url));
-
             const approvedPagesForLocale = pages.filter(page => approvedPages.find((approvedPage) => approvedPage.url === page.url)) || [];
             const disapprovedPagesForLocale = pages.filter(page => disapprovedPages.find((disapprovedPage) => disapprovedPage.url === page.url)) || [];
             const uneditedPageUrlsForLocale = pages.filter(page => !disapprovedPages.find((disapprovedPage) => disapprovedPage.url === page.url) && !approvedPages.find((approvedPage) => approvedPage.url === page.url)) || [];

@@ -22,97 +22,6 @@
 	},
 	{
 		"location": {
-			"lat": 63.5232479,
-			"lng": 22.5356973
-		},
-		"name": "karleborgsgatan"
-	},
-	{
-		"location": {
-			"lat": 63.5232479,
-			"lng": 22.5356973
-		},
-		"name": "borgaregatan"
-	},
-	{
-		"location": {
-			"lat": 63.5196402,
-			"lng": 22.5392551
-		},
-		"name": "bangatan"
-	},
-	{
-		"location": {
-			"lat": 63.5058416,
-			"lng": 22.5287879
-		},
-		"name": "juthasvägen"
-	},
-	{
-		"location": {
-			"lat": 63.52292689999999,
-			"lng": 22.5276398
-		},
-		"name": "kyrkogatan"
-	},
-	{
-		"location": {
-			"lat": 63.5242987,
-			"lng": 22.536147
-		},
-		"name": "lybecksgatan"
-	},
-	{
-		"location": {
-			"lat": 63.5216242,
-			"lng": 22.5400655
-		},
-		"name": "bockmöllergatan"
-	},
-	{
-		"location": {
-			"lat": 63.52501299999999,
-			"lng": 22.5386757
-		},
-		"name": "källbackgatan"
-	},
-	{
-		"location": {
-			"lat": 63.5261522,
-			"lng": 22.5248821
-		},
-		"name": "seminariegatan"
-	},
-	{
-		"location": {
-			"lat": 63.5171249,
-			"lng": 22.5341641
-		},
-		"name": "jeansborgsvägen"
-	},
-	{
-		"location": {
-			"lat": 63.5191834,
-			"lng": 22.5378136
-		},
-		"name": "kolonivägen"
-	},
-	{
-		"location": {
-			"lat": 63.5216187,
-			"lng": 22.540861
-		},
-		"name": "bankgatan 32"
-	},
-	{
-		"location": {
-			"lat": 63.5220274,
-			"lng": 22.5268653
-		},
-		"name": "sollefteågatan 3"
-	},
-	{
-		"location": {
 			"lat": 63.5408541,
 			"lng": 22.5064349
 		},
@@ -2131,17 +2040,17 @@
 	},
 	{
 		"location": {
-			"lat": 63.5227547,
-			"lng": 22.5419863
-		},
-		"name": "borgaregatan 34"
-	},
-	{
-		"location": {
 			"lat": 63.52178359999999,
 			"lng": 22.5301266
 		},
 		"name": "sollefteågatan"
+	},
+	{
+		"location": {
+			"lat": 63.5227547,
+			"lng": 22.5419863
+		},
+		"name": "borgaregatan 34"
 	},
 	{
 		"location": {
@@ -2150,5 +2059,96 @@
 		},
 		"name": "gustav adolfsgatan",
 		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.5232479,
+			"lng": 22.5356973
+		},
+		"name": "karleborgsgatan"
+	},
+	{
+		"location": {
+			"lat": 63.5232479,
+			"lng": 22.5356973
+		},
+		"name": "borgaregatan"
+	},
+	{
+		"location": {
+			"lat": 63.5058416,
+			"lng": 22.5287879
+		},
+		"name": "juthasvägen"
+	},
+	{
+		"location": {
+			"lat": 63.5196402,
+			"lng": 22.5392551
+		},
+		"name": "bangatan"
+	},
+	{
+		"location": {
+			"lat": 63.5216242,
+			"lng": 22.5400655
+		},
+		"name": "bockmöllergatan"
+	},
+	{
+		"location": {
+			"lat": 63.52292689999999,
+			"lng": 22.5276398
+		},
+		"name": "kyrkogatan"
+	},
+	{
+		"location": {
+			"lat": 63.5242987,
+			"lng": 22.536147
+		},
+		"name": "lybecksgatan"
+	},
+	{
+		"location": {
+			"lat": 63.52501299999999,
+			"lng": 22.5386757
+		},
+		"name": "källbackgatan"
+	},
+	{
+		"location": {
+			"lat": 63.5261522,
+			"lng": 22.5248821
+		},
+		"name": "seminariegatan"
+	},
+	{
+		"location": {
+			"lat": 63.5171249,
+			"lng": 22.5341641
+		},
+		"name": "jeansborgsvägen"
+	},
+	{
+		"location": {
+			"lat": 63.5191834,
+			"lng": 22.5378136
+		},
+		"name": "kolonivägen"
+	},
+	{
+		"location": {
+			"lat": 63.5216187,
+			"lng": 22.540861
+		},
+		"name": "bankgatan 32"
+	},
+	{
+		"location": {
+			"lat": 63.5220274,
+			"lng": 22.5268653
+		},
+		"name": "sollefteågatan 3"
 	}
 ]

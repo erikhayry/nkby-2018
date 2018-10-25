@@ -10,26 +10,53 @@
 				"images": [
 					"../vykort/PK/PK_A/PKAE006F.JPG"
 				]
-			}
-		]
-	},
-	"borgaregatan 34-66900": {
-		"name": "borgaregatan 34",
-		"zipCode": "66900",
-		"isAddressWithStreetNumber": true,
-		"pages": [
+			},
 			{
-				"url": "http://nykarlebyvyer.nu/sidor/kortindi/PK/PK_A/Pkav015x.htm",
-				"title": "Våghuset",
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_15431.html",
+				"title": "Karhumäki 15431",
 				"images": [
-					"../bilder/vyer/marknad100d.jpg",
-					"../bilder/hus/vaghus51.jpg",
-					"../bilder/hus/vaghus5t.jpg",
-					"../bilder/hus/vaghus5d.jpg",
-					"../vykort/PK/PK_A/PKAV015X.JPG",
-					"../bilder/personer/torgungd.jpg",
-					"../bilder/personer/torgungdd.jpg",
-					"../bilder/hus/vaghus48b.jpg"
+					"../vykort/KM/KMA/km15431.jpg",
+					"../vykort/KM/KMA/km15431b.jpg"
+				]
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_13955.html",
+				"title": "Karhumäki 13955",
+				"images": [
+					"../vykort/KM/KMA/13955.jpg",
+					"../vykort/KM/KMA/13955b.jpg"
+				]
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_17520.html",
+				"title": "Karhumäki 17520",
+				"images": [
+					"../vykort/KM/KMA/km17520.jpg",
+					"../vykort/KM/KMA/13955b.jpg"
+				]
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_14052.html",
+				"title": "Karhumäki 14052",
+				"images": [
+					"../vykort/KM/KMA/14052.jpg",
+					"../vykort/KM/KMA/km15431b.jpg"
+				]
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_16993.html",
+				"title": "Karhumäki 16993",
+				"images": [
+					"../vykort/KM/KMA/km16993.jpg",
+					"../vykort/KM/KMA/13955b.jpg"
+				]
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_10348.html",
+				"title": "Karhumäki 10348",
+				"images": [
+					"../vykort/KM/KMA/km10348.jpg",
+					"../vykort/KM/KMA/km10348b.jpg"
 				]
 			}
 		]
@@ -59,6 +86,51 @@
 				"images": [
 					"../vykort/PK/PK_A/PKAV030F.JPG"
 				]
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_15431.html",
+				"title": "Karhumäki 15431",
+				"images": [
+					"../vykort/KM/KMA/km15431.jpg",
+					"../vykort/KM/KMA/km15431b.jpg"
+				]
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_04758.html",
+				"title": "Karhumäki 4758",
+				"images": [
+					"../vykort/KM/KMA/km04758.jpg",
+					"../vykort/KM/KMA/km02605b.jpg"
+				]
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_14052.html",
+				"title": "Karhumäki 14052",
+				"images": [
+					"../vykort/KM/KMA/14052.jpg",
+					"../vykort/KM/KMA/km15431b.jpg"
+				]
+			}
+		]
+	},
+	"borgaregatan 34-66900": {
+		"name": "borgaregatan 34",
+		"zipCode": "66900",
+		"isAddressWithStreetNumber": true,
+		"pages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/PK/PK_A/Pkav015x.htm",
+				"title": "Våghuset",
+				"images": [
+					"../bilder/vyer/marknad100d.jpg",
+					"../bilder/hus/vaghus51.jpg",
+					"../bilder/hus/vaghus5t.jpg",
+					"../bilder/hus/vaghus5d.jpg",
+					"../vykort/PK/PK_A/PKAV015X.JPG",
+					"../bilder/personer/torgungd.jpg",
+					"../bilder/personer/torgungdd.jpg",
+					"../bilder/hus/vaghus48b.jpg"
+				]
 			}
 		]
 	},
@@ -73,6 +145,322 @@
 				"images": [
 					"../vykort/PK/PK_A/PKAV030F.JPG"
 				]
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_04758.html",
+				"title": "Karhumäki 4758",
+				"images": [
+					"../vykort/KM/KMA/km04758.jpg",
+					"../vykort/KM/KMA/km02605b.jpg"
+				]
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_15430.html",
+				"title": "Karhumäki 15430",
+				"images": [
+					"../vykort/KM/KMA/km15430.jpg",
+					"../vykort/KM/KMA/km15430b.jpg"
+				]
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_02605.html",
+				"title": "Karhumäki 2605",
+				"images": [
+					"../vykort/KM/KMA/km02605.jpg",
+					"../vykort/KM/KMA/km02605b.jpg"
+				]
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_17521S.html",
+				"title": "Karhumäki 17521",
+				"images": [
+					"../vykort/KM/KMA/km17521.jpg"
+				]
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM02065S.HTM",
+				"title": "Torget",
+				"images": []
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_15432.html",
+				"title": "Karhumäki 15432",
+				"images": [
+					"../vykort/KM/KMA/km15432.jpg",
+					"../vykort/KM/KMA/km15430b.jpg"
+				]
+			}
+		]
+	},
+	"karleborgsgatan-66900": {
+		"name": "karleborgsgatan",
+		"zipCode": "66900",
+		"isAddressWithStreetNumber": false,
+		"pages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_15431.html",
+				"title": "Karhumäki 15431",
+				"images": [
+					"../vykort/KM/KMA/km15431.jpg",
+					"../vykort/KM/KMA/km15431b.jpg"
+				]
+			}
+		]
+	},
+	"borgaregatan-66900": {
+		"name": "borgaregatan",
+		"zipCode": "66900",
+		"isAddressWithStreetNumber": false,
+		"pages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_15430.html",
+				"title": "Karhumäki 15430",
+				"images": [
+					"../vykort/KM/KMA/km15430.jpg",
+					"../vykort/KM/KMA/km15430b.jpg"
+				]
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_17518.html",
+				"title": "Karhumäki 17518",
+				"images": [
+					"../vykort/KM/KMA/km16994.jpg",
+					"../vykort/KM/KMA/13955b.jpg"
+				]
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_17521S.html",
+				"title": "Karhumäki 17521",
+				"images": [
+					"../vykort/KM/KMA/km17521.jpg"
+				]
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_15432.html",
+				"title": "Karhumäki 15432",
+				"images": [
+					"../vykort/KM/KMA/km15432.jpg",
+					"../vykort/KM/KMA/km15430b.jpg"
+				]
+			}
+		]
+	},
+	"juthasvägen-66900": {
+		"name": "juthasvägen",
+		"zipCode": "66900",
+		"isAddressWithStreetNumber": false,
+		"pages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_18696.html",
+				"title": "Karhumäki 18696",
+				"images": [
+					"../vykort/KM/KMA/km18696.jpg",
+					"../vykort/KM/KMA/13955b.jpg"
+				]
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_02604.html",
+				"title": "Karhumäki 2604",
+				"images": [
+					"../vykort/KM/KMA/km02604.jpg",
+					"../vykort/KM/KMA/km02604b.jpg"
+				]
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_17519.html",
+				"title": "Karhumäki 17519",
+				"images": [
+					"../vykort/KM/KMA/km17519.jpg",
+					"../vykort/KM/KMA/13955b.jpg"
+				]
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_00808S.html",
+				"title": "Karhumäki 808",
+				"images": [
+					"../vykort/KM/KMA/km00808.jpg",
+					"../vykort/KM/KMA/km00808b.jpg"
+				]
+			}
+		]
+	},
+	"bangatan-66900": {
+		"name": "bangatan",
+		"zipCode": "66900",
+		"isAddressWithStreetNumber": false,
+		"pages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_02605.html",
+				"title": "Karhumäki 2605",
+				"images": [
+					"../vykort/KM/KMA/km02605.jpg",
+					"../vykort/KM/KMA/km02605b.jpg"
+				]
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_17518.html",
+				"title": "Karhumäki 17518",
+				"images": [
+					"../vykort/KM/KMA/km16994.jpg",
+					"../vykort/KM/KMA/13955b.jpg"
+				]
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM02065S.HTM",
+				"title": "Torget",
+				"images": []
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_13965.html",
+				"title": "Karhumäki 13965",
+				"images": [
+					"../vykort/KM/KMA/13965.jpg",
+					"../vykort/KM/KMA/13965b.jpg"
+				]
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_15432.html",
+				"title": "Karhumäki 15432",
+				"images": [
+					"../vykort/KM/KMA/km15432.jpg",
+					"../vykort/KM/KMA/km15430b.jpg"
+				]
+			}
+		]
+	},
+	"bockmöllergatan-66900": {
+		"name": "bockmöllergatan",
+		"zipCode": "66900",
+		"isAddressWithStreetNumber": false,
+		"pages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_13955.html",
+				"title": "Karhumäki 13955",
+				"images": [
+					"../vykort/KM/KMA/13955.jpg",
+					"../vykort/KM/KMA/13955b.jpg"
+				]
+			}
+		]
+	},
+	"kyrkogatan-66900": {
+		"name": "kyrkogatan",
+		"zipCode": "66900",
+		"isAddressWithStreetNumber": false,
+		"pages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_17520.html",
+				"title": "Karhumäki 17520",
+				"images": [
+					"../vykort/KM/KMA/km17520.jpg",
+					"../vykort/KM/KMA/13955b.jpg"
+				]
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_10348.html",
+				"title": "Karhumäki 10348",
+				"images": [
+					"../vykort/KM/KMA/km10348.jpg",
+					"../vykort/KM/KMA/km10348b.jpg"
+				]
+			}
+		]
+	},
+	"lybecksgatan-66900": {
+		"name": "lybecksgatan",
+		"zipCode": "66900",
+		"isAddressWithStreetNumber": false,
+		"pages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_17520.html",
+				"title": "Karhumäki 17520",
+				"images": [
+					"../vykort/KM/KMA/km17520.jpg",
+					"../vykort/KM/KMA/13955b.jpg"
+				]
+			}
+		]
+	},
+	"källbackgatan-66900": {
+		"name": "källbackgatan",
+		"zipCode": "66900",
+		"isAddressWithStreetNumber": false,
+		"pages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_17521S.html",
+				"title": "Karhumäki 17521",
+				"images": [
+					"../vykort/KM/KMA/km17521.jpg"
+				]
+			}
+		]
+	},
+	"seminariegatan-66900": {
+		"name": "seminariegatan",
+		"zipCode": "66900",
+		"isAddressWithStreetNumber": false,
+		"pages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_14054.html",
+				"title": "Karhumäki 14054",
+				"images": [
+					"../vykort/KM/KMA/14054.jpg",
+					"../vykort/KM/KMA/km14054b.jpg"
+				]
+			}
+		]
+	},
+	"jeansborgsvägen-66900": {
+		"name": "jeansborgsvägen",
+		"zipCode": "66900",
+		"isAddressWithStreetNumber": false,
+		"pages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_11305.html",
+				"title": "Karhumäki 11305",
+				"images": [
+					"../vykort/KM/KMA/km11305.jpg",
+					"../vykort/KM/KMA/km11305b.jpg"
+				]
+			}
+		]
+	},
+	"kolonivägen-66900": {
+		"name": "kolonivägen",
+		"zipCode": "66900",
+		"isAddressWithStreetNumber": false,
+		"pages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/KMA/KM_13965.html",
+				"title": "Karhumäki 13965",
+				"images": [
+					"../vykort/KM/KMA/13965.jpg",
+					"../vykort/KM/KMA/13965b.jpg"
+				]
+			}
+		]
+	},
+	"bankgatan 32-66900": {
+		"name": "bankgatan 32",
+		"zipCode": "66900",
+		"isAddressWithStreetNumber": true,
+		"pages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/kmfortec.htm",
+				"title": "Fygbilder över Nykarleby samt vyer från vattentornet",
+				"images": []
+			}
+		]
+	},
+	"sollefteågatan 3-66900": {
+		"name": "sollefteågatan 3",
+		"zipCode": "66900",
+		"isAddressWithStreetNumber": true,
+		"pages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/kortindi/KM/kmfortec.htm",
+				"title": "Fygbilder över Nykarleby samt vyer från vattentornet",
+				"images": []
 			}
 		]
 	}

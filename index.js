@@ -191,8 +191,11 @@ function getLocales(commune){
 
 }
 
-getLocales('Nykarleby').then((streetNames) => {
-    searchUrls(streetNames, filteredUrls.slice(0, 20));
-});
+//getLocales('Nykarleby').then((streetNames) => {
+//    searchUrls(streetNames, filteredUrls.slice(0, 100));
+//});
+
+//searchUrls(locales, filteredUrls.slice(0, 100));
+searchUrls(locales, filteredUrls);
 
 

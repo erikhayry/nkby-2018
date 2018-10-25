@@ -6,7 +6,9 @@ let res = {};
 Object.keys(editedLocales).forEach(key => {
     let pages = [];
     if (editedLocales[key].approvedPages){
-        pages = editedLocales[key].approvedPages.map(approvedPage => {
+        pages = editedLocales[key].approvedPages.filter(approvedPage =>
+            locales[key] && locales[key].pages.find(page => page.url === approvedPage.url)
+        ).map(approvedPage => {
             let pageData = locales[key].pages.find(page => page.url === approvedPage.url);
 
             return {
