@@ -1,4 +1,4 @@
-import { Button, Icon, Header, Label, Segment, Form, Divider, Card, Image } from 'semantic-ui-react';
+import { Button, Icon, Header, Label, Segment, Form, Divider, Card, Image, Dimmer, Grid } from 'semantic-ui-react';
 
 class Overlay extends React.PureComponent {
     state = {
@@ -34,9 +34,9 @@ class Overlay extends React.PureComponent {
     }
 
 
-    showAllImages = (url) => {
+    showAllImages = (currentPage) => {
         this.setState({
-            showAllImages: url
+            showAllImages: currentPage
         })
     };
 
@@ -49,21 +49,22 @@ class Overlay extends React.PureComponent {
         })
     };
 
-    renderImage = (pageUrl, images = [], type, preferredImage, isStarred) => {
+    renderImage = (localeName, page, type, preferredImage) => {
+        const {images = []} = page;
         if(images.length > 0){
             let src = preferredImage || images[0];
             return (
                 <Image
                     onClick={() => {
                         if(type === 'approved'){
-                            this.showAllImages(pageUrl)
+                            this.showAllImages({localeName, preferredImage, ...page})
                         }
                     }}
                     src={`http://www.nykarlebyvyer.nu/${src.replace('../../../', '')}`}
                     style={{
                         opacity: preferredImage ? 1 : 0.5
                     }}
-                    label={isStarred && { as: 'a', corner: 'left', icon: 'star', color: 'yellow'}}
+                    label={{ as: 'a', ribbon: 'right', content: images.length, color: 'black'}}
 
                 />
             )
@@ -101,36 +102,6 @@ class Overlay extends React.PureComponent {
 
             )
 
-        } else if(images.length > 0){
-            let src = preferredImage || images[0];
-            return (
-                <div style={{
-                    position: 'relative',
-                    display: 'inline-block'
-                }}>
-                    <Image
-                        onClick={() => {
-                            if(type === 'approved'){
-                                this.showAllImages(pageUrl)
-                            }
-                        }}
-                        src={`http://www.nykarlebyvyer.nu/${src.replace('../../../', '')}`}
-                        size='medium'
-                        style={{
-                            opacity: preferredImage ? 1 : 0.5
-                        }}
-                    />
-
-                    <div style={{
-                        position: 'absolute',
-                        top: 5,
-                        right: 5,
-                        color: '#fff',
-                        backgroundColor: '#ff5858',
-                        padding: 2
-                    }}>{images.length}</div>
-                </div>
-            )
         }
 
         return null;
@@ -139,8 +110,13 @@ class Overlay extends React.PureComponent {
     renderPage = (page, i, localeName, type, approvedPage = {}, isStarred) => {
         return (
             <Card key={i}>
-                {this.renderImage(page.url, page.images, type, approvedPage.preferredImage, isStarred)}
+                {this.renderImage(localeName, page, type, approvedPage.preferredImage)}
                 <Card.Content>
+                    <Card.Meta>
+                        {isStarred && <Label size='mini' color='yellow'>
+                        <Icon name='star' /> Stjärnmärkt
+                    </Label>}
+                    </Card.Meta>
                     <Card.Description>
                         <a href={page.url} target="_blank">{page.title || page.url}</a>
                     </Card.Description>
@@ -172,9 +148,9 @@ class Overlay extends React.PureComponent {
                                 pageUrl: page.url
                             })}}><Icon name='undo' /> Ångra</Button>
                         </React.Fragment>}
-                        <Button color='yellow' onClick={()=> {this.props.addStarForPage(page.url)}} disabled={isStarred}>
+                        {!isStarred && <Button color='yellow' onClick={()=> {this.props.addStarForPage(page.url)}}>
                             <Icon name='star' /> Stjärnmärk
-                        </Button>
+                        </Button>}
                     </Button.Group>
                 </Card.Content>
             </Card>
@@ -262,7 +238,7 @@ class Overlay extends React.PureComponent {
                         </Form>
                     </Segment>
 
-                    <Segment color='green'>
+                    <Segment>
                         <Header as='h3' textAlign='center' onClick={() => {
                             this.toggleView({
                                 showApproved: !this.state.showApproved
@@ -330,6 +306,50 @@ class Overlay extends React.PureComponent {
                             {this.state.showDisapproved && disapprovedPagesForLocale.map((page, index) => this.renderPage(page, index, name, 'disapproved', undefined, starredPages.includes(page.url)))}
                         </Card.Group>
                     </Segment>
+                    <Dimmer active={Boolean(this.state.showAllImages)} onClickOutside={() => {
+                        this.setState({
+                            showAllImages: undefined
+                        });
+                    }}>
+                        <div style={{
+                            height: '100vh',
+                            overflow: 'auto',
+                            padding: 10,
+                            boxSizing: 'border-box'
+                        }}>
+                            <Button circular
+                                    color='red'
+                                    onClick={() => {
+                                        this.setState({
+                                            showAllImages: undefined
+                                        });
+                                    }}
+                                    style={{
+                                        position: 'absolute',
+                                        right: '10px',
+                                        top: '10px'
+                                    }}
+                                    icon='close'
+                            />
+                            <Image.Group size='medium'>
+                                {this.state.showAllImages && this.state.showAllImages.images.map(imageUrl => {
+                                    const {url, localeName} = this.state.showAllImages;
+                                    return <Image
+                                        key={imageUrl}
+                                        onClick={() => {
+                                            this.setState({
+                                                showAllImages: undefined
+                                            }, () => {
+                                                this.setAsPreferredImages(localeName, url, imageUrl);
+                                            });
+                                        }}
+                                        src={`http://www.nykarlebyvyer.nu/${imageUrl.replace('../../../', '')}`}
+                                        label={this.state.showAllImages.preferredImage === imageUrl && { as: 'a', corner: 'left', icon: 'heart', color: 'green'}}
+                                    />
+                                })}
+                            </Image.Group>
+                        </div>
+                    </Dimmer>
 
                     <Button circular
                             onClick={() => {
