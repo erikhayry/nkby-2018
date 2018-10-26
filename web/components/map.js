@@ -53,12 +53,13 @@ function renderPage(page, i){
 function addMarkers(props){
     const {onToggleOpen, locales, currentLocale = {}} = props;
     if(locales) {
-        return Object.keys(locales).map((name) => {
-            const locale = locales[name];
+        return Object.keys(locales).map((key) => {
+            const locale = locales[key];
+            const { name, position } = locale;
             return <Marker
-                key={name} position={locale.position}
+                key={key} position={position}
                 onClick={() => {
-                    onToggleOpen({name, ...locale})
+                    onToggleOpen(locale)
                 }}
             >
                 {!props.isSmallDevice && currentLocale.name === name && <InfoWindow onCloseClick={onToggleOpen}>

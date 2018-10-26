@@ -7005,5 +7005,20 @@
 				"preferredImage": "../bilder/jt/broung50.jpg"
 			}
 		]
+	},
+	"grisselören 1-66910": {
+		"disapprovedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/pers/herlerjo.htm"
+			}
+		]
+	},
+	"vedören-66910": {
+		"approvedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/jt/litenbro.html",
+				"preferredImage": "../bilder/jt/broung50.jpg"
+			}
+		]
 	}
 }

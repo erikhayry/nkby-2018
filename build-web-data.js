@@ -20,6 +20,7 @@ Object.keys(editedLocales).forEach(key => {
     }
     if(pages.length > 0){
         res[key] = {
+            name: locales[key].name,
             position: editedLocales[key].position || locales[key].position,
             pages
         }
