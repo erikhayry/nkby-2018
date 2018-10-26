@@ -1,269 +1,443 @@
 [
 	{
 		"location": {
-			"lat": 63.4212643,
-			"lng": 22.2708092
-		},
-		"name": "sjövägen"
-	},
-	{
-		"location": {
 			"lat": 63.5217598,
 			"lng": 22.5303558
 		},
-		"name": "karlgrönforsväg"
+		"name": "karlgrönforsväg",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5650944,
 			"lng": 22.5503492
 		},
-		"name": "rijfsväg"
+		"name": "rijfsväg",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.5222074,
+			"lng": 22.5351597
+		},
+		"name": "bankgatan",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.52178359999999,
+			"lng": 22.5301266
+		},
+		"name": "sollefteågatan",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.5227547,
+			"lng": 22.5419863
+		},
+		"name": "borgaregatan 34",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.5234563,
+			"lng": 22.5335698
+		},
+		"name": "gustav adolfsgatan",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.5232479,
+			"lng": 22.5356973
+		},
+		"name": "karleborgsgatan",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.5232479,
+			"lng": 22.5356973
+		},
+		"name": "borgaregatan",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.5058416,
+			"lng": 22.5287879
+		},
+		"name": "juthasvägen",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.5196402,
+			"lng": 22.5392551
+		},
+		"name": "bangatan",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.5216242,
+			"lng": 22.5400655
+		},
+		"name": "bockmöllergatan",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.52292689999999,
+			"lng": 22.5276398
+		},
+		"name": "kyrkogatan",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.5242987,
+			"lng": 22.536147
+		},
+		"name": "lybecksgatan",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.52501299999999,
+			"lng": 22.5386757
+		},
+		"name": "källbackgatan",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.5171249,
+			"lng": 22.5341641
+		},
+		"name": "jeansborgsvägen",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.5261522,
+			"lng": 22.5248821
+		},
+		"name": "seminariegatan",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.5191834,
+			"lng": 22.5378136
+		},
+		"name": "kolonivägen",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.5216187,
+			"lng": 22.540861
+		},
+		"name": "bankgatan 32",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.5220274,
+			"lng": 22.5268653
+		},
+		"name": "sollefteågatan 3",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5408541,
 			"lng": 22.5064349
 		},
-		"name": "bådasvängen"
+		"name": "bådasvängen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5319811,
 			"lng": 22.5272084
 		},
-		"name": "högbackavägen"
+		"name": "högbackavägen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5230674,
 			"lng": 22.5377496
 		},
-		"name": "mathesiusgatan"
+		"name": "mathesiusgatan",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5229781,
 			"lng": 22.5281705
 		},
-		"name": "bankgatan 4"
+		"name": "bankgatan 4",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5217189,
 			"lng": 22.5423119
 		},
-		"name": "spången"
+		"name": "spången",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.523653,
 			"lng": 22.531456
 		},
-		"name": "topeliusesplanaden"
+		"name": "topeliusesplanaden",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.4212643,
+			"lng": 22.2708092
+		},
+		"name": "sjövägen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5219692,
 			"lng": 22.4894431
 		},
-		"name": "andrasjövägen"
+		"name": "andrasjövägen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52271229999999,
 			"lng": 22.5290719
 		},
-		"name": "bankgatan 3"
+		"name": "bankgatan 3",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.523466,
 			"lng": 22.5307663
 		},
-		"name": "topeliusesplanaden 12"
+		"name": "topeliusesplanaden 12",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5227604,
 			"lng": 22.531258
 		},
-		"name": "topeliusesplanaden 11"
+		"name": "topeliusesplanaden 11",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5238844,
 			"lng": 22.5239311
 		},
-		"name": "seminariegatan 5"
+		"name": "seminariegatan 5",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5236124,
 			"lng": 22.52193
 		},
-		"name": "bergstigen"
+		"name": "bergstigen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52817249999999,
 			"lng": 22.6088869
 		},
-		"name": "kovjokivägen"
+		"name": "kovjokivägen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52142079999999,
 			"lng": 22.5172635
 		},
-		"name": "tvärgatan"
+		"name": "tvärgatan",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52254449999999,
 			"lng": 22.5185687
 		},
-		"name": "badhusstigen"
+		"name": "badhusstigen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5236019,
 			"lng": 22.5330942
 		},
-		"name": "borgaregatan 10"
+		"name": "borgaregatan 10",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5661983,
 			"lng": 22.5711643
 		},
-		"name": "jakobstadsvägen"
+		"name": "jakobstadsvägen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5580228,
 			"lng": 22.5428763
 		},
-		"name": "åminnevägen"
+		"name": "åminnevägen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52269310000001,
 			"lng": 22.5509382
 		},
-		"name": "arbetaregatan"
+		"name": "arbetaregatan",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52311030000001,
 			"lng": 22.5190879
 		},
-		"name": "berggränd"
+		"name": "berggränd",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.51784699999999,
 			"lng": 22.5129881
 		},
-		"name": "bollgränd"
+		"name": "bollgränd",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5142237,
 			"lng": 22.5279849
 		},
-		"name": "buskåkersgränd"
+		"name": "buskåkersgränd",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5426727,
 			"lng": 22.5371728
 		},
-		"name": "conradigatan"
+		"name": "conradigatan",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5171357,
 			"lng": 22.5118658
 		},
-		"name": "diskusgränd"
+		"name": "diskusgränd",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5270731,
 			"lng": 22.5457636
 		},
-		"name": "fabriksgatan"
+		"name": "fabriksgatan",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52688,
 			"lng": 22.5351826
 		},
-		"name": "fiskaregränd"
+		"name": "fiskaregränd",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.53403429999999,
 			"lng": 22.5376836
 		},
-		"name": "fogdegränd"
+		"name": "fogdegränd",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.51791670000001,
 			"lng": 22.5470782
 		},
-		"name": "frihemsvägen"
+		"name": "frihemsvägen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5291159,
 			"lng": 22.5510306
 		},
-		"name": "frillmossavägen"
+		"name": "frillmossavägen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.51931990000001,
 			"lng": 22.5459186
 		},
-		"name": "furugränd"
+		"name": "furugränd",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5340266,
 			"lng": 22.5353424
 		},
-		"name": "fältskärsgatan"
+		"name": "fältskärsgatan",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5187174,
 			"lng": 22.5255838
 		},
-		"name": "färgaregatan"
+		"name": "färgaregatan",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5217598,
 			"lng": 22.5303558
 		},
-		"name": "färgaregränd"
+		"name": "färgaregränd",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.51854660000001,
 			"lng": 22.5447849
 		},
-		"name": "grangränd"
+		"name": "grangränd",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.51838309999999,
 			"lng": 22.5441992
 		},
-		"name": "granvägen"
+		"name": "granvägen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
@@ -278,49 +452,64 @@
 			"lat": 63.5180894,
 			"lng": 22.5365936
 		},
-		"name": "hagagatan"
+		"name": "hagagatan",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5230736,
 			"lng": 22.5525164
 		},
-		"name": "hantverkaregatan"
+		"name": "hantverkaregatan",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5217598,
 			"lng": 22.5303558
 		},
-		"name": "hantverkaregränd"
+		"name": "hantverkaregränd",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5253775,
 			"lng": 22.5167411
 		},
-		"name": "hjortrongränd"
+		"name": "hjortrongränd",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5205716,
 			"lng": 22.5174409
 		},
-		"name": "idrottsgatan"
+		"name": "idrottsgatan",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5199909,
 			"lng": 22.5146671
 		},
-		"name": "idrottsgränd"
+		"name": "idrottsgränd",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.5661983,
+			"lng": 22.5711643
+		},
+		"name": "jakobstadsvägen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.517699,
 			"lng": 22.5263233
 		},
-		"name": "joupersgatan"
+		"name": "joupersgatan",
+		"postcode": "66900"
 	},
 	{
 		"location": {
@@ -343,238 +532,280 @@
 			"lat": 63.52110449999999,
 			"lng": 22.5382849
 		},
-		"name": "karlmansgatan"
+		"name": "karlmansgatan",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.51818359999999,
 			"lng": 22.5337715
 		},
-		"name": "klockaregränd"
+		"name": "klockaregränd",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5226926,
 			"lng": 22.5472926
 		},
-		"name": "kvarnvägen"
+		"name": "kvarnvägen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5244005,
 			"lng": 22.5150667
 		},
-		"name": "lingongränd"
+		"name": "lingongränd",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52171489999999,
 			"lng": 22.5162474
 		},
-		"name": "lundagatan"
+		"name": "lundagatan",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5256472,
 			"lng": 22.5228374
 		},
-		"name": "mellangatan"
+		"name": "mellangatan",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.514881,
 			"lng": 22.5096763
 		},
-		"name": "munsalavägen"
+		"name": "munsalavägen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5217598,
 			"lng": 22.5303558
 		},
-		"name": "norrskenet"
+		"name": "norrskenet",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52916509999999,
 			"lng": 22.5210858
 		},
-		"name": "nybackagatan"
+		"name": "nybackagatan",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5204306,
 			"lng": 22.5276199
 		},
-		"name": "nygårdsgränd"
+		"name": "nygårdsgränd",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5194967,
 			"lng": 22.5270853
 		},
-		"name": "nygårdsvägen"
+		"name": "nygårdsvägen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.529988,
 			"lng": 22.5194706
 		},
-		"name": "patmosgatan"
+		"name": "patmosgatan",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5180089,
 			"lng": 22.5318215
 		},
-		"name": "prästgårdsgränd"
+		"name": "prästgårdsgränd",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5329542,
 			"lng": 22.5446337
 		},
-		"name": "pälsvägen"
+		"name": "pälsvägen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5149339,
 			"lng": 22.5313058
 		},
-		"name": "rajåkersvägen"
+		"name": "rajåkersvägen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5194364,
 			"lng": 22.5056109
 		},
-		"name": "regnbågen"
+		"name": "regnbågen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5231827,
 			"lng": 22.5147169
 		},
-		"name": "remalskroken"
+		"name": "remalskroken",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.525761,
 			"lng": 22.5216271
 		},
-		"name": "residensgatan"
+		"name": "residensgatan",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52065889999999,
 			"lng": 22.547444
 		},
-		"name": "sandvägen"
+		"name": "sandvägen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5173956,
 			"lng": 22.5345789
 		},
-		"name": "sexmansgränd"
+		"name": "sexmansgränd",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5230506,
 			"lng": 22.5392948
 		},
-		"name": "skeppsgatan"
+		"name": "skeppsgatan",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5239834,
 			"lng": 22.5165899
 		},
-		"name": "skogsgatan"
+		"name": "skogsgatan",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.529766,
 			"lng": 22.5223752
 		},
-		"name": "smedsbackavägen"
+		"name": "smedsbackavägen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5279455,
 			"lng": 22.5215628
 		},
-		"name": "smedsgränd"
+		"name": "smedsgränd",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5221321,
 			"lng": 22.5201394
 		},
-		"name": "staketgatan"
+		"name": "staketgatan",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5165982,
 			"lng": 22.5095269
 		},
-		"name": "stenbackagatan"
+		"name": "stenbackagatan",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5187588,
 			"lng": 22.4975108
 		},
-		"name": "stjärnfallet"
+		"name": "stjärnfallet",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5202127,
 			"lng": 22.5445576
 		},
-		"name": "tallvägen"
+		"name": "tallvägen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5217598,
 			"lng": 22.5303558
 		},
-		"name": "trädgårdsmästaregränd"
+		"name": "trädgårdsmästaregränd",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.516868,
 			"lng": 22.5152729
 		},
-		"name": "värnamogatan"
+		"name": "värnamogatan",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5178093,
 			"lng": 22.5167583
 		},
-		"name": "värnamogränd"
+		"name": "värnamogränd",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52898070000001,
 			"lng": 22.5233536
 		},
-		"name": "västanlid"
+		"name": "västanlid",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.5580228,
+			"lng": 22.5428763
+		},
+		"name": "åminnevägen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5217598,
 			"lng": 22.5303558
 		},
-		"name": "älvgränd"
+		"name": "älvgränd",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52071429999999,
 			"lng": 22.5411701
 		},
-		"name": "östanlid"
+		"name": "östanlid",
+		"postcode": "66900"
 	},
 	{
 		"location": {
@@ -589,7 +820,8 @@
 			"lat": 63.42222559999999,
 			"lng": 22.6048085
 		},
-		"name": "jeppovägen"
+		"name": "jeppovägen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
@@ -604,14 +836,16 @@
 			"lat": 63.50741889999999,
 			"lng": 22.4570607
 		},
-		"name": "bonäsvägen"
+		"name": "bonäsvägen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.47623389999999,
 			"lng": 22.5288015
 		},
-		"name": "ytterjeppovägen"
+		"name": "ytterjeppovägen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
@@ -626,42 +860,48 @@
 			"lat": 63.52503599999999,
 			"lng": 22.5245136
 		},
-		"name": "seminariegatan 13"
+		"name": "seminariegatan 13",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52305989999999,
 			"lng": 22.5271176
 		},
-		"name": "bankgatan 2"
+		"name": "bankgatan 2",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52522889999999,
 			"lng": 22.5354757
 		},
-		"name": "källbackgatan 3"
+		"name": "källbackgatan 3",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5680681,
 			"lng": 22.569299
 		},
-		"name": "nyvägen"
+		"name": "nyvägen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5273855,
 			"lng": 22.5332862
 		},
-		"name": "jakobstadsvägen 3"
+		"name": "jakobstadsvägen 3",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5231213,
 			"lng": 22.5381563
 		},
-		"name": "borgaregatan 24"
+		"name": "borgaregatan 24",
+		"postcode": "66900"
 	},
 	{
 		"location": {
@@ -673,94 +913,115 @@
 	},
 	{
 		"location": {
+			"lat": 63.5273855,
+			"lng": 22.5332862
+		},
+		"name": "jakobstadsvägen 3",
+		"postcode": "66900"
+	},
+	{
+		"location": {
 			"lat": 63.5220156,
 			"lng": 22.523206
 		},
-		"name": "juthasvägen 3"
+		"name": "juthasvägen 3",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5248934,
 			"lng": 22.5289806
 		},
-		"name": "kyrkogatan 45"
+		"name": "kyrkogatan 45",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.522848,
 			"lng": 22.520833
 		},
-		"name": "staketgatan 6"
+		"name": "staketgatan 6",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.61204689999999,
 			"lng": 22.4921221
 		},
-		"name": "grisselören"
+		"name": "grisselören",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52261249999999,
 			"lng": 22.5324447
 		},
-		"name": "bankgatan 12"
+		"name": "bankgatan 12",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5224808,
 			"lng": 22.5312825
 		},
-		"name": "bankgatan 7"
+		"name": "bankgatan 7",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.522142,
 			"lng": 22.5347622
 		},
-		"name": "bankgatan 17"
+		"name": "bankgatan 17",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.521167,
 			"lng": 22.5180257
 		},
-		"name": "tvärgatan 4"
+		"name": "tvärgatan 4",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52474589999999,
 			"lng": 22.524375
 		},
-		"name": "seminariegatan 11"
+		"name": "seminariegatan 11",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.45341730000001,
 			"lng": 22.439068
 		},
-		"name": "viksgatan"
+		"name": "viksgatan",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52252730000001,
 			"lng": 22.5272383
 		},
-		"name": "kyrkogatan 6"
+		"name": "kyrkogatan 6",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.521946,
 			"lng": 22.5308876
 		},
-		"name": "topeliusesplanaden 7"
+		"name": "topeliusesplanaden 7",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52143030000001,
 			"lng": 22.5220712
 		},
-		"name": "badhusstigen 1"
+		"name": "badhusstigen 1",
+		"postcode": "66900"
 	},
 	{
 		"location": {
@@ -775,91 +1036,104 @@
 			"lat": 63.5234924,
 			"lng": 22.5277094
 		},
-		"name": "kyrkogatan 10"
+		"name": "kyrkogatan 10",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52476779999999,
 			"lng": 22.5305087
 		},
-		"name": "lybecksgatan 5"
+		"name": "lybecksgatan 5",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52532549999999,
 			"lng": 22.5246437
 		},
-		"name": "seminariegatan 15"
+		"name": "seminariegatan 15",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5213696,
 			"lng": 22.5333763
 		},
-		"name": "sollefteågatan 17"
+		"name": "sollefteågatan 17",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5201857,
 			"lng": 22.5292272
 		},
-		"name": "topeliusesplanaden 2"
+		"name": "topeliusesplanaden 2",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5228929,
 			"lng": 22.5293227
 		},
-		"name": "bankgatan 6"
+		"name": "bankgatan 6",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5227979,
 			"lng": 22.5301319
 		},
-		"name": "bankgatan 8"
+		"name": "bankgatan 8",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5217598,
 			"lng": 22.5303558
 		},
-		"name": "genvägen"
+		"name": "genvägen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5217598,
 			"lng": 22.5303558
 		},
-		"name": "genvägen 2"
+		"name": "genvägen 2",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.4540966,
 			"lng": 22.4349285
 		},
-		"name": "kyrkbacken"
+		"name": "kyrkbacken",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52377,
 			"lng": 22.5295899
 		},
-		"name": "borgaregatan 3"
+		"name": "borgaregatan 3",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52346979999999,
 			"lng": 22.5315985
 		},
-		"name": "topeliusesplanaden 15"
+		"name": "topeliusesplanaden 15",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5214526,
 			"lng": 22.5266442
 		},
-		"name": "kyrkogatan 2"
+		"name": "kyrkogatan 2",
+		"postcode": "66900"
 	},
 	{
 		"location": {
@@ -874,7 +1148,8 @@
 			"lat": 63.5229453,
 			"lng": 22.5305088
 		},
-		"name": "topeliusesplanaden 10"
+		"name": "topeliusesplanaden 10",
+		"postcode": "66900"
 	},
 	{
 		"location": {
@@ -889,35 +1164,40 @@
 			"lat": 63.52047639999999,
 			"lng": 22.5313053
 		},
-		"name": "bangatan 9"
+		"name": "bangatan 9",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52241189999999,
 			"lng": 22.5319796
 		},
-		"name": "bankgatan 9"
+		"name": "bankgatan 9",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5244088,
 			"lng": 22.5381807
 		},
-		"name": "mathesiusgatan 22"
+		"name": "mathesiusgatan 22",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5233372,
 			"lng": 22.5233676
 		},
-		"name": "seminariegatan 10"
+		"name": "seminariegatan 10",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5238429,
 			"lng": 22.5306499
 		},
-		"name": "borgaregatan 6"
+		"name": "borgaregatan 6",
+		"postcode": "66900"
 	},
 	{
 		"location": {
@@ -932,35 +1212,40 @@
 			"lat": 63.52311510000001,
 			"lng": 22.5314284
 		},
-		"name": "topeliusesplanaden 13"
+		"name": "topeliusesplanaden 13",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52499289999999,
 			"lng": 22.5329
 		},
-		"name": "topeliusesplanaden 29"
+		"name": "topeliusesplanaden 29",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52411970000001,
 			"lng": 22.5236337
 		},
-		"name": "seminariegatan 16"
+		"name": "seminariegatan 16",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5222247,
 			"lng": 22.5357795
 		},
-		"name": "bankgatan 20"
+		"name": "bankgatan 20",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52083339999999,
 			"lng": 22.5282273
 		},
-		"name": "bangatan 3"
+		"name": "bangatan 3",
+		"postcode": "66900"
 	},
 	{
 		"location": {
@@ -975,7 +1260,8 @@
 			"lat": 63.5249153,
 			"lng": 22.5291085
 		},
-		"name": "lybecksgatan 1"
+		"name": "lybecksgatan 1",
+		"postcode": "66900"
 	},
 	{
 		"location": {
@@ -990,21 +1276,24 @@
 			"lat": 63.620551,
 			"lng": 22.5098373
 		},
-		"name": "vedören"
+		"name": "vedören",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5855463,
 			"lng": 22.5401866
 		},
-		"name": "socklotvägen"
+		"name": "socklotvägen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52488229999999,
 			"lng": 22.5323009
 		},
-		"name": "topeliusesplanaden 23"
+		"name": "topeliusesplanaden 23",
+		"postcode": "66900"
 	},
 	{
 		"location": {
@@ -1019,14 +1308,16 @@
 			"lat": 63.5049511,
 			"lng": 22.5383896
 		},
-		"name": "broasvägen"
+		"name": "broasvägen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.53284499999999,
 			"lng": 22.5418171
 		},
-		"name": "frillmossavägen 1"
+		"name": "frillmossavägen 1",
+		"postcode": "66900"
 	},
 	{
 		"location": {
@@ -1041,56 +1332,64 @@
 			"lat": 63.5219433,
 			"lng": 22.5276773
 		},
-		"name": "sollefteågatan 5"
+		"name": "sollefteågatan 5",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52150609999999,
 			"lng": 22.5403725
 		},
-		"name": "bankgatan 33"
+		"name": "bankgatan 33",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5202442,
 			"lng": 22.5336526
 		},
-		"name": "bangatan 15"
-	},
-	{
-		"location": {
-			"lat": 63.5230514,
-			"lng": 22.5388905
-		},
-		"name": "borgaregatan 26"
+		"name": "bangatan 15",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5236646,
 			"lng": 22.5193957
 		},
-		"name": "berggränd 5"
+		"name": "berggränd 5",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5234998,
 			"lng": 22.5341503
 		},
-		"name": "borgaregatan 12"
+		"name": "borgaregatan 12",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.5230514,
+			"lng": 22.5388905
+		},
+		"name": "borgaregatan 26",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5222758,
 			"lng": 22.5333665
 		},
-		"name": "bankgatan 13"
+		"name": "bankgatan 13",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5216647,
 			"lng": 22.5227969
 		},
-		"name": "juthasvägen 5"
+		"name": "juthasvägen 5",
+		"postcode": "66900"
 	},
 	{
 		"location": {
@@ -1105,119 +1404,152 @@
 			"lat": 63.52272370000001,
 			"lng": 22.5318378
 		},
-		"name": "bankgatan 10"
+		"name": "bankgatan 10",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.3405852,
 			"lng": 22.5765052
 		},
-		"name": "aspnäsvägen"
+		"name": "aspnäsvägen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5203484,
 			"lng": 22.5325856
 		},
-		"name": "bangatan 13"
+		"name": "bangatan 13",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5066243,
 			"lng": 22.7504642
 		},
-		"name": "markbyvägen"
+		"name": "markbyvägen",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.5066243,
+			"lng": 22.7504642
+		},
+		"name": "markbyvägen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5232185,
 			"lng": 22.5351454
 		},
-		"name": "borgaregatan 13"
+		"name": "borgaregatan 13",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5217598,
 			"lng": 22.5303558
 		},
-		"name": "jeansborgsgatan"
+		"name": "jeansborgsgatan",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52360239999999,
 			"lng": 22.5238262
 		},
-		"name": "seminariegatan 3"
+		"name": "seminariegatan 3",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5203776,
 			"lng": 22.5366245
 		},
-		"name": "mathesiusgatan 1"
+		"name": "mathesiusgatan 1",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.49542,
 			"lng": 22.5004978
 		},
-		"name": "bonskogsvägen"
+		"name": "bonskogsvägen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52160910000001,
 			"lng": 22.5310537
 		},
-		"name": "sollefteågatan 11"
+		"name": "sollefteågatan 11",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52387220000001,
 			"lng": 22.5286148
 		},
-		"name": "borgaregatan 1"
+		"name": "borgaregatan 1",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5251115,
 			"lng": 22.5420112
 		},
-		"name": "källbackgatan 82"
+		"name": "källbackgatan 82",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5226222,
 			"lng": 22.5300525
 		},
-		"name": "bankgatan 5"
+		"name": "bankgatan 5",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52180139999999,
 			"lng": 22.530978
 		},
-		"name": "sollefteågatan 8"
-	},
-	{
-		"location": {
-			"lat": 63.52072399999999,
-			"lng": 22.5216564
-		},
-		"name": "juthasvägen 6"
+		"name": "sollefteågatan 8",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52169910000001,
 			"lng": 22.5299288
 		},
-		"name": "sollefteågatan 9"
+		"name": "sollefteågatan 9",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.52072399999999,
+			"lng": 22.5216564
+		},
+		"name": "juthasvägen 6",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5250216,
 			"lng": 22.5325996
 		},
-		"name": "topeliusesplanaden 31"
+		"name": "topeliusesplanaden 31",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 62.2375753,
+			"lng": 21.509208
+		},
+		"name": "riksväg åtta",
+		"postcode": "66900"
 	},
 	{
 		"location": {
@@ -1232,21 +1564,40 @@
 			"lat": 63.41953090000001,
 			"lng": 22.6184593
 		},
-		"name": "kyrkvägen"
+		"name": "kyrkvägen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5223428,
 			"lng": 22.5326767
 		},
-		"name": "bankgatan 11"
+		"name": "bankgatan 11",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52520699999999,
 			"lng": 22.5228164
 		},
-		"name": "mellangatan 11"
+		"name": "mellangatan 11",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.5223333,
+			"lng": 22.5346757
+		},
+		"name": "bankgatan 16",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.5248529,
+			"lng": 22.5297425
+		},
+		"name": "lybecksgatan 3",
+		"postcode": "66900"
 	},
 	{
 		"location": {
@@ -1258,24 +1609,11 @@
 	},
 	{
 		"location": {
-			"lat": 63.5223333,
-			"lng": 22.5346757
-		},
-		"name": "bankgatan 16"
-	},
-	{
-		"location": {
-			"lat": 63.5248529,
-			"lng": 22.5297425
-		},
-		"name": "lybecksgatan 3"
-	},
-	{
-		"location": {
 			"lat": 63.5204202,
 			"lng": 22.5337339
 		},
-		"name": "bangatan 12"
+		"name": "bangatan 12",
+		"postcode": "66900"
 	},
 	{
 		"location": {
@@ -1306,7 +1644,8 @@
 			"lat": 63.52082290000001,
 			"lng": 22.5342941
 		},
-		"name": "karleborgsgatan 6"
+		"name": "karleborgsgatan 6",
+		"postcode": "66900"
 	},
 	{
 		"location": {
@@ -1321,7 +1660,8 @@
 			"lat": 63.5238556,
 			"lng": 22.5278487
 		},
-		"name": "kyrkogatan 44"
+		"name": "kyrkogatan 44",
+		"postcode": "66900"
 	},
 	{
 		"location": {
@@ -1336,28 +1676,16 @@
 			"lat": 63.5236013,
 			"lng": 22.5234225
 		},
-		"name": "seminariegatan 12"
+		"name": "seminariegatan 12",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5238556,
 			"lng": 22.5278487
 		},
-		"name": "kyrkogatan 58"
-	},
-	{
-		"location": {
-			"lat": 63.5219304,
-			"lng": 22.5377268
-		},
-		"name": "bankgatan 24"
-	},
-	{
-		"location": {
-			"lat": 63.5231788,
-			"lng": 22.5375432
-		},
-		"name": "borgaregatan 22"
+		"name": "kyrkogatan 58",
+		"postcode": "66900"
 	},
 	{
 		"location": {
@@ -1372,35 +1700,56 @@
 			"lat": 63.52455639999999,
 			"lng": 22.5360455
 		},
-		"name": "karleborgsgatan 30"
+		"name": "karleborgsgatan 30",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.5219304,
+			"lng": 22.5377268
+		},
+		"name": "bankgatan 24",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.5231788,
+			"lng": 22.5375432
+		},
+		"name": "borgaregatan 22",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5268712,
 			"lng": 22.5361055
 		},
-		"name": "fiskaregränd 4"
+		"name": "fiskaregränd 4",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5229198,
 			"lng": 22.5402938
 		},
-		"name": "borgaregatan 30"
+		"name": "borgaregatan 30",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5221841,
 			"lng": 22.5371269
 		},
-		"name": "mathesiusgatan 10"
+		"name": "mathesiusgatan 10",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5232044,
 			"lng": 22.5409841
 		},
-		"name": "bockmöllergatan 17"
+		"name": "bockmöllergatan 17",
+		"postcode": "66900"
 	},
 	{
 		"location": {
@@ -1415,77 +1764,88 @@
 			"lat": 63.5239329,
 			"lng": 22.5358161
 		},
-		"name": "karleborgsgatan 26"
+		"name": "karleborgsgatan 26",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52125919999999,
 			"lng": 22.5385923
 		},
-		"name": "karlmansgatan 5"
+		"name": "karlmansgatan 5",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52313299999999,
 			"lng": 22.5275323
 		},
-		"name": "kyrkogatan 8"
+		"name": "kyrkogatan 8",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52503479999999,
 			"lng": 22.5375819
 		},
-		"name": "källbackgatan 9"
+		"name": "källbackgatan 9",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52479520000001,
 			"lng": 22.5387696
 		},
-		"name": "mathesiusgatan 19"
+		"name": "mathesiusgatan 19",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5255995,
 			"lng": 22.5224772
 		},
-		"name": "residensgatan 6"
+		"name": "residensgatan 6",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5225792,
 			"lng": 22.5235906
 		},
-		"name": "seminariegatan 4"
+		"name": "seminariegatan 4",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5217301,
 			"lng": 22.5316525
 		},
-		"name": "sollefteågatan 10"
+		"name": "sollefteågatan 10",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52185530000001,
 			"lng": 22.5375489
 		},
-		"name": "bankgatan 25"
+		"name": "bankgatan 25",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5245433,
 			"lng": 22.528622
 		},
-		"name": "kyrkogatan 11"
+		"name": "kyrkogatan 11",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52777949999999,
 			"lng": 22.5334864
 		},
-		"name": "jakobstadsvägen 7"
+		"name": "jakobstadsvägen 7",
+		"postcode": "66900"
 	},
 	{
 		"location": {
@@ -1497,52 +1857,75 @@
 	},
 	{
 		"location": {
-			"lat": 63.5218971,
-			"lng": 22.5269123
+			"lat": 63.52777949999999,
+			"lng": 22.5334864
 		},
-		"name": "kyrkogatan 4"
+		"name": "jakobstadsvägen 7",
+		"postcode": "66900"
 	},
 	{
 		"location": {
-			"lat": 63.5275182,
-			"lng": 22.5455552
+			"lat": 63.5218971,
+			"lng": 22.5269123
 		},
-		"name": "fabriksgatan 9"
+		"name": "kyrkogatan 4",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5299886,
 			"lng": 22.5364176
 		},
-		"name": "jakobstadsvägen 22"
+		"name": "jakobstadsvägen 22",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.5299886,
+			"lng": 22.5364176
+		},
+		"name": "jakobstadsvägen 22",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.5275182,
+			"lng": 22.5455552
+		},
+		"name": "fabriksgatan 9",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5239452,
 			"lng": 22.5296749
 		},
-		"name": "borgaregatan 4"
+		"name": "borgaregatan 4",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5241757,
 			"lng": 22.5284505
 		},
-		"name": "kyrkogatan 9"
+		"name": "kyrkogatan 9",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5214057,
 			"lng": 22.542593
 		},
-		"name": "kovjokivägen 1"
+		"name": "kovjokivägen 1",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.4080774,
 			"lng": 22.6523932
 		},
-		"name": "stationsvägen"
+		"name": "stationsvägen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
@@ -1557,28 +1940,32 @@
 			"lat": 63.5237259,
 			"lng": 22.5282357
 		},
-		"name": "kyrkogatan 7"
+		"name": "kyrkogatan 7",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5244798,
 			"lng": 22.5314746
 		},
-		"name": "topeliusesplanaden 24"
+		"name": "topeliusesplanaden 24",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.4970027,
 			"lng": 22.6559018
 		},
-		"name": "sorvistvägen"
+		"name": "sorvistvägen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52152570000001,
 			"lng": 22.541948
 		},
-		"name": "bankgatan 34"
+		"name": "bankgatan 34",
+		"postcode": "66900"
 	},
 	{
 		"location": {
@@ -1586,6 +1973,14 @@
 			"lng": 22.5329936
 		},
 		"name": "gustav adolfsgatan 18",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.5240473,
+			"lng": 22.5286997
+		},
+		"name": "borgaregatan 2",
 		"postcode": "66900"
 	},
 	{
@@ -1598,73 +1993,67 @@
 	},
 	{
 		"location": {
-			"lat": 63.5240473,
-			"lng": 22.5286997
-		},
-		"name": "borgaregatan 2"
-	},
-	{
-		"location": {
 			"lat": 63.52527689999999,
 			"lng": 22.5369642
 		},
-		"name": "källbackgatan 8"
-	},
-	{
-		"location": {
-			"lat": 63.5238519,
-			"lng": 22.5278865
-		},
-		"name": "kyrkogatan 12"
-	},
-	{
-		"location": {
-			"lat": 63.52529850000001,
-			"lng": 22.5324888
-		},
-		"name": "topeliusesplanaden 25"
-	},
-	{
-		"location": {
-			"lat": 63.5252101,
-			"lng": 22.5376656
-		},
-		"name": "källbackgatan 10"
+		"name": "källbackgatan 8",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5251434,
 			"lng": 22.5383668
 		},
-		"name": "källbackgatan 12"
+		"name": "källbackgatan 12",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.5238519,
+			"lng": 22.5278865
+		},
+		"name": "kyrkogatan 12",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.52529850000001,
+			"lng": 22.5324888
+		},
+		"name": "topeliusesplanaden 25",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.5252101,
+			"lng": 22.5376656
+		},
+		"name": "källbackgatan 10",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5254237,
 			"lng": 22.5364653
 		},
-		"name": "karleborgsgatan 34"
-	},
-	{
-		"location": {
-			"lat": 63.52139949999999,
-			"lng": 22.5224406
-		},
-		"name": "juthasvägen 7"
+		"name": "karleborgsgatan 34",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52102180000001,
 			"lng": 22.529587
 		},
-		"name": "topeliusesplanaden 4"
+		"name": "topeliusesplanaden 4",
+		"postcode": "66900"
 	},
 	{
 		"location": {
-			"lat": 63.52449429999999,
-			"lng": 22.5313488
+			"lat": 63.52139949999999,
+			"lng": 22.5224406
 		},
-		"name": "topeliusesplanaden 16"
+		"name": "juthasvägen 7",
+		"postcode": "66900"
 	},
 	{
 		"location": {
@@ -1676,10 +2065,10 @@
 	},
 	{
 		"location": {
-			"lat": 63.52466440000001,
-			"lng": 22.5338978
+			"lat": 63.52449429999999,
+			"lng": 22.5313488
 		},
-		"name": "gustav adolfsgatan 28",
+		"name": "topeliusesplanaden 16",
 		"postcode": "66900"
 	},
 	{
@@ -1688,6 +2077,14 @@
 			"lng": 22.5322224
 		},
 		"name": "gustav adolfsgatan 10",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.52466440000001,
+			"lng": 22.5338978
+		},
+		"name": "gustav adolfsgatan 28",
 		"postcode": "66900"
 	},
 	{
@@ -1703,28 +2100,32 @@
 			"lat": 63.5245032,
 			"lng": 22.5321198
 		},
-		"name": "topeliusesplanaden 21"
+		"name": "topeliusesplanaden 21",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5277916,
 			"lng": 22.5330792
 		},
-		"name": "jakobstadsvägen 6"
+		"name": "jakobstadsvägen 6",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.5277916,
+			"lng": 22.5330792
+		},
+		"name": "jakobstadsvägen 6",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52373979999999,
 			"lng": 22.5221668
 		},
-		"name": "mellangatan 1"
-	},
-	{
-		"location": {
-			"lat": 63.5230543,
-			"lng": 22.5237741
-		},
-		"name": "seminariegatan 1"
+		"name": "mellangatan 1",
+		"postcode": "66900"
 	},
 	{
 		"location": {
@@ -1736,45 +2137,59 @@
 	},
 	{
 		"location": {
-			"lat": 63.5218149,
-			"lng": 22.5286893
+			"lat": 63.5230543,
+			"lng": 22.5237741
 		},
-		"name": "sollefteågatan 7"
+		"name": "seminariegatan 1",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5215507,
 			"lng": 22.5298476
 		},
-		"name": "topeliusesplanaden 6"
+		"name": "topeliusesplanaden 6",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.5218149,
+			"lng": 22.5286893
+		},
+		"name": "sollefteågatan 7",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52269310000001,
 			"lng": 22.5509382
 		},
-		"name": "arbetaregatan 1"
+		"name": "arbetaregatan 1",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5241189,
 			"lng": 22.5363106
 		},
-		"name": "karleborgsgatan 15"
+		"name": "karleborgsgatan 15",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5224679,
 			"lng": 22.533274
 		},
-		"name": "bankgatan 14"
+		"name": "bankgatan 14",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52418969999999,
 			"lng": 22.5359264
 		},
-		"name": "karleborgsgatan 28"
+		"name": "karleborgsgatan 28",
+		"postcode": "66900"
 	},
 	{
 		"location": {
@@ -1797,77 +2212,80 @@
 			"lat": 63.5223737,
 			"lng": 22.5310791
 		},
-		"name": "topeliusesplanaden 9"
+		"name": "topeliusesplanaden 9",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5198641,
 			"lng": 22.5342084
 		},
-		"name": "karleborgsgatan 1"
+		"name": "karleborgsgatan 1",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5231872,
 			"lng": 22.5279703
 		},
-		"name": "kyrkogatan 5"
+		"name": "kyrkogatan 5",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5207736,
 			"lng": 22.5173151
 		},
-		"name": "idrottsgatan 7"
+		"name": "idrottsgatan 7",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5175827,
 			"lng": 22.5271513
 		},
-		"name": "joupersgatan 2"
+		"name": "joupersgatan 2",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52146810000001,
 			"lng": 22.5306678
 		},
-		"name": "topeliusesplanaden 5"
+		"name": "topeliusesplanaden 5",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5238156,
 			"lng": 22.5317698
 		},
-		"name": "topeliusesplanaden 17"
+		"name": "topeliusesplanaden 17",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5221001,
 			"lng": 22.5262244
 		},
-		"name": "sollefteågatan 1"
+		"name": "sollefteågatan 1",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5214478,
 			"lng": 22.5344475
 		},
-		"name": "sollefteågatan 18"
+		"name": "sollefteågatan 18",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5253415,
 			"lng": 22.5362629
 		},
-		"name": "källbackgatan 6"
-	},
-	{
-		"location": {
-			"lat": 63.52535709999999,
-			"lng": 22.5291207
-		},
-		"name": "lybecksgatan 2"
+		"name": "källbackgatan 6",
+		"postcode": "66900"
 	},
 	{
 		"location": {
@@ -1875,6 +2293,14 @@
 			"lng": 22.5332481
 		},
 		"name": "gustav adolfsgatan 20",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.52535709999999,
+			"lng": 22.5291207
+		},
+		"name": "lybecksgatan 2",
 		"postcode": "66900"
 	},
 	{
@@ -1906,14 +2332,16 @@
 			"lat": 63.5257491,
 			"lng": 22.5370371
 		},
-		"name": "karleborgsgatan 23"
+		"name": "karleborgsgatan 23",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.3920888,
 			"lng": 22.3678168
 		},
-		"name": "träskvägen"
+		"name": "träskvägen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
@@ -1936,84 +2364,104 @@
 			"lat": 63.5152071,
 			"lng": 22.5345699
 		},
-		"name": "rajåkersgränden"
+		"name": "rajåkersgränden",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5156053,
 			"lng": 22.5328651
 		},
-		"name": "rajåkersstigen"
+		"name": "rajåkersstigen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.521946,
 			"lng": 22.5308876
 		},
-		"name": "solliden"
+		"name": "solliden",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.52432400000001,
 			"lng": 22.5177611
 		},
-		"name": "skogsgatan 4"
+		"name": "skogsgatan 4",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.4740966,
 			"lng": 22.5400481
 		},
-		"name": "haraldsrundan"
+		"name": "haraldsrundan",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5225874,
 			"lng": 22.5471876
 		},
-		"name": "kvarnvägen 2"
+		"name": "kvarnvägen 2",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.42099829999999,
 			"lng": 22.3979402
 		},
-		"name": "hirvlaxvägen"
+		"name": "hirvlaxvägen",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.42099829999999,
+			"lng": 22.3979402
+		},
+		"name": "hirvlaxvägen",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.61204689999999,
 			"lng": 22.4921221
 		},
-		"name": "grisselören 1"
+		"name": "grisselören 1",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5285805,
 			"lng": 22.5455788
 		},
-		"name": "fabriksgatan 27"
+		"name": "fabriksgatan 27",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5248934,
 			"lng": 22.5289806
 		},
-		"name": "kyrkogatan 71"
+		"name": "kyrkogatan 71",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5206944,
 			"lng": 22.5291949
 		},
-		"name": "bangatan 5"
+		"name": "bangatan 5",
+		"postcode": "66900"
 	},
 	{
 		"location": {
 			"lat": 63.5244798,
 			"lng": 22.5314746
 		},
-		"name": "topeliusesplanaden 20"
+		"name": "topeliusesplanaden 20",
+		"postcode": "66900"
 	},
 	{
 		"location": {
@@ -2030,125 +2478,5 @@
 		},
 		"name": "gustav adolfsgatan 43",
 		"postcode": "66900"
-	},
-	{
-		"location": {
-			"lat": 63.5222074,
-			"lng": 22.5351597
-		},
-		"name": "bankgatan"
-	},
-	{
-		"location": {
-			"lat": 63.52178359999999,
-			"lng": 22.5301266
-		},
-		"name": "sollefteågatan"
-	},
-	{
-		"location": {
-			"lat": 63.5227547,
-			"lng": 22.5419863
-		},
-		"name": "borgaregatan 34"
-	},
-	{
-		"location": {
-			"lat": 63.5234563,
-			"lng": 22.5335698
-		},
-		"name": "gustav adolfsgatan",
-		"postcode": "66900"
-	},
-	{
-		"location": {
-			"lat": 63.5232479,
-			"lng": 22.5356973
-		},
-		"name": "karleborgsgatan"
-	},
-	{
-		"location": {
-			"lat": 63.5232479,
-			"lng": 22.5356973
-		},
-		"name": "borgaregatan"
-	},
-	{
-		"location": {
-			"lat": 63.5058416,
-			"lng": 22.5287879
-		},
-		"name": "juthasvägen"
-	},
-	{
-		"location": {
-			"lat": 63.5196402,
-			"lng": 22.5392551
-		},
-		"name": "bangatan"
-	},
-	{
-		"location": {
-			"lat": 63.5216242,
-			"lng": 22.5400655
-		},
-		"name": "bockmöllergatan"
-	},
-	{
-		"location": {
-			"lat": 63.52292689999999,
-			"lng": 22.5276398
-		},
-		"name": "kyrkogatan"
-	},
-	{
-		"location": {
-			"lat": 63.5242987,
-			"lng": 22.536147
-		},
-		"name": "lybecksgatan"
-	},
-	{
-		"location": {
-			"lat": 63.52501299999999,
-			"lng": 22.5386757
-		},
-		"name": "källbackgatan"
-	},
-	{
-		"location": {
-			"lat": 63.5261522,
-			"lng": 22.5248821
-		},
-		"name": "seminariegatan"
-	},
-	{
-		"location": {
-			"lat": 63.5171249,
-			"lng": 22.5341641
-		},
-		"name": "jeansborgsvägen"
-	},
-	{
-		"location": {
-			"lat": 63.5191834,
-			"lng": 22.5378136
-		},
-		"name": "kolonivägen"
-	},
-	{
-		"location": {
-			"lat": 63.5216187,
-			"lng": 22.540861
-		},
-		"name": "bankgatan 32"
-	},
-	{
-		"location": {
-			"lat": 63.5220274,
-			"lng": 22.5268653
-		},
-		"name": "sollefteågatan 3"
 	}
 ]

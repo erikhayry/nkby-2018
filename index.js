@@ -18,7 +18,7 @@ function getKey(addressWithStreetNumber, name){
 }
 
 function searchUrls(zipCodeAndLocales, urls) {
-    console.log(`Searching ${urls.length} urls for ${zipCodeAndLocales} locales`)
+    console.log(`Searching ${urls.length} urls for locales`)
     const result = {};
     let pagesCount = 0;
     const bar = new ProgressBar(':bar', { total: urls.length });

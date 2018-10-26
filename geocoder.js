@@ -60,6 +60,7 @@ function toFile(data, path) {
 function addLocaleToCrawlerResult(geoCodedLocales, crawlerResult){
     geoCodedLocales.forEach(locale => {
         let key =`${locale.name}-${locale.postcode}`;
+        console.log(key)
         if(crawlerResult[key]){
             crawlerResult[key].position = locale.location;
         }
@@ -90,4 +91,5 @@ function geoCodeCrawlerResult() {
         });
 }
 
-geoCodeCrawlerResult();
+//geoCodeCrawlerResult();
+addLocaleToCrawlerResult(geoCodedLocale, crawlerResult);

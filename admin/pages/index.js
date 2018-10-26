@@ -5,6 +5,7 @@ import Head from 'next/head'
 import theme from '../static/themes/dark.json';
 import Overlay from '../components/overlay';
 import Map from '../components/map';
+import { Button } from 'semantic-ui-react'
 
 class App extends React.PureComponent {
     state = {
@@ -167,27 +168,45 @@ class App extends React.PureComponent {
                 <Head>
                     <meta name="viewport" content="width=device-width, initial-scale=1" />
                     <meta charSet="utf-8" />
+                    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.0/dist/semantic.min.css"></link>
                 </Head>
                 <style jsx global>{`
                   body {
-                    font: 11px menlo;
                     color: #222;
                     margin: 0;
                   }
                 `}</style>
                 {!this.state.currentLocale && <div style={{
                     position: 'fixed',
-                    zIndex: 1
+                    zIndex: 1,
+                    padding: 10
                 }}>
-                    <button disabled={this.state.localeFilter === 'approved'} onClick={() => {
-                        this.setLocaleFilter('approved')
-                    }}>{'Visa godkända'}</button>
-                    <button disabled={this.state.localeFilter === 'unedited'} onClick={() => {
-                        this.setLocaleFilter('unedited')
-                    }}>{'Visa oediterade'}</button>
-                    <button disabled={this.state.localeFilter === 'all'} onClick={() => {
-                        this.setLocaleFilter('all')
-                    }}>{'Visa alla'}</button>
+                    <Button.Group>
+                        {[
+                            {
+                                value: 'approved',
+                                text: 'Visa godkända'
+                            },
+                            {
+                                value: 'unedited',
+                                text: 'Visa oediterade'
+                            },
+                            {
+                                value: 'all',
+                                text: 'Visa alla'
+                            },
+                        ].map(btn => (
+                            <Button
+                                key={btn.value}
+                                compact
+                                positive={this.state.localeFilter === btn.value}
+                                onClick={() => {
+                                    this.setLocaleFilter(btn.value)
+                                }}>
+                                {btn.text}
+                            </Button>
+                        ))}
+                    </Button.Group>
                 </div>}
                 <Map
                     onMarkerClick={this.setCurrentLocale}
@@ -207,8 +226,8 @@ class App extends React.PureComponent {
                     addReportedLocale={this.addReportedLocale}
                     addName={this.addName}
                     updateLocale={this.updateLocale}
-                    setCurrentLocale={this.setCurrentLocale}
 
+                    setCurrentLocale={this.setCurrentLocale}
                     globallyDisapprovedPageUrls={this.state.globallyDisapprovedPageUrls}
                     starredPages={this.state.starredPages}
                     reportedLocales={this.state.reportedLocales}

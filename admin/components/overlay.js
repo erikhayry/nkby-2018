@@ -1,3 +1,5 @@
+import { Button, Icon, Header } from 'semantic-ui-react'
+
 class Overlay extends React.PureComponent {
     state = {
         showAllImages: undefined,
@@ -188,13 +190,12 @@ class Overlay extends React.PureComponent {
                     boxSizing: 'border-box'
 
                 }}>
-                    <h1 style={{
-                        textAlign: 'center',
-                        textTransform: 'capitalize',
-                        color: localeIsReported ? 'red' : '#000'
+                    <Header as='h2' textAlign='center' style={{
+                        textTransform: 'capitalize'
                     }}>
-                        {name}
-                    </h1>
+                        <Icon name='marker' />
+                        <Header.Content>{locale.name}</Header.Content>
+                    </Header>
 
                     <div>
                         <button onClick={()=> {this.props.addReportedLocale(name)}} disabled={localeIsReported}>Rapportera</button>
@@ -266,17 +267,21 @@ class Overlay extends React.PureComponent {
                         {this.state.showDisapproved && disapprovedPagesForLocale.map((page, index) => this.renderPage(page, index, name, 'disapproved', undefined, starredPages.includes(page.url)))}
                     </ul>
 
-                    <button onClick={() => {
-                        this.setState({
-                            showAllImages: undefined
-                        }, () => {
-                            this.props.setCurrentLocale()
-                        });
-                    }} style={{
-                        position: 'absolute',
-                        right: '10px',
-                        top: '10px'
-                    }}>Tillbaka till kartan</button>
+                    <Button circular
+                            onClick={() => {
+                                this.setState({
+                                    showAllImages: undefined
+                                }, () => {
+                                    this.props.setCurrentLocale()
+                                });
+                            }}
+                            style={{
+                                position: 'absolute',
+                                right: '10px',
+                                top: '10px'
+                            }}
+                            icon='close'
+                    />
                 </div>
             )
         }
