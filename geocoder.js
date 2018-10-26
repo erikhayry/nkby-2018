@@ -91,5 +91,5 @@ function geoCodeCrawlerResult() {
         });
 }
 
-//geoCodeCrawlerResult();
-addLocaleToCrawlerResult(geoCodedLocale, crawlerResult);
+geoCodeCrawlerResult();
+//addLocaleToCrawlerResult(geoCodedLocale, crawlerResult);

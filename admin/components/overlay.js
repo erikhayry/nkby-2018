@@ -62,7 +62,7 @@ class Overlay extends React.PureComponent {
                     }}
                     src={`http://www.nykarlebyvyer.nu/${src.replace('../../../', '')}`}
                     style={{
-                        opacity: preferredImage ? 1 : 0.5
+                        opacity: type !== 'approved' || preferredImage ? 1 : 0.5
                     }}
                     label={{ as: 'a', ribbon: 'right', content: images.length, color: 'black'}}
 

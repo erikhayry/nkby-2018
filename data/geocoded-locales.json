@@ -1,22 +1,6 @@
 [
 	{
 		"location": {
-			"lat": 63.5217598,
-			"lng": 22.5303558
-		},
-		"name": "karlgrönforsväg",
-		"postcode": "66900"
-	},
-	{
-		"location": {
-			"lat": 63.5650944,
-			"lng": 22.5503492
-		},
-		"name": "rijfsväg",
-		"postcode": "66900"
-	},
-	{
-		"location": {
 			"lat": 63.5222074,
 			"lng": 22.5351597
 		},
@@ -205,7 +189,7 @@
 			"lng": 22.2708092
 		},
 		"name": "sjövägen",
-		"postcode": "66900"
+		"postcode": "66970"
 	},
 	{
 		"location": {
@@ -293,7 +277,7 @@
 			"lng": 22.5711643
 		},
 		"name": "jakobstadsvägen",
-		"postcode": "66900"
+		"postcode": "66910"
 	},
 	{
 		"location": {
@@ -301,7 +285,7 @@
 			"lng": 22.5428763
 		},
 		"name": "åminnevägen",
-		"postcode": "66900"
+		"postcode": "66910"
 	},
 	{
 		"location": {
@@ -501,7 +485,7 @@
 			"lng": 22.5711643
 		},
 		"name": "jakobstadsvägen",
-		"postcode": "66900"
+		"postcode": "66910"
 	},
 	{
 		"location": {
@@ -789,7 +773,7 @@
 			"lng": 22.5428763
 		},
 		"name": "åminnevägen",
-		"postcode": "66900"
+		"postcode": "66910"
 	},
 	{
 		"location": {
@@ -821,7 +805,7 @@
 			"lng": 22.6048085
 		},
 		"name": "jeppovägen",
-		"postcode": "66900"
+		"postcode": "66840"
 	},
 	{
 		"location": {
@@ -885,7 +869,7 @@
 			"lng": 22.569299
 		},
 		"name": "nyvägen",
-		"postcode": "66900"
+		"postcode": "66910"
 	},
 	{
 		"location": {
@@ -893,7 +877,7 @@
 			"lng": 22.5332862
 		},
 		"name": "jakobstadsvägen 3",
-		"postcode": "66900"
+		"postcode": "66910"
 	},
 	{
 		"location": {
@@ -917,7 +901,7 @@
 			"lng": 22.5332862
 		},
 		"name": "jakobstadsvägen 3",
-		"postcode": "66900"
+		"postcode": "66910"
 	},
 	{
 		"location": {
@@ -949,7 +933,7 @@
 			"lng": 22.4921221
 		},
 		"name": "grisselören",
-		"postcode": "66900"
+		"postcode": "66910"
 	},
 	{
 		"location": {
@@ -997,7 +981,7 @@
 			"lng": 22.439068
 		},
 		"name": "viksgatan",
-		"postcode": "66900"
+		"postcode": "66950"
 	},
 	{
 		"location": {
@@ -1089,11 +1073,11 @@
 	},
 	{
 		"location": {
-			"lat": 63.5217598,
-			"lng": 22.5303558
+			"lat": 63.43859659999999,
+			"lng": 22.4569775
 		},
 		"name": "genvägen",
-		"postcode": "66900"
+		"postcode": "66950"
 	},
 	{
 		"location": {
@@ -1101,7 +1085,7 @@
 			"lng": 22.5303558
 		},
 		"name": "genvägen 2",
-		"postcode": "66900"
+		"postcode": "66950"
 	},
 	{
 		"location": {
@@ -1109,7 +1093,7 @@
 			"lng": 22.4349285
 		},
 		"name": "kyrkbacken",
-		"postcode": "66900"
+		"postcode": "66950"
 	},
 	{
 		"location": {
@@ -1277,7 +1261,7 @@
 			"lng": 22.5098373
 		},
 		"name": "vedören",
-		"postcode": "66900"
+		"postcode": "66910"
 	},
 	{
 		"location": {
@@ -1285,7 +1269,7 @@
 			"lng": 22.5401866
 		},
 		"name": "socklotvägen",
-		"postcode": "66900"
+		"postcode": "66910"
 	},
 	{
 		"location": {
@@ -1413,7 +1397,7 @@
 			"lng": 22.5765052
 		},
 		"name": "aspnäsvägen",
-		"postcode": "66900"
+		"postcode": "66840"
 	},
 	{
 		"location": {
@@ -1429,7 +1413,7 @@
 			"lng": 22.7504642
 		},
 		"name": "markbyvägen",
-		"postcode": "66900"
+		"postcode": "66930"
 	},
 	{
 		"location": {
@@ -1437,7 +1421,7 @@
 			"lng": 22.7504642
 		},
 		"name": "markbyvägen",
-		"postcode": "66900"
+		"postcode": "66930"
 	},
 	{
 		"location": {
@@ -1549,7 +1533,7 @@
 			"lng": 21.509208
 		},
 		"name": "riksväg åtta",
-		"postcode": "66900"
+		"postcode": "66930"
 	},
 	{
 		"location": {
@@ -1557,7 +1541,7 @@
 			"lng": 21.509208
 		},
 		"name": "riksväg åtta",
-		"postcode": "66900"
+		"postcode": "66930"
 	},
 	{
 		"location": {
@@ -1565,7 +1549,7 @@
 			"lng": 22.6184593
 		},
 		"name": "kyrkvägen",
-		"postcode": "66900"
+		"postcode": "66850"
 	},
 	{
 		"location": {
@@ -1845,7 +1829,7 @@
 			"lng": 22.5334864
 		},
 		"name": "jakobstadsvägen 7",
-		"postcode": "66900"
+		"postcode": "66910"
 	},
 	{
 		"location": {
@@ -1861,7 +1845,7 @@
 			"lng": 22.5334864
 		},
 		"name": "jakobstadsvägen 7",
-		"postcode": "66900"
+		"postcode": "66910"
 	},
 	{
 		"location": {
@@ -1877,7 +1861,7 @@
 			"lng": 22.5364176
 		},
 		"name": "jakobstadsvägen 22",
-		"postcode": "66900"
+		"postcode": "66910"
 	},
 	{
 		"location": {
@@ -1885,7 +1869,7 @@
 			"lng": 22.5364176
 		},
 		"name": "jakobstadsvägen 22",
-		"postcode": "66900"
+		"postcode": "66910"
 	},
 	{
 		"location": {
@@ -1925,7 +1909,7 @@
 			"lng": 22.6523932
 		},
 		"name": "stationsvägen",
-		"postcode": "66900"
+		"postcode": "66850"
 	},
 	{
 		"location": {
@@ -2109,7 +2093,7 @@
 			"lng": 22.5330792
 		},
 		"name": "jakobstadsvägen 6",
-		"postcode": "66900"
+		"postcode": "66910"
 	},
 	{
 		"location": {
@@ -2117,7 +2101,7 @@
 			"lng": 22.5330792
 		},
 		"name": "jakobstadsvägen 6",
-		"postcode": "66900"
+		"postcode": "66910"
 	},
 	{
 		"location": {
@@ -2341,7 +2325,7 @@
 			"lng": 22.3678168
 		},
 		"name": "träskvägen",
-		"postcode": "66900"
+		"postcode": "66980"
 	},
 	{
 		"location": {
@@ -2409,19 +2393,19 @@
 	},
 	{
 		"location": {
-			"lat": 63.42099829999999,
-			"lng": 22.3979402
+			"lat": 63.42044959999999,
+			"lng": 22.3940431
 		},
 		"name": "hirvlaxvägen",
-		"postcode": "66900"
+		"postcode": "66970"
 	},
 	{
 		"location": {
-			"lat": 63.42099829999999,
-			"lng": 22.3979402
+			"lat": 63.42044959999999,
+			"lng": 22.3940431
 		},
 		"name": "hirvlaxvägen",
-		"postcode": "66900"
+		"postcode": "66970"
 	},
 	{
 		"location": {
@@ -2429,7 +2413,7 @@
 			"lng": 22.4921221
 		},
 		"name": "grisselören 1",
-		"postcode": "66900"
+		"postcode": "66910"
 	},
 	{
 		"location": {

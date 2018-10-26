@@ -12240,7 +12240,11 @@
 				"title": "Ur stadsfullmäktiges protokoll december 1949",
 				"images": []
 			}
-		]
+		],
+		"position": {
+			"lat": 63.4212643,
+			"lng": 22.2708092
+		}
 	},
 	"andrasjövägen-66900": {
 		"name": "andrasjövägen",
@@ -14364,7 +14368,11 @@
 					"bilder/personer/vaxeltan.jpg"
 				]
 			}
-		]
+		],
+		"position": {
+			"lat": 63.5661983,
+			"lng": 22.5711643
+		}
 	},
 	"åminnevägen-66910": {
 		"name": "åminnevägen",
@@ -14423,7 +14431,11 @@
 					"bilder/diverse/skospannestamp.jpg"
 				]
 			}
-		]
+		],
+		"position": {
+			"lat": 63.5580228,
+			"lng": 22.5428763
+		}
 	},
 	"arbetaregatan-66900": {
 		"name": "arbetaregatan",
@@ -15656,11 +15668,7 @@
 					"bilder/personer/vaxeltan.jpg"
 				]
 			}
-		],
-		"position": {
-			"lat": 63.5661983,
-			"lng": 22.5711643
-		}
+		]
 	},
 	"joupersgatan-66900": {
 		"name": "joupersgatan",
@@ -18317,11 +18325,7 @@
 					"bilder/diverse/skospannestamp.jpg"
 				]
 			}
-		],
-		"position": {
-			"lat": 63.5580228,
-			"lng": 22.5428763
-		}
+		]
 	},
 	"älvgränd-66900": {
 		"name": "älvgränd",
@@ -18681,7 +18685,11 @@
 					"../../vykort/bs/bs_a/bsak001f.jpg"
 				]
 			}
-		]
+		],
+		"position": {
+			"lat": 63.42222559999999,
+			"lng": 22.6048085
+		}
 	},
 	"andrasjö strandväg-66900": {
 		"name": "andrasjö strandväg",
@@ -19370,7 +19378,11 @@
 					"../../bilder/parm/sjalvsty.jpg"
 				]
 			}
-		]
+		],
+		"position": {
+			"lat": 63.5680681,
+			"lng": 22.569299
+		}
 	},
 	"jakobstadsvägen 3-66910": {
 		"name": "jakobstadsvägen 3",
@@ -19402,7 +19414,11 @@
 					"bilder/personer/fors_john.jpg"
 				]
 			}
-		]
+		],
+		"position": {
+			"lat": 63.5273855,
+			"lng": 22.5332862
+		}
 	},
 	"borgaregatan 24-66900": {
 		"name": "borgaregatan 24",
@@ -19519,11 +19535,7 @@
 					"bilder/personer/fors_john.jpg"
 				]
 			}
-		],
-		"position": {
-			"lat": 63.5273855,
-			"lng": 22.5332862
-		}
+		]
 	},
 	"juthasvägen 3-66900": {
 		"name": "juthasvägen 3",
@@ -19903,7 +19915,11 @@
 					"bilder/konsten/sjukh_anp.jpg"
 				]
 			}
-		]
+		],
+		"position": {
+			"lat": 63.61204689999999,
+			"lng": 22.4921221
+		}
 	},
 	"bankgatan 12-66900": {
 		"name": "bankgatan 12",
@@ -20372,7 +20388,11 @@
 					"../../bilder/diverse/VASALYCE.JPG"
 				]
 			}
-		]
+		],
+		"position": {
+			"lat": 63.45341730000001,
+			"lng": 22.439068
+		}
 	},
 	"kyrkogatan 6-66900": {
 		"name": "kyrkogatan 6",
@@ -20944,7 +20964,11 @@
 					"../../bilder/lindholm/KYRKTUPP/SALGEN.JPG"
 				]
 			}
-		]
+		],
+		"position": {
+			"lat": 63.43859659999999,
+			"lng": 22.4569775
+		}
 	},
 	"genvägen 2-66950": {
 		"name": "genvägen 2",
@@ -20962,7 +20986,11 @@
 					"../../bilder/enman/41svarfo.jpg"
 				]
 			}
-		]
+		],
+		"position": {
+			"lat": 63.5217598,
+			"lng": 22.5303558
+		}
 	},
 	"kyrkbacken-66950": {
 		"name": "kyrkbacken",
@@ -21120,7 +21148,11 @@
 					"../../bilder/rijf/350namnt.jpg"
 				]
 			}
-		]
+		],
+		"position": {
+			"lat": 63.4540966,
+			"lng": 22.4349285
+		}
 	},
 	"borgaregatan 3-66900": {
 		"name": "borgaregatan 3",
@@ -21993,7 +22025,11 @@
 					"../bilder/jt/brosund.jpg"
 				]
 			}
-		]
+		],
+		"position": {
+			"lat": 63.620551,
+			"lng": 22.5098373
+		}
 	},
 	"socklotvägen-66910": {
 		"name": "socklotvägen",
@@ -22046,7 +22082,11 @@
 					"../../bilder/nkby/socklotskola.jpg"
 				]
 			}
-		]
+		],
+		"position": {
+			"lat": 63.5855463,
+			"lng": 22.5401866
+		}
 	},
 	"topeliusesplanaden 23-66900": {
 		"name": "topeliusesplanaden 23",
@@ -22536,7 +22576,11 @@
 					"../vykort/JH/JH_F/JHFS001F.JPG"
 				]
 			}
-		]
+		],
+		"position": {
+			"lat": 63.3405852,
+			"lng": 22.5765052
+		}
 	},
 	"bangatan 13-66900": {
 		"name": "bangatan 13",
@@ -22568,7 +22612,11 @@
 					"../bilder/kartor/boxal.JPG"
 				]
 			}
-		]
+		],
+		"position": {
+			"lat": 63.5066243,
+			"lng": 22.7504642
+		}
 	},
 	"markbyvägen-66900": {
 		"name": "markbyvägen",
@@ -22582,11 +22630,7 @@
 					"../bilder/kartor/boxal.JPG"
 				]
 			}
-		],
-		"position": {
-			"lat": 63.5066243,
-			"lng": 22.7504642
-		}
+		]
 	},
 	"borgaregatan 13-66900": {
 		"name": "borgaregatan 13",
@@ -22998,7 +23042,11 @@
 					"../bilder/vbl/pumpstation.jpg"
 				]
 			}
-		]
+		],
+		"position": {
+			"lat": 62.2375753,
+			"lng": 21.509208
+		}
 	},
 	"riksväg åtta-66900": {
 		"name": "riksväg åtta",
@@ -23032,11 +23080,7 @@
 					"../bilder/vbl/pumpstation.jpg"
 				]
 			}
-		],
-		"position": {
-			"lat": 62.2375753,
-			"lng": 21.509208
-		}
+		]
 	},
 	"kyrkvägen-66850": {
 		"name": "kyrkvägen",
@@ -23059,7 +23103,11 @@
 					"../bilder/socklot/bygatan.jpg"
 				]
 			}
-		]
+		],
+		"position": {
+			"lat": 63.41953090000001,
+			"lng": 22.6184593
+		}
 	},
 	"bankgatan 11-66900": {
 		"name": "bankgatan 11",
@@ -23882,7 +23930,11 @@
 					"../bilder/handind71/segervall.jpg"
 				]
 			}
-		]
+		],
+		"position": {
+			"lat": 63.52777949999999,
+			"lng": 22.5334864
+		}
 	},
 	"gustav adolfsgatan 4-66900": {
 		"name": "gustav adolfsgatan 4",
@@ -23958,11 +24010,7 @@
 					"../bilder/handind71/segervall.jpg"
 				]
 			}
-		],
-		"position": {
-			"lat": 63.52777949999999,
-			"lng": 22.5334864
-		}
+		]
 	},
 	"kyrkogatan 4-66900": {
 		"name": "kyrkogatan 4",
@@ -24026,7 +24074,11 @@
 					"../bilder/antikvarlden/moppef.jpg"
 				]
 			}
-		]
+		],
+		"position": {
+			"lat": 63.5299886,
+			"lng": 22.5364176
+		}
 	},
 	"jakobstadsvägen 22-66900": {
 		"name": "jakobstadsvägen 22",
@@ -24055,11 +24107,7 @@
 					"../bilder/antikvarlden/moppef.jpg"
 				]
 			}
-		],
-		"position": {
-			"lat": 63.5299886,
-			"lng": 22.5364176
-		}
+		]
 	},
 	"fabriksgatan 9-66900": {
 		"name": "fabriksgatan 9",
@@ -24239,7 +24287,11 @@
 					"bilder/fartyg/ulrika_lj.jpg"
 				]
 			}
-		]
+		],
+		"position": {
+			"lat": 63.4080774,
+			"lng": 22.6523932
+		}
 	},
 	"rijfs väg-66910": {
 		"name": "rijfs väg",
@@ -24821,7 +24873,11 @@
 					"bilder/hus/bircksbd.jpg"
 				]
 			}
-		]
+		],
+		"position": {
+			"lat": 63.5277916,
+			"lng": 22.5330792
+		}
 	},
 	"jakobstadsvägen 6-66900": {
 		"name": "jakobstadsvägen 6",
@@ -24843,11 +24899,7 @@
 					"bilder/hus/bircksbd.jpg"
 				]
 			}
-		],
-		"position": {
-			"lat": 63.5277916,
-			"lng": 22.5330792
-		}
+		]
 	},
 	"mellangatan 1-66900": {
 		"name": "mellangatan 1",
@@ -25458,7 +25510,11 @@
 				"title": "Kungörelser i Nykarleby kyrka ",
 				"images": []
 			}
-		]
+		],
+		"position": {
+			"lat": 63.3920888,
+			"lng": 22.3678168
+		}
 	},
 	"gustav adolfsgatan 24-66900": {
 		"name": "gustav adolfsgatan 24",
@@ -25701,7 +25757,11 @@
 					"bilder/hus/corona_hh.jpg"
 				]
 			}
-		]
+		],
+		"position": {
+			"lat": 63.42044959999999,
+			"lng": 22.3940431
+		}
 	},
 	"hirvlaxvägen-66950": {
 		"name": "hirvlaxvägen",
@@ -25735,7 +25795,11 @@
 					"bilder/hh/herlerbro.jpg"
 				]
 			}
-		]
+		],
+		"position": {
+			"lat": 63.61204689999999,
+			"lng": 22.4921221
+		}
 	},
 	"fabriksgatan 27-66900": {
 		"name": "fabriksgatan 27",
