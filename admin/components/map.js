@@ -32,53 +32,65 @@ function getMarkerImage(hasUneditedPageUrl, hasApprovedPageUrl){
     };
 }
 
-function addMarkers({onMarkerClick, locales, localeFilter, editedLocales, globallyDisapprovedPageUrls}){
-    let addedPositions = [];
+function getLocale(key ,locale, localeFilter, editedLocales, globallyDisapprovedPageUrls){
+    const { pages = [] } = locale;
+    const hasPages = localeHasPages(pages, globallyDisapprovedPageUrls);
 
-    if(locales){
-        return Object.keys(locales).map((name) => {
-            const locale = locales[name];
-            const { pages = [] } = locale;
-            const hasPages = localeHasPages(pages, globallyDisapprovedPageUrls);
+    if(locale.position && hasPages) {
+        const editedLocale = editedLocales[key] || {};
+        const {approvedPages = [], disapprovedPages = []} = editedLocale;
+        const filteredPages = getPages(pages, globallyDisapprovedPageUrls);
+        const hasApprovedPageUrl = localeHasApprovedPageUrl(filteredPages, approvedPages);
+        const hasUneditedPageUrl = localeHasUneditedPageUrl(filteredPages, approvedPages, disapprovedPages);
+        const label = getLabel(localeFilter, filteredPages, approvedPages, disapprovedPages);
 
-            if(locale.position && hasPages){
-                const editedLocale = editedLocales[name] || {};
-                const {approvedPages = [], disapprovedPages = []} = editedLocale;
-                const filteredPages = getPages(pages, globallyDisapprovedPageUrls);
-                const hasApprovedPageUrl = localeHasApprovedPageUrl(filteredPages, approvedPages);
-                const hasUneditedPageUrl = localeHasUneditedPageUrl(filteredPages, approvedPages, disapprovedPages);
-                const label = getLabel(localeFilter, filteredPages, approvedPages, disapprovedPages);
-
-                const position = editedLocale && editedLocale.position ? editedLocale.position : locale.position;
-                const positionAsString = JSON.stringify(position);
-                const positionAdded = addedPositions.find((position) => {
-                    return position === positionAsString;
-                });
-
-                if(positionAdded){
-                    position.lat = position.lat - 0.0001;
-                    position.lng = position.lng + 0.0001;
-                    addedPositions.push(JSON.stringify(position));
-                } else{
-                    addedPositions.push(positionAsString);
-                }
-
-                return label > 0 ? <Marker
-                    key={name}
-                    position={position}
-                    onClick={() => {
-                        onMarkerClick(name, locale)
-                    }}
-                    icon={getMarkerImage(hasUneditedPageUrl, hasApprovedPageUrl)}
-                    label={label.toString()}
-                /> : null
-            }
-
-            return null;
-        })
+        return {
+            locale, editedLocale, label, hasApprovedPageUrl, hasUneditedPageUrl
+        }
     }
 
-    return null;
+    return {}
+
+}
+
+function getPosition(editedLocale, locale, addedPositions){
+    const position = editedLocale && editedLocale.position ? editedLocale.position : locale.position;
+    const positionAsString = JSON.stringify(position);
+    const positionAdded = addedPositions.find((position) => {
+        return position === positionAsString;
+    });
+
+    if(positionAdded){
+        position.lat = position.lat - 0.0001;
+        position.lng = position.lng + 0.0001;
+        addedPositions.push(JSON.stringify(position));
+    } else{
+        addedPositions.push(positionAsString);
+    }
+
+    return position;
+}
+
+function addMarkers({onMarkerClick, locales = [], localeFilter, editedLocales, globallyDisapprovedPageUrls}){
+    let addedPositions = [];
+    return Object.keys(locales).map((key) => {
+        const {locale, editedLocale, label, hasUneditedPageUrl, hasApprovedPageUrl} = getLocale(key, locales[key], localeFilter, editedLocales, globallyDisapprovedPageUrls);
+
+        if(locale && label > 0 ){
+            return <Marker
+                key={key}
+                position={getPosition(editedLocale, locale, addedPositions)}
+                onClick={() => {
+                    onMarkerClick(key, locale)
+                }}
+                icon={getMarkerImage(hasUneditedPageUrl, hasApprovedPageUrl)}
+                label={label.toString()}
+            />
+        }
+
+        return null;
+    })
+
 }
 
 const Map = compose(
