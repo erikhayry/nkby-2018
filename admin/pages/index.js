@@ -1,62 +1,62 @@
 import React from "react"
-import { compose, withProps } from "recompose"
-import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
+import 'isomorphic-unfetch'
 import Head from 'next/head'
-import theme from '../static/themes/dark.json';
 import Overlay from '../components/overlay';
 import Map from '../components/map';
+import locales from '../static/crawler-result-with-locales.json';
+
+import { get, post } from '../utils/api'
+
 import { Button } from 'semantic-ui-react'
 
-class App extends React.PureComponent {
+const LOCALE_FILTERS = [
+    {
+        value: 'approved',
+        text: 'Visa godkända'
+    },
+    {
+        value: 'unedited',
+        text: 'Visa oediterade'
+    },
+    {
+        value: 'all',
+        text: 'Visa alla'
+    },
+]
+
+export default class App extends React.Component {
+    constructor(props){
+        super(props);
+        this.disapproveGlobally = this.disapproveGlobally.bind(this)
+        this.addStarForPage = this.addStarForPage.bind(this)
+        this.addReportedLocale = this.addReportedLocale.bind(this)
+        this.updateLocale = this.updateLocale.bind(this)
+        this.addName = this.addName.bind(this)
+        this.addPreferredPageImage = this.addPreferredPageImage.bind(this)
+        this.approve = this.approve.bind(this)
+        this.undoApprove = this.undoApprove.bind(this)
+        this.disapprove = this.disapprove.bind(this)
+        this.undoDisapprove = this.undoDisapprove.bind(this)
+    }
+
+    async componentDidMount () {
+        const editedLocales = await get('/get/edited-locales');
+        const globallyDisapprovedPageUrls = await get('/get/disapproved-page-url-globally');
+        const starredPages = await get('/get/starred-pages');
+        const reportedLocales = await get('/get/reported-locales');
+
+        this.setState({ editedLocales, globallyDisapprovedPageUrls, starredPages, reportedLocales });
+    }
+
     state = {
-        locales: [],
         currentLocale: undefined,
-        editedLocales: {},
-        globallyDisapprovedPageUrls: [],
         localeFilter: 'all',
+        editedLocales: [],
+        globallyDisapprovedPageUrls: [],
         starredPages: [],
         reportedLocales: []
     };
 
-    componentDidMount() {
-        let that = this;
-        fetch('http://localhost:3001/get/edited-locales')
-            .then(function(response) {
-                return response.json()
-            })
-            .then(function(responseAsJson) {
-                console.log(responseAsJson)
-                that.setState({editedLocales: responseAsJson})
-            });
-        fetch('/static/crawler-result-with-locales.json')
-            .then(function(response) {
-                return response.json()
-            })
-            .then(function(responseAsJson) {
-                that.setState({ locales: responseAsJson })
-            });
-        fetch('http://localhost:3001/get/disapproved-page-url-globally')
-            .then(function(response) {
-                return response.json()
-            })
-            .then(function(responseAsJson) {
-                that.setState({ globallyDisapprovedPageUrls: responseAsJson })
-            });
-        fetch('http://localhost:3001/get/starred-pages')
-            .then(function(response) {
-                return response.json()
-            })
-            .then(function(responseAsJson) {
-                that.setState({ starredPages: responseAsJson })
-            });
-        fetch('http://localhost:3001/get/reported-locales')
-            .then(function(response) {
-                return response.json()
-            })
-            .then(function(responseAsJson) {
-                that.setState({ reportedLocales: responseAsJson })
-            });
-    }
 
     setCurrentLocale = (name, locale) => {
         this.setState({ currentLocale: name && locale ? {name, locale} : undefined})
@@ -68,101 +68,59 @@ class App extends React.PureComponent {
         })
     }
 
-    api = (url, method, body = {}) => {
-        console.log(url, method, body)
-        let that = this;
-        return fetch('http://localhost:3001' + url, {
-                method,
-                body: JSON.stringify(body)
-            })
-            .then(function(response) {
-                return response.json()
-            })
+    async disapproveGlobally(disapprovedUrl) {
+        const globallyDisapprovedPageUrls = await post('/remove/disapproved-page-url-globally', disapprovedUrl)
+        this.setState({globallyDisapprovedPageUrls})
     }
 
-    disapproveGlobally = (disapprovedUrl) => {
-        let that = this;
-        this.api('/remove/disapproved-page-url-globally', 'post', disapprovedUrl)
-            .then(function(responseAsJson) {
-                that.setState({globallyDisapprovedPageUrls: responseAsJson})
-            });
+    async addStarForPage(pageUrl) {
+        const starredPages = await post('/add/starred-page', pageUrl)
+        this.setState({starredPages})
     };
 
-    addStarForPage = (pageUrl) => {
-        let that = this;
-        this.api('/add/starred-page', 'post', pageUrl)
-            .then(function(responseAsJson) {
-                that.setState({starredPages: responseAsJson})
-            });
+    async addReportedLocale(name) {
+        const reportedLocales = await post('/add/reported-locale', name)
+        this.setState({reportedLocales})
     };
 
-    addReportedLocale = (name) => {
-        let that = this;
-        this.api('/add/reported-locale', 'post', name)
-            .then(function(responseAsJson) {
-                that.setState({reportedLocales: responseAsJson})
-            });
+    async updateLocale(data) {
+        const editedLocales = await post('/add/locale-data', data)
+        this.setState({editedLocales})
     };
 
-    updateLocale = (data) => {
-        console.log(data)
-        let that = this;
-        this.api('/add/locale-data', 'post', data)
-            .then(function(responseAsJson) {
-                that.setState({editedLocales: responseAsJson})
-            });
-    };
-
-    addName = (data) => {
-        console.log(data)
-        let that = this;
-        this.api('/add/locale-data', 'post', data)
-            .then(function(responseAsJson) {
-                that.setState({editedLocales: responseAsJson})
-            });
-    };
-
-    addPreferredPageImage = (preferredImageData) => {
-        let that = this;
-        this.api('/add/preferred-page-image', 'post', preferredImageData)
-            .then(function(responseAsJson) {
-                that.setState({editedLocales: responseAsJson})
-            });
+    async addName(data) {
+        const editedLocales = await post('/add/locale-data', data)
+        this.setState({editedLocales})
     }
 
-    approve = (approvedUrlData) => {
-        let that = this;
-        this.api('/add/approved-page-url', 'post', approvedUrlData)
-        .then(function(responseAsJson) {
-            that.setState({editedLocales: responseAsJson})
-        });
+    async addPreferredPageImage(preferredImageData){
+        const editedLocales = await post('/add/preferred-page-image', preferredImageData)
+        this.setState({editedLocales})
+    }
+
+    async approve(urlData){
+        const editedLocales = await post('/add/approved-page-url', urlData)
+        this.setState({editedLocales})
     };
 
-    undoApprove = (approvedUrlData) => {
-        let that = this;
-        this.api('/remove/approved-page-url', 'post', approvedUrlData)
-        .then(function(responseAsJson) {
-            that.setState({editedLocales: responseAsJson})
-        });
+    async undoApprove(urlData){
+        const editedLocales = await post('/remove/approved-page-url', urlData)
+        this.setState({editedLocales})
     };
 
-    disapprove = (approvedUrlData) => {
-        let that = this;
-        this.api('/add/disapproved-page-url', 'post', approvedUrlData)
-        .then(function(responseAsJson) {
-            that.setState({editedLocales: responseAsJson})
-        });
+    async disapprove(urlData){
+        const editedLocales = await post('/add/disapproved-page-url', urlData)
+        this.setState({editedLocales})
     };
 
-    undoDisapprove = (approvedUrlData) => {
-        let that = this;
-        this.api('/remove/disapproved-page-url', 'post', approvedUrlData)
-        .then(function(responseAsJson) {
-            that.setState({editedLocales: responseAsJson})
-        });
+    async undoDisapprove(urlData){
+        const editedLocales = await post('/remove/disapproved-page-url', urlData)
+        this.setState({editedLocales})
     };
 
     render() {
+        const {currentLocale, localeFilter, editedLocales, globallyDisapprovedPageUrls, starredPages, reportedLocales} = this.state;
+
         return (
             <div>
                 <Head>
@@ -176,30 +134,17 @@ class App extends React.PureComponent {
                     margin: 0;
                   }
                 `}</style>
-                {!this.state.currentLocale && <div style={{
+                {!currentLocale && <div style={{
                     position: 'fixed',
                     zIndex: 1,
                     padding: 10
                 }}>
                     <Button.Group>
-                        {[
-                            {
-                                value: 'approved',
-                                text: 'Visa godkända'
-                            },
-                            {
-                                value: 'unedited',
-                                text: 'Visa oediterade'
-                            },
-                            {
-                                value: 'all',
-                                text: 'Visa alla'
-                            },
-                        ].map(btn => (
+                        {LOCALE_FILTERS.map(btn => (
                             <Button
                                 key={btn.value}
                                 compact
-                                positive={this.state.localeFilter === btn.value}
+                                positive={localeFilter === btn.value}
                                 onClick={() => {
                                     this.setLocaleFilter(btn.value)
                                 }}>
@@ -210,12 +155,12 @@ class App extends React.PureComponent {
                 </div>}
                 <Map
                     onMarkerClick={this.setCurrentLocale}
-                    locales={this.state.locales}
-                    localeFilter={this.state.localeFilter}
-                    editedLocales={this.state.editedLocales}
-                    globallyDisapprovedPageUrls={this.state.globallyDisapprovedPageUrls}
+                    locales={locales}
+                    localeFilter={localeFilter}
+                    editedLocales={editedLocales}
+                    globallyDisapprovedPageUrls={globallyDisapprovedPageUrls}
                 />
-                {this.state.currentLocale && <Overlay
+                {currentLocale && <Overlay
                     addPreferredPageImage={this.addPreferredPageImage}
                     approve={this.approve}
                     undoApprove={this.undoApprove}
@@ -228,15 +173,13 @@ class App extends React.PureComponent {
                     updateLocale={this.updateLocale}
 
                     setCurrentLocale={this.setCurrentLocale}
-                    globallyDisapprovedPageUrls={this.state.globallyDisapprovedPageUrls}
-                    starredPages={this.state.starredPages}
-                    reportedLocales={this.state.reportedLocales}
-                    currentLocale={this.state.currentLocale}
-                    editedLocales={this.state.editedLocales}
+                    globallyDisapprovedPageUrls={globallyDisapprovedPageUrls}
+                    starredPages={starredPages}
+                    reportedLocales={reportedLocales}
+                    currentLocale={currentLocale}
+                    editedLocales={editedLocales}
                 />}
             </div>
         )
     }
 }
-
-export default () => <App />;

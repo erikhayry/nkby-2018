@@ -2,6 +2,35 @@ import React from "react"
 import { compose, withProps } from "recompose"
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
 import theme from '../static/themes/dark.json';
+import { localeHasPages, localeHasApprovedPageUrl, localeHasUneditedPageUrl, getPages } from '../utils/filters'
+
+function getLabel(localeFilter, filteredPages = [], approvedPages = [], disapprovedPages = []){
+    switch(localeFilter){
+        case 'approved':
+            return approvedPages.length;
+        case 'unedited':
+            return filteredPages.length - approvedPages.length - disapprovedPages.length;
+        default:
+            return filteredPages.length;
+    }
+}
+
+function getMarkerImage(hasUneditedPageUrl, hasApprovedPageUrl){
+    let marker = '/static/images/markers/_white.png';
+
+    if(hasUneditedPageUrl){
+        marker =  '/static/images/markers/_red.png';
+    }
+    if(hasApprovedPageUrl){
+        marker =  '/static/images/markers/_green.png';
+    }
+
+    return {
+        url: marker,
+        size: new google.maps.Size(22, 40),
+        labelOrigin: new google.maps.Point(11, 12)
+    };
+}
 
 function addMarkers({onMarkerClick, locales, localeFilter, editedLocales, globallyDisapprovedPageUrls}){
     let addedPositions = [];
@@ -9,52 +38,22 @@ function addMarkers({onMarkerClick, locales, localeFilter, editedLocales, global
     if(locales){
         return Object.keys(locales).map((name) => {
             const locale = locales[name];
-            if(locale.position && locale.pages.some(page => !globallyDisapprovedPageUrls.includes(page.url))){
+            const { pages = [] } = locale;
+            const hasPages = localeHasPages(pages, globallyDisapprovedPageUrls);
+
+            if(locale.position && hasPages){
                 const editedLocale = editedLocales[name] || {};
                 const {approvedPages = [], disapprovedPages = []} = editedLocale;
+                const filteredPages = getPages(pages, globallyDisapprovedPageUrls);
+                const hasApprovedPageUrl = localeHasApprovedPageUrl(filteredPages, approvedPages);
+                const hasUneditedPageUrl = localeHasUneditedPageUrl(filteredPages, approvedPages, disapprovedPages);
+                const label = getLabel(localeFilter, filteredPages, approvedPages, disapprovedPages);
+
                 const position = editedLocale && editedLocale.position ? editedLocale.position : locale.position;
                 const positionAsString = JSON.stringify(position);
                 const positionAdded = addedPositions.find((position) => {
                     return position === positionAsString;
                 });
-                const hasApprovedPageUrl = editedLocale ? locale.pages.find(page => approvedPages.find(approvedPage => approvedPage.url === page.url)) : false;
-                const hasUneditedPageUrl = editedLocale ? locale.pages.find(page => !approvedPages.includes(page.url) && !disapprovedPages.includes(page.url)) : true;
-                const pages = locale.pages.filter(page => !globallyDisapprovedPageUrls.includes(page.url));
-                let label = 0;
-
-                let marker = '/static/images/markers/_red.png';
-                if(editedLocale && approvedPages.every(page => page.preferredImage) && hasUneditedPageUrl){
-                    marker = '/static/images/markers/_purple.png';
-                } else if(hasApprovedPageUrl){
-                    marker = '/static/images/markers/_green.png';
-                }
-
-                if(localeFilter === 'approved'){
-                    if(!hasApprovedPageUrl ){
-                        return null;
-                    }
-                    pages.forEach((page) => {
-                        if(editedLocale && approvedPages.find(approvedPage => approvedPage.url === page.url)){
-                            label++
-                        }
-                    })
-                } else if(localeFilter === 'unedited'){
-                    if(!hasUneditedPageUrl ){
-                        return null;
-                    }
-                    pages.forEach((page) => {
-                        if(!editedLocale ||
-                            (
-                                !approvedPages.find(approvedPage => approvedPage.url === page.url) &&
-                                !disapprovedPages.find(disapprovedPage => disapprovedPage.url === page.url)
-                            )
-                        ){
-                            label++
-                        }
-                    })
-                } else {
-                    label = pages.length;
-                }
 
                 if(positionAdded){
                     position.lat = position.lat - 0.0001;
@@ -64,18 +63,13 @@ function addMarkers({onMarkerClick, locales, localeFilter, editedLocales, global
                     addedPositions.push(positionAsString);
                 }
 
-                const image = {
-                    url: marker,
-                    size: new google.maps.Size(22, 40),
-                    labelOrigin: new google.maps.Point(11, 12)
-                };
-
                 return label > 0 ? <Marker
-                    key={name} position={position}
+                    key={name}
+                    position={position}
                     onClick={() => {
                         onMarkerClick(name, locale)
                     }}
-                    icon={image}
+                    icon={getMarkerImage(hasUneditedPageUrl, hasApprovedPageUrl)}
                     label={label.toString()}
                 /> : null
             }

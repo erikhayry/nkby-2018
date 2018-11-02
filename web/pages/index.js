@@ -25,6 +25,7 @@ class App extends React.PureComponent {
         this.updateDimensions();
         window.addEventListener("resize", this.updateDimensions.bind(this));
     }
+
     componentWillUnmount() {
         window.removeEventListener("resize", this.updateDimensions);
     }  
