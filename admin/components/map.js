@@ -2,7 +2,9 @@ import React from "react"
 import { compose, withProps } from "recompose"
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
 import theme from '../static/themes/dark.json';
-import { localeHasPages, localeHasApprovedPageUrl, localeHasUneditedPageUrl, getPages } from '../utils/filters'
+import { localeHasPages, localeHasApprovedPageUrl, localeHasUneditedPageUrl, getFilteredPages } from '../utils/filters'
+import Link from 'next/link'
+import Router from 'next/router'
 
 function getLabel(localeFilter, filteredPages = [], approvedPages = [], disapprovedPages = []){
     switch(localeFilter){
@@ -39,7 +41,7 @@ function getLocale(key ,locale, localeFilter, editedLocales, globallyDisapproved
     if(locale.position && hasPages) {
         const editedLocale = editedLocales[key] || {};
         const {approvedPages = [], disapprovedPages = []} = editedLocale;
-        const filteredPages = getPages(pages, globallyDisapprovedPageUrls);
+        const filteredPages = getFilteredPages(pages, globallyDisapprovedPageUrls);
         const hasApprovedPageUrl = localeHasApprovedPageUrl(filteredPages, approvedPages);
         const hasUneditedPageUrl = localeHasUneditedPageUrl(filteredPages, approvedPages, disapprovedPages);
         const label = getLabel(localeFilter, filteredPages, approvedPages, disapprovedPages);
@@ -81,7 +83,7 @@ function addMarkers({onMarkerClick, locales = [], localeFilter, editedLocales, g
                 key={key}
                 position={getPosition(editedLocale, locale, addedPositions)}
                 onClick={() => {
-                    onMarkerClick(key, locale)
+                    Router.push(`/?locale=${key}`)
                 }}
                 icon={getMarkerImage(hasUneditedPageUrl, hasApprovedPageUrl)}
                 label={label.toString()}

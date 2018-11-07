@@ -1,4 +1,6 @@
 import { Button, Icon, Header, Label, Segment, Form, Divider, Card, Image, Dimmer, Grid } from 'semantic-ui-react';
+import { toImagesSrc } from '../utils'
+import Link from 'next/link'
 
 class Overlay extends React.PureComponent {
     state = {
@@ -49,7 +51,7 @@ class Overlay extends React.PureComponent {
         })
     };
 
-    renderImage = (localeName, page, type, preferredImage) => {
+.    renderImage = (localeName, page, type, preferredImage) => {
         const {images = []} = page;
         if(images.length > 0){
             let src = preferredImage || images[0];
@@ -60,7 +62,7 @@ class Overlay extends React.PureComponent {
                             this.showAllImages({localeName, preferredImage, ...page})
                         }
                     }}
-                    src={`http://www.nykarlebyvyer.nu/${src.replace('../../../', '')}`}
+                    src={toImagesSrc(src)}
                     style={{
                         opacity: type !== 'approved' || preferredImage ? 1 : 0.5
                     }}
@@ -89,7 +91,7 @@ class Overlay extends React.PureComponent {
                                     this.setAsPreferredImages(localeName, pageUrl, url);
                                 });
                             }}
-                            src={`http://www.nykarlebyvyer.nu/${url.replace('../../../', '')}`}
+                            src={toImagesSrc(url)}
                             size='medium'
                             label={preferredImage === url && { as: 'a', corner: 'left', icon: 'heart', color: 'green'}}
                         />
@@ -343,7 +345,7 @@ class Overlay extends React.PureComponent {
                                                 this.setAsPreferredImages(localeName, url, imageUrl);
                                             });
                                         }}
-                                        src={`http://www.nykarlebyvyer.nu/${imageUrl.replace('../../../', '')}`}
+                                        src={toImagesSrc(imageUrl)}
                                         label={this.state.showAllImages.preferredImage === imageUrl && { as: 'a', corner: 'left', icon: 'heart', color: 'green'}}
                                     />
                                 })}
@@ -351,21 +353,16 @@ class Overlay extends React.PureComponent {
                         </div>
                     </Dimmer>
 
-                    <Button circular
-                            onClick={() => {
-                                this.setState({
-                                    showAllImages: undefined
-                                }, () => {
-                                    this.props.setCurrentLocale()
-                                });
-                            }}
-                            style={{
-                                position: 'absolute',
-                                right: '10px',
-                                top: '10px'
-                            }}
-                            icon='close'
-                    />
+                    <Link href={`/`}>
+                        <Button circular
+                                style={{
+                                    position: 'absolute',
+                                    right: '10px',
+                                    top: '10px'
+                                }}
+                                icon='close'
+                        />
+                    </Link>
                 </div>
             )
         }

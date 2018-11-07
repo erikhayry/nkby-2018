@@ -4,6 +4,8 @@ import Head from 'next/head'
 import Overlay from '../components/overlay';
 import Map from '../components/map';
 import locales from '../static/crawler-result-with-locales.json';
+import Page from '../components/page'
+import {withRouter} from 'next/router'
 
 import { get, post } from '../utils/api'
 
@@ -24,7 +26,7 @@ const LOCALE_FILTERS = [
     },
 ]
 
-export default class App extends React.Component {
+class App extends React.Component {
     constructor(props){
         super(props);
         this.disapproveGlobally = this.disapproveGlobally.bind(this)
@@ -37,6 +39,8 @@ export default class App extends React.Component {
         this.undoApprove = this.undoApprove.bind(this)
         this.disapprove = this.disapprove.bind(this)
         this.undoDisapprove = this.undoDisapprove.bind(this)
+
+        console.log(props)
     }
 
     async componentDidMount () {
@@ -45,7 +49,7 @@ export default class App extends React.Component {
         const starredPages = await get('/get/starred-pages');
         const reportedLocales = await get('/get/reported-locales');
 
-        this.setState({ editedLocales, globallyDisapprovedPageUrls, starredPages, reportedLocales });
+        this.setState({ editedLocales, globallyDisapprovedPageUrls, starredPages, reportedLocales});
     }
 
     state = {
@@ -119,21 +123,13 @@ export default class App extends React.Component {
     };
 
     render() {
-        const {currentLocale, localeFilter, editedLocales, globallyDisapprovedPageUrls, starredPages, reportedLocales} = this.state;
+        const { localeFilter, editedLocales, globallyDisapprovedPageUrls, starredPages, reportedLocales, test} = this.state;
+        const { currentLocale } = this.props;
+
+        console.log(currentLocale)
 
         return (
-            <div>
-                <Head>
-                    <meta name="viewport" content="width=device-width, initial-scale=1" />
-                    <meta charSet="utf-8" />
-                    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.0/dist/semantic.min.css"></link>
-                </Head>
-                <style jsx global>{`
-                  body {
-                    color: #222;
-                    margin: 0;
-                  }
-                `}</style>
+            <Page styles={{padding:0}}>
                 {!currentLocale && <div style={{
                     position: 'fixed',
                     zIndex: 1,
@@ -179,7 +175,19 @@ export default class App extends React.Component {
                     currentLocale={currentLocale}
                     editedLocales={editedLocales}
                 />}
-            </div>
+            </Page>
         )
     }
 }
+
+App.getInitialProps = async function (context) {
+    const { locale: name } = context.query
+
+    if(name){
+        return { currentLocale: {name, locale: {...locales[name]}} }
+    }
+
+    return {currentLocale: undefined}
+}
+
+export default withRouter(App)
