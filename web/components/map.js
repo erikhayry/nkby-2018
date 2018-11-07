@@ -3,8 +3,9 @@ import { withScriptjs, withGoogleMap, GoogleMap, Marker, InfoWindow } from "reac
 import { MarkerWithLabel } from "react-google-maps/lib/components/addons/MarkerWithLabel"
 import theme from '../static/themes/dark.json';
 import Overlay from './overlay.js';
+import Router from 'next/router'
 
-const   MapWrapper = withScriptjs(withGoogleMap((props) => {
+const MapWrapper = withScriptjs(withGoogleMap((props) => {
     const userMarkerImage = {
         url: '/static/images/markers/white.png',
         size: new google.maps.Size(22, 40),
@@ -60,8 +61,8 @@ const   MapWrapper = withScriptjs(withGoogleMap((props) => {
     return (
         <React.Fragment>
             <GoogleMap
-                defaultZoom={12}
-                defaultCenter={{ lat: 63.5217687, lng: 22.5216011 }}
+                defaultZoom={currentLocale ? 15 : 12}
+                defaultCenter={currentLocale ? currentLocale.position : { lat: 63.5217687, lng: 22.5216011 }}
                 ref={props.onMapMounted}
                 options={{
                     fullscreenControl: !isSmallDevice,
@@ -80,7 +81,9 @@ const   MapWrapper = withScriptjs(withGoogleMap((props) => {
                     position={props.userPosition}
                     icon={userMarkerImage}
                 />}
-                {!isSmallDevice && currentLocale && <InfoWindow position={currentLocale.position} onCloseClick={onToggleOpen}>
+                {!isSmallDevice && currentLocale && <InfoWindow position={currentLocale.position} onCloseClick={() => {
+                    Router.push(`/`)
+                }}>
                     <div style={{
                         width: 500,
                         height: 500,
@@ -127,13 +130,11 @@ const   MapWrapper = withScriptjs(withGoogleMap((props) => {
 class Map extends React.Component {
     constructor(props) {
         super(props);
-        this.onToggleOpen = this.onToggleOpen.bind(this);
         this.onMapMounted = this.onMapMounted.bind(this);
         this.setLocation = this.setLocation.bind(this);
     }
 
     state = {
-        currentLocale: undefined,
         userPosition: undefined
     };
 
@@ -154,7 +155,7 @@ class Map extends React.Component {
                         }}
                         zIndex={key === activeMarker ? 1 : 0}
                         onClick={() => {
-                            this.onToggleOpen(locale)
+                            Router.push(`/?locale=${key}`)
                         }}
                         onMouseOver={() => {
                             this.onSetActiveMarker(key)
@@ -166,10 +167,6 @@ class Map extends React.Component {
         }
 
         return null;
-    }
-
-    onToggleOpen(currentLocale) {
-        this.setState({currentLocale})
     }
 
     onSetActiveMarker(activeMarker) {
@@ -190,8 +187,8 @@ class Map extends React.Component {
     }
 
     render(){
-        const {userPosition, currentLocale, activeMarker} = this.state;
-        const {isSmallDevice, locales} = this.props;
+        const {userPosition, activeMarker} = this.state;
+        const {isSmallDevice, locales, currentLocale} = this.props;
         const markers = this.getMarkers(locales, activeMarker);
         return <MapWrapper
                     markers={markers}

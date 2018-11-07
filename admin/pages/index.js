@@ -126,8 +126,6 @@ class App extends React.Component {
         const { localeFilter, editedLocales, globallyDisapprovedPageUrls, starredPages, reportedLocales, test} = this.state;
         const { currentLocale } = this.props;
 
-        console.log(currentLocale)
-
         return (
             <Page styles={{padding:0}}>
                 {!currentLocale && <div style={{
@@ -150,11 +148,17 @@ class App extends React.Component {
                     </Button.Group>
                 </div>}
                 <Map
+                    googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoFBVnwa-VAWKXuZ5m32Jh6fL4lvPYVxQ&v=3.exp&libraries=geometry,drawing,places"
+                    loadingElement={<div style={{ height: `100%` }} />}
+                    containerElement={<div style={{ height: `100vh`, width: '100%' }} />}
+                    mapElement={<div style={{ height: `100%` }} />}
+
                     onMarkerClick={this.setCurrentLocale}
                     locales={locales}
                     localeFilter={localeFilter}
                     editedLocales={editedLocales}
                     globallyDisapprovedPageUrls={globallyDisapprovedPageUrls}
+                    currentLocale={currentLocale}
                 />
                 {currentLocale && <Overlay
                     addPreferredPageImage={this.addPreferredPageImage}

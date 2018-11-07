@@ -51,7 +51,7 @@ class Overlay extends React.PureComponent {
         })
     };
 
-.    renderImage = (localeName, page, type, preferredImage) => {
+    renderImage = (localeName, page, type, preferredImage) => {
         const {images = []} = page;
         if(images.length > 0){
             let src = preferredImage || images[0];

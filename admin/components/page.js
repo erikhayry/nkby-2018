@@ -17,23 +17,6 @@ const Page = ({ children, title, styles = {} }) => (
               }
             `}
         </style>
-        <Menu>
-            <Menu.Item
-                name='editorials'
-            >
-                Editorials
-            </Menu.Item>
-
-            <Menu.Item name='reviews'  >
-                Reviews
-            </Menu.Item>
-
-            <Menu.Item
-                name='upcomingEvents'
-            >
-                Upcoming Events
-            </Menu.Item>
-        </Menu>
         {title && <Header as='h2' icon textAlign='center'>
             <Icon name='star' circular />
             <Header.Content>{title}</Header.Content>

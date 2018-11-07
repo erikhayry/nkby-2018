@@ -2,26 +2,19 @@ import React from "react"
 import { compose, withProps } from "recompose"
 import Head from 'next/head'
 import Map from '../components/map';
+import {withRouter} from 'next/router'
+import locales from '../static/locales.json';
 
 class App extends React.PureComponent {
     state = {
-        locales: []
-    };
+        isSmallDevice: false
+    }
 
     updateDimensions() {
         this.setState({isSmallDevice: window.innerWidth < 800});
     }
 
     componentDidMount() {
-        let that = this;
-        fetch('/static/locales.json')
-            .then(function(response) {
-                return response.json()
-            })
-            .then(function(responseAsJson) {
-                that.setState({ locales: responseAsJson })
-            });
-
         this.updateDimensions();
         window.addEventListener("resize", this.updateDimensions.bind(this));
     }
@@ -46,7 +39,8 @@ class App extends React.PureComponent {
                   }
                 `}</style>
                 <Map
-                    locales={this.state.locales}
+                    currentLocale={this.props.currentLocale}
+                    locales={locales}
                     isSmallDevice={this.state.isSmallDevice}
                 />
             </div>
@@ -54,4 +48,14 @@ class App extends React.PureComponent {
     }
 }
 
-export default () => <App />;
+App.getInitialProps = async function (context) {
+    const { locale: name } = context.query;
+
+    if(name){
+        return { currentLocale: locales[name] }
+    }
+
+    return {currentLocale: undefined}
+}
+
+export default withRouter(App)

@@ -3,7 +3,6 @@ import { compose, withProps } from "recompose"
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
 import theme from '../static/themes/dark.json';
 import { localeHasPages, localeHasApprovedPageUrl, localeHasUneditedPageUrl, getFilteredPages } from '../utils/filters'
-import Link from 'next/link'
 import Router from 'next/router'
 
 function getLabel(localeFilter, filteredPages = [], approvedPages = [], disapprovedPages = []){
@@ -73,7 +72,7 @@ function getPosition(editedLocale, locale, addedPositions){
     return position;
 }
 
-function addMarkers({onMarkerClick, locales = [], localeFilter, editedLocales, globallyDisapprovedPageUrls}){
+function addMarkers(locales = [], localeFilter, editedLocales, globallyDisapprovedPageUrls){
     let addedPositions = [];
     return Object.keys(locales).map((key) => {
         const {locale, editedLocale, label, hasUneditedPageUrl, hasApprovedPageUrl} = getLocale(key, locales[key], localeFilter, editedLocales, globallyDisapprovedPageUrls);
@@ -95,19 +94,10 @@ function addMarkers({onMarkerClick, locales = [], localeFilter, editedLocales, g
 
 }
 
-const Map = compose(
-    withProps({
-        googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyBoFBVnwa-VAWKXuZ5m32Jh6fL4lvPYVxQ&v=3.exp&libraries=geometry,drawing,places",
-        loadingElement: <div style={{ height: `100%` }} />,
-        containerElement: <div style={{ height: `100vh`, width: '100%' }} />,
-        mapElement: <div style={{ height: `100%` }} />,
-    }),
-    withScriptjs,
-    withGoogleMap
-)((props) =>
+const Map = ({currentLocale, locales, localeFilter, editedLocales, globallyDisapprovedPageUrls}) =>
     <GoogleMap
-        defaultZoom={12}
-        defaultCenter={{ lat: 63.5217687, lng: 22.5216011 }}
+        defaultZoom={currentLocale ? 16 : 12}
+        defaultCenter={currentLocale ? currentLocale.locale.position : { lat: 63.5217687, lng: 22.5216011 }}
 
         options={{
             fullscreenControl: false,
@@ -118,8 +108,10 @@ const Map = compose(
             styles: theme
         }}
     >
-        {addMarkers(props)}
-    </GoogleMap>
-);
+        {addMarkers(locales, localeFilter, editedLocales, globallyDisapprovedPageUrls)}
+    </GoogleMap>;
 
-export default Map;
+
+
+
+export default withScriptjs(withGoogleMap(Map));
