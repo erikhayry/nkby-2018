@@ -1,8 +1,8 @@
 import React from "react"
 import { compose, withProps } from "recompose"
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
-import theme from '../static/themes/dark.json';
-import { localeHasPages, localeHasApprovedPageUrl, localeHasUneditedPageUrl, getFilteredPages } from '../utils/filters'
+import theme from '../../static/themes/dark.json';
+import { localeHasPages, localeHasApprovedPageUrl, localeHasUneditedPageUrl, getFilteredPages } from '../../utils/filters'
 import Router from 'next/router'
 
 function getLabel(localeFilter, filteredPages = [], approvedPages = [], disapprovedPages = []){
@@ -33,12 +33,12 @@ function getMarkerImage(hasUneditedPageUrl, hasApprovedPageUrl){
     };
 }
 
-function getLocale(key ,locale, localeFilter, editedLocales, globallyDisapprovedPageUrls){
+function getLocale({id, ...locale}, localeFilter, editedLocales, globallyDisapprovedPageUrls){
     const { pages = [] } = locale;
     const hasPages = localeHasPages(pages, globallyDisapprovedPageUrls);
 
     if(locale.position && hasPages) {
-        const editedLocale = editedLocales[key] || {};
+        const editedLocale = editedLocales[id] || {};
         const {approvedPages = [], disapprovedPages = []} = editedLocale;
         const filteredPages = getFilteredPages(pages, globallyDisapprovedPageUrls);
         const hasApprovedPageUrl = localeHasApprovedPageUrl(filteredPages, approvedPages);
@@ -74,15 +74,15 @@ function getPosition(editedLocale, locale, addedPositions){
 
 function addMarkers(locales = [], localeFilter, editedLocales, globallyDisapprovedPageUrls){
     let addedPositions = [];
-    return Object.keys(locales).map((key) => {
-        const {locale, editedLocale, label, hasUneditedPageUrl, hasApprovedPageUrl} = getLocale(key, locales[key], localeFilter, editedLocales, globallyDisapprovedPageUrls);
+    return locales.map(({id, ...locale}) => {
+        const {editedLocale, label, hasUneditedPageUrl, hasApprovedPageUrl} = getLocale({id, ...locale}, localeFilter, editedLocales, globallyDisapprovedPageUrls);
 
         if(locale && label > 0 ){
             return <Marker
-                key={key}
+                key={id}
                 position={getPosition(editedLocale, locale, addedPositions)}
                 onClick={() => {
-                    Router.push(`/?locale=${key}`)
+                    Router.push(`/?locale=${id}`)
                 }}
                 icon={getMarkerImage(hasUneditedPageUrl, hasApprovedPageUrl)}
                 label={label.toString()}

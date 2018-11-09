@@ -2,12 +2,12 @@ import React from "react"
 import 'isomorphic-unfetch'
 import Head from 'next/head'
 import Overlay from '../components/overlay';
-import Map from '../components/map';
-import locales from '../static/crawler-result-with-locales.json';
+import Map from '../components/map/map';
 import Page from '../components/page'
 import {withRouter} from 'next/router'
 
 import { get, post } from '../utils/api'
+import { getLocales, getLocale } from '../utils'
 
 import { Button } from 'semantic-ui-react'
 
@@ -39,8 +39,6 @@ class App extends React.Component {
         this.undoApprove = this.undoApprove.bind(this)
         this.disapprove = this.disapprove.bind(this)
         this.undoDisapprove = this.undoDisapprove.bind(this)
-
-        console.log(props)
     }
 
     async componentDidMount () {
@@ -124,7 +122,7 @@ class App extends React.Component {
 
     render() {
         const { localeFilter, editedLocales, globallyDisapprovedPageUrls, starredPages, reportedLocales, test} = this.state;
-        const { currentLocale } = this.props;
+        const { currentLocale, locales } = this.props;
 
         return (
             <Page styles={{padding:0}}>
@@ -185,13 +183,15 @@ class App extends React.Component {
 }
 
 App.getInitialProps = async function (context) {
-    const { locale: name } = context.query
+    const { locale: id } = context.query
+    const locales = getLocales();
 
-    if(name){
-        return { currentLocale: {name, locale: {...locales[name]}} }
+    if(id){
+        const locale = getLocale(id);
+        return { locales, currentLocale: { id, locale} }
     }
 
-    return {currentLocale: undefined}
+    return { locales, currentLocale: undefined}
 }
 
 export default withRouter(App)

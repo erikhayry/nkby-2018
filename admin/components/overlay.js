@@ -43,7 +43,6 @@ class Overlay extends React.PureComponent {
     };
 
     setAsPreferredImages = (localeName, pageUrl, preferredImage) => {
-        console.log('setAsPreferredImages', localeName, pageUrl, preferredImage);
         this.props.addPreferredPageImage({
             name: localeName,
             pageUrl,
@@ -161,15 +160,17 @@ class Overlay extends React.PureComponent {
 
     render() {
         if(this.props.currentLocale){
-            const {editedLocales = {}, currentLocale: {name, locale}, globallyDisapprovedPageUrls, starredPages, reportedLocales} = this.props;
-            const editedLocale = editedLocales[name] || {};
+            const {editedLocales = {}, currentLocale: {id, locale}, globallyDisapprovedPageUrls, starredPages, reportedLocales} = this.props;
+            console.log({id, locale})
+            const editedLocale = editedLocales[id] || {};
             const { approvedPages = [], disapprovedPages = [], alternativeNames = [], position: editedPosition = {}} = editedLocale;
+
             const pages = locale.pages.filter(page => !globallyDisapprovedPageUrls.includes(page.url));
             const approvedPagesForLocale = pages.filter(page => approvedPages.find((approvedPage) => approvedPage.url === page.url)) || [];
             const disapprovedPagesForLocale = pages.filter(page => disapprovedPages.find((disapprovedPage) => disapprovedPage.url === page.url)) || [];
             const uneditedPageUrlsForLocale = pages.filter(page => !disapprovedPages.find((disapprovedPage) => disapprovedPage.url === page.url) && !approvedPages.find((approvedPage) => approvedPage.url === page.url)) || [];
 
-            const localeIsReported = reportedLocales.includes(name);
+            const localeIsReported = reportedLocales.includes(id);
 
             return (
                 <div style={{
@@ -209,7 +210,7 @@ class Overlay extends React.PureComponent {
                                 <Form.Input width={3} type="number" fluid placeholder='lat' defaultValue={editedPosition.lat ? editedPosition: locale.position.lat} onChange={evt => this.updateInputValueLat(evt)} />
                                 <Form.Button onClick={() => {
                                     this.props.updateLocale({
-                                        name,
+                                        id,
                                         position: {
                                             lng: Number(this.state.inputValueLng),
                                             lat: Number(this.state.inputValueLat)
@@ -225,7 +226,7 @@ class Overlay extends React.PureComponent {
                                 <Form.Input width={3} type="text" fluid placeholder='Alternativt namn' value={this.state.inputValueName} onChange={evt => this.updateInputValueName(evt)} />
                                 <Form.Button onClick={() => {
                                     this.props.addName({
-                                        name,
+                                        id,
                                         alternativeNames: [...alternativeNames, this.state.inputValueName]
                                     });
 
@@ -235,7 +236,7 @@ class Overlay extends React.PureComponent {
                         <Divider />
                         <Form>
                             <Form.Group>
-                                <Form.Button onClick={()=> {this.props.addReportedLocale(name)}} disabled={localeIsReported}>Rapportera</Form.Button>
+                                <Form.Button onClick={()=> {this.props.addReportedLocale(id)}} disabled={localeIsReported}>Rapportera</Form.Button>
                             </Form.Group>
                         </Form>
                     </Segment>

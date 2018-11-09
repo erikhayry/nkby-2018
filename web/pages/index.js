@@ -1,14 +1,12 @@
 import React from "react"
-import { compose, withProps } from "recompose"
-import Head from 'next/head'
-import Map from '../components/map';
+import MapWrapper from '../components/map-wrapper';
 import {withRouter} from 'next/router'
-import locales from '../static/locales.json';
+import { getLocales, getLocale } from '../utils'
 
 class App extends React.PureComponent {
     state = {
-        isSmallDevice: false
-    }
+        isSmallDevice: false,
+    };
 
     updateDimensions() {
         this.setState({isSmallDevice: window.innerWidth < 800});
@@ -26,21 +24,10 @@ class App extends React.PureComponent {
     render() {
         return (
             <div>
-                <Head>
-                    <meta name="viewport" content="width=device-width, initial-scale=1" />
-                    <meta charSet="utf-8" />
-                </Head>
-                <style jsx global>{`
-                  body {
-                    color: #222;
-                    margin: 0;
-                    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-                    font-weight: 300;
-                  }
-                `}</style>
-                <Map
+                <MapWrapper
+                    isClient={(typeof window !== 'undefined')}
                     currentLocale={this.props.currentLocale}
-                    locales={locales}
+                    locales={this.props.locales}
                     isSmallDevice={this.state.isSmallDevice}
                 />
             </div>
@@ -49,13 +36,15 @@ class App extends React.PureComponent {
 }
 
 App.getInitialProps = async function (context) {
-    const { locale: name } = context.query;
+    const { locale: id } = context.query;
+    const locales = getLocales();
+    const locale = getLocale(id);
 
-    if(name){
-        return { currentLocale: locales[name] }
+    if(id){
+        return { currentLocale: locale, locales }
     }
 
-    return {currentLocale: undefined}
-}
+    return {currentLocale: undefined, locales}
+};
 
 export default withRouter(App)
