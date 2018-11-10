@@ -3,17 +3,19 @@ import { sortPagesByTitle, sortLocalesByName, getMinMax } from '../utils'
 
 let {min: latMin, max: latMax} = getMinMax('lat');
 let {min: lngMin, max: lngMax} = getMinMax('lng');
+const ratio = (lngMax - lngMin) / (latMax - latMin);
 
-const MapList = ({locales}) => {
+
+const MapList = ({locales, userPosition, setLocation}) => {
     const [current, setCurrent] = useState('');
     const [zoom, setZoom] = useState(0);
-    const z = zoom / 100;
+    const z = zoom / 200;
 
     let latMinZoomed = latMin + z;
     let latMaxZoomed = latMax - z;
 
-    let lngMinZoomed = lngMin + z;
-    let lngMaxZoomed = lngMax - z;
+    let lngMinZoomed = lngMin + (z * ratio);
+    let lngMaxZoomed = lngMax - (z * ratio);
 
     let lngC = 1;
     let latC = 1;
@@ -38,14 +40,15 @@ const MapList = ({locales}) => {
                      :root {
                         --lngC: ${lngC};
                         --latC: ${latC};
+                        --lngMinZoomed: ${lngMinZoomed};
+                        --lngWidth: ${lngWidth};
                      }
 
                     `}</style>
             <div style={{
                 position: 'relative',
-                width: `${400 * (lngWidth / latWidth)}px`,
+                width: `${400 * ratio}px`,
                 height: `400px`,
-                backgroundColor: '#ccc',
                 margin: '0 auto'
             }}>
 
@@ -62,26 +65,53 @@ const MapList = ({locales}) => {
                     <button onClick={() => {
                         setZoom(zoom === -9 ? zoom : zoom - 1)
                     }}>-</button>
+                    <button onClick={setLocation}>Hitta mig</button>
                 </div>
                 <ul style={{
                     margin: 0,
                     listStyle: 'none'
                 }}>
+                    {userPosition &&
+                        <li data-lng={userPosition.lng}
+                            data-lat={userPosition.lat}
+                            style={{
+                                '--lng': `${userPosition.lng}`,
+                                '--left': `${((userPosition.lng*lngC)-lngMinZoomed) / (lngWidth) * 100}`,
+                                cursor: 'pointer',
+                                position: 'absolute',
+                                left: `calc(var(--left) * 1%)`,
+                                bottom: `calc(((${userPosition.lat} * var(--latC)) - ${latMinZoomed}) / ${latWidth} * 100%)`,
+                                transform: `
+                                        translateX(${((userPosition.lng*lngC)-lngMinZoomed) / (lngWidth) * 100 > 50 ? -100 : 0}%)
+                                        translateY(${((userPosition.lat*latC)-latMinZoomed) / (latWidth) * 100 < 50 ? -100 : 0}%)
+                                        `,
+                                transition: 'left 0.3s ease-out, bottom 0.3s ease-out, transform 0.3s ease-out',
+                                zIndex: 1,
+                                color: 'red',
+                            }}>
+                            JAG
+                        </li>}
                     {sortLocalesByName(locales).map(({id, name, pages, position}, i) => {
                         if(position){
                             let lng = ((position.lng*lngC)-lngMinZoomed) / (lngWidth) * 100;
                             let lat = ((position.lat*latC)-latMinZoomed) / (latWidth) * 100;
 
                             return (
-                                <li key={i} data-lng={position.lng} data-lat={position.lat} style={{
-                                    cursor: 'pointer',
-                                    position: 'absolute',
-                                    left: `calc(((${position.lng} * var(--lngC)) - ${lngMinZoomed}) / ${lngWidth} * 100%)`,
-                                    bottom: `calc(((${position.lat} * var(--latC)) - ${latMinZoomed}) / ${latWidth} * 100%)`,
-                                    transform: `translateX(${lng > 50 ? -100 : 0}%) translateY(${lat < 50 ? -100 : 0}%)`,
-                                    transition: 'left 0.3s ease-out, bottom 0.3s ease-out, transform 0.3s ease-out'
+                                <li key={i}
+                                    data-lng={position.lng}
+                                    data-lat={position.lat}
+                                    style={{
+                                        '--lng': `${position.lng}`,
+                                        '--left': `${((position.lng*lngC)-lngMinZoomed) / (lngWidth) * 100}`,
+                                        cursor: 'pointer',
+                                        position: 'absolute',
+                                        left: `calc(var(--left) * 1%)`,
+                                        bottom: `calc(((${position.lat} * var(--latC)) - ${latMinZoomed}) / ${latWidth} * 100%)`,
+                                        transform: `translateX(${lng > 50 ? -100 : 0}%) translateY(${lat < 50 ? -100 : 0}%)`,
+                                        transition: 'left 0.3s ease-out, bottom 0.3s ease-out, transform 0.3s ease-out'
 
-                                }}>
+                                    }}
+                                >
                                     <span id={id} style={{
                                         fontSize: 8
                                     }} onClick={() => {

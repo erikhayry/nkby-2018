@@ -25,7 +25,9 @@ class MapWrapper extends React.Component {
 
     setLocation(){
         navigator.geolocation.getCurrentPosition((position) => {
-            this.ref.panTo({lat: position.coords.latitude, lng: position.coords.longitude})
+            if(this.ref){
+                this.ref.panTo({lat: position.coords.latitude, lng: position.coords.longitude})
+            }
             this.setState({
                 userPosition: {lat: position.coords.latitude, lng: position.coords.longitude}
             })
@@ -38,7 +40,7 @@ class MapWrapper extends React.Component {
 
         return (
             <div>
-                {!false && <MapList locales={locales} />}
+                {!false && <MapList locales={locales} userPosition={userPosition} setLocation={this.setLocation}/>}
                 {false && <ErrorBoundary alternate={<MapList locales={locales} />}>
                     <Map
                         locales={locales}
