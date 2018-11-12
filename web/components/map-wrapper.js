@@ -40,7 +40,12 @@ class MapWrapper extends React.Component {
 
         return (
             <div>
-                {!false && <MapList locales={locales} userPosition={userPosition} setLocation={this.setLocation}/>}
+                {!false && <MapList
+                    locales={locales}
+                    userPosition={userPosition}
+                    setLocation={this.setLocation}
+                    currentLocale={currentLocale}
+                />}
                 {false && <ErrorBoundary alternate={<MapList locales={locales} />}>
                     <Map
                         locales={locales}
