@@ -21,7 +21,7 @@ function render(locales = [], activeMarker, setActiveMarker){
             }}
             zIndex={id === activeMarker ? 1 : 0}
             onClick={() => {
-                Router.push(`/?locale=${id}`)
+                Router.push(`/?locale=${id}`, `/locale/${id}`)
             }}
             onMouseOver={() => {
                 setActiveMarker(id)

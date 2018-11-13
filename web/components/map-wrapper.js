@@ -37,16 +37,17 @@ class MapWrapper extends React.Component {
     render(){
         const {userPosition, activeMarker} = this.state;
         const {isSmallDevice, locales, currentLocale, isClient} = this.props;
+        const mapListProps = {
+            locales: locales,
+            userPosition: userPosition,
+            setLocation: this.setLocation,
+            currentLocale: currentLocale
+        };
 
         return (
             <div>
-                {!false && <MapList
-                    locales={locales}
-                    userPosition={userPosition}
-                    setLocation={this.setLocation}
-                    currentLocale={currentLocale}
-                />}
-                {false && <ErrorBoundary alternate={<MapList locales={locales} />}>
+                {!isClient && <MapList {...mapListProps} />}
+                {isClient && <ErrorBoundary alternate={<MapList {...mapListProps} />}>
                     <Map
                         locales={locales}
                         activeMarker={activeMarker}
@@ -57,7 +58,7 @@ class MapWrapper extends React.Component {
                         setLocation={this.setLocation}
                         setActiveMarker={this.setActiveMarker}
                         userPosition={userPosition}
-                        googleMapURL={"https://maps.googleapis.com/maps/api/js?key=AIzaSyBoFBVnwa-VAWKXuZ5m32Jh6fL4lvPYVxQ&v=3.exp&libraries=geometry,drawing,places"}
+                        googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_MAPS_API}&v=3.exp&librarie=geometry,drawing,places`}
                         loadingElement={<div style={{ height: `100%` }} />}
                         containerElement={<div style={{ height: `100vh`, width: '100%' }} />}
                         mapElement={<div style={{ height: `100%` }} />}

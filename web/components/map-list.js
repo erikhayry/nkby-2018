@@ -55,7 +55,7 @@ function setStyle(e, freeze) {
     }
 }
 
-function getPosition(position, lngMaxZoomed, lngMinZoomed, latMaxZoomed, latMinZoomed){
+function getPosition(position = {}, lngMaxZoomed, lngMinZoomed, latMaxZoomed, latMinZoomed){
     const centerLng = position.lng;
     const centerLat = position.lat;
 
@@ -73,7 +73,7 @@ function getPosition(position, lngMaxZoomed, lngMinZoomed, latMaxZoomed, latMinZ
     }
 }
 
-const MapList = ({locales, userPosition, setLocation, currentLocale}) => {
+const MapList = ({locales, userPosition, setLocation, currentLocale = {}}) => {
     const [viewAsMap, toogleView] = useState(false);
     const [zoom, setZoom] = useState(18);
     const z = zoom / 200;
@@ -116,7 +116,7 @@ const MapList = ({locales, userPosition, setLocation, currentLocale}) => {
                      }
 
                     `}</style>
-            <div style={viewAsMap ? {
+            <div className="map-list" style={viewAsMap ? {
                 position: 'relative',
                 width: `calc(var(--ratio) * var(--size))`,
                 height: 'var(--size)',

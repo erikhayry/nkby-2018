@@ -22,12 +22,14 @@ class App extends React.PureComponent {
     }  
 
     render() {
+        const isClient = typeof window !== 'undefined';
+        const { currentLocale, locales } = this.props;
         return (
             <div>
                 <MapWrapper
-                    isClient={(typeof window !== 'undefined')}
-                    currentLocale={this.props.currentLocale}
-                    locales={this.props.locales}
+                    isClient={isClient}
+                    currentLocale={currentLocale}
+                    locales={locales}
                     isSmallDevice={this.state.isSmallDevice}
                 />
             </div>
