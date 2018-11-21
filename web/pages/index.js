@@ -19,7 +19,7 @@ class App extends React.PureComponent {
 
     componentWillUnmount() {
         window.removeEventListener("resize", this.updateDimensions);
-    }  
+    }
 
     render() {
         const isClient = typeof window !== 'undefined';
@@ -39,7 +39,7 @@ class App extends React.PureComponent {
 
 App.getInitialProps = async function (context) {
     const { locale: id } = context.query;
-    const locales = getLocales();
+    const locales = await getLocales();
     const locale = getLocale(id);
 
     if(id){

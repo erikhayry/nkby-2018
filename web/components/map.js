@@ -1,6 +1,6 @@
 import React from "react"
 import { withScriptjs, withGoogleMap, GoogleMap, Marker, InfoWindow } from "react-google-maps"
-import theme from '../static/themes/dark.json';
+import theme from '../data/themes/dark.json';
 import Overlay from './overlay.js';
 import Router from 'next/router'
 import Locales from './locales';

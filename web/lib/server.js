@@ -1,7 +1,7 @@
 /* eslint-env node */
 const express = require('express');
 const next = require('next');
-const dotenv = require('dotenv').config()
+require('dotenv').config();
 
 const port = process.env.PORT || 3000;
 const dev = process.env.NODE_ENV !== 'production';
@@ -15,7 +15,6 @@ app
 
     server.get('/locale/:locale', (req, res) => {
         const { locale } = req.params;
-        console.log(locale)
         app.render(req, res, '/', { locale, ...req.query })
     });
 

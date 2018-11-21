@@ -1,4 +1,4 @@
-import locales from '../static/locales.json';
+import locales from '../data/locales.json';
 
 function sortByName(a, b){
     if(a < b){
