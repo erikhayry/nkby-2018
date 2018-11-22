@@ -45,7 +45,7 @@ function scrollTo(e, shouldScrollIntoView){
 
 function setStyle(e, freeze) {
     if (e && freeze) {
-        console.log(e.getBoundingClientRect())
+        //console.log(e.getBoundingClientRect())
         const {top, x, height, width} = e.getBoundingClientRect();
         e.style.top = `${top}px`;
         e.style.left = `${x}px`;
@@ -94,12 +94,11 @@ const MapList = ({locales, userPosition, setLocation, currentLocale = {}}) => {
         latC
     } = getPosition(currentLocale ? currentLocale.position : defaultPosition, lngMaxZoomed, lngMinZoomed, latMaxZoomed, latMinZoomed);
 
-    console.log(`current`, currentLocale)
-    console.log(`zoom: ${z}`)
-    console.log(`lngZoomed: min ${lngMinZoomed}, max ${lngMaxZoomed}, lngC ${lngC}, lngWidth ${lngWidth}, centerLng, ${centerLng}`)
-    console.log(`latZoomed: min ${latMinZoomed}, max ${latMaxZoomed}, latC ${latC}, latWidth ${latWidth}, centerLat, ${centerLat}`)
-
-    console.log("=====================================")
+    //console.log(`current`, currentLocale)
+    //console.log(`zoom: ${z}`)
+    //console.log(`lngZoomed: min ${lngMinZoomed}, max ${lngMaxZoomed}, lngC ${lngC}, lngWidth ${lngWidth}, centerLng, ${centerLng}`)
+    //console.log(`latZoomed: min ${latMinZoomed}, max ${latMaxZoomed}, latC ${latC}, latWidth ${latWidth}, centerLat, ${centerLat}`)
+    //console.log("=====================================")
 
     return (
         <>

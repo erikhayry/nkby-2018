@@ -2,6 +2,7 @@ import React from "react"
 import Map from './map';
 import ErrorBoundary from './error-boundary'
 import MapList from './map-list';
+import ReactGA from 'react-ga';
 
 class MapWrapper extends React.Component {
     constructor(props) {
@@ -24,6 +25,10 @@ class MapWrapper extends React.Component {
     }
 
     setLocation(){
+        ReactGA.event({
+            category: 'User',
+            action: 'Clicked on find me'
+        });
         navigator.geolocation.getCurrentPosition((position) => {
             if(this.ref){
                 this.ref.panTo({lat: position.coords.latitude, lng: position.coords.longitude})
