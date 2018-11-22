@@ -9,9 +9,9 @@ let {min: latMin, max: latMax} = getMinMax('lat');
 let {min: lngMin, max: lngMax} = getMinMax('lng');
 const ratio = (lngMax - lngMin) / (latMax - latMin);
 
-console.log(`LNG: min ${lngMin}, max ${lngMax}`)
-console.log(`LAT: min ${latMin}, max ${latMax}`)
-console.log(`Ratio: ${ratio}`)
+//console.log(`LNG: min ${lngMin}, max ${lngMax}`)
+//console.log(`LAT: min ${latMin}, max ${latMax}`)
+//console.log(`Ratio: ${ratio}`)
 
 function getMarkerStyle(position, lngC, lngMinZoomed, lngWidth, latC, latMinZoomed, latWidth){
     let lng = ((position.lng*lngC)-lngMinZoomed) / (lngWidth) * 100;

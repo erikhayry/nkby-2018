@@ -2,6 +2,8 @@ import React from "react"
 import MapWrapper from '../components/map-wrapper';
 import {withRouter} from 'next/router'
 import { getLocales, getLocale } from '../utils'
+import ReactGA from 'react-ga';
+import * as Sentry from '@sentry/browser';
 
 class App extends React.PureComponent {
     state = {
@@ -13,6 +15,12 @@ class App extends React.PureComponent {
     }
 
     componentDidMount() {
+        ReactGA.initialize('UA-129661075-1', {
+            debug: true
+        });
+        Sentry.init({
+            dsn: 'https://89980de6a8aa466695ae8186dba70f9b@sentry.io/1305873'
+        });
         this.updateDimensions();
         window.addEventListener("resize", this.updateDimensions.bind(this));
     }

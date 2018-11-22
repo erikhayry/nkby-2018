@@ -1,3 +1,5 @@
+import ReactGA from 'react-ga';
+
 class Overlay extends React.PureComponent {
     renderPage = (page, i) => {
         return (
@@ -9,12 +11,11 @@ class Overlay extends React.PureComponent {
                 textAlign: 'center'
             }}>
 
-                <a href={page.url} target="_blank" style={{
-                    display: 'block',
-                    textDecoration: 'none',
-                    minHeight: 300,
-                    width: '100%'
-                }}>
+                <ReactGA.OutboundLink
+                    eventLabel="to-nykarlebyvyer"
+                    to={page.url}
+                    target="_blank"
+                >
                     {page.image && <img
                         src={`http://www.nykarlebyvyer.nu/${page.image.replace('../../../', '')}`}
                         alt=""
@@ -34,7 +35,7 @@ class Overlay extends React.PureComponent {
                         maxWidth: '75%',
                         fontSize: 16
                     }}>{page.title || page.url}</div>
-                </a>
+                </ReactGA.OutboundLink>
             </li>
         )
     };

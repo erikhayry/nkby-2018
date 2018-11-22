@@ -5,6 +5,7 @@ import Overlay from './overlay.js';
 import Router from 'next/router'
 import Locales from './locales';
 import { MarkerWithLabel } from "react-google-maps/lib/components/addons/MarkerWithLabel"
+import ReactGA from 'react-ga';
 
 function render(locales = [], activeMarker, setActiveMarker){
     return locales.map(({id, ...locale}) => {
@@ -21,6 +22,11 @@ function render(locales = [], activeMarker, setActiveMarker){
             }}
             zIndex={id === activeMarker ? 1 : 0}
             onClick={() => {
+                ReactGA.event({
+                    category: 'User',
+                    action: 'Clicked on marker',
+                    value: id
+                });
                 Router.push(`/?locale=${id}`, `/locale/${id}`)
             }}
             onMouseOver={() => {
