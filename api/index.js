@@ -49,10 +49,10 @@ const removeFromList = async (req, res, list) => {
     const editedLocale = await json(req);
     let editedLocales = JSON.parse(await read('data/edited-locales.json'));
 
-    if(editedLocales[editedLocale.name]){
-        const locationIndex = editedLocales[editedLocale.name][list].findIndex(page => page.url === editedLocale.pageUrl);
+    if(editedLocales[editedLocale.id]){
+        const locationIndex = editedLocales[editedLocale.id][list].findIndex(page => page.url === editedLocale.pageUrl);
         if(locationIndex > -1){
-            editedLocales[editedLocale.name][list].splice(locationIndex, 1);
+            editedLocales[editedLocale.id][list].splice(locationIndex, 1);
         }
     }
 
@@ -65,16 +65,16 @@ const addToList = async (req, res, list) => {
     const editedLocale = await json(req);
     let editedLocales = JSON.parse(await read('data/edited-locales.json'));
 
-    if(editedLocales[editedLocale.name]){
-        if(!editedLocales[editedLocale.name][list]){
-            editedLocales[editedLocale.name][list] = [{url: editedLocale.pageUrl}];
+    if(editedLocales[editedLocale.id]){
+        if(!editedLocales[editedLocale.id][list]){
+            editedLocales[editedLocale.id][list] = [{url: editedLocale.pageUrl}];
         }
-        else if(!editedLocales[editedLocale.name][list].find(page => page.url === editedLocale.pageUrl)){
-            editedLocales[editedLocale.name][list].push({url: editedLocale.pageUrl})
+        else if(!editedLocales[editedLocale.id][list].find(page => page.url === editedLocale.pageUrl)){
+            editedLocales[editedLocale.id][list].push({url: editedLocale.pageUrl})
         }
     } else {
-        editedLocales[editedLocale.name] = {};
-        editedLocales[editedLocale.name][list] = [{url: editedLocale.pageUrl}];
+        editedLocales[editedLocale.id] = {};
+        editedLocales[editedLocale.id][list] = [{url: editedLocale.pageUrl}];
     }
 
     await write('data/edited-locales.json', editedLocales);
@@ -119,10 +119,10 @@ const addImageToPage = async (req, res) => {
     const editedLocale = await json(req);
     let editedLocales = JSON.parse(await read('data/edited-locales.json'));
 
-    if(editedLocales[editedLocale.name]){
-        let pageIndex = editedLocales[editedLocale.name]['approvedPages'].findIndex(page => page.url === editedLocale.pageUrl);
+    if(editedLocales[editedLocale.id]){
+        let pageIndex = editedLocales[editedLocale.id]['approvedPages'].findIndex(page => page.url === editedLocale.pageUrl);
         if(pageIndex > -1){
-            editedLocales[editedLocale.name]['approvedPages'][pageIndex].preferredImage = editedLocale.preferredImage
+            editedLocales[editedLocale.id]['approvedPages'][pageIndex].preferredImage = editedLocale.preferredImage
         }
     }
 
@@ -134,16 +134,16 @@ const addImageToPage = async (req, res) => {
 const addLocationData = async (req, res) => {
     const editedLocale = await json(req);
     let editedLocales = JSON.parse(await read('data/edited-locales.json'));
-    let name = editedLocale.name;
-    delete editedLocale["name"];
+    const id = editedLocale.id;
+    delete editedLocale["id"];
 
-    if(editedLocales[name]){
-        editedLocales[name] = {
-            ...editedLocales[name],
+    if(editedLocales[id]){
+        editedLocales[id] = {
+            ...editedLocales[id],
             ...editedLocale
         }
     } else {
-        editedLocales[name] = {
+        editedLocales[id] = {
             ...editedLocale.position
         };
     }

@@ -42,9 +42,9 @@ class Overlay extends React.PureComponent {
         })
     };
 
-    setAsPreferredImages = (localeName, pageUrl, preferredImage) => {
+    setAsPreferredImages = (localeId, pageUrl, preferredImage) => {
         this.props.addPreferredPageImage({
-            name: localeName,
+            id: localeId,
             pageUrl,
             preferredImage
         })
@@ -108,10 +108,10 @@ class Overlay extends React.PureComponent {
         return null;
     };
 
-    renderPage = (page, i, localeName, type, approvedPage = {}, isStarred) => {
+    renderPage = (page, i, localeId, type, approvedPage = {}, isStarred) => {
         return (
             <Card key={i}>
-                {this.renderImage(localeName, page, type, approvedPage.preferredImage)}
+                {this.renderImage(localeId, page, type, approvedPage.preferredImage)}
                 <Card.Content>
                     <Card.Meta>
                         {isStarred && <Label size='mini' color='yellow'>
@@ -126,11 +126,11 @@ class Overlay extends React.PureComponent {
                     <Button.Group size='mini' fluid vertical>
                         {type === 'unedited' && <React.Fragment>
                             <Button color='green' onClick={()=> {this.props.approve({
-                                name: localeName,
+                                id: localeId,
                                 pageUrl: page.url
                             })}}><Icon name='check' /> Godkänn</Button>
                             <Button color='red' onClick={()=> {this.props.disapprove({
-                                name: localeName,
+                                id: localeId,
                                 pageUrl: page.url
                             })}}><Icon name='trash' /> Släng</Button>
                             <Button color='black' onClick={()=> {this.props.disapproveGlobally(page.url)}}><Icon name='globe' /> Släng globalt</Button>
@@ -138,14 +138,14 @@ class Overlay extends React.PureComponent {
 
                         {type === 'approved' && <React.Fragment>
                             <Button color='purple' onClick={()=> {this.props.undoApprove({
-                                name: localeName,
+                                id: localeId,
                                 pageUrl: page.url
                             })}}><Icon name='undo' /> Ångra</Button>
                         </React.Fragment>}
 
                         {type === 'disapproved' && <React.Fragment>
                             <Button onClick={()=> {this.props.undoDisapprove({
-                                name: localeName,
+                                id: localeId,
                                 pageUrl: page.url
                             })}}><Icon name='undo' /> Ångra</Button>
                         </React.Fragment>}
@@ -161,7 +161,6 @@ class Overlay extends React.PureComponent {
     render() {
         if(this.props.currentLocale){
             const {editedLocales = {}, currentLocale: {id, locale}, globallyDisapprovedPageUrls, starredPages, reportedLocales} = this.props;
-            console.log({id, locale})
             const editedLocale = editedLocales[id] || {};
             const { approvedPages = [], disapprovedPages = [], alternativeNames = [], position: editedPosition = {}} = editedLocale;
 
@@ -260,7 +259,7 @@ class Overlay extends React.PureComponent {
                             {
                                 (this.state.showApproved || uneditedPageUrlsForLocale.length === 0) &&
                                 approvedPagesForLocale.map((page, index) =>
-                                    this.renderPage(page, index, name, 'approved', approvedPages.find((approvedPage) => approvedPage.url === page.url), starredPages.includes(page.url)))
+                                    this.renderPage(page, index, id, 'approved', approvedPages.find((approvedPage) => approvedPage.url === page.url), starredPages.includes(page.url)))
                             }
                         </Card.Group>
 
@@ -281,7 +280,7 @@ class Overlay extends React.PureComponent {
                         </Header>
 
                         <Card.Group itemsPerRow={6}>
-                            {this.state.showUnedited && uneditedPageUrlsForLocale.map((page, index) => this.renderPage(page, index, name, 'unedited', undefined, starredPages.includes(page.url)))}
+                            {this.state.showUnedited && uneditedPageUrlsForLocale.map((page, index) => this.renderPage(page, index, id, 'unedited', undefined, starredPages.includes(page.url)))}
                         </Card.Group>
 
                         <Divider />
@@ -306,7 +305,7 @@ class Overlay extends React.PureComponent {
                             })
                         }}></h2>
                         <Card.Group itemsPerRow={6}>
-                            {this.state.showDisapproved && disapprovedPagesForLocale.map((page, index) => this.renderPage(page, index, name, 'disapproved', undefined, starredPages.includes(page.url)))}
+                            {this.state.showDisapproved && disapprovedPagesForLocale.map((page, index) => this.renderPage(page, index, id, 'disapproved', undefined, starredPages.includes(page.url)))}
                         </Card.Group>
                     </Segment>
                     <Dimmer active={Boolean(this.state.showAllImages)} onClickOutside={() => {
@@ -343,7 +342,7 @@ class Overlay extends React.PureComponent {
                                             this.setState({
                                                 showAllImages: undefined
                                             }, () => {
-                                                this.setAsPreferredImages(localeName, url, imageUrl);
+                                                this.setAsPreferredImages(id, url, imageUrl);
                                             });
                                         }}
                                         src={toImagesSrc(imageUrl)}
