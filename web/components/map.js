@@ -6,6 +6,7 @@ import Router from 'next/router'
 import Locales from './locales';
 import { MarkerWithLabel } from "react-google-maps/lib/components/addons/MarkerWithLabel"
 import ReactGA from 'react-ga';
+import Link from 'next/link'
 
 function render(locales = [], activeMarker, setActiveMarker){
     return locales.map(({id, ...locale}) => {
@@ -25,7 +26,7 @@ function render(locales = [], activeMarker, setActiveMarker){
                 ReactGA.event({
                     category: 'User',
                     action: 'Clicked on marker',
-                    value: id
+                    value: id,
                 });
                 Router.push(`/?locale=${id}`, `/locale/${id}`)
             }}
@@ -93,18 +94,39 @@ const Map = (props) => {
             />}
 
         </GoogleMap>
-        <button onClick={props.setLocation} style={{
-            backgroundColor: 'transparent',
+        <div style={{
             position: 'absolute',
             top: 5,
             left: 5,
             padding: 4,
             color: '#fff',
-            border: '2px solid #fff',
-            textTransform: 'uppercase',
-            fontSize: '14',
             zIndex: 1
-        }}>Hitta mig</button>
+        }}>
+            <button onClick={props.setLocation} style={{
+                display: 'block',
+                backgroundColor: 'transparent',
+                padding: 4,
+                color: '#fff',
+                border: '2px solid #fff',
+                marginBottom: 5,
+                fontSize: 14,
+                textTransform: 'uppercase',
+            }}>Hitta mig</button>
+            <Link href="/about">
+                <a style={{
+                    textAlign: 'center',
+                    display: 'block',
+                    backgroundColor: 'transparent',
+                    padding: 4,
+                    color: '#fff',
+                    border: '2px solid #fff',
+                    fontSize: 14,
+                    textTransform: 'uppercase',
+                    textDecoration: 'none'
+                }}>Om</a>
+            </Link>
+
+        </div>
         </>
     )
 };
