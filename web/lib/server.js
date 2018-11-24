@@ -18,6 +18,10 @@ app
         app.render(req, res, '/', { locale, ...req.query })
     });
 
+    server.get('/om', (req, res) => {
+      app.render(req, res, '/about')
+    });
+
     server.get('*', (req, res) => handle(req, res));
 
     server.listen(port, err => {

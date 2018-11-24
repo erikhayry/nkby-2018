@@ -112,7 +112,7 @@ const Map = (props) => {
                 fontSize: 14,
                 textTransform: 'uppercase',
             }}>Hitta mig</button>
-            <Link href="/about">
+            <Link href="/about" as="/om">
                 <a style={{
                     textAlign: 'center',
                     display: 'block',

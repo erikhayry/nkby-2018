@@ -15,12 +15,15 @@ class App extends React.PureComponent {
     }
 
     componentDidMount() {
-        ReactGA.initialize('UA-129661075-1', {
-            debug: true
-        });
-        Sentry.init({
-            dsn: 'https://89980de6a8aa466695ae8186dba70f9b@sentry.io/1305873'
-        });
+        const isDev = process.env.NODE_ENV !== 'production';
+        if(!isDev){
+            ReactGA.initialize('UA-129661075-1', {
+                debug: true
+            });
+            Sentry.init({
+                dsn: 'https://89980de6a8aa466695ae8186dba70f9b@sentry.io/1305873'
+            });
+        }
         this.updateDimensions();
         window.addEventListener("resize", this.updateDimensions.bind(this));
     }
@@ -33,14 +36,14 @@ class App extends React.PureComponent {
         const isClient = typeof window !== 'undefined';
         const { currentLocale, locales } = this.props;
         return (
-            <div>
+            <>
                 <MapWrapper
                     isClient={isClient}
                     currentLocale={currentLocale}
                     locales={locales}
                     isSmallDevice={this.state.isSmallDevice}
                 />
-            </div>
+            </>
         )
     }
 }
