@@ -15,11 +15,7 @@ app
 
     server.get('/locale/:locale', (req, res) => {
         const { locale } = req.params;
-        app.render(req, res, '/', { locale, ...req.query })
-    });
-
-    server.get('/om', (req, res) => {
-      app.render(req, res, '/about')
+        app.render(req, res, '/locale', { locale, ...req.query })
     });
 
     server.get('*', (req, res) => handle(req, res));

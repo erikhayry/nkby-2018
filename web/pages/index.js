@@ -18,7 +18,8 @@ class App extends React.PureComponent {
         const isDev = process.env.NODE_ENV !== 'production';
         if(!isDev){
             ReactGA.initialize('UA-129661075-1', {
-                debug: true
+                debug: true,
+                titleCase: false
             });
             Sentry.init({
                 dsn: 'https://89980de6a8aa466695ae8186dba70f9b@sentry.io/1305873'

@@ -2,7 +2,6 @@ import React from "react"
 import Map from './map';
 import ErrorBoundary from './error-boundary'
 import MapList from './map-list';
-import StaticMap from './static-map';
 import ReactGA from 'react-ga';
 
 class MapWrapper extends React.Component {
@@ -52,13 +51,10 @@ class MapWrapper extends React.Component {
 
         return (
             <div>
-                {!isClient &&
-                    <div>
-                        <StaticMap currentLocale={currentLocale}/>
-                        <MapList {...mapListProps} />
-                    </div>
-                }
-                {isClient && <ErrorBoundary alternate={<MapList {...mapListProps} />}>
+                <noscript>
+                    <MapList {...mapListProps} />
+                </noscript>
+                <ErrorBoundary>
                     <Map
                         locales={locales}
                         activeMarker={activeMarker}
@@ -74,7 +70,7 @@ class MapWrapper extends React.Component {
                         containerElement={<div style={{ height: `100vh`, width: '100%' }} />}
                         mapElement={<div style={{ height: `100%` }} />}
                     />
-                </ErrorBoundary>}
+                </ErrorBoundary>
             </div>
         )
     }

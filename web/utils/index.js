@@ -12,6 +12,49 @@ function sortByName(a, b){
     return 0;
 }
 
+export function parseImageSrc(src){
+    if(src){
+        return `http://www.nykarlebyvyer.nu/${src.replace('../../../', '')}`;
+    }
+
+    return undefined;
+}
+
+// Convert Degress to Radians
+function Deg2Rad(deg) {
+    return deg * Math.PI / 180;
+}
+
+function PythagorasEquirectangular(lat1, lon1, lat2, lon2) {
+    lat1 = Deg2Rad(lat1);
+    lat2 = Deg2Rad(lat2);
+    lon1 = Deg2Rad(lon1);
+    lon2 = Deg2Rad(lon2);
+    let R = 6371; // km
+    let x = (lon2 - lon1) * Math.cos((lat1 + lat2) / 2);
+    let y = (lat2 - lat1);
+
+    return Math.sqrt(x * x + y * y) * R;
+}
+
+export function getLocalesNearby(currentLocaleId, {lng: currentLocaleLng, lat: currentLocaleLat}, numbersOfResults = 10){
+    return getLocales()
+        .filter(locale => locale.position && locale.id !== currentLocaleId)
+        .map(locale => {
+            const {lng, lat} = locale.position;
+            const dif = PythagorasEquirectangular(currentLocaleLng, currentLocaleLat, lng, lat);
+
+            return {
+                ...locale,
+                dif
+            }
+        })
+        .sort((localeA, localeB) => {
+           return localeA.dif - localeB.dif
+        })
+        .splice(0, numbersOfResults)
+}
+
 export function getLocales(){
     return Object.keys(locales)
         .map(key => ({id: key, ...locales[key]}))
@@ -36,7 +79,7 @@ export function sortPagesByTitle(pages){
 
 export function getMinMax(type) {
     const filteredLocales = getLocales()
-        .filter(locale => locale.position)
+        .filter(locale => locale.position);
 
     const max = Math.max(...filteredLocales.map(({position}) => position[type]));
 

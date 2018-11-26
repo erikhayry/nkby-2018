@@ -24,9 +24,8 @@ function render(locales = [], activeMarker, setActiveMarker){
             zIndex={id === activeMarker ? 1 : 0}
             onClick={() => {
                 ReactGA.event({
-                    category: 'User',
-                    action: 'Clicked on marker',
-                    value: id,
+                    category: 'user',
+                    action: `marker:${id}`
                 });
                 Router.push(`/?locale=${id}`, `/locale/${id}`)
             }}
