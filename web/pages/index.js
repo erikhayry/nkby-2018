@@ -1,5 +1,6 @@
 import React from "react"
 import MapWrapper from '../components/map-wrapper';
+import MapList from '../components/map-list';
 import {withRouter} from 'next/router'
 import { getLocales, getLocale } from '../utils'
 import ReactGA from 'react-ga';
@@ -35,9 +36,7 @@ class App extends React.PureComponent {
     }
 
     render() {
-        const isClient = typeof window !== 'undefined';
         const { locales } = this.props;
-
 
         return (
             <>
