@@ -5,7 +5,7 @@ import Router from 'next/router'
 import { MarkerWithLabel } from "react-google-maps/lib/components/addons/MarkerWithLabel"
 import ReactGA from 'react-ga';
 
-function renderMarkers(currentLocale, locales = [], activeMarker, setActiveMarker){
+function renderMarkers(currentLocale = {}, locales = [], activeMarker, setActiveMarker){
     const currentMarkerImage = {
         url: '/static/images/markers/white.png',
         size: new google.maps.Size(22, 40),
@@ -24,7 +24,7 @@ function renderMarkers(currentLocale, locales = [], activeMarker, setActiveMarke
                 padding: "16px",
                 visibility: id === activeMarker ? 'visible' : 'hidden'
             }}
-            zIndex={id === activeMarker ? 1 : 0}
+            zIndex={id === activeMarker || currentLocale.id === id ? 1 : 0}
             onClick={() => {
                 ReactGA.event({
                     category: 'user',
@@ -53,6 +53,7 @@ const Map = (props) => {
 
     return (
         <>
+            <button onClick={props.setLocation}>Hitta mig</button>
             <GoogleMap
                 defaultZoom={currentLocale ? 15 : 12}
                 defaultCenter={currentLocale ? currentLocale.position : { lat: 63.5217687, lng: 22.5216011 }}
@@ -76,25 +77,6 @@ const Map = (props) => {
                     icon={userMarkerImage}
                 />}
             </GoogleMap>
-            <div style={{
-                position: 'absolute',
-                top: 5,
-                left: 5,
-                padding: 4,
-                color: '#fff',
-                zIndex: 1
-            }}>
-                <button onClick={props.setLocation} style={{
-                    display: 'block',
-                    backgroundColor: 'transparent',
-                    padding: 4,
-                    color: '#fff',
-                    border: '2px solid #fff',
-                    marginBottom: 5,
-                    fontSize: 14,
-                    textTransform: 'uppercase',
-                }}>Hitta mig</button>
-            </div>
         </>
     )
 };
