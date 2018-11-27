@@ -4,6 +4,7 @@ import {withRouter} from 'next/router'
 import { getLocales, getLocale } from '../utils'
 import ReactGA from 'react-ga';
 import * as Sentry from '@sentry/browser';
+import Link from 'next/link'
 
 class App extends React.PureComponent {
     state = {
@@ -35,12 +36,28 @@ class App extends React.PureComponent {
 
     render() {
         const isClient = typeof window !== 'undefined';
-        const { currentLocale, locales } = this.props;
+        const { locales } = this.props;
+
+
         return (
             <>
+                <Link href="/about" as="/om">
+                    <a style={{
+                        textAlign: 'center',
+                        display: 'block',
+                        backgroundColor: 'transparent',
+                        padding: 4,
+                        color: '#fff',
+                        border: '2px solid #fff',
+                        fontSize: 14,
+                        textTransform: 'uppercase',
+                        textDecoration: 'none'
+                    }}>Om</a>
+                </Link>
+                <noscript>
+                    <MapList locales={locales} />
+                </noscript>
                 <MapWrapper
-                    isClient={isClient}
-                    currentLocale={currentLocale}
                     locales={locales}
                     isSmallDevice={this.state.isSmallDevice}
                 />

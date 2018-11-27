@@ -41,37 +41,25 @@ class MapWrapper extends React.Component {
 
     render(){
         const {userPosition, activeMarker} = this.state;
-        const {isSmallDevice, locales, currentLocale, isClient} = this.props;
-        const mapListProps = {
-            locales: locales,
-            userPosition: userPosition,
-            setLocation: this.setLocation,
-            currentLocale: currentLocale
-        };
-
+        const {isSmallDevice, locales, currentLocale} = this.props;
         return (
-            <div>
-                <noscript>
-                    <MapList {...mapListProps} />
-                </noscript>
-                <ErrorBoundary>
-                    <Map
-                        locales={locales}
-                        activeMarker={activeMarker}
-                        currentLocale={currentLocale}
-                        isSmallDevice={isSmallDevice}
-                        onMapMounted={this.onMapMounted}
-                        onToggleOpen={this.onToggleOpen}
-                        setLocation={this.setLocation}
-                        setActiveMarker={this.setActiveMarker}
-                        userPosition={userPosition}
-                        googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_MAPS_API}&v=3.exp&librarie=geometry,drawing,places`}
-                        loadingElement={<div style={{ height: `100%` }} />}
-                        containerElement={<div style={{ height: `100vh`, width: '100%' }} />}
-                        mapElement={<div style={{ height: `100%` }} />}
-                    />
-                </ErrorBoundary>
-            </div>
+            <ErrorBoundary>
+                <Map
+                    locales={locales}
+                    activeMarker={activeMarker}
+                    currentLocale={currentLocale}
+                    isSmallDevice={isSmallDevice}
+                    onMapMounted={this.onMapMounted}
+                    onToggleOpen={this.onToggleOpen}
+                    setLocation={this.setLocation}
+                    setActiveMarker={this.setActiveMarker}
+                    userPosition={userPosition}
+                    googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_MAPS_API}&v=3.exp&librarie=geometry,drawing,places`}
+                    loadingElement={<div style={{ height: `100%` }} />}
+                    containerElement={<div style={{ height: `100vh`, width: '100%' }} />}
+                    mapElement={<div style={{ height: `100%` }} />}
+                />
+            </ErrorBoundary>
         )
     }
 }

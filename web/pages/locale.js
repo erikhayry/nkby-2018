@@ -3,16 +3,23 @@ import {withRouter} from 'next/router'
 import ReactGA from 'react-ga';
 import { getLocales, getLocale, sortPagesByTitle, parseImageSrc, getLocalesNearby } from '../utils'
 import StaticMap from '../components/static-map';
+import MapWrapper from '../components/map-wrapper';
 
-const Locale = ({currentLocale = {}}) => {
+const Locale = ({currentLocale = {}, locales}) => {
     const localesNearby = getLocalesNearby(currentLocale.id, currentLocale.position, 9);
 
     return (<div style={{
         padding: 20
     }}>
         <h1>{currentLocale.name}</h1>
-        <StaticMap currentLocale={currentLocale} localesNearby={localesNearby}/>
-        <a href="#nearby-locales">Närliggande adresser</a>
+        <noscript>
+            <StaticMap currentLocale={currentLocale} localesNearby={localesNearby}/>
+            <a href="#nearby-locales">Närliggande adresser</a>
+        </noscript>
+        <MapWrapper
+            currentLocale={currentLocale}
+            locales={locales}
+        />
         <ul>
             {sortPagesByTitle(currentLocale.pages).map((page, i) => {
                 return (
@@ -31,16 +38,18 @@ const Locale = ({currentLocale = {}}) => {
             })}
         </ul>
 
-        <h2 id="nearby-locales">Närliggande adress</h2>
-        <ol>
-            {localesNearby.map(({id, name, pages}, i) => {
-                return (
-                    <li key={i}>
-                        <Link prefetch href={`/?locale=${id}`} as={`/locale/${id}`} ><a>{name} [{pages.length}]</a></Link>
-                    </li>
-                )
-            })}
-        </ol>
+        <noscript>
+            <h2 id="nearby-locales">Närliggande adress</h2>
+            <ol>
+                {localesNearby.map(({id, name, pages}, i) => {
+                    return (
+                        <li key={i}>
+                            <Link prefetch href={`/?locale=${id}`} as={`/locale/${id}`} ><a>{name} [{pages.length}]</a></Link>
+                        </li>
+                    )
+                })}
+            </ol>
+        </noscript>
 
         <Link href="/">
             <a>Tillbaka</a>
