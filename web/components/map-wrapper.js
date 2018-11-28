@@ -1,7 +1,6 @@
 import React from "react"
 import Map from './map';
 import ErrorBoundary from './error-boundary'
-import MapList from './map-list';
 import ReactGA from 'react-ga';
 
 class MapWrapper extends React.Component {
@@ -41,14 +40,14 @@ class MapWrapper extends React.Component {
 
     render(){
         const {userPosition, activeMarker} = this.state;
-        const {isSmallDevice, locales, currentLocale} = this.props;
+        const {locales, currentLocale} = this.props;
+
         return (
             <ErrorBoundary>
                 <Map
                     locales={locales}
                     activeMarker={activeMarker}
                     currentLocale={currentLocale}
-                    isSmallDevice={isSmallDevice}
                     onMapMounted={this.onMapMounted}
                     onToggleOpen={this.onToggleOpen}
                     setLocation={this.setLocation}

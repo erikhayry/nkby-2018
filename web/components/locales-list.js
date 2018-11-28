@@ -1,14 +1,12 @@
 import { sortLocalesByName } from '../utils'
 import Link from 'next/link'
 
-const MapList = ({locales}) => {
+const LocalesList = ({locales}) => {
     const sortedLocales = sortLocalesByName(locales).filter(({position}) => position);
     const letterList = sortedLocales.map(({name}) => name[0]).filter((value, index, self) => self.indexOf(value) === index);
 
     return (
-        <div style={{
-            padding: 20
-        }}>
+        <>
             <ul>
                 {letterList.map((letter, i) => <li key={i}><a href={`#${letter}`}>{letter}</a></li>)}
             </ul>
@@ -31,8 +29,8 @@ const MapList = ({locales}) => {
 
                 return null;
             })}
-        </div>
+        </>
     )
 };
 
-export default MapList;
+export default LocalesList;
