@@ -1,9 +1,9 @@
 import React from "react"
-import Map from './map';
-import ErrorBoundary from './error-boundary'
 import ReactGA from 'react-ga';
+import MapRenderer from './map-renderer';
+import ErrorBoundary from '../error-boundary'
 
-class MapWrapper extends React.Component {
+class Map extends React.Component {
     constructor(props) {
         super(props);
         this.onMapMounted = this.onMapMounted.bind(this);
@@ -40,12 +40,13 @@ class MapWrapper extends React.Component {
 
     render(){
         const {userPosition, activeMarker} = this.state;
-        const {locales, currentLocale} = this.props;
+        const {locales, currentLocale, visitedLocales} = this.props;
 
         return (
             <ErrorBoundary>
-                <Map
+                <MapRenderer
                     locales={locales}
+                    visitedLocales={visitedLocales}
                     activeMarker={activeMarker}
                     currentLocale={currentLocale}
                     onMapMounted={this.onMapMounted}
@@ -63,4 +64,4 @@ class MapWrapper extends React.Component {
     }
 }
 
-export default MapWrapper;
+export default Map;

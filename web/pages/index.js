@@ -1,13 +1,16 @@
 import React from "react"
-import MapWrapper from '../components/map-wrapper';
+import Map from '../components/map';
 import LocalesList from '../components/locales-list';
 import { getLocales } from '../utils'
 import Link from 'next/link';
 import Page from '../components/page.js';
+import store from 'store/dist/store.modern'
 
 class App extends React.PureComponent {
     render() {
         const { locales } = this.props;
+        const visitedLocales = store.get('visited-locales') || [];
+
 
         return (
             <Page>
@@ -16,9 +19,9 @@ class App extends React.PureComponent {
                 </Link>
 
                 <noscript>
-                    <LocalesList locales={locales} />
+                    <LocalesList locales={locales}  />
                 </noscript>
-                <MapWrapper locales={locales} />
+                <Map locales={locales} visitedLocales={visitedLocales}/>
             </Page>
         )
     }
@@ -26,6 +29,7 @@ class App extends React.PureComponent {
 
 App.getInitialProps = async function () {
     const locales = await getLocales();
+
     return { locales }
 };
 

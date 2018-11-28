@@ -1,17 +1,32 @@
 import React from "react"
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
-import theme from '../data/themes/dark.json';
 import Router from 'next/router'
 import { MarkerWithLabel } from "react-google-maps/lib/components/addons/MarkerWithLabel"
 import ReactGA from 'react-ga';
+import theme from '../../data/themes/dark.json';
+import store from 'store/dist/store.modern'
 
-function renderMarkers(currentLocale = {}, locales = [], activeMarker, setActiveMarker){
-    const currentMarkerImage = {
-        url: '/static/images/markers/white.png',
+function renderIcon(url){
+    return {
+        url,
         size: new google.maps.Size(22, 40),
         labelOrigin: new google.maps.Point(11, 12)
-    };
+    }
+}
 
+function getIcon(id, currentLocaleId, visitedLocales){
+    if(id === currentLocaleId){
+        return renderIcon('/static/images/markers/white.png')
+    }
+
+    if(visitedLocales.includes(id)){
+        return renderIcon('/static/images/markers/white.png')
+    }
+
+    return null
+}
+
+function renderMarkers(currentLocale = {}, locales = [], visitedLocales = [], activeMarker, setActiveMarker){
     return locales.map(({id, ...locale}) => {
         const { name, position } = locale;
         return position ? <MarkerWithLabel
@@ -26,6 +41,10 @@ function renderMarkers(currentLocale = {}, locales = [], activeMarker, setActive
             }}
             zIndex={id === activeMarker || currentLocale.id === id ? 1 : 0}
             onClick={() => {
+                if(!visitedLocales.includes(id)){
+                    store.set('visited-locales', [...visitedLocales, id]);
+                }
+
                 ReactGA.event({
                     category: 'user',
                     action: `marker:${id}`
@@ -35,21 +54,15 @@ function renderMarkers(currentLocale = {}, locales = [], activeMarker, setActive
             onMouseOver={() => {
                 setActiveMarker(id)
             }}
-            icon={currentLocale.id === id ? currentMarkerImage : null}
+            icon={getIcon(id, currentLocale.id, visitedLocales)}
         >
             <div>{name}</div>
         </MarkerWithLabel> : null
     });
 }
 
-const Map = (props) => {
-    const userMarkerImage = {
-        url: '/static/images/markers/white.png',
-        size: new google.maps.Size(22, 40),
-        labelOrigin: new google.maps.Point(11, 12)
-    };
-
-    const { currentLocale, isSmallDevice, locales, activeMarker, setActiveMarker} = props;
+const MapRenderer = (props) => {
+    const { currentLocale, locales, visitedLocales, activeMarker, setActiveMarker} = props;
 
     return (
         <>
@@ -59,7 +72,7 @@ const Map = (props) => {
                 defaultCenter={currentLocale ? currentLocale.position : { lat: 63.5217687, lng: 22.5216011 }}
                 ref={props.onMapMounted}
                 options={{
-                    fullscreenControl: !isSmallDevice,
+                    fullscreenControl: true,
                     mapTypeControl: false,
                     streetViewControl: false,
                     zoomControl: true,
@@ -69,16 +82,16 @@ const Map = (props) => {
                     styles: theme,
                 }}
             >
-                {renderMarkers(currentLocale, locales, activeMarker, setActiveMarker)}
+                {renderMarkers(currentLocale, locales, visitedLocales, activeMarker, setActiveMarker)}
 
                 {props.userPosition && <Marker
                     key={'user'}
                     position={props.userPosition}
-                    icon={userMarkerImage}
+                    icon={renderIcon('/static/images/markers/white.png')}
                 />}
             </GoogleMap>
         </>
     )
 };
 
-export default withScriptjs(withGoogleMap(Map));
+export default withScriptjs(withGoogleMap(MapRenderer));

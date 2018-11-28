@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { getLocales, getLocale, getLocalesNearby } from '../utils'
 import StaticMap from '../components/static-map';
-import MapWrapper from '../components/map-wrapper';
+import Map from '../components/map';
 import Page from '../components/page.js';
 import PageList from '../components/page-list.js';
 
@@ -15,7 +15,7 @@ const Locale = ({currentLocale = {}, locales}) => {
                 <StaticMap currentLocale={currentLocale} localesNearby={localesNearby}/>
                 <a href="#nearby-locales">Närliggande adresser</a>
             </noscript>
-            <MapWrapper
+            <Map
                 currentLocale={currentLocale}
                 locales={locales}
             />
