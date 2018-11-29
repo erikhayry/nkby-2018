@@ -1,9 +1,9 @@
 import React from "react"
 import Map from '../components/map';
 import LocalesList from '../components/locales-list';
-import { getLocales } from '../utils'
+import { getLocales } from '../utils/locales'
 import Link from 'next/link';
-import Page from '../components/page.js';
+import {withPage} from '../HOCs/page.js';
 import store from '../utils/store'
 import style from './index.scss';
 
@@ -17,13 +17,13 @@ class App extends React.PureComponent {
     }
 
     render() {
-        const { locales } = this.props;
+        const { locales, isClient, isCuttingTheMustard } = this.props;
         const visitedLocales = store.get('visited-locales') || [];
         const zoom = store.get('zoom');
         const position = store.get('position');
 
         return (
-            <Page>
+            <>
                 <Link href="/about" as="/om">
                     <a className={style.link}>Om</a>
                 </Link>
@@ -40,7 +40,7 @@ class App extends React.PureComponent {
                     onDragEnd={this.onDragEnd}
                     onZoomChanged={this.onZoomChanged}
                 />
-            </Page>
+            </>
         )
     }
 }
@@ -51,4 +51,4 @@ App.getInitialProps = async function () {
     return { locales }
 };
 
-export default App
+export default withPage(App)

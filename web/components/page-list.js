@@ -1,5 +1,6 @@
 import ReactGA from 'react-ga';
-import { sortPagesByTitle, parseImageSrc } from '../utils'
+import { parseImageSrc } from '../utils'
+import { sortPagesByTitle } from '../utils/locales'
 import LazyLoad from 'react-lazyload';
 
 const PageList = ({pages = []}) =>
