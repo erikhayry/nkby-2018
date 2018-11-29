@@ -1,11 +1,11 @@
 import Link from 'next/link'
 import { getLocales, getLocale, getLocalesNearby } from '../utils'
-import StaticMap from '../components/static-map';
+import StaticMap from '../components/map/static-map';
 import Map from '../components/map';
 import Page from '../components/page.js';
 import PageList from '../components/page-list.js';
 
-const Locale = ({currentLocale = {}, locales}) => {
+const Locale = ({currentLocale = {}}) => {
     const localesNearby = getLocalesNearby(currentLocale.id, currentLocale.position, 9);
 
     return (
@@ -53,14 +53,13 @@ const Locale = ({currentLocale = {}, locales}) => {
 
 Locale.getInitialProps = async function (context) {
     const { locale: id } = context.query;
-    const locales = await getLocales();
     const locale = getLocale(id);
 
     if(id){
-        return { currentLocale: locale, locales }
+        return { currentLocale: locale }
     }
 
-    return {currentLocale: undefined, locales}
+    return {currentLocale: undefined }
 };
 
 export default Locale;

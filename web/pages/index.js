@@ -11,7 +11,6 @@ class App extends React.PureComponent {
         const { locales } = this.props;
         const visitedLocales = store.get('visited-locales') || [];
 
-
         return (
             <Page>
                 <Link href="/about" as="/om">
