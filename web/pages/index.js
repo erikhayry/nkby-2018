@@ -4,7 +4,7 @@ import LocalesList from '../components/locales-list';
 import { getLocales } from '../utils'
 import Link from 'next/link';
 import Page from '../components/page.js';
-import store from 'store/dist/store.modern'
+import store from '../utils/store'
 
 class App extends React.PureComponent {
     render() {
@@ -21,7 +21,7 @@ class App extends React.PureComponent {
                 <noscript>
                     <LocalesList locales={locales}  />
                 </noscript>
-                <Map locales={locales} visitedLocales={visitedLocales}/>
+                <Map locales={locales} visitedLocales={visitedLocales} style={{height: '500px'}}/>
             </Page>
         )
     }

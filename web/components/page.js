@@ -2,7 +2,6 @@ import React from "react"
 import {withRouter} from 'next/router'
 import ReactGA from 'react-ga';
 import * as Sentry from '@sentry/browser';
-import store from 'store/dist/store.modern'
 
 class Page extends React.PureComponent {
     componentDidMount() {

@@ -40,7 +40,7 @@ class Map extends React.Component {
 
     render(){
         const {userPosition, activeMarker} = this.state;
-        const {locales, currentLocale, visitedLocales} = this.props;
+        const {locales, currentLocale, visitedLocales, style = {}, options, showFindMeButton, enableUserInteractions} = this.props;
 
         return (
             <ErrorBoundary>
@@ -56,8 +56,11 @@ class Map extends React.Component {
                     userPosition={userPosition}
                     googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_MAPS_API}&v=3.exp&librarie=geometry,drawing,places`}
                     loadingElement={<div style={{ height: `100%` }} />}
-                    containerElement={<div style={{ height: `100vh`, width: '100%' }} />}
+                    containerElement={<div style={{ height: `100vh`, width: '100%', ...style }} />}
                     mapElement={<div style={{ height: `100%` }} />}
+                    options={options}
+                    showFindMeButton={showFindMeButton}
+                    enableUserInteractions={enableUserInteractions}
                 />
             </ErrorBoundary>
         )

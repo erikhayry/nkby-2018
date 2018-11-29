@@ -17,7 +17,16 @@ const Locale = ({currentLocale = {}, locales}) => {
             </noscript>
             <Map
                 currentLocale={currentLocale}
-                locales={locales}
+                locales={[currentLocale]} //TODO fix
+                style={{height: '200px', width: '200px'}}
+                options={{
+                    fullscreenControl: false,
+                    locationControl: false,
+                    zoomControl: false,
+                    draggable: false,
+                }}
+                showFindMeButton={false}
+                enableUserInteractions={false}
             />
 
             <PageList pages={currentLocale.pages} />

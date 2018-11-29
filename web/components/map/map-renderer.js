@@ -4,7 +4,7 @@ import Router from 'next/router'
 import { MarkerWithLabel } from "react-google-maps/lib/components/addons/MarkerWithLabel"
 import ReactGA from 'react-ga';
 import theme from '../../data/themes/dark.json';
-import store from 'store/dist/store.modern'
+import store from '../../utils/store'
 
 function renderIcon(url){
     return {
@@ -26,7 +26,8 @@ function getIcon(id, currentLocaleId, visitedLocales){
     return null
 }
 
-function renderMarkers(currentLocale = {}, locales = [], visitedLocales = [], activeMarker, setActiveMarker){
+function renderMarkers(currentLocale = {}, locales = [], visitedLocales = [], activeMarker, setActiveMarker, enableUserInteractions = true){
+
     return locales.map(({id, ...locale}) => {
         const { name, position } = locale;
         return position ? <MarkerWithLabel
@@ -41,18 +42,22 @@ function renderMarkers(currentLocale = {}, locales = [], visitedLocales = [], ac
             }}
             zIndex={id === activeMarker || currentLocale.id === id ? 1 : 0}
             onClick={() => {
-                if(!visitedLocales.includes(id)){
-                    store.set('visited-locales', [...visitedLocales, id]);
-                }
+                if(enableUserInteractions){
+                    if(!visitedLocales.includes(id)){
+                        store.set('visited-locales', [...visitedLocales, id]);
+                    }
 
-                ReactGA.event({
-                    category: 'user',
-                    action: `marker:${id}`
-                });
-                Router.push(`/locale/${id}`)
+                    ReactGA.event({
+                        category: 'user',
+                        action: `marker:${id}`
+                    });
+                    Router.push(`/locale/${id}`)
+                }
             }}
             onMouseOver={() => {
-                setActiveMarker(id)
+                if(enableUserInteractions) {
+                    setActiveMarker(id)
+                }
             }}
             icon={getIcon(id, currentLocale.id, visitedLocales)}
         >
@@ -62,27 +67,37 @@ function renderMarkers(currentLocale = {}, locales = [], visitedLocales = [], ac
 }
 
 const MapRenderer = (props) => {
-    const { currentLocale, locales, visitedLocales, activeMarker, setActiveMarker} = props;
+    const {
+        currentLocale,
+        locales,
+        visitedLocales,
+        activeMarker,
+        setActiveMarker,
+        options = {},
+        showFindMeButton = true,
+        enableUserInteractions
+    } = props;
 
     return (
         <>
-            <button onClick={props.setLocation}>Hitta mig</button>
+            {showFindMeButton && <button onClick={props.setLocation}>Hitta mig</button>}
             <GoogleMap
                 defaultZoom={currentLocale ? 15 : 12}
                 defaultCenter={currentLocale ? currentLocale.position : { lat: 63.5217687, lng: 22.5216011 }}
                 ref={props.onMapMounted}
                 options={{
                     fullscreenControl: true,
-                    mapTypeControl: false,
-                    streetViewControl: false,
+                    locationControl: true,
                     zoomControl: true,
+                    streetViewControl: false,
+                    mapTypeControl: false,
                     scaleControl: false,
                     scrollwheel: false,
-                    locationControl: true,
                     styles: theme,
+                    ...options
                 }}
             >
-                {renderMarkers(currentLocale, locales, visitedLocales, activeMarker, setActiveMarker)}
+                {renderMarkers(currentLocale, locales, visitedLocales, activeMarker, setActiveMarker, enableUserInteractions)}
 
                 {props.userPosition && <Marker
                     key={'user'}
