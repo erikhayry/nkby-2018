@@ -5,6 +5,7 @@ import { getLocales } from '../utils'
 import Link from 'next/link';
 import Page from '../components/page.js';
 import store from '../utils/store'
+import style from './index.scss';
 
 class App extends React.PureComponent {
     onZoomChanged(zoom){
@@ -24,7 +25,7 @@ class App extends React.PureComponent {
         return (
             <Page>
                 <Link href="/about" as="/om">
-                    <a>Om</a>
+                    <a className={style.link}>Om</a>
                 </Link>
 
                 <noscript>

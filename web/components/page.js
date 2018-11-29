@@ -2,6 +2,7 @@ import React from "react"
 import {withRouter} from 'next/router'
 import ReactGA from 'react-ga';
 import * as Sentry from '@sentry/browser';
+import '../styles/global.scss';
 
 class Page extends React.PureComponent {
     componentDidMount() {
