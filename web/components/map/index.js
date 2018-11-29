@@ -2,6 +2,8 @@ import React from "react"
 import ReactGA from 'react-ga';
 import MapRenderer from './map-renderer';
 import ErrorBoundary from '../error-boundary'
+import Router from 'next/router'
+import store from '../../utils/store'
 
 class Map extends React.Component {
     constructor(props) {
@@ -9,14 +11,48 @@ class Map extends React.Component {
         this.onMapMounted = this.onMapMounted.bind(this);
         this.setLocation = this.setLocation.bind(this);
         this.setActiveMarker = this.setActiveMarker.bind(this);
+        this.onZoomChanged = this.onZoomChanged.bind(this);
+        this.onDragEnd = this.onDragEnd.bind(this);
+        this.handleMarkerEvent = this.handleMarkerEvent.bind(this);
     }
 
     state = {
-        userPosition: undefined
+        userPosition: undefined,
+        zoom: undefined,
+        center: undefined
     };
 
     onMapMounted(map){
         this.ref = map;
+    }
+
+    onZoomChanged(){
+        if(this.props.onZoomChanged){
+            this.props.onZoomChanged(this.ref.getZoom())
+        }
+    }
+
+    onDragEnd(){
+        if(this.props.onDragEnd){
+            this.props.onDragEnd({
+                    lat: this.ref.getCenter().lat(),
+                    lng: this.ref.getCenter().lng()
+                })
+        }
+    }
+
+    handleMarkerEvent(id, visitedLocales = []){
+        if(!visitedLocales.includes(id)){
+            store.set('visited-locales', [...visitedLocales, id]);
+        }
+
+        ReactGA.event({
+            category: 'user',
+            action: `marker:${id}`
+        });
+        Router.push({
+            pathname: `/locale/${id}`
+        })
     }
 
     setActiveMarker(id){
@@ -25,8 +61,8 @@ class Map extends React.Component {
 
     setLocation(){
         ReactGA.event({
-            category: 'User',
-            action: 'Clicked on find me'
+            category: 'user',
+            action: 'find me'
         });
         navigator.geolocation.getCurrentPosition((position) => {
             if(this.ref){
@@ -40,17 +76,29 @@ class Map extends React.Component {
 
     render(){
         const {userPosition, activeMarker} = this.state;
-        const {locales, currentLocale, visitedLocales, style = {}, options, showFindMeButton, enableUserInteractions} = this.props;
+        const {
+            locales,
+            currentLocale,
+            visitedLocales,
+            style = {},
+            options,
+            showFindMeButton,
+            enableUserInteractions,
+            zoom,
+            position
+        } = this.props;
 
         return (
             <ErrorBoundary>
                 <MapRenderer
+                    onMapMounted={this.onMapMounted}
+                    onZoomChanged={this.onZoomChanged}
+                    onDragEnd={this.onDragEnd}
                     locales={locales}
                     visitedLocales={visitedLocales}
                     activeMarker={activeMarker}
                     currentLocale={currentLocale}
-                    onMapMounted={this.onMapMounted}
-                    onToggleOpen={this.onToggleOpen}
+                    handleMarkerEvent={this.handleMarkerEvent}
                     setLocation={this.setLocation}
                     setActiveMarker={this.setActiveMarker}
                     userPosition={userPosition}
@@ -61,6 +109,8 @@ class Map extends React.Component {
                     options={options}
                     showFindMeButton={showFindMeButton}
                     enableUserInteractions={enableUserInteractions}
+                    zoom={zoom}
+                    position={position}
                 />
             </ErrorBoundary>
         )

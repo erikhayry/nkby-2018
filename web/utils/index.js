@@ -1,5 +1,21 @@
 import locales from '../data/locales.json';
 
+export function searchToObject() {
+    const queries = window.location.search.substring(1).split('&');
+    const result = {};
+    let queryPair;
+    let query;
+
+    for ( query in queries ) {
+        if ( queries[query] === '' ) continue;
+
+        queryPair = queries[query].split('=');
+        result[ decodeURIComponent( queryPair[0] ) ] = decodeURIComponent( queryPair[1] );
+    }
+
+    return result;
+}
+
 function sortByName(a, b){
     if(a < b){
         return -1

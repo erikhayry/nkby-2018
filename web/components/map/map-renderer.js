@@ -1,10 +1,7 @@
 import React from "react"
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
-import Router from 'next/router'
 import { MarkerWithLabel } from "react-google-maps/lib/components/addons/MarkerWithLabel"
-import ReactGA from 'react-ga';
 import theme from '../../data/themes/dark.json';
-import store from '../../utils/store'
 
 function renderIcon(url){
     return {
@@ -14,11 +11,7 @@ function renderIcon(url){
     }
 }
 
-function getIcon(id, currentLocaleId, visitedLocales){
-    if(id === currentLocaleId){
-        return renderIcon('/static/images/markers/white.png')
-    }
-
+function getIcon(id, visitedLocales = []){
     if(visitedLocales.includes(id)){
         return renderIcon('/static/images/markers/white.png')
     }
@@ -26,7 +19,7 @@ function getIcon(id, currentLocaleId, visitedLocales){
     return null
 }
 
-function renderMarkers(currentLocale = {}, locales = [], visitedLocales = [], activeMarker, setActiveMarker, enableUserInteractions = true){
+function renderMarkers(locales = [], visitedLocales, activeMarker, setActiveMarker, handleMarkerEvent, enableUserInteractions = true){
 
     return locales.map(({id, ...locale}) => {
         const { name, position } = locale;
@@ -40,18 +33,10 @@ function renderMarkers(currentLocale = {}, locales = [], visitedLocales = [], ac
                 padding: "16px",
                 visibility: id === activeMarker ? 'visible' : 'hidden'
             }}
-            zIndex={id === activeMarker || currentLocale.id === id ? 1 : 0}
+            zIndex={id === activeMarker ? 1 : 0}
             onClick={() => {
-                if(enableUserInteractions){
-                    if(!visitedLocales.includes(id)){
-                        store.set('visited-locales', [...visitedLocales, id]);
-                    }
-
-                    ReactGA.event({
-                        category: 'user',
-                        action: `marker:${id}`
-                    });
-                    Router.push(`/locale/${id}`)
+                if(enableUserInteractions) {
+                    handleMarkerEvent(id, visitedLocales);
                 }
             }}
             onMouseOver={() => {
@@ -59,7 +44,7 @@ function renderMarkers(currentLocale = {}, locales = [], visitedLocales = [], ac
                     setActiveMarker(id)
                 }
             }}
-            icon={getIcon(id, currentLocale.id, visitedLocales)}
+            icon={getIcon(id, visitedLocales)}
         >
             <div>{name}</div>
         </MarkerWithLabel> : null
@@ -68,23 +53,29 @@ function renderMarkers(currentLocale = {}, locales = [], visitedLocales = [], ac
 
 const MapRenderer = (props) => {
     const {
-        currentLocale,
         locales,
         visitedLocales,
         activeMarker,
         setActiveMarker,
         options = {},
         showFindMeButton = true,
-        enableUserInteractions
+        enableUserInteractions,
+        handleMarkerEvent,
+        onZoomChanged,
+        onDragEnd,
+        zoom,
+        position
     } = props;
 
     return (
         <>
             {showFindMeButton && <button onClick={props.setLocation}>Hitta mig</button>}
             <GoogleMap
-                defaultZoom={currentLocale ? 15 : 12}
-                defaultCenter={currentLocale ? currentLocale.position : { lat: 63.5217687, lng: 22.5216011 }}
+                defaultZoom={zoom || 12}
+                defaultCenter={position || { lat: 63.5217687, lng: 22.5216011 }}
                 ref={props.onMapMounted}
+                onZoomChanged={onZoomChanged}
+                onDragEnd={onDragEnd}
                 options={{
                     fullscreenControl: true,
                     locationControl: true,
@@ -97,7 +88,7 @@ const MapRenderer = (props) => {
                     ...options
                 }}
             >
-                {renderMarkers(currentLocale, locales, visitedLocales, activeMarker, setActiveMarker, enableUserInteractions)}
+                {renderMarkers(locales, visitedLocales, activeMarker, setActiveMarker, handleMarkerEvent, enableUserInteractions)}
 
                 {props.userPosition && <Marker
                     key={'user'}

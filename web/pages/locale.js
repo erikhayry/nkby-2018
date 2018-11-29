@@ -16,8 +16,8 @@ const Locale = ({currentLocale = {}}) => {
                 <a href="#nearby-locales">Närliggande adresser</a>
             </noscript>
             <Map
-                currentLocale={currentLocale}
-                locales={[currentLocale]} //TODO fix
+                position={currentLocale.position}
+                locales={[currentLocale]}
                 style={{height: '200px', width: '200px'}}
                 options={{
                     fullscreenControl: false,

@@ -7,9 +7,19 @@ import Page from '../components/page.js';
 import store from '../utils/store'
 
 class App extends React.PureComponent {
+    onZoomChanged(zoom){
+        store.set('zoom', zoom)
+    }
+
+    onDragEnd(position){
+        store.set('position', position)
+    }
+
     render() {
         const { locales } = this.props;
         const visitedLocales = store.get('visited-locales') || [];
+        const zoom = store.get('zoom');
+        const position = store.get('position');
 
         return (
             <Page>
@@ -20,7 +30,15 @@ class App extends React.PureComponent {
                 <noscript>
                     <LocalesList locales={locales}  />
                 </noscript>
-                <Map locales={locales} visitedLocales={visitedLocales} style={{height: '500px'}}/>
+                <Map
+                    locales={locales}
+                    visitedLocales={visitedLocales}
+                    zoom={zoom}
+                    position={position}
+                    style={{height: '500px'}}
+                    onDragEnd={this.onDragEnd}
+                    onZoomChanged={this.onZoomChanged}
+                />
             </Page>
         )
     }
