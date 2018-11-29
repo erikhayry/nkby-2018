@@ -1,6 +1,5 @@
 import React from "react"
 import { isClient, isCuttingTheMustard } from '../utils'
-import {withRouter} from 'next/router'
 
 export function withPage(WrappedComponent) {
     return class extends React.Component {
@@ -22,7 +21,7 @@ export function withPage(WrappedComponent) {
         }
 
         componentDidMount() {
-            console.log('mounted')
+            document.documentElement.className = "js";
             const isDev = process.env.NODE_ENV !== 'production';
             if (!isDev) {
                 ReactGA.initialize('UA-129661075-1', {
@@ -36,7 +35,6 @@ export function withPage(WrappedComponent) {
         }
 
         render() {
-            const WrappedComponentWitRouter = withRouter(WrappedComponent);
             return <WrappedComponent {...this.state} {...this.props} />;
         }
     };

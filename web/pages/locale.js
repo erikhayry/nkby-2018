@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import {withRouter} from 'next/router'
 import { getLocale, getLocalesNearby } from '../utils/locales'
 import StaticMap from '../components/map/static-map';
 import Map from '../components/map';
@@ -47,17 +46,17 @@ class Locale extends React.PureComponent {
                     </ol>
                 </noscript>
 
-                <Link href="/">
+                <Link href="/" prefetch>
                     <a>Tillbaka</a>
                 </Link>
             </>
         )
 
     }
-};
+}
 
 Locale.getInitialProps = async function (context) {
-    const { locale: id } = context.query;
+    const { id } = context.query;
     const locale = getLocale(id);
 
     if(id){

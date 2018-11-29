@@ -14,12 +14,17 @@ app
     const server = express();
 
     server.get('/locale/:locale', (req, res) => {
+        console.log('locale')
         const { locale } = req.params;
-        app.render(req, res, '/locale', { locale, ...req.query })
+        app.render(req, res, '/locale', { id: locale, ...req.query })
     });
 
     server.get('/om', (req, res) => {
       app.render(req, res, '/about', req.query)
+    });
+
+    server.get('/karta', (req, res) => {
+      app.render(req, res, '/', req.query)
     });
 
     server.get('*', (req, res) => handle(req, res));
