@@ -1,7 +1,7 @@
-import { sortLocalesByName } from '../utils'
+import { sortLocalesByName } from '../utils/locales'
 import Link from 'next/link'
 
-const LocalesList = ({locales}) => {
+const LocalesList = ({locales = []}) => {
     const sortedLocales = sortLocalesByName(locales).filter(({position}) => position);
     const letterList = sortedLocales.map(({name}) => name[0]).filter((value, index, self) => self.indexOf(value) === index);
 

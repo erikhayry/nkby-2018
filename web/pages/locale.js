@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { getLocales, getLocale, getLocalesNearby } from '../utils'
+import { getLocales, getLocale, getLocalesNearby } from '../utils/locales'
 import StaticMap from '../components/map/static-map';
 import Map from '../components/map';
 import Page from '../components/page.js';

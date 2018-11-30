@@ -1,7 +1,7 @@
 import React from "react"
 import Map from '../components/map';
 import LocalesList from '../components/locales-list';
-import { getLocales } from '../utils'
+import { getLocales } from '../utils/locales'
 import Link from 'next/link';
 import Page from '../components/page.js';
 import store from '../utils/store'
