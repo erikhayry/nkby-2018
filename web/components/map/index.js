@@ -51,8 +51,9 @@ class Map extends React.Component {
             action: `marker:${id}`
         });
         Router.push({
-            pathname: `/locale/${id}`
-        })
+            pathname: '/locale',
+            query: {id},
+        }, `/locale/${id}`)
     }
 
     setActiveMarker(id){
