@@ -53,7 +53,8 @@ class Overlay extends React.PureComponent {
     renderImage = (localeName, page, type, preferredImage) => {
         const {images = []} = page;
         if(images.length > 0){
-            let src = preferredImage || images[0];
+            console.log(images)
+            let src = preferredImage || images[0].src;
             return (
                 <Image
                     onClick={() => {
@@ -333,23 +334,26 @@ class Overlay extends React.PureComponent {
                                     }}
                                     icon='close'
                             />
-                            <Image.Group size='medium'>
-                                {this.state.showAllImages && this.state.showAllImages.images.map(imageUrl => {
+                            <Grid columns={5} padded>
+                                {this.state.showAllImages && this.state.showAllImages.images.map(({src, description}) => {
                                     const {url, localeName} = this.state.showAllImages;
-                                    return <Image
-                                        key={imageUrl}
-                                        onClick={() => {
-                                            this.setState({
-                                                showAllImages: undefined
-                                            }, () => {
-                                                this.setAsPreferredImages(id, url, imageUrl);
-                                            });
-                                        }}
-                                        src={toImagesSrc(imageUrl)}
-                                        label={this.state.showAllImages.preferredImage === imageUrl && { as: 'a', corner: 'left', icon: 'heart', color: 'green'}}
-                                    />
+                                    return <Grid.Column key={src}>
+                                            <Image
+                                                onClick={() => {
+                                                    this.setState({
+                                                        showAllImages: undefined
+                                                    }, () => {
+                                                        this.setAsPreferredImages(id, url, src);
+                                                    });
+                                                }}
+                                                src={toImagesSrc(src)}
+                                                alt={description}
+                                                label={this.state.showAllImages.preferredImage === src && { as: 'a', corner: 'left', icon: 'heart', color: 'green'}}
+                                            />
+                                            <p>{description || 'Bildtext saknas'}</p>
+                                        </Grid.Column>
                                 })}
-                            </Image.Group>
+                            </Grid>
                         </div>
                     </Dimmer>
 

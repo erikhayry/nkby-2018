@@ -1,6 +1,14 @@
 [
 	{
 		"location": {
+			"lat": 63.5227547,
+			"lng": 22.5419863
+		},
+		"name": "borgaregatan 34",
+		"postcode": "66900"
+	},
+	{
+		"location": {
 			"lat": 63.5222074,
 			"lng": 22.5351597
 		},
@@ -17,26 +25,10 @@
 	},
 	{
 		"location": {
-			"lat": 63.5227547,
-			"lng": 22.5419863
-		},
-		"name": "borgaregatan 34",
-		"postcode": "66900"
-	},
-	{
-		"location": {
 			"lat": 63.5234563,
 			"lng": 22.5335698
 		},
 		"name": "gustav adolfsgatan",
-		"postcode": "66900"
-	},
-	{
-		"location": {
-			"lat": 63.5232479,
-			"lng": 22.5356973
-		},
-		"name": "karleborgsgatan",
 		"postcode": "66900"
 	},
 	{
@@ -49,10 +41,10 @@
 	},
 	{
 		"location": {
-			"lat": 63.5058416,
-			"lng": 22.5287879
+			"lat": 63.5232479,
+			"lng": 22.5356973
 		},
-		"name": "juthasvägen",
+		"name": "karleborgsgatan",
 		"postcode": "66900"
 	},
 	{
@@ -65,10 +57,10 @@
 	},
 	{
 		"location": {
-			"lat": 63.5216242,
-			"lng": 22.5400655
+			"lat": 63.5058416,
+			"lng": 22.5287879
 		},
-		"name": "bockmöllergatan",
+		"name": "juthasvägen",
 		"postcode": "66900"
 	},
 	{
@@ -85,6 +77,14 @@
 			"lng": 22.536147
 		},
 		"name": "lybecksgatan",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.5216242,
+			"lng": 22.5400655
+		},
+		"name": "bockmöllergatan",
 		"postcode": "66900"
 	},
 	{
@@ -929,19 +929,19 @@
 	},
 	{
 		"location": {
-			"lat": 63.61204689999999,
-			"lng": 22.4921221
-		},
-		"name": "grisselören",
-		"postcode": "66910"
-	},
-	{
-		"location": {
 			"lat": 63.52261249999999,
 			"lng": 22.5324447
 		},
 		"name": "bankgatan 12",
 		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.61204689999999,
+			"lng": 22.4921221
+		},
+		"name": "grisselören",
+		"postcode": "66910"
 	},
 	{
 		"location": {
@@ -1137,18 +1137,18 @@
 	},
 	{
 		"location": {
-			"lat": 63.5270275,
-			"lng": 22.5350226
-		},
-		"name": "gustav adolfsgatan 44",
-		"postcode": "66900"
-	},
-	{
-		"location": {
 			"lat": 63.52047639999999,
 			"lng": 22.5313053
 		},
 		"name": "bangatan 9",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.5270275,
+			"lng": 22.5350226
+		},
+		"name": "gustav adolfsgatan 44",
 		"postcode": "66900"
 	},
 	{
@@ -1337,6 +1337,14 @@
 	},
 	{
 		"location": {
+			"lat": 63.5230514,
+			"lng": 22.5388905
+		},
+		"name": "borgaregatan 26",
+		"postcode": "66900"
+	},
+	{
+		"location": {
 			"lat": 63.5236646,
 			"lng": 22.5193957
 		},
@@ -1349,14 +1357,6 @@
 			"lng": 22.5341503
 		},
 		"name": "borgaregatan 12",
-		"postcode": "66900"
-	},
-	{
-		"location": {
-			"lat": 63.5230514,
-			"lng": 22.5388905
-		},
-		"name": "borgaregatan 26",
 		"postcode": "66900"
 	},
 	{
@@ -1673,22 +1673,6 @@
 	},
 	{
 		"location": {
-			"lat": 63.52365390000001,
-			"lng": 22.5334489
-		},
-		"name": "gustav adolfsgatan 22",
-		"postcode": "66900"
-	},
-	{
-		"location": {
-			"lat": 63.52455639999999,
-			"lng": 22.5360455
-		},
-		"name": "karleborgsgatan 30",
-		"postcode": "66900"
-	},
-	{
-		"location": {
 			"lat": 63.5219304,
 			"lng": 22.5377268
 		},
@@ -1701,6 +1685,22 @@
 			"lng": 22.5375432
 		},
 		"name": "borgaregatan 22",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.52365390000001,
+			"lng": 22.5334489
+		},
+		"name": "gustav adolfsgatan 22",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.52455639999999,
+			"lng": 22.5360455
+		},
+		"name": "karleborgsgatan 30",
 		"postcode": "66900"
 	},
 	{
@@ -1857,27 +1857,27 @@
 	},
 	{
 		"location": {
-			"lat": 63.5299886,
-			"lng": 22.5364176
-		},
-		"name": "jakobstadsvägen 22",
-		"postcode": "66910"
-	},
-	{
-		"location": {
-			"lat": 63.5299886,
-			"lng": 22.5364176
-		},
-		"name": "jakobstadsvägen 22",
-		"postcode": "66910"
-	},
-	{
-		"location": {
 			"lat": 63.5275182,
 			"lng": 22.5455552
 		},
 		"name": "fabriksgatan 9",
 		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.5299886,
+			"lng": 22.5364176
+		},
+		"name": "jakobstadsvägen 22",
+		"postcode": "66910"
+	},
+	{
+		"location": {
+			"lat": 63.5299886,
+			"lng": 22.5364176
+		},
+		"name": "jakobstadsvägen 22",
+		"postcode": "66910"
 	},
 	{
 		"location": {
@@ -1905,19 +1905,19 @@
 	},
 	{
 		"location": {
-			"lat": 63.4080774,
-			"lng": 22.6523932
-		},
-		"name": "stationsvägen",
-		"postcode": "66850"
-	},
-	{
-		"location": {
 			"lat": 63.5650944,
 			"lng": 22.5503492
 		},
 		"name": "rijfs väg",
 		"postcode": "66910"
+	},
+	{
+		"location": {
+			"lat": 63.4080774,
+			"lng": 22.6523932
+		},
+		"name": "stationsvägen",
+		"postcode": "66850"
 	},
 	{
 		"location": {
@@ -1961,6 +1961,14 @@
 	},
 	{
 		"location": {
+			"lat": 63.5213446,
+			"lng": 22.5327225
+		},
+		"name": "gustav adolfsgatan 9",
+		"postcode": "66900"
+	},
+	{
+		"location": {
 			"lat": 63.5240473,
 			"lng": 22.5286997
 		},
@@ -1969,10 +1977,10 @@
 	},
 	{
 		"location": {
-			"lat": 63.5213446,
-			"lng": 22.5327225
+			"lat": 63.5238519,
+			"lng": 22.5278865
 		},
-		"name": "gustav adolfsgatan 9",
+		"name": "kyrkogatan 12",
 		"postcode": "66900"
 	},
 	{
@@ -1989,14 +1997,6 @@
 			"lng": 22.5383668
 		},
 		"name": "källbackgatan 12",
-		"postcode": "66900"
-	},
-	{
-		"location": {
-			"lat": 63.5238519,
-			"lng": 22.5278865
-		},
-		"name": "kyrkogatan 12",
 		"postcode": "66900"
 	},
 	{
@@ -2025,14 +2025,6 @@
 	},
 	{
 		"location": {
-			"lat": 63.52102180000001,
-			"lng": 22.529587
-		},
-		"name": "topeliusesplanaden 4",
-		"postcode": "66900"
-	},
-	{
-		"location": {
 			"lat": 63.52139949999999,
 			"lng": 22.5224406
 		},
@@ -2041,10 +2033,10 @@
 	},
 	{
 		"location": {
-			"lat": 63.52676830000001,
-			"lng": 22.5349051
+			"lat": 63.52102180000001,
+			"lng": 22.529587
 		},
-		"name": "gustav adolfsgatan 42",
+		"name": "topeliusesplanaden 4",
 		"postcode": "66900"
 	},
 	{
@@ -2057,6 +2049,14 @@
 	},
 	{
 		"location": {
+			"lat": 63.52676830000001,
+			"lng": 22.5349051
+		},
+		"name": "gustav adolfsgatan 42",
+		"postcode": "66900"
+	},
+	{
+		"location": {
 			"lat": 63.5211648,
 			"lng": 22.5322224
 		},
@@ -2065,18 +2065,18 @@
 	},
 	{
 		"location": {
-			"lat": 63.52466440000001,
-			"lng": 22.5338978
-		},
-		"name": "gustav adolfsgatan 28",
-		"postcode": "66900"
-	},
-	{
-		"location": {
 			"lat": 63.5209942,
 			"lng": 22.5325493
 		},
 		"name": "gustav adolfsgatan 7",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.52466440000001,
+			"lng": 22.5338978
+		},
+		"name": "gustav adolfsgatan 28",
 		"postcode": "66900"
 	},
 	{
@@ -2105,6 +2105,14 @@
 	},
 	{
 		"location": {
+			"lat": 63.52004090000001,
+			"lng": 22.5316655
+		},
+		"name": "gustav adolfsgatan 2",
+		"postcode": "66900"
+	},
+	{
+		"location": {
 			"lat": 63.52373979999999,
 			"lng": 22.5221668
 		},
@@ -2113,10 +2121,10 @@
 	},
 	{
 		"location": {
-			"lat": 63.52004090000001,
-			"lng": 22.5316655
+			"lat": 63.5218149,
+			"lng": 22.5286893
 		},
-		"name": "gustav adolfsgatan 2",
+		"name": "sollefteågatan 7",
 		"postcode": "66900"
 	},
 	{
@@ -2137,10 +2145,10 @@
 	},
 	{
 		"location": {
-			"lat": 63.5218149,
-			"lng": 22.5286893
+			"lat": 63.5241189,
+			"lng": 22.5363106
 		},
-		"name": "sollefteågatan 7",
+		"name": "karleborgsgatan 15",
 		"postcode": "66900"
 	},
 	{
@@ -2149,14 +2157,6 @@
 			"lng": 22.5509382
 		},
 		"name": "arbetaregatan 1",
-		"postcode": "66900"
-	},
-	{
-		"location": {
-			"lat": 63.5241189,
-			"lng": 22.5363106
-		},
-		"name": "karleborgsgatan 15",
 		"postcode": "66900"
 	},
 	{
@@ -2273,14 +2273,6 @@
 	},
 	{
 		"location": {
-			"lat": 63.52321939999999,
-			"lng": 22.5332481
-		},
-		"name": "gustav adolfsgatan 20",
-		"postcode": "66900"
-	},
-	{
-		"location": {
 			"lat": 63.52535709999999,
 			"lng": 22.5291207
 		},
@@ -2293,6 +2285,14 @@
 			"lng": 22.5343467
 		},
 		"name": "gustav adolfsgatan 34",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.52321939999999,
+			"lng": 22.5332481
+		},
+		"name": "gustav adolfsgatan 20",
 		"postcode": "66900"
 	},
 	{

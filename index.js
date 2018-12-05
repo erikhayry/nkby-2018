@@ -17,6 +17,47 @@ function getKey(addressWithStreetNumber, name){
     return name;
 }
 
+function trimSpaces(copy){
+    copy = copy.replace(/(^\s*)|(\s*$)/gi,"");
+    copy = copy.replace(/(\r\n|\n|\r)/gm,"");
+    copy = copy.replace(/[ ]{2,}/gi," ");
+    copy = copy.replace(/ \./gi,".")
+
+    return copy;
+}
+
+function getImageDescription(el){
+    if(el && el.name === 'br'){
+        let next = el.next;
+        let desc = '';
+
+        while(next){
+            if(next.type === 'text'){
+                desc += next.data
+                next = next.next;
+            } else if(next.name === 'a') {
+                if(next.children && next.children.length > 0){
+                    desc += ` ${next.children[0].data || ''} `;
+                }
+                next = next.next;
+            } else if(next.name === 'span') {
+                if(next.children && next.children.length > 0){
+                    desc += ` ${next.children[0].data || ''} `;
+                }
+                next = next.next;
+            }
+            else {
+                next = undefined;
+            }
+        }
+
+        return trimSpaces(desc);
+
+    }
+
+    return undefined;
+}
+
 function searchUrls(zipCodeAndLocales, urls) {
     console.log(`Searching ${urls.length} urls for locales`)
     const result = {};
@@ -41,7 +82,10 @@ function searchUrls(zipCodeAndLocales, urls) {
                             const bodyText = (body.text() || '').toLowerCase();
                             const title = $("title").text() || '';
                             const images = Array.from($('body img')).map((el) => {
-                                return el.attribs.src.replace('../../../', '')
+                                return {
+                                    src: el.attribs.src.replace('../../../', ''),
+                                    description: el.attribs.alt || getImageDescription(el.nextSibling)
+                                }
                             });
 
                             if(bodyText.indexOf(streetName.toLowerCase()) > 0){

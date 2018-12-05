@@ -2,6 +2,29 @@ import locales from '../admin/static/crawler-result-with-locales.json';
 import editedLocales from '../api/data/edited-locales.json';
 import fs from 'fs';
 
+function getImage(images = [], preferredImage){
+    let image = {};
+
+    if(preferredImage){
+        image = images.find(({src}) => src === preferredImage);
+    } else {
+        image = images[0]
+    }
+
+    if(image){
+        if(image.description){
+                return image
+        }
+        return {
+            src: image.src
+        }
+    }
+
+    return undefined
+
+
+}
+
 let res = {};
 Object.keys(editedLocales).forEach(key => {
     let pages = [];
@@ -14,7 +37,7 @@ Object.keys(editedLocales).forEach(key => {
             return {
                 title: pageData.title,
                 url: pageData.url,
-                image: approvedPage.preferredImage ? approvedPage.preferredImage : pageData.images[0]
+                image: getImage(pageData.images, approvedPage.preferredImage)
             }
         });
     }
@@ -27,4 +50,4 @@ Object.keys(editedLocales).forEach(key => {
     }
 });
 
-fs.writeFile('web/static/locales.json', JSON.stringify(res))
+fs.writeFile('web/data/locales.json', JSON.stringify(res))
