@@ -29,16 +29,6 @@ const LOCALE_FILTERS = [
 class App extends React.Component {
     constructor(props){
         super(props);
-        this.disapproveGlobally = this.disapproveGlobally.bind(this)
-        this.addStarForPage = this.addStarForPage.bind(this)
-        this.addReportedLocale = this.addReportedLocale.bind(this)
-        this.updateLocale = this.updateLocale.bind(this)
-        this.addName = this.addName.bind(this)
-        this.addPreferredPageImage = this.addPreferredPageImage.bind(this)
-        this.approve = this.approve.bind(this)
-        this.undoApprove = this.undoApprove.bind(this)
-        this.disapprove = this.disapprove.bind(this)
-        this.undoDisapprove = this.undoDisapprove.bind(this)
     }
 
     async componentDidMount () {
@@ -60,73 +50,19 @@ class App extends React.Component {
     };
 
 
-    setCurrentLocale = (name, locale) => {
-        this.setState({ currentLocale: name && locale ? {name, locale} : undefined})
-    };
-
     setLocaleFilter = (type) => {
         this.setState({
             localeFilter: type
         })
     }
 
-    async disapproveGlobally(disapprovedUrl) {
-        const globallyDisapprovedPageUrls = await post('/remove/disapproved-page-url-globally', disapprovedUrl)
-        this.setState({globallyDisapprovedPageUrls})
-    }
-
-    async addStarForPage(pageUrl) {
-        const starredPages = await post('/add/starred-page', pageUrl)
-        this.setState({starredPages})
-    };
-
-    async addReportedLocale(name) {
-        const reportedLocales = await post('/add/reported-locale', name)
-        this.setState({reportedLocales})
-    };
-
-    async updateLocale(data) {
-        const editedLocales = await post('/add/locale-data', data)
-        this.setState({editedLocales})
-    };
-
-    async addName(data) {
-        const editedLocales = await post('/add/locale-data', data)
-        this.setState({editedLocales})
-    }
-
-    async addPreferredPageImage(preferredImageData){
-        const editedLocales = await post('/add/preferred-page-image', preferredImageData)
-        this.setState({editedLocales})
-    }
-
-    async approve(urlData){
-        const editedLocales = await post('/add/approved-page-url', urlData)
-        this.setState({editedLocales})
-    };
-
-    async undoApprove(urlData){
-        const editedLocales = await post('/remove/approved-page-url', urlData)
-        this.setState({editedLocales})
-    };
-
-    async disapprove(urlData){
-        const editedLocales = await post('/add/disapproved-page-url', urlData)
-        this.setState({editedLocales})
-    };
-
-    async undoDisapprove(urlData){
-        const editedLocales = await post('/remove/disapproved-page-url', urlData)
-        this.setState({editedLocales})
-    };
-
     render() {
         const { localeFilter, editedLocales, globallyDisapprovedPageUrls, starredPages, reportedLocales, test} = this.state;
-        const { currentLocale, locales } = this.props;
+        const { locales } = this.props;
 
         return (
             <Page styles={{padding:0}}>
-                {!currentLocale && <div style={{
+                <div style={{
                     position: 'fixed',
                     zIndex: 1,
                     padding: 10
@@ -144,54 +80,28 @@ class App extends React.Component {
                             </Button>
                         ))}
                     </Button.Group>
-                </div>}
+                </div>
                 <Map
                     googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_MAPS_API}&v=3.exp&libraries=geometry,drawing,places`}
                     loadingElement={<div style={{ height: `100%` }} />}
                     containerElement={<div style={{ height: `100vh`, width: '100%' }} />}
                     mapElement={<div style={{ height: `100%` }} />}
 
-                    onMarkerClick={this.setCurrentLocale}
                     locales={locales}
                     localeFilter={localeFilter}
                     editedLocales={editedLocales}
                     globallyDisapprovedPageUrls={globallyDisapprovedPageUrls}
-                    currentLocale={currentLocale}
                 />
-                {currentLocale && <Overlay
-                    addPreferredPageImage={this.addPreferredPageImage}
-                    approve={this.approve}
-                    undoApprove={this.undoApprove}
-                    disapprove={this.disapprove}
-                    undoDisapprove={this.undoDisapprove}
-                    disapproveGlobally={this.disapproveGlobally}
-                    addStarForPage={this.addStarForPage}
-                    addReportedLocale={this.addReportedLocale}
-                    addName={this.addName}
-                    updateLocale={this.updateLocale}
-
-                    setCurrentLocale={this.setCurrentLocale}
-                    globallyDisapprovedPageUrls={globallyDisapprovedPageUrls}
-                    starredPages={starredPages}
-                    reportedLocales={reportedLocales}
-                    currentLocale={currentLocale}
-                    editedLocales={editedLocales}
-                />}
             </Page>
         )
     }
 }
 
 App.getInitialProps = async function (context) {
-    const { locale: id } = context.query
     const locales = getLocales();
 
-    if(id){
-        const locale = getLocale(id);
-        return { locales, currentLocale: { id, locale} }
-    }
 
-    return { locales, currentLocale: undefined}
+    return { locales }
 }
 
 export default withRouter(App)

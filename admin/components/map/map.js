@@ -82,7 +82,10 @@ function addMarkers(locales = [], localeFilter, editedLocales, globallyDisapprov
                 key={id}
                 position={getPosition(editedLocale, locale, addedPositions)}
                 onClick={() => {
-                    Router.push(`/?locale=${id}`)
+                    Router.push({
+                        pathname: '/locale',
+                        query: {id},
+                    });
                 }}
                 icon={getMarkerImage(hasUneditedPageUrl, hasApprovedPageUrl)}
                 label={label.toString()}
@@ -94,10 +97,10 @@ function addMarkers(locales = [], localeFilter, editedLocales, globallyDisapprov
 
 }
 
-const Map = ({currentLocale, locales, localeFilter, editedLocales, globallyDisapprovedPageUrls}) =>
+const Map = ({locales, localeFilter, editedLocales, globallyDisapprovedPageUrls}) =>
     <GoogleMap
-        defaultZoom={currentLocale ? 16 : 12}
-        defaultCenter={currentLocale ? currentLocale.locale.position : { lat: 63.5217687, lng: 22.5216011 }}
+        defaultZoom={12}
+        defaultCenter={{ lat: 63.5217687, lng: 22.5216011 }}
 
         options={{
             fullscreenControl: false,

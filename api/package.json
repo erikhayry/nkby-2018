@@ -1,7 +1,7 @@
 {
   "name": "api",
   "scripts": {
-    "start": "micro"
+    "start": "micro -p 3001"
   },
   "dependencies": {
     "micro": "latest",
