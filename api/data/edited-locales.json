@@ -5171,10 +5171,6 @@
 				"preferredImage": "../bilder/wenelius/wenelius.jpg"
 			},
 			{
-				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/fanglagr.html",
-				"preferredImage": "../bilder/1918/andrasjovag.JPG"
-			},
-			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/prosa/birck/iii/tandsteb.htm",
 				"preferredImage": "../../bilder/hus/tandstf1.jpg"
 			},
@@ -5197,6 +5193,9 @@
 			{
 				"url": "http://nykarlebyvyer.nu/sidor/texter/hus/andrkisf.htm",
 				"preferredImage": "bilder/hus/sjokiosk.jpg"
+			},
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/bidrag/pensarla/fanglagr.html"
 			}
 		]
 	},

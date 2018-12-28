@@ -1,7 +1,0 @@
-{
-  "version": 1,
-  "env": {
-    "GOOGLE_MAPS_API": "@google_maps_api"
-  },
-  "alias": ["nkby.now.sh"]
-}

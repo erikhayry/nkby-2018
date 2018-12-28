@@ -1,0 +1,4 @@
+Count images
+find bilder/. -type f | wc -l > numberOfImages.txt
+
+Get all html files

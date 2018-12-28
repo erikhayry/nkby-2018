@@ -6,6 +6,23 @@ export function localeHasApprovedPageUrl(pages, approvedPages){
     return pages.findIndex(page => approvedPages.find(approvedPage => approvedPage.url === page.url)) > -1;
 }
 
+export function localeHashMissingAltForPreferredImage(pages, approvedPages){
+    if(approvedPages){
+        return approvedPages.some(approvedPage => {
+            const page = pages.find(page => page.url === approvedPage.url);
+            if(page){
+                const image = page.images.find(image => image.src === approvedPage.preferredImage)
+                return image && !image.description;
+            }
+
+            return false;
+        })
+    }
+
+    return false;
+
+}
+
 function localeHasDisapprovedPageUrl(pages, disapprovedPages){
     return pages.findIndex(page => disapprovedPages.find(disapprovedPage => disapprovedPage.url === page.url)) > -1;
 }

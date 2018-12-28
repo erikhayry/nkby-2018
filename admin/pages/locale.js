@@ -30,7 +30,7 @@ class Locale extends React.Component {
         const starredPages = await get('/get/starred-pages');
         const reportedLocales = await get('/get/reported-locales');
 
-        this.setState({ editedLocales, globallyDisapprovedPageUrls, starredPages, reportedLocales});
+        this.setState({ editedLocales, globallyDisapprovedPageUrls, starredPages, reportedLocales });
     }
 
     state = {
@@ -41,6 +41,10 @@ class Locale extends React.Component {
         showUnedited: true,
         showApproved: false,
         showDisapproved: false,
+        editedLocales: [],
+        globallyDisapprovedPageUrls: [],
+        starredPages: [],
+        reportedLocales: []
     };
 
     toggleView(val){

@@ -1,13 +1,58 @@
-import { localeHasUneditedPageUrl, getStarredPageWithLocales, getPageFromLocale } from './filters';
+import { localeHasUneditedPageUrl, getStarredPageWithLocales, getPageFromLocale,localeHashMissingAltForPreferredImage } from './filters';
 
 const pages = [
-    {url: 'url1'},
-    {url: 'url2'},
-    {url: 'url3'},
+    {
+        url: 'url1',
+        images: [
+            {
+                src: "image1.JPG",
+                description: ""
+            }
+        ]
+    },
+    {
+        url: 'url2',
+        images: [
+            {
+                src: "image2.JPG",
+                description: "desc 2"
+            }
+        ]
+    },
+    {
+        url: 'url3',
+        images: [
+            {
+                src: "image3.JPG",
+                description: "desc 3"
+            }
+        ]
+    },
+    {
+        url: 'url4',
+        images: [
+            {
+                src: "image4.JPG",
+                description: "desc 4"
+            },
+            {
+                src: "image4.1.JPG"
+            }
+        ]
+    },
 ];
 
 const approvedPages = [
-    {url: 'url1'}
+    {
+        url: 'url1',
+        preferredImage: 'image1.JPG'
+
+    },
+    {
+        url: 'url4',
+        preferredImage: 'image4.JPG'
+
+    }
 ];
 
 const disapprovedPages = [
@@ -28,6 +73,12 @@ test('hasUnedited', () => {
     expect(localeHasUneditedPageUrl(pages, pages, disapprovedPages)).toBe(false);
 });
 
+test('localeHashMissingAltForPreferredImage', () => {
+    expect(localeHashMissingAltForPreferredImage([pages[0]], [])).toBe(true);
+    expect(localeHashMissingAltForPreferredImage([pages[3]], approvedPages)).toBe(false);
+    expect(localeHashMissingAltForPreferredImage([pages[3]], approvedPages)).toBe(false);
+});
+
 test('getPageFromLocale', () => {
     const url = 'url-1';
     const locale = {
@@ -39,14 +90,20 @@ test('getPageFromLocale', () => {
                 "url": "http://nykarlebyvyer.nu/sidor/kortindi/PK/PK_A/PKA----2.HTM",
                 "title": "Torget och Sollefteågatan",
                 "images": [
-                    "../vykort/PK/PK_A/PKA----2.JPG"
+                    {
+                        src: "../vykort/PK/PK_A/PKA----2.JPG",
+                        description: ""
+                    }
                 ]
             },
             {
                 "url": "url-1",
                 "title": "Köpmansgatan",
                 "images": [
-                    "../vykort/PK/PK_A/PKAV030F.JPG"
+                    {
+                        src: "../vykort/PK/PK_A/PKAV030F.JPG",
+                        description: "Bild på Köpmansgatan"
+                    }
                 ]
             }
         ]
@@ -57,7 +114,7 @@ test('getPageFromLocale', () => {
 
     expect(page.url).toBe('url-1');
     expect(page.title).toBe('Köpmansgatan');
-    expect(page.images[0]).toBe('../vykort/PK/PK_A/PKAV030F.JPG');
+    expect(page.images[0].src).toBe('../vykort/PK/PK_A/PKAV030F.JPG');
 })
 
 test('getStarredPageWithLocales', () => {

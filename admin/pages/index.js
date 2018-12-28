@@ -26,6 +26,21 @@ const LOCALE_FILTERS = [
     },
 ]
 
+const UNEDITED_FILTERS = [
+    {
+        value: 'no-alt-for-preffered-image',
+        text: 'Visa utan alt text'
+    },
+    {
+        value: 'has-unedited-pages',
+        text: 'Visa med ooediterade sidor'
+    },
+    {
+        value: 'all',
+        text: 'Visa alla'
+    },
+]
+
 class App extends React.Component {
     constructor(props){
         super(props);
@@ -43,6 +58,7 @@ class App extends React.Component {
     state = {
         currentLocale: undefined,
         localeFilter: 'all',
+        uneditedFilter: 'all',
         editedLocales: [],
         globallyDisapprovedPageUrls: [],
         starredPages: [],
@@ -56,15 +72,19 @@ class App extends React.Component {
         })
     }
 
+    setUneditedFilter = (type) => {
+        this.setState({
+            uneditedFilter: type
+        })
+    }
+
     render() {
-        const { localeFilter, editedLocales, globallyDisapprovedPageUrls, starredPages, reportedLocales, test} = this.state;
+        const { localeFilter, uneditedFilter, editedLocales, globallyDisapprovedPageUrls, starredPages, reportedLocales, test} = this.state;
         const { locales } = this.props;
 
         return (
             <Page styles={{padding:0}}>
                 <div style={{
-                    position: 'fixed',
-                    zIndex: 1,
                     padding: 10
                 }}>
                     <Button.Group>
@@ -80,18 +100,37 @@ class App extends React.Component {
                             </Button>
                         ))}
                     </Button.Group>
+                    <br/>
+                    {localeFilter === 'unedited' && <Button.Group>
+                        {UNEDITED_FILTERS.map(btn => (
+                            <Button
+                                key={btn.value}
+                                compact
+                                positive={uneditedFilter === btn.value}
+                                onClick={() => {
+                                    this.setUneditedFilter(btn.value)
+                                }}>
+                                {btn.text}
+                            </Button>
+                        ))}
+                    </Button.Group>}
                 </div>
                 <Map
                     googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_MAPS_API}&v=3.exp&libraries=geometry,drawing,places`}
                     loadingElement={<div style={{ height: `100%` }} />}
-                    containerElement={<div style={{ height: `100vh`, width: '100%' }} />}
+                    containerElement={<div style={{ height: `800px`, width: '100%' }} />}
                     mapElement={<div style={{ height: `100%` }} />}
 
                     locales={locales}
                     localeFilter={localeFilter}
+                    uneditedFilter={uneditedFilter}
                     editedLocales={editedLocales}
                     globallyDisapprovedPageUrls={globallyDisapprovedPageUrls}
                 />
+
+                {locales.filter(locale => !locale.position).map((locale, i) => {
+                    return <div>{locale.name}{JSON.stringify(locale.position)}</div>
+                })}
             </Page>
         )
     }

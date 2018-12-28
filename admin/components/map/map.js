@@ -2,15 +2,25 @@ import React from "react"
 import { compose, withProps } from "recompose"
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
 import theme from '../../static/themes/dark.json';
-import { localeHasPages, localeHasApprovedPageUrl, localeHasUneditedPageUrl, getFilteredPages } from '../../utils/filters'
+import { localeHasPages, localeHasApprovedPageUrl, localeHasUneditedPageUrl, getFilteredPages, localeHashMissingAltForPreferredImage } from '../../utils/filters'
 import Router from 'next/router'
 
-function getLabel(localeFilter, filteredPages = [], approvedPages = [], disapprovedPages = []){
+function getNumberOfPagesVisibleForUnedited(uneditedFilter, filteredPages, approvedPages, disapprovedPages){
+    switch(uneditedFilter){
+        case 'no-alt-for-preffered-image':
+            return filteredPages.length - approvedPages.length - disapprovedPages.length;
+        case 'has-unedited-pages':
+        default:
+            return filteredPages.length - approvedPages.length - disapprovedPages.length;
+    }
+}
+
+function getNumberOfPagesVisible(localeFilter, uneditedFilter, filteredPages = [], approvedPages = [], disapprovedPages = []){
     switch(localeFilter){
         case 'approved':
             return approvedPages.length;
         case 'unedited':
-            return filteredPages.length - approvedPages.length - disapprovedPages.length;
+            return getNumberOfPagesVisibleForUnedited(uneditedFilter, filteredPages, approvedPages, disapprovedPages);
         default:
             return filteredPages.length;
     }
@@ -33,7 +43,7 @@ function getMarkerImage(hasUneditedPageUrl, hasApprovedPageUrl){
     };
 }
 
-function getLocale({id, ...locale}, localeFilter, editedLocales, globallyDisapprovedPageUrls){
+function getLocale({id, ...locale}, localeFilter, uneditedFilter, editedLocales, globallyDisapprovedPageUrls){
     const { pages = [] } = locale;
     const hasPages = localeHasPages(pages, globallyDisapprovedPageUrls);
 
@@ -43,10 +53,11 @@ function getLocale({id, ...locale}, localeFilter, editedLocales, globallyDisappr
         const filteredPages = getFilteredPages(pages, globallyDisapprovedPageUrls);
         const hasApprovedPageUrl = localeHasApprovedPageUrl(filteredPages, approvedPages);
         const hasUneditedPageUrl = localeHasUneditedPageUrl(filteredPages, approvedPages, disapprovedPages);
-        const label = getLabel(localeFilter, filteredPages, approvedPages, disapprovedPages);
+        const hasMissingAltForPreferredImage = localeHashMissingAltForPreferredImage(filteredPages, approvedPages);
+        const numberOfPagesVisible = getNumberOfPagesVisible(localeFilter, uneditedFilter, filteredPages, approvedPages, disapprovedPages);
 
         return {
-            locale, editedLocale, label, hasApprovedPageUrl, hasUneditedPageUrl
+            locale, editedLocale, numberOfPagesVisible, hasApprovedPageUrl, hasUneditedPageUrl, hasMissingAltForPreferredImage
         }
     }
 
@@ -72,12 +83,18 @@ function getPosition(editedLocale, locale, addedPositions){
     return position;
 }
 
-function addMarkers(locales = [], localeFilter, editedLocales, globallyDisapprovedPageUrls){
+function addMarkers(locales = [], localeFilter, uneditedFilter, editedLocales, globallyDisapprovedPageUrls){
     let addedPositions = [];
     return locales.map(({id, ...locale}) => {
-        const {editedLocale, label, hasUneditedPageUrl, hasApprovedPageUrl} = getLocale({id, ...locale}, localeFilter, editedLocales, globallyDisapprovedPageUrls);
+        const {
+            editedLocale,
+            numberOfPagesVisible,
+            hasUneditedPageUrl,
+            hasApprovedPageUrl,
+            hasMissingAltForPreferredImage
+        } = getLocale({id, ...locale}, localeFilter, uneditedFilter, editedLocales, globallyDisapprovedPageUrls);
 
-        if(locale && label > 0 ){
+        if(locale && numberOfPagesVisible > 0 ){
             return <Marker
                 key={id}
                 position={getPosition(editedLocale, locale, addedPositions)}
@@ -88,7 +105,7 @@ function addMarkers(locales = [], localeFilter, editedLocales, globallyDisapprov
                     });
                 }}
                 icon={getMarkerImage(hasUneditedPageUrl, hasApprovedPageUrl)}
-                label={label.toString()}
+                label={numberOfPagesVisible.toString()}
             />
         }
 
@@ -97,7 +114,7 @@ function addMarkers(locales = [], localeFilter, editedLocales, globallyDisapprov
 
 }
 
-const Map = ({locales, localeFilter, editedLocales, globallyDisapprovedPageUrls}) =>
+const Map = ({locales, localeFilter, uneditedFilter, editedLocales, globallyDisapprovedPageUrls}) =>
     <GoogleMap
         defaultZoom={12}
         defaultCenter={{ lat: 63.5217687, lng: 22.5216011 }}
@@ -111,7 +128,7 @@ const Map = ({locales, localeFilter, editedLocales, globallyDisapprovedPageUrls}
             styles: theme
         }}
     >
-        {addMarkers(locales, localeFilter, editedLocales, globallyDisapprovedPageUrls)}
+        {addMarkers(locales, localeFilter, uneditedFilter, editedLocales, globallyDisapprovedPageUrls)}
     </GoogleMap>;
 
 
