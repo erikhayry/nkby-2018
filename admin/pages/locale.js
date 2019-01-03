@@ -255,6 +255,8 @@ class Locale extends React.Component {
 
         const localeIsReported = reportedLocales.includes(id);
 
+        const localePosition = locale.position || {};
+
         return (
             <Page>
                 <Header as='h2' textAlign='center' style={{
@@ -279,8 +281,8 @@ class Locale extends React.Component {
                     </Header>
                     <Form>
                         <Form.Group>
-                            <Form.Input width={3} type="number" fluid placeholder='lng' defaultValue={editedPosition.lng ? editedPosition.lng: locale.position.lng} onChange={evt => this.updateInputValueLng(evt)} />
-                            <Form.Input width={3} type="number" fluid placeholder='lat' defaultValue={editedPosition.lat ? editedPosition.lat: locale.position.lat} onChange={evt => this.updateInputValueLat(evt)} />
+                            <Form.Input width={3} fluid placeholder='lng' defaultValue={editedPosition.lng ? editedPosition.lng: localePosition.lng} onChange={evt => this.updateInputValueLng(evt)} />
+                            <Form.Input width={3} fluid placeholder='lat' defaultValue={editedPosition.lat ? editedPosition.lat: localePosition.lat} onChange={evt => this.updateInputValueLat(evt)} />
                             <Form.Button onClick={() => {
                                 this.updateLocale({
                                     id,

@@ -8006,5 +8006,18 @@
 				"url": "http://nykarlebyvyer.nu/sidor/texter/protokoll/fullm4912_lubeck.html"
 			}
 		]
+	},
+	"hirvlaxvägen-66950": {
+		"lng": 63.4210007,
+		"lat": 22.3957515,
+		"position": {
+			"lng": 63.4210007,
+			"lat": 22.3957515
+		},
+		"disapprovedPages": [
+			{
+				"url": "http://nykarlebyvyer.nu/sidor/texter/diverse/postensocklot.html"
+			}
+		]
 	}
 }

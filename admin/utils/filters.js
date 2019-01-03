@@ -75,3 +75,38 @@ export function getStarredPageWithLocales(starredPages, editedLocales) {
     });
 
 }
+
+
+export function getLocalesWithData(locales, editedLocales, globallyDisapprovedPageUrls, starredPages, reportedLocales) {
+
+    return locales.map(locale => {
+        const { pages = [] } = locale;
+        const hasPages = localeHasPages(pages, globallyDisapprovedPageUrls);
+
+
+
+        if(hasPages) {
+            const editedLocale = editedLocales[locale.id] || {};
+            const {approvedPages = [], disapprovedPages = []} = editedLocale;
+            const filteredPages = getFilteredPages(pages, globallyDisapprovedPageUrls);
+            const hasApprovedPageUrl = localeHasApprovedPageUrl(filteredPages, approvedPages);
+            const hasUneditedPageUrl = localeHasUneditedPageUrl(filteredPages, approvedPages, disapprovedPages);
+            const hasMissingAltForPreferredImage = localeHashMissingAltForPreferredImage(filteredPages, approvedPages);
+
+            return {
+                ...locale,
+                hasApprovedPageUrl,
+                hasUneditedPageUrl,
+                hasUnapprovedPageUrl: !hasUneditedPageUrl && !hasApprovedPageUrl,
+                hasMissingAltForPreferredImage,
+                editedPosition: editedLocale.position
+            }
+        }
+
+        return locale;
+
+
+
+
+    });
+}
