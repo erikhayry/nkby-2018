@@ -87,7 +87,7 @@ class App extends React.Component {
 
     render() {
         const { localeFilter, uneditedFilter, editedLocales, globallyDisapprovedPageUrls, starredPages, reportedLocales, localesWithData, showMap} = this.state;
-        const { locales } = this.props;
+        const { locales, filteredColumnsQuery } = this.props;
 
         return (
             <Page styles={{padding:0}}>
@@ -140,18 +140,18 @@ class App extends React.Component {
                 <div style={{
                     padding: 10
                 }}>
-                    <LocalesTable locales={localesWithData}/>
+                    <LocalesTable locales={localesWithData} filteredColumnsQuery={filteredColumnsQuery}/>
                 </div>
             </Page>
         )
     }
 }
 
-App.getInitialProps = async function (context) {
+App.getInitialProps = async function ({query}) {
     const locales = getLocales();
 
 
-    return { locales }
+    return { locales, filteredColumnsQuery: query.filteredColumns }
 }
 
 export default withRouter(App)

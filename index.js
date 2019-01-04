@@ -2,7 +2,15 @@ import Crawler from "crawler";
 import fs from 'fs';
 import ProgressBar from 'progress';
 import locales from '../data/locales.json';
+import areas from '../data/areas.json';
 import urls from '../data/urls.json';
+require('dotenv').config();
+
+const POST_URL= process.env.POST_URL || 'https://www.verkkoposti.com/e3/svenska/postnummercatalog';
+const LOCALES_FILE_NAME= process.env.LOCALES_FILE_NAME || 'locales.json';
+const DATA_URL= process.env.DATA_URL || 'http://localhost:8080';
+const ZIP_CODE_URL= process.env.ZIP_CODE_URL || 'https://www.verkkoposti.com';
+const RESULT_FILE_NAME= process.env.RESULT_FILE_NAME || 'crawler-result-lg.json';
 
 function getKey(addressWithStreetNumber, name){
     const address = addressWithStreetNumber && addressWithStreetNumber[0];
@@ -58,8 +66,18 @@ function getImageDescription(el){
     return undefined;
 }
 
-function searchUrls(zipCodeAndLocales, urls) {
+function save(data){
+    fs.writeFile(`data/${RESULT_FILE_NAME}`,  JSON.stringify(data, null,'\t'), function (err) {
+        if (err) {
+            return console.log(err);
+        }
+        console.log(`The file data/${RESULT_FILE_NAME} was saved!`);
+    });
+}
+
+function searchUrls(zipCodeAndLocales, urls, replaceData = false) {
     console.log(`Searching ${urls.length} urls for locales`)
+    console.log(`replaceData: ${replaceData}`)
     const result = {};
     let pagesCount = 0;
     const bar = new ProgressBar(':bar', { total: urls.length });
@@ -75,8 +93,9 @@ function searchUrls(zipCodeAndLocales, urls) {
                 bar.tick();
 
                 Object.keys(zipCodeAndLocales).forEach(key => {
-                    const {zipCode, streetNames} = zipCodeAndLocales[key];
-                    streetNames.forEach(streetName => {
+                    const {zipCode, localeNames } = zipCodeAndLocales[key];
+                    let { type } = zipCodeAndLocales[key];
+                    localeNames.forEach(localeName => {
                         if($){
                             const body = $("body");
                             const bodyText = (body.text() || '').toLowerCase();
@@ -88,16 +107,20 @@ function searchUrls(zipCodeAndLocales, urls) {
                                 }
                             });
 
-                            if(bodyText.indexOf(streetName.toLowerCase()) > 0){
-                                const re = new RegExp(`\\b${streetName.toLowerCase()}\\s[0-9]{1,3}`);
-                                const addressWithStreetNumber = bodyText.match(re);
-                                const name = getKey(addressWithStreetNumber, streetName);
+                            if(bodyText.indexOf(localeName.toLowerCase()) > 0){
+                                const re = new RegExp(`\\b${localeName.toLowerCase()}\\s[0-9]{1,3}`);
+                                let name = localeName;
+                                if(type === 'locale'){
+                                    const addressWithStreetNumber = bodyText.match(re);
+                                    name = getKey(addressWithStreetNumber, localeName);
+                                    type = addressWithStreetNumber ? 'address' : 'street'
+                                }
                                 pagesCount++;
-                                const key = `${name}-${zipCode}`;
+                                const key = zipCode ? `${name}-${zipCode}` : `${name}-${type}`;
 
                                 if(result[key]){
                                     result[key].pages.push({
-                                        url: res.options.uri,
+                                        url: res.options.uri.replace(DATA_URL, ''),
                                         title,
                                         images
                                     })
@@ -106,9 +129,9 @@ function searchUrls(zipCodeAndLocales, urls) {
                                     result[key] = {
                                         name,
                                         zipCode,
-                                        isAddressWithStreetNumber: !!addressWithStreetNumber,
+                                        type,
                                         pages: [{
-                                            url: res.options.uri,
+                                            url: res.options.uri.replace(DATA_URL, ''),
                                             title,
                                             images,
                                         }]
@@ -127,17 +150,27 @@ function searchUrls(zipCodeAndLocales, urls) {
         }
     });
 
-    c.queue(urls.map(url => 'http://nykarlebyvyer.nu/' + url));
+    c.queue(urls.map(url => `${DATA_URL}/${url}`));
     c.on('drain', function() {
         console.log('Searching done');
         console.log(`Matched ${pagesCount} urls to ${Object.keys(result).length} locales`);
 
-        fs.writeFile("data/crawler-result-lg.json",  JSON.stringify(result, null,'\t'), function (err) {
-            if (err) {
-                return console.log(err);
-            }
-            console.log(`The file data/crawler-result.json was saved!`);
-        });
+        if(replaceData){
+            save(result)
+        }
+        else {
+            fs.readFile("data/crawler-result-lg.json" , "utf8", function(err, d) {
+                if(err){
+                    reject(err)
+                }
+                const data = JSON.parse(d)
+                for(const key in data){
+                    result[key] = data[key]
+                }
+
+                save(result)
+            });
+        }
     });
 }
 
@@ -168,12 +201,16 @@ function getStreetNames(zipCodeUrls){
                 } else{
                     const $ = res.$;
                     if($){
-                        const streetNameData = $('.data table table td div:not(.ipono_tooltip)')
-                        result.push({zipCode, streetNames: Object.keys(streetNameData).filter(key => streetNameData[key]).map(key => {
-                            if(streetNameData[key].children && streetNameData[key].children.length > 0 &&  streetNameData[key].children[0]){
-                                return streetNameData[key].children[0].data.replace(/(\r\n|\n|\r|\t)/gm,'').replace('  ', '').toLowerCase()
-                            }
-                        }).filter(streetName => streetName)});
+                        const localeNameData = $('.data table table td div:not(.ipono_tooltip)')
+                        result.push({
+                            type: 'locale',
+                            zipCode,
+                            localeNames: Object.keys(localeNameData).filter(key => localeNameData[key]).map(key => {
+                                if(localeNameData[key].children && localeNameData[key].children.length > 0 &&  localeNameData[key].children[0]){
+                                    return localeNameData[key].children[0].data.replace(/(\r\n|\n|\r|\t)/gm,'').replace('  ', '').toLowerCase()
+                                }
+                            })
+                        .filter(localeName => localeName)});
                     }
 
                 }
@@ -181,7 +218,7 @@ function getStreetNames(zipCodeUrls){
             }
         });
 
-        c.queue(zipCodeUrls.filter(url => url).map(zipCodeUrl => `https://www.verkkoposti.com${zipCodeUrl}`));
+        c.queue(zipCodeUrls.filter(url => url).map(zipCodeUrl => `${ZIP_CODE_URL}${zipCodeUrl}`));
         c.on('drain', function() {
             console.log('Searching for streetnames done');
             resolve(result)
@@ -216,16 +253,16 @@ function getLocales(commune){
             }
         });
 
-        c.queue(`https://www.verkkoposti.com/e3/svenska/postnummercatalog?streetname=&postcodeorcommune=${commune}`);
+        c.queue(`${POST_URL}?streetname=&postcodeorcommune=${commune}`);
         c.on('drain', function() {
             console.log('Searching done');
-            getStreetNames(zipeCodeUrls).then((streetNames) => {
-                fs.writeFile("data/locales.json",  JSON.stringify(streetNames, null,'\t'), function (err) {
+            getStreetNames(zipeCodeUrls).then((localeNames) => {
+                fs.writeFile(`data/${LOCALES_FILE_NAME}`,  JSON.stringify(locleNames, null,'\t'), function (err) {
                     if (err) {
                         return console.log(err);
                     }
-                    console.log(`The file data/locales.json was saved!`);
-                    resolve(streetNames)
+                    console.log(`The file data/${process.env.LOCALES_FILE_NAME} was saved!`);
+                    resolve(localeNames)
                 });
             });
         });
@@ -235,11 +272,11 @@ function getLocales(commune){
 
 }
 
-//getLocales('Nykarleby').then((streetNames) => {
-//    searchUrls(streetNames, filteredUrls.slice(0, 100));
+//getLocales('Nykarleby').then((localeNames) => {
+//    searchUrls(localeNames, filteredUrls.slice(0, 100));
 //});
 
 //searchUrls(locales, filteredUrls.slice(0, 100));
-searchUrls(locales, filteredUrls);
+searchUrls(locales.concat(areas), filteredUrls, process.env.REPLACE_DATA);
 
 

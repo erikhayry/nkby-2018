@@ -1,17 +1,20 @@
 [
 	{
+		"type": "locale",
 		"zipCode": "66901",
-		"streetNames": []
+		"localeNames": []
 	},
 	{
+		"type": "locale",
 		"zipCode": "62350",
-		"streetNames": [
+		"localeNames": [
 			"karkausvägen"
 		]
 	},
 	{
+		"type": "locale",
 		"zipCode": "66840",
-		"streetNames": [
+		"localeNames": [
 			"aspnästået",
 			"brännlandsvägen",
 			"centrumvägen",
@@ -28,8 +31,9 @@
 		]
 	},
 	{
+		"type": "locale",
 		"zipCode": "66980",
-		"streetNames": [
+		"localeNames": [
 			"gabilsvägen",
 			"gunilackvägen",
 			"knutsvägen",
@@ -44,8 +48,9 @@
 		]
 	},
 	{
+		"type": "locale",
 		"zipCode": "66910",
-		"streetNames": [
+		"localeNames": [
 			"frostasvägen",
 			"granviksvägen",
 			"grisselören",
@@ -75,8 +80,9 @@
 		]
 	},
 	{
+		"type": "locale",
 		"zipCode": "66970",
-		"streetNames": [
+		"localeNames": [
 			"alihamnsvägen",
 			"bertilsrundan",
 			"getingsandsvägen",
@@ -109,8 +115,9 @@
 		]
 	},
 	{
+		"type": "locale",
 		"zipCode": "66850",
-		"streetNames": [
+		"localeNames": [
 			"aspgränd",
 			"bangårdsvägen",
 			"bärsvägen",
@@ -149,8 +156,9 @@
 		]
 	},
 	{
+		"type": "locale",
 		"zipCode": "66930",
-		"streetNames": [
+		"localeNames": [
 			"framstuvägen",
 			"gjuterivägen",
 			"granbäcksvägen",
@@ -175,8 +183,9 @@
 		]
 	},
 	{
+		"type": "locale",
 		"zipCode": "66950",
-		"streetNames": [
+		"localeNames": [
 			"björkbackavägen",
 			"brotthällsvägen",
 			"fiskhamnsvägen",
@@ -226,8 +235,9 @@
 		]
 	},
 	{
+		"type": "locale",
 		"zipCode": "66900",
-		"streetNames": [
+		"localeNames": [
 			"andrasjö strandväg",
 			"andrasjövägen",
 			"arbetaregatan",

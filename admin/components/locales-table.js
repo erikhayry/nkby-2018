@@ -8,7 +8,7 @@ export default class LocalesTable extends Component {
     state = {
         column: null,
         direction: null,
-        filteredColumns: []
+        filteredColumns: null
     };
 
     handleSort = clickedColumn => () => {
@@ -29,7 +29,7 @@ export default class LocalesTable extends Component {
     };
 
     handleFilter = (clickedColumn, newVal) => () => {
-        const { filteredColumns } = this.state;
+        const filteredColumns = this.getFilteredColumns();
         const i = filteredColumns.findIndex(({col, val}) => clickedColumn === col);
 
         if(i !== -1) {
@@ -63,23 +63,49 @@ export default class LocalesTable extends Component {
     }
 
     getButtons(currentCol){
-        const { filteredColumns } = this.state;
+        const filteredColumns = this.getFilteredColumns();
 
         return (
             <>
-                <Button onClick={this.handleFilter(currentCol, true)} primary={filteredColumns.findIndex(({col, val}) => col === currentCol && val === true) > -1}>
+                <Button onClick={this.handleFilter(currentCol, true)} primary={filteredColumns && filteredColumns.findIndex(({col, val}) => col === currentCol && val === true) > -1}>
                     <Icon circular color='green' name='check' />
                 </Button>
-                <Button onClick={this.handleFilter(currentCol, false)} primary={filteredColumns.findIndex(({col, val}) => col === currentCol && val === false) > -1}>
+                <Button onClick={this.handleFilter(currentCol, false)} primary={filteredColumns && filteredColumns.findIndex(({col, val}) => col === currentCol && val === false) > -1}>
                     <Icon circular color='red' name='close' />
                 </Button>
             </>
         )
     }
 
+    queryToArray(filteredColumnsQuery){
+        let ret = [];
+
+        if(filteredColumnsQuery){
+            filteredColumnsQuery.split(',').forEach(col => {
+                let colVals = col.split(':');
+
+                ret.push({
+                    col: colVals[0],
+                    val: colVals[1] === 'true'
+                })
+            });
+        }
+
+
+        return ret;
+
+    }
+
+    getFilteredColumns(){
+        const { filteredColumns: filteredColumnsFromState } = this.state;
+        const { filteredColumnsQuery } = this.props;
+        return  filteredColumnsFromState || this.queryToArray(filteredColumnsQuery) || [];
+    }
+
     render() {
-        const { column, direction, filteredColumns } = this.state;
+        const { column, direction } = this.state;
         const { locales } = this.props;
+        const filteredColumns = this.getFilteredColumns()
 
         let data = _.sortBy(locales.filter((locale => {
             return filteredColumns.length === 0 || filteredColumns.every(({col, val}) => {
@@ -101,6 +127,12 @@ export default class LocalesTable extends Component {
                             onClick={this.handleSort('name')}
                         >
                             Namn
+                        </Table.HeaderCell>
+                        <Table.HeaderCell
+                            sorted={column === 'type' ? direction : null}
+                            onClick={this.handleSort('type')}
+                        >
+                            Typ
                         </Table.HeaderCell>
                         <Table.HeaderCell
                             sorted={column === 'pages' ? direction : null}
@@ -145,6 +177,8 @@ export default class LocalesTable extends Component {
                         <Table.HeaderCell>
                         </Table.HeaderCell>
                         <Table.HeaderCell>
+                        </Table.HeaderCell>
+                        <Table.HeaderCell>
                             {this.getButtons('position')}
                         </Table.HeaderCell>
                         <Table.HeaderCell>
@@ -162,13 +196,14 @@ export default class LocalesTable extends Component {
                     </Table.Row>
                 </Table.Header>
                 <Table.Body>
-                    {_.map(data, ({ id, pages, position, editedPosition, name, hasApprovedPageUrl, hasUneditedPageUrl, hasDisapprovedPages}) => (
+                    {_.map(data, ({ id, type, pages, position, editedPosition, name, hasApprovedPageUrl, hasUneditedPageUrl, hasDisapprovedPages}) => (
                         <Table.Row key={id}>
                             <Table.Cell>
                                 <Link href={`/locale?id=${id}`}>
                                     <a>{name}</a>
                                 </Link>
                             </Table.Cell>
+                            <Table.Cell>{type}</Table.Cell>
                             <Table.Cell>{pages.length}</Table.Cell>
                             <Table.Cell>{this.getIcon(position)}</Table.Cell>
                             <Table.Cell>{this.getIcon(editedPosition)}</Table.Cell>
