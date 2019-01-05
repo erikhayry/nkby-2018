@@ -1,6 +1,7 @@
 import React from "react"
 import { compose, withProps } from "recompose"
-import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
+import { withScriptjs, withGoogleMap, GoogleMap } from "react-google-maps"
+import { MarkerWithLabel } from "react-google-maps/lib/components/addons/MarkerWithLabel"
 import theme from '../../static/themes/dark.json';
 import { localeHasPages, localeHasApprovedPageUrl, localeHasUneditedPageUrl, getFilteredPages, localeHashMissingAltForPreferredImage } from '../../utils/filters'
 import Router from 'next/router'
@@ -47,7 +48,7 @@ function getLocale({id, ...locale}, localeFilter, uneditedFilter, editedLocales,
     const { pages = [] } = locale;
     const hasPages = localeHasPages(pages, globallyDisapprovedPageUrls);
 
-    if(locale.position && hasPages) {
+    if(hasPages) {
         const editedLocale = editedLocales[id] || {};
         const {approvedPages = [], disapprovedPages = []} = editedLocale;
         const filteredPages = getFilteredPages(pages, globallyDisapprovedPageUrls);
@@ -66,6 +67,10 @@ function getLocale({id, ...locale}, localeFilter, uneditedFilter, editedLocales,
 }
 
 function getPosition(editedLocale, locale, addedPositions){
+    if(locale.name == 'munsala'){
+        console.log('musnal pos', editedLocale)
+    }
+
     const position = editedLocale && editedLocale.position ? editedLocale.position : locale.position;
     const positionAsString = JSON.stringify(position);
     const positionAdded = addedPositions.find((position) => {
@@ -80,24 +85,35 @@ function getPosition(editedLocale, locale, addedPositions){
         addedPositions.push(positionAsString);
     }
 
+    if(locale.name == 'munsala'){
+        console.log('musnal pos', position)
+    }
+
     return position;
 }
 
 function addMarkers(locales = [], localeFilter, uneditedFilter, editedLocales, globallyDisapprovedPageUrls){
     let addedPositions = [];
     return locales.map(({id, ...locale}) => {
+
         const {
             editedLocale,
-            numberOfPagesVisible,
+            numberOfPagesVisible = 0,
             hasUneditedPageUrl,
             hasApprovedPageUrl,
             hasMissingAltForPreferredImage
         } = getLocale({id, ...locale}, localeFilter, uneditedFilter, editedLocales, globallyDisapprovedPageUrls);
 
-        if(locale && numberOfPagesVisible > 0 ){
-            return <Marker
+        if(locale.name == 'munsala'){
+            console.log('musnal 3', editedLocale)
+        }
+
+        const position = getPosition(editedLocale, locale, addedPositions);
+        if(locale && position){
+            return <MarkerWithLabel
                 key={id}
-                position={getPosition(editedLocale, locale, addedPositions)}
+                labelAnchor={{x: 0, y: -5}}
+                position={position}
                 onClick={() => {
                     Router.push({
                         pathname: '/locale',
@@ -105,8 +121,12 @@ function addMarkers(locales = [], localeFilter, uneditedFilter, editedLocales, g
                     });
                 }}
                 icon={getMarkerImage(hasUneditedPageUrl, hasApprovedPageUrl)}
-                label={numberOfPagesVisible.toString()}
-            />
+            >
+                <div style={{
+                    backgroundColor: 'yellow',
+                    padding: 2
+                }}>{locale.name} | {numberOfPagesVisible.toString()}</div>
+            </MarkerWithLabel>
         }
 
         return null;

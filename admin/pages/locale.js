@@ -2,6 +2,7 @@ import React from "react"
 import 'isomorphic-unfetch'
 import Page from '../components/page'
 import {withRouter} from 'next/router'
+import LazyLoad from 'react-lazyload';
 
 import { get, post } from '../utils/api'
 import { getLocales, getLocale, toImagesSrc } from '../utils'
@@ -281,8 +282,8 @@ class Locale extends React.Component {
                     </Header>
                     <Form>
                         <Form.Group>
-                            <Form.Input width={3} fluid placeholder='lng' defaultValue={editedPosition.lng ? editedPosition.lng: localePosition.lng} onChange={evt => this.updateInputValueLng(evt)} />
                             <Form.Input width={3} fluid placeholder='lat' defaultValue={editedPosition.lat ? editedPosition.lat: localePosition.lat} onChange={evt => this.updateInputValueLat(evt)} />
+                            <Form.Input width={3} fluid placeholder='lng' defaultValue={editedPosition.lng ? editedPosition.lng: localePosition.lng} onChange={evt => this.updateInputValueLng(evt)} />
                             <Form.Button onClick={() => {
                                 this.updateLocale({
                                     id,
@@ -413,18 +414,20 @@ class Locale extends React.Component {
                             {this.state.showAllImages && this.state.showAllImages.images.map(({src, description}) => {
                                 const {url, localeName} = this.state.showAllImages;
                                 return <Grid.Column key={src}>
-                                    <Image
-                                        onClick={() => {
-                                            this.setState({
-                                                showAllImages: undefined
-                                            }, () => {
-                                                this.setAsPreferredImages(id, url, src);
-                                            });
-                                        }}
-                                        src={toImagesSrc(src)}
-                                        alt={description}
-                                        label={this.state.showAllImages.preferredImage === src && { as: 'a', corner: 'left', icon: 'heart', color: 'green'}}
-                                    />
+                                    <LazyLoad height={200}>
+                                        <Image
+                                            onClick={() => {
+                                                this.setState({
+                                                    showAllImages: undefined
+                                                }, () => {
+                                                    this.setAsPreferredImages(id, url, src);
+                                                });
+                                            }}
+                                            src={toImagesSrc(src)}
+                                            alt={description}
+                                            label={this.state.showAllImages.preferredImage === src && { as: 'a', corner: 'left', icon: 'heart', color: 'green'}}
+                                        />
+                                    </LazyLoad>
                                     <p>{description || 'Bildtext saknas'}</p>
                                 </Grid.Column>
                             })}

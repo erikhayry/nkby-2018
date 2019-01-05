@@ -67,10 +67,10 @@ export default class LocalesTable extends Component {
 
         return (
             <>
-                <Button onClick={this.handleFilter(currentCol, true)} primary={filteredColumns && filteredColumns.findIndex(({col, val}) => col === currentCol && val === true) > -1}>
+                <Button size='mini' onClick={this.handleFilter(currentCol, true)} secondary={filteredColumns && filteredColumns.findIndex(({col, val}) => col === currentCol && val === true) > -1}>
                     <Icon circular color='green' name='check' />
                 </Button>
-                <Button onClick={this.handleFilter(currentCol, false)} primary={filteredColumns && filteredColumns.findIndex(({col, val}) => col === currentCol && val === false) > -1}>
+                <Button size='mini' onClick={this.handleFilter(currentCol, false)} secondary={filteredColumns && filteredColumns.findIndex(({col, val}) => col === currentCol && val === false) > -1}>
                     <Icon circular color='red' name='close' />
                 </Button>
             </>
@@ -105,7 +105,7 @@ export default class LocalesTable extends Component {
     render() {
         const { column, direction } = this.state;
         const { locales } = this.props;
-        const filteredColumns = this.getFilteredColumns()
+        const filteredColumns = this.getFilteredColumns();
 
         let data = _.sortBy(locales.filter((locale => {
             return filteredColumns.length === 0 || filteredColumns.every(({col, val}) => {
@@ -173,6 +173,7 @@ export default class LocalesTable extends Component {
                     </Table.Row>
                     <Table.Row>
                         <Table.HeaderCell>
+                             {data.length} / {locales.length} 
                         </Table.HeaderCell>
                         <Table.HeaderCell>
                         </Table.HeaderCell>

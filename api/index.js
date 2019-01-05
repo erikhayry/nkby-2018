@@ -144,7 +144,7 @@ const addLocationData = async (req, res) => {
         }
     } else {
         editedLocales[id] = {
-            ...editedLocale.position
+            position: editedLocale.position
         };
     }
 

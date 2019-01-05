@@ -91,11 +91,16 @@ class App extends React.Component {
 
         return (
             <Page styles={{padding:0}}>
+                <div style={{
+                    padding: 10
+                }}>
+                <Button onClick={() => {
+                    this.setState({
+                        showMap: !this.state.showMap
+                    })
+                }}>Visa/göm karta</Button>
                 {showMap &&
                 <>
-                    <div style={{
-                        padding: 10
-                    }}>
                         <Button.Group>
                             {LOCALE_FILTERS.map(btn => (
                                 <Button
@@ -123,7 +128,6 @@ class App extends React.Component {
                                 </Button>
                             ))}
                         </Button.Group>}
-                    </div>
                     <Map
                         googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_MAPS_API}&v=3.exp&libraries=geometry,drawing,places`}
                         loadingElement={<div style={{ height: `100%` }} />}
@@ -137,6 +141,7 @@ class App extends React.Component {
                         globallyDisapprovedPageUrls={globallyDisapprovedPageUrls}
                     />
                 </>}
+                </div>
                 <div style={{
                     padding: 10
                 }}>
