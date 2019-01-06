@@ -1,10 +1,16 @@
 import _ from 'lodash'
 import React, { Component } from 'react'
-import { Table, Button, Icon } from 'semantic-ui-react'
+import { Table, Button, Icon, Select, Form } from 'semantic-ui-react'
 import Link from 'next/link'
 import Router from 'next/router'
 
 export default class LocalesTable extends Component {
+    constructor(props){
+        super(props);
+
+        this.handleSelectFilter = this.handleSelectFilter.bind(this)
+
+    }
     state = {
         column: null,
         direction: null,
@@ -57,12 +63,60 @@ export default class LocalesTable extends Component {
 
     };
 
+    handleSelectFilter(event) {
+        const val = event.target.value;
+        const filteredColumns = this.getFilteredColumns();
+        const i = filteredColumns.findIndex(({col}) => 'type' === col);
+
+        if(val === 'all'){
+            filteredColumns.splice(i, 1);
+        } else {
+            if(i !== -1) {
+                filteredColumns[i].val = val;
+            } else {
+                filteredColumns.push({col: 'type', val})
+            }
+        }
+
+        Router.push({
+            pathname: '/',
+            query: {
+                filteredColumns: filteredColumns.map(({val, col}) => col + ':' + val).join(',')
+            },
+            shallow: true
+        });
+
+        this.setState({
+            filteredColumns
+        });
+    }
+
     getIcon(val){
         return val ? <Icon circular color='green' name='check' /> : <Icon circular color='red' name='close' />;
 
     }
 
-    getButtons(currentCol){
+    getFilterSelect(currentCol, data){
+        const options = data
+                            .map(locale => locale[currentCol])
+                            .filter((value, index, self) => {
+                                return self.indexOf(value) === index;
+                            })
+        return (
+            <select onChange={this.handleSelectFilter}>
+                <option key="all" value="all">Alla</option>
+                {
+                    options.map(option => {
+                        return (<option key={option} value={option}>{option}</option>);
+
+                     })
+                }
+            </select>
+
+        )
+    }
+
+    getFilterButtons(currentCol){
         const filteredColumns = this.getFilteredColumns();
 
         return (
@@ -83,10 +137,18 @@ export default class LocalesTable extends Component {
         if(filteredColumnsQuery){
             filteredColumnsQuery.split(',').forEach(col => {
                 let colVals = col.split(':');
+                let val = colVals[1];
+
+                if(colVals[1] === 'true'){
+                    val = true
+                }
+                if(colVals[1] === 'false'){
+                    val = false
+                }
 
                 ret.push({
                     col: colVals[0],
-                    val: colVals[1] === 'true'
+                    val: val
                 })
             });
         }
@@ -99,7 +161,7 @@ export default class LocalesTable extends Component {
     getFilteredColumns(){
         const { filteredColumns: filteredColumnsFromState } = this.state;
         const { filteredColumnsQuery } = this.props;
-        return  filteredColumnsFromState || this.queryToArray(filteredColumnsQuery) || [];
+        return filteredColumnsFromState || this.queryToArray(filteredColumnsQuery) || [];
     }
 
     render() {
@@ -109,7 +171,7 @@ export default class LocalesTable extends Component {
 
         let data = _.sortBy(locales.filter((locale => {
             return filteredColumns.length === 0 || filteredColumns.every(({col, val}) => {
-                return Boolean(locale[col]) === val;
+                return locale[col] === val;
             })
 
         })), [this.state.column]);
@@ -176,23 +238,24 @@ export default class LocalesTable extends Component {
                              {data.length} / {locales.length} 
                         </Table.HeaderCell>
                         <Table.HeaderCell>
+                            {this.getFilterSelect('type', data)}
                         </Table.HeaderCell>
                         <Table.HeaderCell>
                         </Table.HeaderCell>
                         <Table.HeaderCell>
-                            {this.getButtons('position')}
+                            {this.getFilterButtons('position')}
                         </Table.HeaderCell>
                         <Table.HeaderCell>
-                            {this.getButtons('editedPosition')}
+                            {this.getFilterButtons('editedPosition')}
                         </Table.HeaderCell>
                         <Table.HeaderCell>
-                            {this.getButtons('hasApprovedPageUrl')}
+                            {this.getFilterButtons('hasApprovedPageUrl')}
                         </Table.HeaderCell>
                         <Table.HeaderCell>
-                            {this.getButtons('hasUneditedPageUrl')}
+                            {this.getFilterButtons('hasUneditedPageUrl')}
                         </Table.HeaderCell>
                         <Table.HeaderCell >
-                            {this.getButtons('hasDisapprovedPages')}
+                            {this.getFilterButtons('hasDisapprovedPages')}
                         </Table.HeaderCell>
                     </Table.Row>
                 </Table.Header>

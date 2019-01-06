@@ -1,5 +1,6 @@
 import locales from '../admin/static/crawler-result-with-locales.json';
 import editedLocales from '../api/data/edited-locales.json';
+import prevStatistics from '../build/statistics.json';
 import fs from 'fs';
 var flatten = require('flat')
 
@@ -48,10 +49,18 @@ function countPageData(pageDataKey){
 }
 
 let localesData = {};
-let statistics = {
-    numberOfLocales: Object.keys(editedLocales).length,
-    numberOfPages: countPageData('url'),
-    numberOfImages: countPageData('preferredImage'),
+const numberOfPages = countPageData('url');
+const numberOfLocales = Object.keys(editedLocales).length;
+const numberOfImages = countPageData('preferredImage');
+const statistics = {
+    version: prevStatistics.version + 1,
+    date: new Date().toLocaleString(),
+    numberOfLocales,
+    numberOfLocalesAdded: numberOfLocales - prevStatistics.numberOfLocales,
+    numberOfPages,
+    numberOfPagesAdded: numberOfPages - prevStatistics.numberOfPages,
+    numberOfImages,
+    numberOfImagesAdded: numberOfImages - prevStatistics.numberOfImages,
     totalNumberOfPages: urls.length,
     totalNumberOfImages: 1395 + 13414
 };
@@ -81,5 +90,5 @@ Object.keys(editedLocales).forEach(key => {
     }
 });
 
-fs.writeFile('web/data/locales.json', JSON.stringify(localesData))
-fs.writeFile('web/data/statistics.json', JSON.stringify(statistics))
+fs.writeFile('build/locales.json', JSON.stringify(localesData), () => {})
+fs.writeFile('build/statistics.json', JSON.stringify(statistics), () => {})

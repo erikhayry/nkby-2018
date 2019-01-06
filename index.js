@@ -4,7 +4,6 @@ import ProgressBar from 'progress';
 import locales from '../data/locales.json';
 import areas from '../data/areas.json';
 import urls from '../data/urls.json';
-require('dotenv').config();
 
 const POST_URL= process.env.POST_URL || 'https://www.verkkoposti.com/e3/svenska/postnummercatalog';
 const LOCALES_FILE_NAME= process.env.LOCALES_FILE_NAME || 'locales.json';
@@ -277,6 +276,6 @@ function getLocales(commune){
 //});
 
 //searchUrls(locales, filteredUrls.slice(0, 100));
-searchUrls(locales.concat(areas), filteredUrls, process.env.REPLACE_DATA);
+searchUrls(locales.concat(areas, filteredUrls.slice(0, 100), process.env.REPLACE_DATA));
 
 

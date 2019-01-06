@@ -13,6 +13,7 @@ import { get, post } from '../utils/api'
 import { getLocales, getLocale } from '../utils'
 
 import { Button } from 'semantic-ui-react'
+import env from '../env.json';
 
 const LOCALE_FILTERS = [
     {
@@ -129,7 +130,7 @@ class App extends React.Component {
                             ))}
                         </Button.Group>}
                     <Map
-                        googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_MAPS_API}&v=3.exp&libraries=geometry,drawing,places`}
+                        googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${env.GOOGLE_MAPS_API || process.env.GOOGLE_MAPS_API}&v=3.exp&libraries=geometry,drawing,places`}
                         loadingElement={<div style={{ height: `100%` }} />}
                         containerElement={<div style={{ height: `400px`, width: '100%' }} />}
                         mapElement={<div style={{ height: `100%` }} />}

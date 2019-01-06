@@ -8,6 +8,7 @@ import { get, post } from '../utils/api'
 import { getLocales, getLocale, toImagesSrc } from '../utils'
 
 import { Button, Icon, Header, Label, Segment, Form, Divider, Card, Image, Dimmer, Grid } from 'semantic-ui-react';
+const MAIN_URL = 'https://nykarlebyvyer.nu'
 
 class Locale extends React.Component {
     constructor(props){
@@ -154,8 +155,8 @@ class Locale extends React.Component {
                         </Label>}
                     </Card.Meta>
                     <Card.Description>
-                        <a href={page.url} target="_blank">{page.title || page.url}</a>
-                    </Card.Description>
+                        <a href={`${MAIN_URL}${page.url}`} target="_blank">{page.title || page.url}</a>
+                    </Card.Description>`
                 </Card.Content>
                 <Card.Content extra>
                     <Button.Group size='mini' fluid vertical>
@@ -166,7 +167,7 @@ class Locale extends React.Component {
                             })}}><Icon name='check' /> Godkänn</Button>
                             <Button color='red' onClick={()=> {this.disapprove({
                                 id: localeId,
-                                pageUrl: page.url
+                                pageUrl: page.url``
                             })}}><Icon name='trash' /> Släng</Button>
                             <Button color='black' onClick={()=> {this.disapproveGlobally(page.url)}}><Icon name='globe' /> Släng globalt</Button>
                         </React.Fragment>}

@@ -8033,5 +8033,22 @@
 			"lng": 22.52614,
 			"lat": 63.522578
 		}
+	},
+	"torget-area": {
+		"approvedPages": [
+			{
+				"url": "/sidor/kortindi/PK/PK_A/PKAV015S.HTM"
+			},
+			{
+				"url": "/sidor/kortindi/PK/PK_A/PKA----S.HTM"
+			},
+			{
+				"url": "/sidor/kortindi/KM/KMA/KM_19547.html"
+			}
+		],
+		"position": {
+			"lng": 22.529037,
+			"lat": 63.522368
+		}
 	}
 }
