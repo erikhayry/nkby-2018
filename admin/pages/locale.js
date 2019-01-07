@@ -167,7 +167,7 @@ class Locale extends React.Component {
                             })}}><Icon name='check' /> Godkänn</Button>
                             <Button color='red' onClick={()=> {this.disapprove({
                                 id: localeId,
-                                pageUrl: page.url``
+                                pageUrl: page.url
                             })}}><Icon name='trash' /> Släng</Button>
                             <Button color='black' onClick={()=> {this.disapproveGlobally(page.url)}}><Icon name='globe' /> Släng globalt</Button>
                         </React.Fragment>}

@@ -8016,8 +8016,8 @@
 	},
 	"munsala-village": {
 		"position": {
-			"lng": 22.428349,
-			"lat": 63.4525637
+			"lng": 22.437233,
+			"lat": 63.452765
 		}
 	},
 	"kyrkan-area": {
@@ -8049,6 +8049,219 @@
 		"position": {
 			"lng": 22.529037,
 			"lat": 63.522368
+		}
+	},
+	"lippjärv-village": {
+		"lng": 22.5970977,
+		"lat": 63.5281152,
+		"approvedPages": [
+			{
+				"url": "/sidor/texter/prosa/jt/skogslund2013.html",
+				"preferredImage": "../bilder/hus/skogslund2.jpg"
+			},
+			{
+				"url": "/sidor/texter/pers/forman.htm",
+				"preferredImage": "bilder/personer/formvama.jpg"
+			},
+			{
+				"url": "/sidor/texter/prosa/agreng/enman/01forord.htm",
+				"preferredImage": "../../bilder/enman/13viseru.jpg"
+			}
+		],
+		"disapprovedPages": [
+			{
+				"url": "/sidor/texter/bidrag/pensarla/lowing.html"
+			}
+		],
+		"position": {
+			"lng": 22.605895,
+			"lat": 63.528278
+		}
+	},
+	"pensala-village": {
+		"lng": 22.5465734,
+		"lat": 63.3444797,
+		"position": {
+			"lng": 22.555371,
+			"lat": 63.344585
+		},
+		"disapprovedPages": [
+			{
+				"url": "/sidor/texter/prosa/op/julhap58.htm"
+			},
+			{
+				"url": "/sidor/texter/prosa/backmanw/div/keppo2.htm"
+			},
+			{
+				"url": "/sidor/texter/prosa/backmanw/back/03back.htm"
+			},
+			{
+				"url": "/sidor/texter/prosa/edmanl/mansk/0250-tal.htm"
+			}
+		],
+		"approvedPages": [
+			{
+				"url": "/sidor/texter/diverse/andelskassan.html",
+				"preferredImage": "bilder/akassan/hirvlax_ak.jpg"
+			}
+		]
+	},
+	"monå-village": {
+		"lng": 22.3537752,
+		"lat": 63.3898731,
+		"position": {
+			"lng": 22.362616,
+			"lat": 63.389902
+		},
+		"approvedPages": [
+			{
+				"url": "/sidor/texter/prosa/agreng/enman/02kungsa.htm",
+				"preferredImage": "../../bilder/enman/35liftra.jpg"
+			},
+			{
+				"url": "/sidor/texter/prosa/op/julbrannvinet32.html"
+			}
+		],
+		"disapprovedPages": [
+			{
+				"url": "/sidor/texter/prosa/backmanw/2s/fs03.htm"
+			}
+		]
+	},
+	"socklot-village": {
+		"lng": 22.549324,
+		"lat": 63.575819,
+		"position": {
+			"lng": 22.549324,
+			"lat": 63.575819
+		},
+		"alternativeNames": [
+			"Soklot"
+		],
+		"approvedPages": [
+			{
+				"url": "/sidor/texter/prosa/birck/ii/hallgrun.htm",
+				"preferredImage": "../../bilder/fakta/HALLGRUN.JPG"
+			},
+			{
+				"url": "/sidor/texter/prosa/op/sangfest1932.html",
+				"preferredImage": "../bilder/hus/socklot_bonehus_brand.jpg"
+			},
+			{
+				"url": "/sidor/texter/prosa/op/smapratsock45.html",
+				"preferredImage": "../bilder/socklot/grisslp10.jpg"
+			},
+			{
+				"url": "/sidor/texter/prosa/ungdoms/socklot.htm",
+				"preferredImage": "../bilder/hus/socklouf.jpg"
+			},
+			{
+				"url": "/sidor/texter/prosa/diverse/socklots.htm",
+				"preferredImage": "../bilder/socklot/bygatan.jpg"
+			},
+			{
+				"url": "/sidor/texter/diverse/nodlandn.htm",
+				"preferredImage": "bilder/diverse/tyskflyg.jpg"
+			}
+		]
+	},
+	"forsby-village": {
+		"lng": 22.542803,
+		"lat": 63.499595,
+		"position": {
+			"lng": 22.542803,
+			"lat": 63.499595
+		},
+		"disapprovedPages": [
+			{
+				"url": "/sidor/texter/gatunamn/gtext.htm"
+			},
+			{
+				"url": "/sidor/texter/bidrag/div/dynamita.htm"
+			},
+			{
+				"url": "/sidor/texter/bidrag/pensarla/bomberlp.htm"
+			},
+			{
+				"url": "/sidor/texter/prosa/birck/iii/denyasko.htm"
+			},
+			{
+				"url": "/sidor/texter/prosa/op/melitfrs.html"
+			},
+			{
+				"url": "/sidor/texter/prosa/op/handelser59.html"
+			},
+			{
+				"url": "/sidor/texter/prosa/wichmang/68sommar.htm"
+			}
+		],
+		"approvedPages": [
+			{
+				"url": "/sidor/texter/prosa/birck/iii/gyllenbe.htm",
+				"preferredImage": "../../bilder/sjoblom/gyllenbergs0.jpg"
+			},
+			{
+				"url": "/sidor/texter/prosa/olsonr/hemkyfo/lillolla.htm",
+				"preferredImage": "../../bilder/hus/lillolls_ms.jpg"
+			},
+			{
+				"url": "/sidor/texter/prosa/olsonr/hemkyfo/mickelsb.htm",
+				"preferredImage": "../../bilder/hus/mick1920.jpg"
+			},
+			{
+				"url": "/sidor/texter/prosa/nyby/divvn/haralden.htm",
+				"preferredImage": "../../bilder/personer/kvismoli.jpg"
+			}
+		]
+	},
+	"kovjoki-village": {
+		"lng": 22.696514,
+		"lat": 63.541074,
+		"approvedPages": [
+			{
+				"url": "/sidor/kortindi/NN/NN_B/nnbh060s.htm",
+				"preferredImage": "../vykort/NN/NN_B/nnbh060f.jpg"
+			},
+			{
+				"url": "/sidor/kortindi/JS/JS_A/JSAX050S.htm",
+				"preferredImage": "../vykort/JS/JS_A/JSAX050F.JPG"
+			},
+			{
+				"url": "/sidor/kortindi/JH/JH_B/JHBH054S.HTM",
+				"preferredImage": "../vykort/JH/JH_B/JHBH054F.JPG"
+			},
+			{
+				"url": "/sidor/kortindi/JH/JH_B/JHBV062S.HTM",
+				"preferredImage": "../vykort/JH/JH_B/JHBV062F.JPG"
+			},
+			{
+				"url": "/sidor/texter/prosa/birck/iii/nkbyjrnv.htm",
+				"preferredImage": "../../bilder/diverse/NJKOVSTA.jpg"
+			},
+			{
+				"url": "/sidor/texter/prosa/op/uleaborg.htm",
+				"preferredImage": "../bilder/forsa/83kovsta.jpg"
+			},
+			{
+				"url": "/sidor/texter/prosa/eklund/ldp/kovjoki.htm",
+				"preferredImage": "../../bilder/hus/kovjstat.jpg"
+			},
+			{
+				"url": "/sidor/texter/prosa/diverse/mejkovny.htm",
+				"preferredImage": "../bilder/hus/mejkov58.jpg"
+			},
+			{
+				"url": "/sidor/texter/prosa/rundt/denostby/Kovjoki.htm",
+				"preferredImage": "../../bilder/diverse/JRKOVBYG.JPG"
+			},
+			{
+				"url": "/sidor/texter/diverse/kovjojul.htm",
+				"preferredImage": "bilder/hus/kovjstls.jpg"
+			}
+		],
+		"position": {
+			"lng": 22.696514,
+			"lat": 63.541074
 		}
 	}
 }

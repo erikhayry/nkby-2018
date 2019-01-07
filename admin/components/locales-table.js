@@ -101,7 +101,7 @@ export default class LocalesTable extends Component {
                             .map(locale => locale[currentCol])
                             .filter((value, index, self) => {
                                 return self.indexOf(value) === index;
-                            })
+                            });
         return (
             <select onChange={this.handleSelectFilter}>
                 <option key="all" value="all">Alla</option>
@@ -169,8 +169,15 @@ export default class LocalesTable extends Component {
         const { locales } = this.props;
         const filteredColumns = this.getFilteredColumns();
 
+        console.log(filteredColumns)
+
         let data = _.sortBy(locales.filter((locale => {
             return filteredColumns.length === 0 || filteredColumns.every(({col, val}) => {
+                console.log(col, val)
+                if(typeof val === 'boolean'){
+                    return Boolean(locale[col]) === val;
+                }
+
                 return locale[col] === val;
             })
 
