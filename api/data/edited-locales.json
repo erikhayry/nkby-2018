@@ -8263,5 +8263,103 @@
 			"lng": 22.696514,
 			"lat": 63.541074
 		}
+	},
+	"Kristliga Folkhögskolan-building": {
+		"approvedPages": [
+			{
+				"url": "/sidor/kortindi/KM/KMA/KM_10347.html",
+				"preferredImage": "../vykort/KM/KMA/km10347.jpg"
+			},
+			{
+				"url": "/sidor/kortindi/NN/NN_C/NNCR061S.HTM",
+				"preferredImage": "../vykort/NN/NN_C/NNCR061F.JPG"
+			},
+			{
+				"url": "/sidor/kortindi/NN/NN_C/nnch065s.htm",
+				"preferredImage": "../vykort/NN/NN_C/nnch065f.jpg"
+			},
+			{
+				"url": "/sidor/kortindi/NN/NN_C/NNCV032S.HTM",
+				"preferredImage": "../vykort/NN/NN_C/NNCV032F.JPG"
+			},
+			{
+				"url": "/sidor/kortindi/NN/NN_C/NNC.HTM",
+				"preferredImage": "../vykort/NN/NN_C/NNCH027P.JPG"
+			},
+			{
+				"url": "/sidor/kortindi/JH/JH_F/JHFR011S.HTM",
+				"preferredImage": "../vykort/JH/JH_F/JHFR011F.JPG"
+			},
+			{
+				"url": "/sidor/kortindi/GK/GK_A/GKAR018S.HTM",
+				"preferredImage": "../vykort/GK/GK_A/GKAR018F.JPG"
+			},
+			{
+				"url": "/sidor/texter/prosa/birck/iii/folkiseb.htm",
+				"preferredImage": "../../bilder/birck3/247FOLKI.JPG"
+			},
+			{
+				"url": "/sidor/texter/prosa/folkis50/01folkis.htm",
+				"preferredImage": "../bilder/folkis50/06byggna.jpg"
+			},
+			{
+				"url": "/sidor/texter/prosa/diverse/folkisrh.htm",
+				"preferredImage": "../bilder/diverse/FOLK50VY.JPG"
+			},
+			{
+				"url": "/sidor/texter/hus/folkisba.htm",
+				"preferredImage": "bilder/illustra/folkisgn.jpg"
+			}
+		],
+		"disapprovedPages": [
+			{
+				"url": "/sidor/texter/bidrag/sjoskogs/alven.htm"
+			},
+			{
+				"url": "/sidor/texter/bidrag/pensarla/birgprog.htm"
+			},
+			{
+				"url": "/sidor/texter/bidrag/pensarla/juthbama.htm"
+			},
+			{
+				"url": "/sidor/texter/bidrag/div/diktensdag.html"
+			}
+		]
+	},
+	"idrottsgården-building": {
+		"approvedPages": [
+			{
+				"url": "/sidor/texter/hus/idrgkios.htm",
+				"preferredImage": "bilder/sjoblom/IDRGKIOS.JPG"
+			}
+		]
+	},
+	"Normen-building": {
+		"approvedPages": [
+			{
+				"url": "/sidor/texter/bidrag/holmstrf/normen.htm",
+				"preferredImage": "../bilder/holmstrf/norteckn.jpg"
+			},
+			{
+				"url": "/sidor/texter/prosa/op/normen60.htm",
+				"preferredImage": "../bilder/hus/normen60.jpg"
+			},
+			{
+				"url": "/sidor/texter/prosa/op/normen07.htm",
+				"preferredImage": "../bilder/hus/normen07.jpg"
+			},
+			{
+				"url": "/sidor/texter/prosa/op/normen08.htm",
+				"preferredImage": "../bilder/hus/normen89.jpg"
+			},
+			{
+				"url": "/sidor/texter/hus/normensh.html",
+				"preferredImage": "bilder/hus/normensh2.jpg"
+			},
+			{
+				"url": "/sidor/texter/upp/torget_normen.html",
+				"preferredImage": "bilder/upp/torget_eh.jpg"
+			}
+		]
 	}
 }

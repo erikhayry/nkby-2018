@@ -489,6 +489,46 @@
 	},
 	{
 		"location": {
+			"lat": 63.5225543,
+			"lng": 22.5261296
+		},
+		"name": "kyrkan",
+		"postcode": ""
+	},
+	{
+		"location": {
+			"lat": 63.527452,
+			"lng": 22.5269353
+		},
+		"name": "Kristliga Folkhögskolan",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.5217598,
+			"lng": 22.5303558
+		},
+		"name": "kampen",
+		"postcode": ""
+	},
+	{
+		"location": {
+			"lat": 63.52274980000001,
+			"lng": 22.528589
+		},
+		"name": "Normen",
+		"postcode": "66900"
+	},
+	{
+		"location": {
+			"lat": 63.5217598,
+			"lng": 22.5303558
+		},
+		"name": "idrottsgården",
+		"postcode": ""
+	},
+	{
+		"location": {
 			"lat": 63.5222074,
 			"lng": 22.5351597
 		},
@@ -549,14 +589,6 @@
 			"lng": 22.4371037
 		},
 		"name": "munsala",
-		"postcode": ""
-	},
-	{
-		"location": {
-			"lat": 63.5225543,
-			"lng": 22.5261296
-		},
-		"name": "kyrkan",
 		"postcode": ""
 	},
 	{
@@ -662,14 +694,6 @@
 		},
 		"name": "källbackgatan",
 		"postcode": "66900"
-	},
-	{
-		"location": {
-			"lat": 63.5217598,
-			"lng": 22.5303558
-		},
-		"name": "kampen",
-		"postcode": ""
 	},
 	{
 		"location": {
@@ -1504,14 +1528,6 @@
 			"lng": 22.5419179
 		},
 		"name": "mickelsbacka",
-		"postcode": ""
-	},
-	{
-		"location": {
-			"lat": 63.5217598,
-			"lng": 22.5303558
-		},
-		"name": "idrottsgården",
 		"postcode": ""
 	},
 	{

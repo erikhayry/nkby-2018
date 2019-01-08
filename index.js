@@ -287,7 +287,7 @@ function getLocales(commune){
 //});
 
 //searchUrls(locales, filteredUrls.slice(0, 100));
-searchUrls(locales.concat(areas), filteredUrls.slice(0, 100), {
+searchUrls(locales.concat(areas), filteredUrls, {
     replaceData: process.env.REPLACE_DATA,
     onlySearchNewLocales: process.env.ONLY_SEARCH_NEW_LOCALES,
 });
