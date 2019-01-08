@@ -13,7 +13,6 @@
       "jungar",
       "jussila",
       "juthas",
-      "kampen",
       "kasackbacka",
       "kengo",
       "keppo",
@@ -26,10 +25,18 @@
       "överjeppo",
       "esplanaden",
       "torget",
-      "kyrkan",
-      "idrottsgården",
       "rummelbacken",
       "kackurdunten"
+    ]
+  },
+  {
+    "type": "building",
+    "localeNames": [
+      "kyrkan",
+      "idrottsgården",
+      "kampen",
+      "Kristliga Folkhögskolan",
+      "Normen"
     ]
   },
   {

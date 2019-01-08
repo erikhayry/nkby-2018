@@ -4,6 +4,7 @@ import ProgressBar from 'progress';
 import locales from '../data/locales.json';
 import areas from '../data/areas.json';
 import urls from '../data/urls.json';
+import crawlerResult from '../data/crawler-result-lg.json';
 
 const POST_URL= process.env.POST_URL || 'https://www.verkkoposti.com/e3/svenska/postnummercatalog';
 const LOCALES_FILE_NAME= process.env.LOCALES_FILE_NAME || 'locales.json';
@@ -74,9 +75,21 @@ function save(data){
     });
 }
 
-function searchUrls(zipCodeAndLocales, urls, replaceData = false) {
+function buildLocaleId(name, zipCode, type){
+    return zipCode ? `${name}-${zipCode}` : `${name}-${type}`;
+}
+
+function isLocaleAlreadyAdded(localeName, zipCode, type){
+    const id = buildLocaleId(localeName, zipCode, type);
+
+    return Boolean(crawlerResult[id]);
+}
+
+function searchUrls(zipCodeAndLocales, urls = [], {replaceData = false, onlySearchNewLocales = true} = {}) {
     console.log(`Searching ${urls.length} urls for locales`)
-    console.log(`replaceData: ${replaceData}`)
+    console.log(`replaceData: ${replaceData}`);
+    console.log(`onlySearchNewLocales: ${onlySearchNewLocales}`);
+
     const result = {};
     let pagesCount = 0;
     const bar = new ProgressBar(':bar', { total: urls.length });
@@ -92,53 +105,57 @@ function searchUrls(zipCodeAndLocales, urls, replaceData = false) {
                 bar.tick();
 
                 Object.keys(zipCodeAndLocales).forEach(key => {
-                    const {zipCode, localeNames } = zipCodeAndLocales[key];
+                    const {zipCode, localeNames} = zipCodeAndLocales[key];
                     let { type } = zipCodeAndLocales[key];
                     localeNames.forEach(localeName => {
-                        if($){
-                            const body = $("body");
-                            const bodyText = (body.text() || '').toLowerCase();
-                            const title = $("title").text() || '';
-                            const images = Array.from($('body img')).map((el) => {
-                                return {
-                                    src: el.attribs.src.replace('../../../', ''),
-                                    description: el.attribs.alt || getImageDescription(el.nextSibling)
-                                }
-                            });
+                        const skipLocale = onlySearchNewLocales && isLocaleAlreadyAdded(localeName, zipCode, type);
 
-                            if(bodyText.indexOf(localeName.toLowerCase()) > 0){
-                                const re = new RegExp(`\\b${localeName.toLowerCase()}\\s[0-9]{1,3}`);
-                                let name = localeName;
-                                if(type === 'locale'){
-                                    const addressWithStreetNumber = bodyText.match(re);
-                                    name = getKey(addressWithStreetNumber, localeName);
-                                    type = addressWithStreetNumber ? 'address' : 'street'
-                                }
-                                pagesCount++;
-                                const key = zipCode ? `${name}-${zipCode}` : `${name}-${type}`;
+                        if(!skipLocale) {
+                            if ($) {
+                                const body = $("body");
+                                const bodyText = (body.text() || '').toLowerCase();
+                                const title = $("title").text() || '';
+                                const images = Array.from($('body img')).map((el) => {
+                                    return {
+                                        src: el.attribs.src.replace('../../../', ''),
+                                        description: el.attribs.alt || getImageDescription(el.nextSibling)
+                                    }
+                                });
 
-                                if(result[key]){
-                                    result[key].pages.push({
-                                        url: res.options.uri.replace(DATA_URL, ''),
-                                        title,
-                                        images
-                                    })
-                                }
-                                else {
-                                    result[key] = {
-                                        name,
-                                        zipCode,
-                                        type,
-                                        pages: [{
+                                if (bodyText.indexOf(localeName.toLowerCase()) > 0) {
+                                    const re = new RegExp(`\\b${localeName.toLowerCase()}\\s[0-9]{1,3}`);
+                                    let name = localeName;
+                                    if (type === 'locale') {
+                                        const addressWithStreetNumber = bodyText.match(re);
+                                        name = getKey(addressWithStreetNumber, localeName);
+                                        type = addressWithStreetNumber ? 'address' : 'street'
+                                    }
+                                    pagesCount++;
+                                    const key = buildLocaleId(name, zipCode, type);
+
+                                    if (result[key]) {
+                                        result[key].pages.push({
                                             url: res.options.uri.replace(DATA_URL, ''),
                                             title,
-                                            images,
-                                        }]
+                                            images
+                                        })
+                                    }
+                                    else {
+                                        result[key] = {
+                                            name,
+                                            zipCode,
+                                            type,
+                                            pages: [{
+                                                url: res.options.uri.replace(DATA_URL, ''),
+                                                title,
+                                                images,
+                                            }]
+                                        }
                                     }
                                 }
+
                             }
                         }
-
                     })
                 })
 
@@ -158,17 +175,11 @@ function searchUrls(zipCodeAndLocales, urls, replaceData = false) {
             save(result)
         }
         else {
-            fs.readFile("data/crawler-result-lg.json" , "utf8", function(err, d) {
-                if(err){
-                    reject(err)
-                }
-                const data = JSON.parse(d)
-                for(const key in data){
-                    result[key] = data[key]
-                }
+            for (const key in crawlerResult) {
+                result[key] = crawlerResult[key]
+            }
 
-                save(result)
-            });
+            save(result)
         }
     });
 }
@@ -276,6 +287,9 @@ function getLocales(commune){
 //});
 
 //searchUrls(locales, filteredUrls.slice(0, 100));
-searchUrls(locales.concat(areas, filteredUrls.slice(0, 100), process.env.REPLACE_DATA));
+searchUrls(locales.concat(areas), filteredUrls.slice(0, 100), {
+    replaceData: process.env.REPLACE_DATA,
+    onlySearchNewLocales: process.env.ONLY_SEARCH_NEW_LOCALES,
+});
 
 
