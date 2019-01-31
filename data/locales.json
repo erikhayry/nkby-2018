@@ -6,45 +6,14 @@
 	},
 	{
 		"type": "locale",
+		"zipCode": "66904",
+		"localeNames": []
+	},
+	{
+		"type": "locale",
 		"zipCode": "62350",
 		"localeNames": [
 			"karkausvägen"
-		]
-	},
-	{
-		"type": "locale",
-		"zipCode": "66840",
-		"localeNames": [
-			"aspnästået",
-			"brännlandsvägen",
-			"centrumvägen",
-			"jeppovägen",
-			"södersvedsvägen",
-			"jussilavägen",
-			"aspnäsvägen",
-			"kullasvägen",
-			"köurosvägen",
-			"milbackavägen",
-			"målarsvägen",
-			"nedranvägen",
-			"pensalavägen"
-		]
-	},
-	{
-		"type": "locale",
-		"zipCode": "66980",
-		"localeNames": [
-			"gabilsvägen",
-			"gunilackvägen",
-			"knutsvägen",
-			"makalösvägen",
-			"monåvägen",
-			"pansastået",
-			"rivägen",
-			"sandgärdsvägen",
-			"sundvägen",
-			"träskvägen",
-			"östergärdsvägen"
 		]
 	},
 	{
@@ -81,6 +50,25 @@
 	},
 	{
 		"type": "locale",
+		"zipCode": "66840",
+		"localeNames": [
+			"aspnästået",
+			"brännlandsvägen",
+			"centrumvägen",
+			"jeppovägen",
+			"södersvedsvägen",
+			"jussilavägen",
+			"aspnäsvägen",
+			"kullasvägen",
+			"köurosvägen",
+			"milbackavägen",
+			"målarsvägen",
+			"nedranvägen",
+			"pensalavägen"
+		]
+	},
+	{
+		"type": "locale",
 		"zipCode": "66970",
 		"localeNames": [
 			"alihamnsvägen",
@@ -112,6 +100,33 @@
 			"spårasvägen",
 			"storsandsvägen",
 			"sundvägen"
+		]
+	},
+	{
+		"type": "locale",
+		"zipCode": "66930",
+		"localeNames": [
+			"framstuvägen",
+			"gjuterivägen",
+			"granbäcksvägen",
+			"hosibackavägen",
+			"hysalvägen",
+			"industrivägen",
+			"kovjoki riksväg",
+			"källmossvägen",
+			"lukusvägen",
+			"lövsvedenvägen",
+			"lövögränd",
+			"mannforsvägen",
+			"markbyvägen",
+			"nabbavägen",
+			"nyåkersvägen",
+			"riksväg åtta",
+			"sågvägen",
+			"utförevägen",
+			"vannäsbackavägen",
+			"åmansvägen",
+			"ångloksvägen"
 		]
 	},
 	{
@@ -153,33 +168,6 @@
 			"åkervägen",
 			"älvvägen",
 			"östra jeppovägen"
-		]
-	},
-	{
-		"type": "locale",
-		"zipCode": "66930",
-		"localeNames": [
-			"framstuvägen",
-			"gjuterivägen",
-			"granbäcksvägen",
-			"hosibackavägen",
-			"hysalvägen",
-			"industrivägen",
-			"kovjoki riksväg",
-			"källmossvägen",
-			"lukusvägen",
-			"lövsvedenvägen",
-			"lövögränd",
-			"mannforsvägen",
-			"markbyvägen",
-			"nabbavägen",
-			"nyåkersvägen",
-			"riksväg åtta",
-			"sågvägen",
-			"utförevägen",
-			"vannäsbackavägen",
-			"åmansvägen",
-			"ångloksvägen"
 		]
 	},
 	{
@@ -232,6 +220,23 @@
 			"viksgränd",
 			"öjskatavägen",
 			"öjvägen"
+		]
+	},
+	{
+		"type": "locale",
+		"zipCode": "66980",
+		"localeNames": [
+			"gabilsvägen",
+			"gunilackvägen",
+			"knutsvägen",
+			"makalösvägen",
+			"monåvägen",
+			"pansastået",
+			"rivägen",
+			"sandgärdsvägen",
+			"sundvägen",
+			"träskvägen",
+			"östergärdsvägen"
 		]
 	},
 	{

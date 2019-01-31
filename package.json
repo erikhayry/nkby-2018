@@ -5,10 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "search": "./node_modules/.bin/babel index.js --out-dir lib --presets=@babel/env && node lib/index.js",
-    "geocoder": "./node_modules/.bin/babel geocoder.js --out-dir lib --presets=@babel/env && node lib/geocoder.js",
-    "build": "./node_modules/.bin/babel build-web-data.js --out-dir lib --presets=@babel/env && node lib/build-web-data.js",
-    "start": "npm run search && npm run geocoder"
+    "lib": "./node_modules/.bin/babel crawler/*.js --out-dir lib --presets=@babel/env ",
+    "search": "npm run lib && node lib/search.js",
+    "get-locales": "npm run lib && node lib/get-locales.js",
+    "geocoder": "./node_modules/.bin/babel crawler/geocoder.js --out-dir lib --presets=@babel/env && node lib/geocoder.js",
+    "build": "./node_modules/.bin/babel crawler/build-web-data.js --out-dir lib --presets=@babel/env && node lib/build-web-data.js",
+    "start": "npm run get-locales && npm run search && npm run geocoder"
   },
   "repository": {
     "type": "git",

@@ -8324,7 +8324,11 @@
 			{
 				"url": "/sidor/texter/bidrag/div/diktensdag.html"
 			}
-		]
+		],
+		"position": {
+			"lng": 22.526935,
+			"lat": 63.527466
+		}
 	},
 	"idrottsgården-building": {
 		"approvedPages": [
@@ -8359,6 +8363,355 @@
 			{
 				"url": "/sidor/texter/upp/torget_normen.html",
 				"preferredImage": "bilder/upp/torget_eh.jpg"
+			},
+			{
+				"url": "/sidor/texter/prosa/op/gran44de.htm",
+				"preferredImage": "../bilder/pensarl/normejul.jpg"
+			}
+		],
+		"position": {
+			"lng": 22.5286,
+			"lat": 63.522774
+		}
+	},
+	"kyrkan-building": {
+		"position": {
+			"lng": 22.526204,
+			"lat": 63.522578
+		},
+		"approvedPages": [
+			{
+				"url": "/sidor/kortindi/PK/PK_A/PKAK027S.HTM"
+			},
+			{
+				"url": "/sidor/kortindi/KM/KMA/KM_15429.html"
+			},
+			{
+				"url": "/sidor/kortindi/BY/BYA/KYRKBY.HTM"
+			},
+			{
+				"url": "/sidor/kortindi/DIV/DIV_A/LTAK016S.HTM"
+			},
+			{
+				"url": "/sidor/kortindi/JH/JH_N/JHNK000S.HTM"
+			},
+			{
+				"url": "/sidor/kortindi/JH/JH_N/JHNK020S.HTM"
+			},
+			{
+				"url": "/sidor/kortindi/JH/JH_I/JHIK036S.HTM"
+			},
+			{
+				"url": "/sidor/kortindi/JH/JH_F/JHFR043S.HTM"
+			},
+			{
+				"url": "/sidor/kortindi/JH/JH_G/JHGK018S.HTM"
+			},
+			{
+				"url": "/sidor/kortindi/JH/JH_H/Jhhr083s.htm"
+			},
+			{
+				"url": "/sidor/kortindi/JH/JH_O/JHO.HTM"
+			},
+			{
+				"url": "/sidor/kortindi/JH/JH_O/JHOK047S.html"
+			},
+			{
+				"url": "/sidor/kortindi/JH/JH_O/JHOR087S.html"
+			},
+			{
+				"url": "/sidor/kortindi/JH/JH_O/JHOK024S.html"
+			},
+			{
+				"url": "/sidor/kortindi/JH/JH_O/JHOR063S.html"
+			},
+			{
+				"url": "/sidor/kortindi/JH/JH_M/JHMVO56S.HTM"
+			},
+			{
+				"url": "/sidor/kortindi/JH/JH_M/JHMKO32S.HTM"
+			},
+			{
+				"url": "/sidor/kortindi/JH/JH_C/JHCK003S.HTM"
+			},
+			{
+				"url": "/sidor/kortindi/JH/JH_B/JHBR045S.HTM"
+			},
+			{
+				"url": "/sidor/kortindi/JH/JH_E/JHEV040S.HTM"
+			},
+			{
+				"url": "/sidor/kortindi/JH/JH_L/JHLK006S.HTM"
+			},
+			{
+				"url": "/sidor/kortindi/JH/JH_L/JHLK041S.HTM"
+			},
+			{
+				"url": "/sidor/kortindi/JH/JH_K/JHKK031S.HTM"
+			},
+			{
+				"url": "/sidor/kortindi/JH/JH_K/JHKK017S.HTM"
+			},
+			{
+				"url": "/sidor/kortindi/JH/JH_P/JHPR080S.HTM"
+			},
+			{
+				"url": "/sidor/kortindi/JH/JH_P/JHPK009S.HTM"
+			},
+			{
+				"url": "/sidor/kortindi/JH/JH_L/JHLR052S.HTM"
+			},
+			{
+				"url": "/sidor/kortindi/JH/JH_P/JHPK029S.HTM"
+			},
+			{
+				"url": "/sidor/kortindi/VB/VB_A/VBAR0192.HTM"
+			},
+			{
+				"url": "/sidor/kortindi/VB/VB_A/vbar019j.htm"
+			},
+			{
+				"url": "/sidor/kortindi/VB/VB_A/VBAR019D.HTM"
+			},
+			{
+				"url": "/sidor/kortindi/VB/VB_A/VBAR019S.HTM"
+			},
+			{
+				"url": "/sidor/kortindi/NB/NB_A/NBAR020S.HTM"
+			},
+			{
+				"url": "/sidor/kortindi/NB/NB_A/NBA----S.HTM"
+			},
+			{
+				"url": "/sidor/kortindi/NY/NY_A/NYAK026S.HTM"
+			},
+			{
+				"url": "/sidor/kortindi/FG/FG_A/FGAK0112.HTM"
+			},
+			{
+				"url": "/sidor/kortindi/FG/FG_A/FGAK011S.HTM"
+			},
+			{
+				"url": "/sidor/kortindi/LR/LR_G/LRGK016S.HTM"
+			},
+			{
+				"url": "/sidor/kortindi/LR/LR_F/LRFR015S.HTM"
+			},
+			{
+				"url": "/sidor/kortindi/LR/LR_A/LRAK022S.HTM"
+			},
+			{
+				"url": "/sidor/kortindi/LR/LR_M/LRMKO27S.HTM"
+			},
+			{
+				"url": "/sidor/kortindi/LR/LR_K/LRKK007S.HTM"
+			},
+			{
+				"url": "/sidor/kortindi/lt/lt_b/ltbcjes.htm"
+			},
+			{
+				"url": "/sidor/kortindi/EG/EG_A/egak044s.htm"
+			},
+			{
+				"url": "/sidor/kortindi/lt/lt_a/ltax009s.htm"
+			},
+			{
+				"url": "/sidor/texter/bidrag/pensarla/host10.html"
+			},
+			{
+				"url": "/sidor/texter/bidrag/schalinl/kyrkbran.htm"
+			},
+			{
+				"url": "/sidor/texter/bidrag/holmstrf/fhgraste.htm"
+			},
+			{
+				"url": "/sidor/texter/bidrag/nbyfors/birgitta.htm"
+			},
+			{
+				"url": "/sidor/texter/bidrag/nbyfors/takmalmn.htm"
+			},
+			{
+				"url": "/sidor/texter/prosa/birck/iii/sbil1946.htm"
+			},
+			{
+				"url": "/sidor/texter/prosa/birckjl/julljus.htm"
+			},
+			{
+				"url": "/sidor/texter/prosa/birckjl/divlb/kyrkan.htm"
+			},
+			{
+				"url": "/sidor/texter/prosa/pettersl/svohist5/kyrkanlp.htm"
+			},
+			{
+				"url": "/sidor/texter/prosa/jt/staden_byter_fasad_86.html"
+			},
+			{
+				"url": "/sidor/texter/prosa/jt/fotograf.htm"
+			},
+			{
+				"url": "/sidor/texter/prosa/jt/levtidbi.htm"
+			},
+			{
+				"url": "/sidor/texter/prosa/op/mibakyas.htm"
+			},
+			{
+				"url": "/sidor/texter/prosa/op/paskbr57.htm"
+			},
+			{
+				"url": "/sidor/texter/prosa/op/kyrkbran.htm"
+			},
+			{
+				"url": "/sidor/texter/prosa/op/kyrkren28.html"
+			},
+			{
+				"url": "/sidor/texter/prosa/op/julhal52.htm"
+			},
+			{
+				"url": "/sidor/texter/prosa/op/julhal51.html"
+			},
+			{
+				"url": "/sidor/texter/prosa/op/dentunga.htm"
+			},
+			{
+				"url": "/sidor/texter/prosa/op/1920300a.htm"
+			},
+			{
+				"url": "/sidor/texter/prosa/op/emi59fors.html"
+			},
+			{
+				"url": "/sidor/texter/prosa/op/kyrkren1.htm"
+			},
+			{
+				"url": "/sidor/texter/prosa/op/sjalvs59.htm"
+			},
+			{
+				"url": "/sidor/texter/prosa/op/minnenjul51.html"
+			},
+			{
+				"url": "/sidor/texter/prosa/sfv/kyrkan02.htm"
+			},
+			{
+				"url": "/sidor/texter/prosa/allas/morgonvandr_27.html"
+			},
+			{
+				"url": "/sidor/texter/prosa/diverse/brosky73.htm"
+			},
+			{
+				"url": "/sidor/texter/diverse/klockarba.htm"
+			},
+			{
+				"url": "/sidor/texter/diverse/nkbymedky.html"
+			},
+			{
+				"url": "/sidor/texter/diverse/ballon08.html"
+			},
+			{
+				"url": "/sidor/texter/diverse/finlarki.htm"
+			},
+			{
+				"url": "/sidor/texter/hus/kyrkan92.html"
+			},
+			{
+				"url": "/sidor/texter/hus/kyrkan79.htm"
+			},
+			{
+				"url": "/sidor/texter/hus/kyrkrsv.htm"
+			},
+			{
+				"url": "/sidor/texter/hus/holmstmag.htm"
+			},
+			{
+				"url": "/sidor/texter/hus/kyrkan2009.html"
+			},
+			{
+				"url": "/sidor/texter/hus/kyrkmatt.htm"
+			},
+			{
+				"url": "/sidor/texter/hus/kyrkaljs.htm"
+			},
+			{
+				"url": "/sidor/texter/hus/kyrkmala.htm"
+			},
+			{
+				"url": "/sidor/texter/hus/kyrkfros.htm"
+			},
+			{
+				"url": "/sidor/texter/hus/kyrkan63.htm"
+			},
+			{
+				"url": "/sidor/texter/hus/stadsbrh.htm"
+			},
+			{
+				"url": "/sidor/texter/poesi/rundt/baraiden/ottesang.htm"
+			},
+			{
+				"url": "/sidor/texter/poesi/nyvisa/bild/JHKR031V.HTM"
+			},
+			{
+				"url": "/sidor/texter/fakta/kyrkron.htm"
+			},
+			{
+				"url": "/sidor/texter/fakta/storbron.htm"
+			},
+			{
+				"url": "/sidor/texter/fakta/espen.htm"
+			},
+			{
+				"url": "/sidor/texter/prosa/vbl/orglarna.htm"
+			},
+			{
+				"url": "/sidor/texter/prosa/vbl/mitzi42.html"
+			},
+			{
+				"url": "/sidor/texter/prosa/topelius/db/3511td.htm"
+			},
+			{
+				"url": "/sidor/texter/prosa/topelius/db/4006td.htm"
+			},
+			{
+				"url": "/sidor/texter/prosa/wichmanv/pastorer.htm"
+			},
+			{
+				"url": "/sidor/texter/prosa/wichmanv/stadoomg.htm"
+			},
+			{
+				"url": "/sidor/texter/prosa/diverse/nykarlwh.htm"
+			},
+			{
+				"url": "/sidor/texter/prosa/diverse/finlkyrk.htm"
+			},
+			{
+				"url": "/sidor/texter/prosa/diverse/bruhn949.htm"
+			},
+			{
+				"url": "/sidor/texter/prosa/diverse/nyka1900.htm"
+			},
+			{
+				"url": "/sidor/texter/prosa/diverse/nyka1901.htm"
+			},
+			{
+				"url": "/sidor/texter/prosa/diverse/opingluo.htm"
+			},
+			{
+				"url": "/sidor/texter/prosa/diverse/turist59.htm"
+			}
+		],
+		"disapprovedPages": [
+			{
+				"url": "/sidor/texter/bidrag/sjoskogs/alven.htm"
+			},
+			{
+				"url": "/sidor/texter/prosa/topelius/db/3809td.htm"
+			}
+		]
+	},
+	"kampen-building": {
+		"approvedPages": [
+			{
+				"url": "/sidor/texter/upp/kampen64p.htm"
+			},
+			{
+				"url": "/sidor/texter/prosa/birck/iii/hdutslag.htm"
 			}
 		]
 	}
